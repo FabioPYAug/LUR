@@ -9,45 +9,24 @@
 </head>
 
 <body>
-        <div class="search">
-            <label for="searchInput">
-                <span class="material-symbols-outlined"></span>
-            </label>
-            <input type="text" id="searchInput" placeholder="Pesquisar" onkeyup="searchName()">
-        </div>
-        <div class="card-container">
-            
-        </div>
+    <div class="search">
+        <label for="searchInput">
+            <span class="material-symbols-outlined"></span>
+        </label>
+        <input type="text" id="searchInput" placeholder="Pesquisar">
+    </div>
+
+    <script type ="text/javascript">
+        $(document).ready(function(){
+
+            $("#searchInput").keyup(function(){
+                var input
+            })
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-
-function Ler() {
-        $.ajax({
-            url: "./function.php",
-            type: "post",
-            async: true,
-            data: {
-                acao: "lerFormulario"
-            },
-            dataType: "json",
-            success: function(result) {
-                contIds = [];
-                let lbd = result.historico;
-                Listar(lbd)
-
-            },
-            error: function(data) {
-                console.log(data);
-                alert('error handling here');
-            }
-        });
-    }
-
-</script>
-
 <?php
 
 ?>
