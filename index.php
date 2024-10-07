@@ -15,13 +15,28 @@
         </label>
         <input type="text" id="searchInput" placeholder="Pesquisar">
     </div>
+    <div id="resultado">
 
+    </div>
     <script type ="text/javascript">
         $(document).ready(function(){
 
             $("#searchInput").keyup(function(){
                 var input = $(this).val();
-                alert(input)
+                if(input != ""){
+                    $.ajax({
+                        url: "function.php",
+                        method: "POST",
+                        data: {input:input},
+
+                        success:function(data){
+                            $("#resultado").html(data);
+                        }
+
+                    })
+                }else{
+                    $("#resultado").css("display", "none");
+                }
             })
         });
     </script>
