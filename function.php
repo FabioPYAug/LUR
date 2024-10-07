@@ -2,7 +2,7 @@
 include("conexao.php");
 if(isset($_POST["input"])){
 
-    $input = trim($_POST["input"]); // Remove espaços em branco
+    $input = trim($_POST["input"]);
 
     if(empty($input)) {
         echo "<h6 class='text-danger text-center'>Por favor, digite algo para pesquisar.</h6>";

@@ -16,23 +16,23 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#searchInput").keyup(function(){
-                var input = $(this).val().trim(); // Remove espaços em branco
+                var input = $(this).val().trim();
                 if(input != ""){
                     $.ajax({
                         url: "function.php",
                         method: "POST",
                         data: {input: input},
                         success: function(data) {
-                            console.log(data); // Para depuração
+                            console.log(data);
                             if(data.trim() != "") {
-                                $("#resultado").html(data).css("display", "block"); // Mostra o resultado
+                                $("#resultado").html(data).css("display", "block");
                             } else {
-                                $("#resultado").css("display", "none"); // Oculta se não houver resultados
+                                $("#resultado").css("display", "none");
                             }
                         }
                     });
                 } else {
-                    $("#resultado").css("display", "none"); // Oculta se a entrada estiver vazia
+                    $("#resultado").css("display", "none");
                 }
             });
         });
