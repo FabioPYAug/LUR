@@ -20,7 +20,8 @@
         $(document).ready(function(){
 
             $("#searchInput").keyup(function(){
-                var input
+                var input = $(this).val();
+                alert(input)
             })
         });
     </script>
