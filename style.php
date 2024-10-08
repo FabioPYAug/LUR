@@ -1,5 +1,4 @@
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -17,10 +16,7 @@
     border-radius: 20px;
     padding: 5px 10px;
     color: #4b4b4b;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 20px auto;
 }
 
 #searchInput {
@@ -36,5 +32,9 @@
     height: 40px;
 }
 
-
+#resultado {
+    max-width: 750px; 
+    margin: 20px auto;
+    display: none; 
+}
 </style>

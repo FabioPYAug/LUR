@@ -12,27 +12,29 @@
         </label>
         <input type="text" id="searchInput" placeholder="Pesquisar">
     </div>
-    <div id="resultado"></div>
+    
+    <div id="resultado"></div> 
+
     <script type="text/javascript">
         $(document).ready(function(){
             $("#searchInput").keyup(function(){
-                var input = $(this).val().trim();
+                var input = $(this).val().trim(); 
                 if(input != ""){
                     $.ajax({
                         url: "function.php",
                         method: "POST",
                         data: {input: input},
                         success: function(data) {
-                            console.log(data);
+                            console.log(data); 
                             if(data.trim() != "") {
-                                $("#resultado").html(data).css("display", "block");
+                                $("#resultado").html(data).css("display", "block"); 
                             } else {
-                                $("#resultado").css("display", "none");
+                                $("#resultado").css("display", "none"); 
                             }
                         }
                     });
                 } else {
-                    $("#resultado").css("display", "none");
+                    $("#resultado").css("display", "none"); 
                 }
             });
         });
