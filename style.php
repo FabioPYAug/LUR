@@ -36,11 +36,13 @@
     display: none;
 }
 
-h3 {
-    margin: 0;
+h6 {
+    margin: 20px 0 0 0;
     padding: 0;
     box-sizing: border-box;
     color: black;
+    font-size: 25px;
+    text-align: center; 
 }
 
 .custom-btn {

@@ -25,7 +25,6 @@
                         method: "POST",
                         data: {input: input},
                         success: function(data) {
-                            console.log(data); 
                             if(data.trim() != "") {
                                 $("#resultado").html(data).css("display", "block"); 
                             } else {
@@ -38,6 +37,11 @@
                 }
             });
         });
+
+        function valores(id, nome){
+            let local = `Valores/${id}${nome}.html`;
+            window.location.href = local;
+        }
     </script>
 </body>
 </html>

@@ -5,7 +5,7 @@ if(isset($_POST["input"])){
     $input = trim($_POST["input"]);
 
     if(empty($input)) {
-        echo "<h6 class='text-danger text-center'>Por favor, digite algo para pesquisar.</h6>";
+        echo "<h6 class ='text-danger text-center'>Por favor, digite algo para pesquisar.</h6>";
         exit;
     }
 
@@ -19,7 +19,7 @@ if(isset($_POST["input"])){
             $nome = $row['nome'];
             $tipo = $row['tipo'];
             ?>
-            <button class="custom-btn btn-1">
+            <button class="custom-btn btn-1" onclick="valores(<?php echo $id; ?>, '<?php echo addslashes($nome); ?>')">
                 <span class="item-left"><?php echo $id; ?></span>
                 <span class="item-center"><?php echo $nome; ?></span>
                 <span class="item-right"><?php echo $tipo; ?></span>
