@@ -9,7 +9,7 @@ if(isset($_POST["input"])){
         exit;
     }
 
-    $query = "SELECT * FROM ne_dados WHERE nome LIKE '{$input}%' OR id LIKE '{$input}%' OR tipo LIKE '{$input}%'";
+    $query = "SELECT * FROM ne_dados WHERE nome LIKE '{$input}%' OR id LIKE '{$input}%' OR tipo LIKE '{$input}%' OR alcance LIKE '{$input}%' OR entidade LIKE '{$input}%'";
     $result = mysqli_query($conexao, $query);
 
     if(mysqli_num_rows($result) > 0){
