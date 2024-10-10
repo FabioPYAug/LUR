@@ -1,9 +1,10 @@
 <style>
+@import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Jura', sans-serif;
     background-color: #f2f2ed;
 }
 
@@ -28,13 +29,16 @@
     font-size: 20px;
 }
 
-.search label {
-    height: 40px;
+#resultado {
+    max-width: 750px;
+    margin: 20px auto;
+    display: none;
 }
 
-#resultado {
-    max-width: 750px; 
-    margin: 20px auto;
-    display: none; 
+h3 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 </style>
