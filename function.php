@@ -5,11 +5,11 @@ if(isset($_POST["input"])){
     $input = trim($_POST["input"]);
 
     if(empty($input)) {
-        echo "<h6 class='text-danger text-center'>Por favor, digite algo para pesquisar.</h6>";
+        echo "<h6 class ='text-danger text-center'>Por favor, digite algo para pesquisar.</h6>";
         exit;
     }
 
-    $query = "SELECT * FROM ne_dados WHERE nome LIKE '{$input}%' OR id LIKE '{$input}%' OR tipo LIKE '{$input}%'";
+    $query = "SELECT * FROM ne_dados WHERE nome LIKE '{$input}%' OR id LIKE '{$input}%' OR tipo LIKE '{$input}%' OR alcance LIKE '{$input}%' OR entidade LIKE '{$input}%'";
     $result = mysqli_query($conexao, $query);
 
     if(mysqli_num_rows($result) > 0){
@@ -19,8 +19,10 @@ if(isset($_POST["input"])){
             $nome = $row['nome'];
             $tipo = $row['tipo'];
             ?>
-            <button class="btn btn-primary mt-2 <?php echo $id; ?>">
-                <?php echo "$id - $nome - $tipo"; ?>
+            <button class="custom-btn btn-1" onclick="valores(<?php echo $id; ?>, '<?php echo addslashes($nome); ?>')">
+                <span class="item-left"><?php echo $id; ?></span>
+                <span class="item-center"><?php echo $nome; ?></span>
+                <span class="item-right"><?php echo $tipo; ?></span>
             </button><br>
             <?php
         }
