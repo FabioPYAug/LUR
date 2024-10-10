@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Espada Curta</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -13,6 +14,10 @@
     <header>
         <div class="header-container">
             <h1 class="site-title">Espada Curta</h1>
+            <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../index.php'">
+                stroke-linejoin="round" stroke-width="2" class="icon">
+                <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
+            </svg>
         </div>
     </header>
 
@@ -32,10 +37,14 @@
             <div class="meio">
                 <article>
                     <h3 id="cap1">Descrição</h3>
-                    <p>O tipo mais comum de espada, possuindo uma lâmina curta variando de 40 a 60cm. Esta espada foi criada para ser prática e barata para aqueles que não possuem dinheiro ou que não querem gastar, sendo bastante comum entre guardas e aventureiros.</p>
+                    <p>O tipo mais comum de espada, possuindo uma lâmina curta variando de 40 a 60cm. Esta espada foi
+                        criada para ser prática e barata para aqueles que não possuem dinheiro ou que não querem gastar,
+                        sendo bastante comum entre guardas e aventureiros.</p>
 
                     <h3 id="cap2">História</h3>
-                    <p>O tipo mais comum de espada, possuindo uma lâmina curta variando de 40 a 60cm. Esta espada foi criada para ser prática e barata para aqueles que não possuem dinheiro ou que não querem gastar, sendo bastante comum entre guardas e aventureiros.</p>
+                    <p>O tipo mais comum de espada, possuindo uma lâmina curta variando de 40 a 60cm. Esta espada foi
+                        criada para ser prática e barata para aqueles que não possuem dinheiro ou que não querem gastar,
+                        sendo bastante comum entre guardas e aventureiros.</p>
                 </article>
             </div>
         </div>
@@ -44,122 +53,148 @@
 
 </html>
 <style>
-@import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+    @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
 
-body, h1, h2, h3, h4, h5, h6, p, ul, li, nav, header, footer, main, aside, article {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    .icon {
+        width: 52px;
+        height: 52px;
+        color: gold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
 
-body {
-    font-family: 'Jura', sans-serif;
-    background-color: #000000;
-    color: #f0f0f0; 
-}
+    .icon:hover {
+        color: white;
+    }
 
-header {
-    background-color: #111;
-    padding: 15px 20px;
-    border-bottom: 2px solid #444;
-}
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    li,
+    nav,
+    header,
+    footer,
+    main,
+    aside,
+    article {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    body {
+        font-family: 'Jura', sans-serif;
+        background-color: #000000;
+        color: #f0f0f0;
+    }
 
-.site-title {
-    color: #FFD700; 
-    font-size: 2rem; 
-}
+    header {
+        background-color: #111;
+        padding: 15px 20px;
+        border-bottom: 2px solid #444;
+    }
 
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.main-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-}
+    .site-title {
+        color: #FFD700;
+        font-size: 2rem;
+    }
 
-.main-nav a:hover {
-    color: #FFD700;
-}
+    .main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
 
-/* MENU */
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
+    .main-nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: color 0.3s ease;
+    }
 
-.sidebar {
-    width: 20%;
-    background-color: #282828; 
-    padding: 15px;
-    border-right: 2px solid #444;
-    position: sticky;
-    top: 20px;
-}
+    .main-nav a:hover {
+        color: #FFD700;
+    }
 
-.sidebar h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
+    /* MENU */
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
 
-.sidebar ul {
-    list-style: none;
-}
+    .sidebar {
+        width: 20%;
+        background-color: #282828;
+        padding: 15px;
+        border-right: 2px solid #444;
+        position: sticky;
+        top: 20px;
+    }
 
-.sidebar a {
-    color: #FFD700; 
-    text-decoration: none;
-    display: block;
-    padding: 5px 0;
-    border-bottom: 1px solid #444;
-}
+    .sidebar h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
 
-.sidebar a:hover {
-    background-color: #333;
-}
+    .sidebar ul {
+        list-style: none;
+    }
 
-.meio {
-    text-align: center;
-    width: 75%;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background-color: #353535;
-}
+    .sidebar a {
+        color: #FFD700;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        border-bottom: 1px solid #444;
+    }
 
-h1 {
-    font-size: 4rem;
-    margin: 0;
-    padding: 20px 0;
-    border-bottom: 7px solid #FFD700;
-    color: white;
-}
+    .sidebar a:hover {
+        background-color: #333;
+    }
 
-h3,
-h2 {
-    margin-bottom: 1rem;
-    text-align: left; 
-    color: white;
-    font-size: 28px;
-}
+    .meio {
+        text-align: center;
+        width: 75%;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background-color: #353535;
+    }
 
-p {
-    margin-bottom: 1.5rem;
-    max-width: 650px; 
-    text-align: justify;
-    color: white;
-    font-size: 18px;
-    line-height: 1.4;
-}
+    h1 {
+        font-size: 4rem;
+        margin: 0;
+        padding: 20px 0;
+        border-bottom: 7px solid #FFD700;
+        color: white;
+    }
 
+    h3,
+    h2 {
+        margin-bottom: 1rem;
+        text-align: left;
+        color: white;
+        font-size: 28px;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        max-width: 650px;
+        text-align: justify;
+        color: white;
+        font-size: 18px;
+        line-height: 1.4;
+    }
 </style>
