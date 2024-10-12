@@ -39,7 +39,8 @@
         });
 
         function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade){
-            let LocalImagem = `../Imagens/${nome}.png`;
+
+            let LocalImagem = `../Imagens/PlaceHolder.png`;
 
             sessionStorage.setItem('nome', nome);
             sessionStorage.setItem('tipo', tipo);
@@ -59,7 +60,6 @@
             switch (tipo){
                 case "Arma":
                     window.location.href = 'Valores/ArmaPadrão.html';
-                    
             }
             
         }
