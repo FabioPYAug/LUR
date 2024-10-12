@@ -41,56 +41,51 @@
                         <!-- Textos -->
                         <div class="text-content">
                             <h3 id="capD">Descrição</h3>
-                            <p id="APdescricao">Considerada como arma leve/simples, espadas curtas são o tipo mais comum de espada...</p>
+                            <p id="APdescricao"></p>
 
                             <h3 id="capH">História</h3>
-                            <p id="APhistoria">As espadas curtas foram criadas há tanto tempo que sua origem se perdeu na história...</p>
+                            <p id="APhistoria"></p>
 
                             <h3 id="capC">Categorias</h3>
-                            <p id="APentidade"><strong class="negrito">Armas</strong> : <strong class="negrito">Corpo a Corpo</strong></p>
+                            <div class="info-row">
+                                <p id="APtipo"><strong class="negrito"></strong></p>
+                                <p id="APalcanceTAB"><strong class="negrito"></strong></p>
+                            </div>
                         </div>
 
                         <!-- Imagem -->
                         <div class="image-content">
-                            <img src="../Imagens/PlaceHolder.png" class="Imagens" alt="Espada Curta"/>
+                            <img src="../Imagens/PlaceHolder.png" id="imagePlaceholder" class="Imagens" alt="Espada Curta"/>
                             
                             <!-- Tabela abaixo da imagem -->
                             <table class="info-table">
                                 <tr>
                                     <td class="title">Teste</td>
-                                    <td class="value" id="APteste">Luta</td>
+                                    <td class="value" id="APteste"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Dano</td>
-                                    <td class="value" id="APdano">1d4</td>
+                                    <td class="value" id="APdano"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Crítico</td>
-                                    <td class="value" id="APcritico">19</td>
+                                    <td class="value" id="APcritico"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Alcance</td>
-                                    <td class="value" id="APalcance">Corpo a Corpo</td>
+                                    <td class="value" id="APalcance"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Peso</td>
-                                    <td class="value" id="APpeso">1kg</td>
+                                    <td class="value" id="APpeso"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Tipo</td>
-                                    <td class="value" id="APtipoDano">Perfuração (P)</td>
+                                    <td class="value" id="APtipoDano"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Preço de Venda</td>
-                                    <td class="value" id="APvenda">10 JONS<br>4 ZENS</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Defesa</td>
-                                    <td class="value" id="APdefesa">-</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Penalidade</td>
-                                    <td class="value" id="APpenalidade">-</td>
+                                    <td class="value" id="APvenda"></td>
                                 </tr>
                             </table>
                         </div>
@@ -117,20 +112,23 @@
             const venda = sessionStorage.getItem('venda');
             const defesa = sessionStorage.getItem('defesa');
             const penalidade = sessionStorage.getItem('penalidade');
+            const LocalImagem = sessionStorage.getItem('LocalImagem');
 
-            // Atualiza o título da página
             const tituloPagina = document.getElementById('tituloPagina');
+            const imgElement = document.getElementById('imagePlaceholder');
+            if (imgElement && LocalImagem) {
+                imgElement.src = LocalImagem;
+            }
+            
             if (tituloPagina && nome) {
                 tituloPagina.textContent = nome;
             }
 
-            // Atualiza o título no header
             const elementoNome = document.getElementById('APnome');
             if (elementoNome && nome) {
                 elementoNome.textContent = nome;
             }
 
-            // Atualiza outros elementos
             if (tipo) {
                 const elementoTipo = document.getElementById('APtipo');
                 if (elementoTipo) elementoTipo.textContent = tipo;
@@ -138,7 +136,9 @@
 
             if (alcance) {
                 const elementoAlcance = document.getElementById('APalcance');
+                const elementoAlcanceTab = document.getElementById('APalcanceTAB');
                 if (elementoAlcance) elementoAlcance.textContent = alcance;
+                if (elementoAlcanceTab) elementoAlcanceTab.textContent = alcance;
             }
 
             if (descricao) {
@@ -204,6 +204,16 @@
 
 <style>
     @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+
+    .info-row {
+        display: flex;       
+        align-items: center;
+    }
+    .info-row p {
+        margin: 0 10px;  
+        color: rgb(206, 176, 9);   
+        font-weight: bold;
+    }
 
     *,
     *::before,

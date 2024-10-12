@@ -39,6 +39,8 @@
         });
 
         function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade){
+            let LocalImagem = `../Imagens/${nome}.png`;
+
             sessionStorage.setItem('nome', nome);
             sessionStorage.setItem('tipo', tipo);
             sessionStorage.setItem('alcance', alcance);
@@ -53,8 +55,9 @@
             sessionStorage.setItem('venda', venda);
             sessionStorage.setItem('defesa', defesa);
             sessionStorage.setItem('penalidade', penalidade);
-            switch (nome){
-                case "Espada Curta":
+            sessionStorage.setItem('LocalImagem', LocalImagem);
+            switch (tipo){
+                case "Arma":
                     window.location.href = 'Valores/ArmaPadrão.html';
                     
             }
