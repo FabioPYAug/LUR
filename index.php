@@ -38,10 +38,27 @@
             });
         });
 
-        function valores(id, nome){
+        function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade){
+            sessionStorage.setItem('nome', nome);
+            sessionStorage.setItem('tipo', tipo);
+            sessionStorage.setItem('alcance', alcance);
+            sessionStorage.setItem('descricao', descricao);
+            sessionStorage.setItem('historia', historia);
+            sessionStorage.setItem('entidade', entidade);
+            sessionStorage.setItem('teste', teste);
+            sessionStorage.setItem('dano', dano);
+            sessionStorage.setItem('critico', critico);
+            sessionStorage.setItem('peso', peso);
+            sessionStorage.setItem('tipoDano', tipoDano);
+            sessionStorage.setItem('venda', venda);
+            sessionStorage.setItem('defesa', defesa);
+            sessionStorage.setItem('penalidade', penalidade);
+            switch (nome){
+                case "Espada Curta":
+                    window.location.href = 'Valores/ArmaPadrão.html';
+                    
+            }
             
-            let local = `Valores/${id}${nome}.html`;
-            window.location.href = local;
         }
     </script>
 </body>

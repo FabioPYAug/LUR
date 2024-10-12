@@ -18,8 +18,36 @@ if(isset($_POST["input"])){
             $id = $row['ID'];
             $nome = $row['nome'];
             $tipo = $row['tipo'];
+            $alcance = $row['alcance'];
+            $descricao = $row['descricao'];
+            $historia = $row['historia'];
+            $entidade = $row['entidade'];
+            $teste = $row['teste'];
+            $dano = $row['dano'];
+            $critico = $row['critico'];
+            $peso = $row['peso'];
+            $tipo_dano = $row['tipo_dano'];
+            $venda = $row['venda'];
+            $defesa = $row['defesa'];
+            $penalidade = $row['penalidade'];
+
             ?>
-            <button class="custom-btn btn-1" onclick="valores(<?php echo $id; ?>, '<?php echo addslashes($nome); ?>')">
+            <button class="custom-btn btn-1" onclick="valores(
+            '<?php echo addslashes($nome); ?>',
+            '<?php echo addslashes($tipo); ?>',
+            '<?php echo addslashes($alcance); ?>',
+            '<?php echo addslashes($descricao); ?>',
+            '<?php echo addslashes($historia); ?>',
+            '<?php echo addslashes($entidade); ?>',
+            '<?php echo addslashes($teste); ?>',
+            '<?php echo addslashes($dano); ?>',
+            '<?php echo addslashes($critico); ?>',
+            '<?php echo addslashes($peso); ?>',
+            '<?php echo addslashes($tipo_dano); ?>',
+            '<?php echo addslashes($venda); ?>',
+            '<?php echo addslashes($defesa); ?>',
+            '<?php echo addslashes($penalidade); ?>',
+            )">
                 <span class="item-left"><?php echo $id; ?></span>
                 <span class="item-center"><?php echo $nome; ?></span>
                 <span class="item-right"><?php echo $tipo; ?></span>
