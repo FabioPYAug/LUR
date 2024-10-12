@@ -39,6 +39,7 @@
         });
 
         function valores(id, nome){
+            
             let local = `Valores/${id}${nome}.html`;
             window.location.href = local;
         }
