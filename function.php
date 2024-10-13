@@ -30,6 +30,8 @@ if(isset($_POST["input"])){
             $venda = $row['venda'];
             $defesa = $row['defesa'];
             $penalidade = $row['penalidade'];
+            $acao = $row['acao'];
+            $efeito = $row['efeito'];
 
             ?>
             <button class="custom-btn btn-1" onclick="valores(
@@ -47,6 +49,8 @@ if(isset($_POST["input"])){
             '<?php echo addslashes($venda); ?>',
             '<?php echo addslashes($defesa); ?>',
             '<?php echo addslashes($penalidade); ?>',
+            '<?php echo addslashes($acao); ?>',
+            '<?php echo addslashes($efeito); ?>'
             )">
                 <span class="item-left"><?php echo $id; ?></span>
                 <span class="item-center"><?php echo $nome; ?></span>

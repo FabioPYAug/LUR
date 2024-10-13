@@ -38,8 +38,7 @@
             });
         });
 
-        function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade){
-
+        function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito){
             let LocalImagem = `../Imagens/PlaceHolder.png`;
 
             sessionStorage.setItem('nome', nome);
@@ -57,9 +56,14 @@
             sessionStorage.setItem('defesa', defesa);
             sessionStorage.setItem('penalidade', penalidade);
             sessionStorage.setItem('LocalImagem', LocalImagem);
+            sessionStorage.setItem('acao', acao);
+            sessionStorage.setItem('efeito', efeito);
             switch (tipo){
                 case "Arma":
                     window.location.href = 'Valores/ArmaPadrão.html';
+                    break;
+                case "Material":
+                    window.location.href = 'Valores/ItemPadrão.html';
             }
             
         }
