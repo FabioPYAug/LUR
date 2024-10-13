@@ -63,7 +63,7 @@
                     window.location.href = 'Valores/ArmaPadrão.html';
                     break;
                 case "Material":
-                    window.location.href = 'Valores/ItemPadrão.html';
+                    window.location.href = 'Valores/MaterialPadrão.html';
             }
             
         }
