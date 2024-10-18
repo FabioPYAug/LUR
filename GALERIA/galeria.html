@@ -6,15 +6,13 @@
     <title>Galeria com Filtro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
-    stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../index.php'">
-    <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
-</svg>
-
-
 </head>
 <body>
+
+<svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
+stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../lobby.php'">
+    <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
+</svg>
 
 <div class="gallery">
     <ul class="controls">
@@ -62,33 +60,39 @@
             });
         });
     });
+    
 </script>
 
 <style>
-    .icon {
-    width: 52px;
-    height: 52px;
-    color: gold; 
-    cursor: pointer; 
-    transition: color 0.3s ease;
-    }
-
-    .icon:hover {
-        color: white; 
-    }
-
-
+    
     * {
-        margin: 0; padding: 0;
+        margin: 0; 
+        padding: 0;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
         text-transform: capitalize;
         transition: all .2s cubic-bezier(.34,1.12,.68,1.31);
     }
+    body{
+        background: #000000;
+    }
+    .icon {
+        width: 52px;
+        height: 52px;
+        color: white; 
+        cursor: pointer; 
+        position: absolute; 
+        top: 10px; 
+        left: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .icon:hover {
+        color: gold; 
+    }
 
     .gallery {
         min-height: 100vh;
-        background: #000000;
         padding-bottom: 100px;
     }
 
@@ -130,19 +134,26 @@
         height: 450px;
         width: 450px;
         overflow: hidden;
-        border: 15px solid #fff;
+        border: 7px solid #fff;
         box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
         margin: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    }
+
+    .gallery .image-container .image:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); 
     }
 
     .gallery .image-container .image img {
         height: 100%;
         width: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease; 
     }
 
     .gallery .image-container .image:hover img {
-        transform: scale(1.4);
+        transform: scale(1.1); 
     }
 </style>
 
