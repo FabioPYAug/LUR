@@ -22,39 +22,47 @@
             position: relative; 
         }
 
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            background: rgba(28, 1, 48, 0.8);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.3s ease; 
+        }
+
+        header.scrolled {
+            background: rgba(28, 1, 48, 1);
+        }
+
         .icon {
             width: 52px;
             height: 52px;
             color: white; 
             cursor: pointer; 
-            position: absolute; 
-            top: 10px; 
-            left: 10px;
             transition: color 0.3s ease;
-            z-index: 10; 
         }
 
         .icon:hover {
             color: rgb(255, 0, 234); 
         }
 
-        .gallery {
-            min-height: 100vh;
-            padding-bottom: 100px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .gallery .controls {
+        .controls {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 20px 0;
-            list-style: none;
+            padding: 0;
+            list-style-type: none;
         }
 
-        .gallery .controls .buttons {
+        .controls .buttons {
             height: 45px;
             width: 150px;
             background: #a68bdb; 
@@ -62,15 +70,23 @@
             font-size: 20px;
             line-height: 40px;
             cursor: pointer;
-            margin: 20px;
+            margin: 0 10px;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
             text-align: center;
             transition: background 0.3s, color 0.3s;
         }
 
-        .gallery .controls .buttons.active {
+        .controls .buttons.active {
             background: #ba55d3; 
             color: #fff;
+        }
+
+        .gallery {
+            padding-top: 80px;
+            min-height: 100vh;
+            padding-bottom: 100px;
+            position: relative;
+            z-index: 1;
         }
 
         .gallery .image-container {
@@ -139,12 +155,12 @@
 </head>
 <body>
 
-    <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
-    stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../lobby.php'">
-        <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
-    </svg>
+    <header>
+        <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../lobby.php'">
+            <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
+        </svg>
 
-    <div class="gallery">
         <ul class="controls">
             <li class="buttons active" data-filter="all">Gerais</li>
             <li class="buttons" data-filter="Conto">Conto</li>
@@ -152,7 +168,9 @@
             <li class="buttons" data-filter="Minis">Minis</li>
             <li class="buttons" data-filter="Tokens">Tokens</li>
         </ul>
+    </header>
 
+    <div class="gallery">
         <div class="image-container"></div>
     </div>
 
@@ -209,6 +227,15 @@
             }
 
             setInterval(createStar, 150);
+
+            // Efeito de rolagem para o cabeçalho
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('header').addClass('scrolled');
+                } else {
+                    $('header').removeClass('scrolled');
+                }
+            });
         });
     </script>
 
