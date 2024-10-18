@@ -22,6 +22,31 @@
             position: relative; 
         }
 
+        /* Estilo da barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 12px; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(155, 89, 182, 0.8); /* Cor do "thumb" */
+            border-radius: 6px; 
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(142, 68, 173, 0.8); /* Cor do "thumb" ao passar o mouse */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1); /* Cor da pista da barra de rolagem */
+            border-radius: 6px; 
+        }
+
+        /* Estilo da barra de rolagem para Firefox */
+        * {
+            scrollbar-width: thin; 
+            scrollbar-color: rgba(155, 89, 182, 0.8) rgba(255, 255, 255, 0.1);
+        }
+
         header {
             position: fixed;
             top: 0;
@@ -97,8 +122,8 @@
         }
 
         .gallery .image-container .image {
-            height: 450px;
-            width: 450px;
+            height: auto; /* Altura automática */
+            width: calc(33.33% - 40px); /* Ajuste de largura com margem */
             overflow: hidden;
             border: 7px solid #513e79; 
             box-shadow: 0 3px 10px rgba(148, 0, 211, 0.5);
@@ -146,9 +171,22 @@
             }
         }
 
+        @media screen and (max-width: 900px) {
+            .gallery .image-container .image {
+                width: calc(50% - 40px); /* Ajusta para duas colunas */
+            }
+        }
+
         @media screen and (max-width: 600px) {
+            .gallery .image-container .image {
+                width: calc(100% - 40px); /* Ajusta para uma coluna */
+            }
             .star {
                 font-size: 15px;
+            }
+            header {
+                flex-direction: column; /* Empilha os elementos do cabeçalho */
+                align-items: flex-start; /* Alinha os itens à esquerda */
             }
         }
     </style>
@@ -183,7 +221,7 @@
             $.getJSON('galeria.json', function(data) {
                 data.forEach(function(image) {
                     let imgElement = `<a href="${image.url}" class="image ${image.categoria}">
-                                        <img src="${image.url}" alt="">
+                                        <img src="${image.url}" alt="Imagem">
                                       </a>`;
                     $('.image-container').append(imgElement);
                 });
