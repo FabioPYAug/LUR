@@ -11,8 +11,9 @@
         <h1>Logo</h1>
         <nav>
             <a href="#">Retorno</a>
-            <a href="#">Pesquisa</a>
+            <a href="#" onclick="window.location.href='SEARCH/index.php'">Pesquisa</a>
             <a href="#">Mapa</a>
+            <a href="#" onclick="window.location.href='GALERIA/galeria.html'">Galeria</a>
             <a href="#">Perfil</a>
         </nav>
     </header>
