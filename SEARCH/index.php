@@ -34,16 +34,18 @@ include 'style.php';
     </section>
 
     <section class="banner banner-2">
-    <div class="search">
-        <label for="searchInput">
-            <span class="material-symbols-outlined"></span>
-        </label>
-        <input type="text" id="searchInput" placeholder="Pesquisar">
+    <div class="book-cover">
+        <div class="book-page">
+            <div class="search">
+                <label for="searchInput">
+                    <span class="material-symbols-outlined"></span>
+                </label>
+                <input type="text" id="searchInput" placeholder="Pesquisar">
+            </div>
+            <div id="resultado"></div>
+        </div>
     </div>
-    </section>
-    
-
-    <div id="resultado"></div>
+</section>
 
     <script type="text/javascript">
         $(document).ready(function () {

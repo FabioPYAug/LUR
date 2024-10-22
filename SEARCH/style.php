@@ -73,23 +73,13 @@ header ul li a {
     transition: .2s;
 }
 
-.banner {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    background-attachment: fixed;
-}
-
 .banner-1 {
     background-color: #1a1a1a; 
     color: #fff;
 }
 
 .banner-2 {
-    background-color: #; 
+    background-color: white; 
 }
 
 .banner-3 {
@@ -110,7 +100,8 @@ header ul li a {
     align-items: center;
     border: 1px solid #ccc;
     background-color: #00000006;
-    width: 750px;
+    width: 100%; /* Para responsividade */
+    max-width: 750px;
     border-radius: 20px;
     padding: 5px 10px;
     color: #4b4b4b;
@@ -128,8 +119,30 @@ header ul li a {
 
 #resultado {
     max-width: 750px;
-    margin: 20px auto;
-    display: none;
+    margin: 10px auto; /* Menor margem para estar mais próximo da busca */
+    display: block;
+    position: relative;
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+    flex-direction: column; /* Para empilhar os elementos verticalmente */
+}
+
+@media (max-width: 768px) {
+    .search {
+        width: 90%; /* Reduzir a largura em telas menores */
+    }
+
+    #resultado {
+        width: 90%; /* Manter a largura responsiva */
+    }
 }
 
 h6 {
