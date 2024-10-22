@@ -8,7 +8,7 @@
 
 html {
     height: 100%;
-    background-color: #fff; /* Background set to white */
+    background-color: #fff;
 }
 
 .container {
@@ -79,12 +79,15 @@ header ul li a {
 }
 
 .banner-2 {
-    background-color: white; 
+    background-image: url('../Imagens/TOMOFUNDO.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #4b3a29;
+    border: 7px solid #7f6a4d;
+    text-align: center;
 }
 
-.banner-3 {
-    background-color: #e6b800; 
-}
 
 .banner h1 {
     font-size: 4em;
@@ -98,14 +101,14 @@ header ul li a {
 .search {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    background-color: #00000006;
-    width: 100%; /* Para responsividade */
+    border: 2px solid #7f6a4d;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
     max-width: 750px;
     border-radius: 20px;
-    padding: 5px 10px;
-    color: #4b4b4b;
+    padding: 10px;
     margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #searchInput {
@@ -115,11 +118,12 @@ header ul li a {
     width: 100%;
     outline: none;
     font-size: 20px;
+    color: #4b3a29;
 }
 
 #resultado {
     max-width: 750px;
-    margin: 10px auto; /* Menor margem para estar mais próximo da busca */
+    margin: 10px auto;
     display: block;
     position: relative;
 }
@@ -132,16 +136,16 @@ header ul li a {
     text-align: center;
     position: relative;
     background-attachment: fixed;
-    flex-direction: column; /* Para empilhar os elementos verticalmente */
+    flex-direction: column; 
 }
 
 @media (max-width: 768px) {
     .search {
-        width: 90%; /* Reduzir a largura em telas menores */
+        width: 90%;
     }
 
     #resultado {
-        width: 90%; /* Manter a largura responsiva */
+        width: 90%;
     }
 }
 
