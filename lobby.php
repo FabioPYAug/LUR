@@ -10,7 +10,7 @@
     <header>
         <h1>Logo</h1>
         <nav>
-            <a href="#">Documentos</a>
+            <a href="#" onclick="window.location.href='DOCUMENTOS/documentos.html'">Documentos</a>
             <a href="#" onclick="window.location.href='SEARCH/index.php'">Pesquisa</a>
             <a href="#">Mapa</a>
             <a href="#" onclick="window.location.href='GALERIA/galeria.html'">Galeria</a>
