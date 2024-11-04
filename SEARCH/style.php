@@ -8,7 +8,7 @@
 
 html {
     height: 100%;
-    background-color: #fff;
+    background-color: #1a1a1a;
 }
 
 .container {
@@ -30,51 +30,41 @@ header {
     left: 0;
     transition: .5s;
     z-index: 1000;
+    background-color: #1a1a1a;
 }
 
 header.rolagem {
-    background-color: #fff;
+    background-color: #2e2e3a;
     padding: 20px 4%;
 }
 
 header.rolagem a, header.rolagem i {
-    color: #FE775A;
+    color: #bb86fc;
 }
 
 header i {
     font-size: 30px;
-    color: #fff;
-}
-
-header ul {
-    list-style-type: none;
-}
-
-header ul li {
-    display: inline-block;
-    margin: 0 40px;
-}
-
-header ul li a {
-    color: #000; 
-    text-decoration: none;
+    color: #bb86fc;
 }
 
 .btn-contato button {
     border-radius: 99px;
-    gap: 30px;
     font-size: 20px;
     width: 120px;
     height: 40px;
     border: 0;
-    background-color: #FE775A;
+    background-color: #6200ea; 
     color: #fff;
     cursor: pointer;
     transition: .2s;
 }
 
+.btn-contato button:hover {
+    background-color: #3700b3;
+}
+
 .banner-1 {
-    background-color: #1a1a1a; 
+    background-color: #2e2e3a;
     color: #fff;
 }
 
@@ -83,11 +73,10 @@ header ul li a {
     background-size: cover;
     background-position: center;
     padding: 50px 0;
-    color: #4b3a29;
-    border: 7px solid #7f6a4d;
+    color: #d0c7f7;
+    border: 7px solid #3a3a55;
     text-align: center;
 }
-
 
 .banner h1 {
     font-size: 4em;
@@ -95,14 +84,14 @@ header ul li a {
 }
 
 .banner h1 span {
-    color: #FFAE81;
+    color: #bb86fc;
 }
 
 .search {
     display: flex;
     align-items: center;
-    border: 2px solid #7f6a4d;
-    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #4a4a5d;
+    background-color: rgba(46, 46, 58, 0.8);
     width: 100%;
     max-width: 750px;
     border-radius: 20px;
@@ -118,7 +107,7 @@ header ul li a {
     width: 100%;
     outline: none;
     font-size: 20px;
-    color: #4b3a29;
+    color: #d0c7f7;
 }
 
 #resultado {
@@ -153,7 +142,7 @@ h6 {
     margin: 20px 0 0 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
+    color: #d0c7f7;
     font-size: 25px;
     text-align: center;
 }
@@ -161,7 +150,7 @@ h6 {
 .custom-btn {
     width: 750px;
     height: 40px;
-    color: black;
+    color: #d0c7f7;
     border-radius: 5px;
     padding: 10px 25px;
     font-family: 'Lato', sans-serif;
@@ -176,30 +165,17 @@ h6 {
 }
 
 .btn-1 {
-    background: #00000006;
+    background: rgba(72, 61, 139, 0.3);
     border: none;
 }
 
 .btn-1:hover {
-    background: rgb(255, 255, 255);
-    border-color: yellow;
+    background: rgba(72, 61, 139, 0.6);
+    border-color: #bb86fc;
 }
 
-.item-left {
-    flex: 1;
-    text-align: left;
+.item-left, .item-center, .item-right {
     background: transparent;
 }
 
-.item-center {
-    flex: 20;
-    text-align: left;
-    background: transparent;
-}
-
-.item-right {
-    flex: 1;
-    text-align: right;
-    background: transparent;
-}
 </style>
