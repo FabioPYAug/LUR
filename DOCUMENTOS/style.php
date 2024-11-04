@@ -53,7 +53,7 @@ header i {
     width: 120px;
     height: 40px;
     border: 0;
-    background-color: #e8c45f;
+    background-color: #FFD700;
     color: #3e1e02;
     cursor: pointer;
     transition: .3s;
@@ -136,4 +136,5 @@ header i {
         width: 90%;
     }
 }
+
 </style>
