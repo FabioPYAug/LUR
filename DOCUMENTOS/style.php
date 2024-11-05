@@ -82,7 +82,6 @@ header i {
     background-position: center;
     padding: 50px 0;
     color: #8d5524;
-    border: 5px solid #d3a35f;
     text-align: center;
 }
 

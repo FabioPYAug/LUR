@@ -150,7 +150,6 @@ header i {
     background-position: center;
     padding: 50px 0;
     color: #d0c7f7;
-    border: 7px solid #3a3a55;
     text-align: center;
 }
 
