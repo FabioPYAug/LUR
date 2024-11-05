@@ -22,7 +22,7 @@ include 'style.php';
                 <a><i class="bi bi-moon"></i></a>
                 <div class="btn-contato">
                     <a onclick="window.location.href='../lobby.php'"><button>Retornar</button></a>
-                    <a onclick="window.location.href='../lobby.php'"><button>Filtro</button></a>
+                    <a><button>Filtro</button></a>
                 </div>
             </div>
         </div>
