@@ -19,7 +19,7 @@ include 'style.php';
     <header id="header">
         <div class="container">
             <div class="flex">
-                <a href="#"><i class="bi bi-sun"></i></a>
+                <a><i class="bi bi-sun"></i></a>
                 <div class="btn-contato">
                     <a onclick="window.location.href='../lobby.php'"><button>Retornar</button></a>
                     <a onclick="window.location.href='../lobby.php'"><button>Filtro</button></a>

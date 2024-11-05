@@ -47,6 +47,10 @@ header i {
     color: #ffd966;
 }
 
+.btn-contato a {
+    margin-right: 30px; 
+}
+
 .btn-contato button {
     border-radius: 30px;
     font-size: 20px;
@@ -56,8 +60,20 @@ header i {
     background-color: #FFD700;
     color: #3e1e02;
     cursor: pointer;
-    transition: .3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
+.btn-contato button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    background-color: #FFC107; 
+}
+
+.btn-contato button:active {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 .banner-1 {
     background: linear-gradient(160deg, #f4c742, #f49756);

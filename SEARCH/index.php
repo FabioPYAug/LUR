@@ -19,9 +19,10 @@ include 'style.php';
     <header id="header">
         <div class="container">
             <div class="flex">
-                <a href="#"><i class="bi bi-moon"></i></a>
+                <a><i class="bi bi-moon"></i></a>
                 <div class="btn-contato">
                     <a onclick="window.location.href='../lobby.php'"><button>Retornar</button></a>
+                    <a onclick="window.location.href='../lobby.php'"><button>Filtro</button></a>
                 </div>
             </div>
         </div>
@@ -31,18 +32,6 @@ include 'style.php';
         <div class="centered-text">
             <h1>PESQUISA EM <span>NOITE ESCURA</span></h1>
         </div>
-    </section>
-
-    <section class="banner banner-2">
-        
-        <div class="search">
-            <label for="searchInput">
-                <span class="material-symbols-outlined"></span>
-            </label>
-            <input type="text" id="searchInput" placeholder="Pesquisar">
-        </div>
-        <div id="resultado"></div>
-        <div class="spiral-container"></div>
     </section>
 
     <section class="banner banner-2">
