@@ -30,7 +30,7 @@ include 'style.php';
 
     <section class="banner banner-1">
         <div class="centered-text">
-            <h1>PESQUISA EM <span>ORIGEM SOLAR</span></h1>
+            <h1>PESQUISA NA <span>ORIGEM SOLAR</span></h1>
         </div>
     </section>
 

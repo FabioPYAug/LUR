@@ -72,6 +72,7 @@
         opacity: 0;
         transform: translateY(-900px) scale(5.0);
         height: 10px;
+        
     }
 }
 
