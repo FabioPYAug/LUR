@@ -112,7 +112,35 @@ include 'style.php';
 </html>
 <script>
     window.addEventListener("scroll", function () {
-        let header = document.querySelector('#header')
-        header.classList.toggle('rolagem', window.scrollY > 500)
-    })
+    const header = document.querySelector('#header');
+    header.classList.toggle('rolagem', window.scrollY > 50);
+});
+
+
+const particleContainer = document.createElement('div');
+particleContainer.classList.add('particle-container');
+document.body.appendChild(particleContainer);
+
+const particleCount = 35; 
+
+function createParticle() {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    
+    particle.style.left = `${Math.random() * 100}vw`;
+    particle.style.animationDuration = `${1 + Math.random() * 3}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+
+    particleContainer.appendChild(particle);
+
+    particle.addEventListener('animationend', () => {
+        particle.remove();
+        createParticle(); 
+    });
+}
+
+for (let i = 0; i < particleCount; i++) {
+    createParticle();
+}
+
 </script>

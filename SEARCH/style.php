@@ -1,4 +1,80 @@
 <style>
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s;
+}
+
+#header.rolagem {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.btn-contato button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.particle-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.4);
+    animation: moveUp linear infinite;
+    opacity: 0;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        height: 15px;
+    }
+    25% {
+        opacity: 0.8;
+        transform: translateY(-150px) scale(2);
+        height: 30px;
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-300px) scale(3.0);
+        height: 100px;
+    }
+    50% {
+        opacity: 0.2;
+        transform: translateY(-450px) scale(4.0);
+        height: 60px;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-900px) scale(5.0);
+        height: 10px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -69,7 +145,6 @@ header i {
 }
 
 .banner-2 {
-    background-image: url('../Imagens/TOMOFUNDO.png');
     background-size: cover;
     background-position: center;
     padding: 50px 0;
