@@ -5,7 +5,7 @@
 ![GitHub open pull requests](https://img.shields.io/github/issues-pr/FabioPYAug/Luna-RPG?style=for-the-badge)
 
 
-
+## Descrição
 Lun é um site desenvolvido para facilitar e organizar sessões de RPG, proporcionando uma experiência aprimorada com acesso rápido a recursos essenciais e estatísticas dos jogadores. :D
 
 ## Funcionalidades
