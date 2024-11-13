@@ -99,30 +99,30 @@ include 'style-doc.php';
     })
 
     const words = ["Sol", "Lua", "Baúrda", "Zoystea", "Aystea", "Kruspoll", "Deuses", "Parasita", "Bobby", "Erin", "Flora", "PlinPlinPlon", "Luniére", "Pietro", "Nila", "Allyan", "Onho", "Ely", "Tina", "Snuggle"];
-    const container = document.getElementById("words-container");
+const container = document.getElementById("words-container");
 
-    function createWord() {
-        const word = document.createElement("div");
-        word.classList.add("word");
-        word.textContent = words[Math.floor(Math.random() * words.length)];
+function createWord() {
+    const word = document.createElement("div");
+    word.classList.add("word");
+    word.textContent = words[Math.floor(Math.random() * words.length)];
 
-        const xPos = Math.random() * 100;
-        const yPos = Math.random() * 100;
-        const rotation = (Math.random() * 360) + "deg";
+    const xPos = Math.random() * 100;
+    const yPos = Math.random() * 100;
+    const rotation = (Math.random() * 360) + "deg";
 
-        const delay = Math.random() * 3;
-        const scale = (Math.random() * 0.5 + 0.5).toFixed(2);
+    const delay = Math.random() * 3;
+    const scale = (Math.random() * 0.5 + 0.5).toFixed(2);
 
-        word.style.left = `${xPos}vw`;
-        word.style.top = `${yPos}vh`;
-        word.style.transform = `rotate(${rotation}) scale(${scale})`; 
-        word.style.animationDelay = `${delay}s`;
+    word.style.left = `${xPos}vw`;
+    word.style.top = `${yPos}vh`;
+    word.style.transform = `rotate(${rotation}) scale(${scale})`; 
+    word.style.animationDelay = `${delay}s`;
 
-        container.appendChild(word);
+    container.appendChild(word);
 
-        setTimeout(() => {
-            word.remove();
-        }, 5000);
-    }
-    setInterval(createWord, 50);
+    setTimeout(() => {
+        word.remove();
+    }, 5000);
+}
+setInterval(createWord, 50);
 </script>

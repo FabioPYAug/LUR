@@ -40,10 +40,6 @@ header.rolagem {
     padding: 20px 4%;
 }
 
-header.rolagem a, header.rolagem i {
-    color: #FFF8D6;
-}
-
 header i {
     font-size: 30px;
     color: #B07E63;
@@ -52,14 +48,6 @@ header i {
 header.rolagem .btn-contato button {
     background-color: #CD8861;
     color: #FFF8D6;
-}
-
-header.rolagem .btn-contato button:hover {
-    background-color: #AF5B2C;
-}
-
-header .btn-contato a {
-    margin-right: 30px;
 }
 
 header .btn-contato button {
@@ -169,22 +157,21 @@ header .btn-contato button:hover {
 
 @keyframes growFade {
     0% {
-        opacity: 0.5;
-        transform: scale(0.5)
+        transform: scale(0.8);
+        opacity: 8;
     }
     100% {
+        transform: scale(1);
         opacity: 0;
-        transform: scale(1)
     }
 }
 
-@media (max-width: 768px) {
-    .search {
-        width: 90%;
-    }
-
-    header {
-        padding: 20px 2%;
-    }
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 </style>
