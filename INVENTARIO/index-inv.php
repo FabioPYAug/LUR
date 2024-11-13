@@ -1,5 +1,5 @@
 <?php
-include 'style.php';
+include 'style-inv.php';
 ?>
 
 <!DOCTYPE html>

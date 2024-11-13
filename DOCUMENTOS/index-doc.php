@@ -1,5 +1,5 @@
 <?php 
-include 'style.php';
+include 'style-doc.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ include 'style.php';
                 var input = $(this).val().trim(); 
                 if(input != ""){
                     $.ajax({
-                        url: "function.php",
+                        url: "functionDoc.php",
                         method: "POST",
                         data: {input: input},
                         success: function(data) {
@@ -73,38 +73,7 @@ include 'style.php';
 
             sessionStorage.setItem('nome', nome);
             sessionStorage.setItem('tipo', tipo);
-            sessionStorage.setItem('alcance', alcance);
-            sessionStorage.setItem('descricao', descricao);
-            sessionStorage.setItem('historia', historia);
-            sessionStorage.setItem('entidade', entidade);
-            sessionStorage.setItem('teste', teste);
-            sessionStorage.setItem('dano', dano);
-            sessionStorage.setItem('critico', critico);
-            sessionStorage.setItem('peso', peso);
-            sessionStorage.setItem('tipoDano', tipoDano);
-            sessionStorage.setItem('venda', venda);
-            sessionStorage.setItem('defesa', defesa);
-            sessionStorage.setItem('penalidade', penalidade);
-            sessionStorage.setItem('LocalImagem', LocalImagem);
-            sessionStorage.setItem('acao', acao);
-            sessionStorage.setItem('efeito', efeito);
-            switch (tipo){
-                case "Arma":
-                    window.location.href = 'Valores/ArmaPadrão.html'
-                    break;
-                case "Material":
-                    window.location.href = 'Valores/MaterialPadrão.html'
-                    break;
-                case "Poção":
-                    window.location.href = 'Valores/PoçãoPadrão.html'
-                    break;
-                case "Moeda":
-                    window.location.href = 'Valores/MoedaPadrão.html'
-                    break;
-                case "Itens":
-                    window.location.href = 'Valores/ItensPadrão.html'
-                    break;
-            }
+            sessionStorage.setItem('historia', relacao);
         }
     </script>
 </body>

@@ -1,5 +1,5 @@
 <?php 
-include("conexao.php");
+include("../conexao.php");
 if(isset($_POST["input"])){
 
     $input = trim($_POST["input"]);
