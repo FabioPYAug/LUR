@@ -201,7 +201,8 @@ header i {
 #resultado {
     max-width: 750px;
     margin: 10px auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'style.php';
 ?>
 
@@ -35,113 +35,114 @@ include 'style.php';
     </section>
 
     <section class="banner banner-2">
-        
+
         <div class="search">
             <label for="searchInput">
                 <span class="material-symbols-outlined"></span>
             </label>
             <input type="text" id="searchInput" placeholder="Pesquisar">
         </div>
-        <div id="resultado"></div>
-        <div class="spiral-container"></div>
-    </section>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#searchInput").keyup(function(){
-                var input = $(this).val().trim(); 
-                if(input != ""){
-                    $.ajax({
-                        url: "function.php",
-                        method: "POST",
-                        data: {input: input},
-                        success: function(data) {
-                            if(data.trim() != "") {
-                                $("#resultado").html(data).css("display", "block"); 
-                            } else {
-                                $("#resultado").css("display", "none"); 
-                            }
+        <div id="resultado">
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#searchInput").keyup(function() {
+                        var input = $(this).val().trim();
+                        if (input != "") {
+                            $.ajax({
+                                url: "function.php",
+                                method: "POST",
+                                data: {
+                                    input: input
+                                },
+                                success: function(data) {
+                                    if (data.trim() != "") {
+                                        $("#resultado").html(data).css("display", "block");
+                                    } else {
+                                        $("#resultado").css("display", "none");
+                                    }
+                                }
+                            });
+                        } else {
+                            $("#resultado").css("display", "none");
                         }
                     });
-                } else {
-                    $("#resultado").css("display", "none"); 
+                });
+
+                function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito) {
+                    let LocalImagem = `../Imagens/PlaceHolder.png`;
+
+                    sessionStorage.setItem('nome', nome);
+                    sessionStorage.setItem('tipo', tipo);
+                    sessionStorage.setItem('alcance', alcance);
+                    sessionStorage.setItem('descricao', descricao);
+                    sessionStorage.setItem('historia', historia);
+                    sessionStorage.setItem('entidade', entidade);
+                    sessionStorage.setItem('teste', teste);
+                    sessionStorage.setItem('dano', dano);
+                    sessionStorage.setItem('critico', critico);
+                    sessionStorage.setItem('peso', peso);
+                    sessionStorage.setItem('tipoDano', tipoDano);
+                    sessionStorage.setItem('venda', venda);
+                    sessionStorage.setItem('defesa', defesa);
+                    sessionStorage.setItem('penalidade', penalidade);
+                    sessionStorage.setItem('LocalImagem', LocalImagem);
+                    sessionStorage.setItem('acao', acao);
+                    sessionStorage.setItem('efeito', efeito);
+                    switch (tipo) {
+                        case "Arma":
+                            window.location.href = 'Valores/ArmaPadrão.html'
+                            break;
+                        case "Material":
+                            window.location.href = 'Valores/MaterialPadrão.html'
+                            break;
+                        case "Poção":
+                            window.location.href = 'Valores/PoçãoPadrão.html'
+                            break;
+                        case "Moeda":
+                            window.location.href = 'Valores/MoedaPadrão.html'
+                            break;
+                        case "Itens":
+                            window.location.href = 'Valores/ItensPadrão.html'
+                            break;
+                    }
+
                 }
-            });
-        });
-
-        function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito){
-            let LocalImagem = `../Imagens/PlaceHolder.png`;
-
-            sessionStorage.setItem('nome', nome);
-            sessionStorage.setItem('tipo', tipo);
-            sessionStorage.setItem('alcance', alcance);
-            sessionStorage.setItem('descricao', descricao);
-            sessionStorage.setItem('historia', historia);
-            sessionStorage.setItem('entidade', entidade);
-            sessionStorage.setItem('teste', teste);
-            sessionStorage.setItem('dano', dano);
-            sessionStorage.setItem('critico', critico);
-            sessionStorage.setItem('peso', peso);
-            sessionStorage.setItem('tipoDano', tipoDano);
-            sessionStorage.setItem('venda', venda);
-            sessionStorage.setItem('defesa', defesa);
-            sessionStorage.setItem('penalidade', penalidade);
-            sessionStorage.setItem('LocalImagem', LocalImagem);
-            sessionStorage.setItem('acao', acao);
-            sessionStorage.setItem('efeito', efeito);
-            switch (tipo){
-                case "Arma":
-                    window.location.href = 'Valores/ArmaPadrão.html'
-                    break;
-                case "Material":
-                    window.location.href = 'Valores/MaterialPadrão.html'
-                    break;
-                case "Poção":
-                    window.location.href = 'Valores/PoçãoPadrão.html'
-                    break;
-                case "Moeda":
-                    window.location.href = 'Valores/MoedaPadrão.html'
-                    break;
-                case "Itens":
-                    window.location.href = 'Valores/ItensPadrão.html'
-                    break;
-            }
-            
-        }
-    </script>
+            </script>
+        </div>
+    </section>
 </body>
+
 </html>
 <script>
-    window.addEventListener("scroll", function () {
-    const header = document.querySelector('#header');
-    header.classList.toggle('rolagem', window.scrollY > 50);
-});
-
-
-const particleContainer = document.createElement('div');
-particleContainer.classList.add('particle-container');
-document.body.appendChild(particleContainer);
-
-const particleCount = 42;
-
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    
-    particle.style.left = `${Math.random() * 100}vw`;
-    particle.style.animationDuration = `${1 + Math.random() * 2}s`;
-    particle.style.animationDelay = `${Math.random() * 5}s`;
-
-    particleContainer.appendChild(particle);
-
-    particle.addEventListener('animationend', () => {
-        particle.remove();
-        createParticle(); 
+    window.addEventListener("scroll", function() {
+        const header = document.querySelector('#header');
+        header.classList.toggle('rolagem', window.scrollY > 50);
     });
-}
 
-for (let i = 0; i < particleCount; i++) {
-    createParticle();
-}
 
+    const particleContainer = document.createElement('div');
+    particleContainer.classList.add('particle-container');
+    document.body.appendChild(particleContainer);
+
+    const particleCount = 42;
+
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.animationDuration = `${1 + Math.random() * 2}s`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+
+        particleContainer.appendChild(particle);
+
+        particle.addEventListener('animationend', () => {
+            particle.remove();
+            createParticle();
+        });
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+        createParticle();
+    }
 </script>
