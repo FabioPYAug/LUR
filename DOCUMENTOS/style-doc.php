@@ -1,4 +1,5 @@
 <style>
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html {
+/* Body e Background */
+html, body {
     height: 100%;
-    background-color: #f4efe1;
+    background-color: #FFF67F; /* Tom amarelo claro */
 }
 
 .container {
@@ -22,6 +24,7 @@ html {
     justify-content: space-between;
 }
 
+/* Cabeçalho */
 header {
     width: 100%;
     padding: 60px 4%;
@@ -30,21 +33,21 @@ header {
     left: 0;
     transition: .5s;
     z-index: 1000;
-    background: #d3a35f;
+    background: #E5BF76; /* Tom dourado claro */
 }
 
 header.rolagem {
-    background-color: #8d5524;
+    background-color: #AF5B2C; /* Tom laranja queimado */
     padding: 20px 4%;
 }
 
 header.rolagem a, header.rolagem i {
-    color: #e8c45f;
+    color: #FFF67F; /* Amarelo claro */
 }
 
 header i {
     font-size: 30px;
-    color: #ffd966;
+    color: #884121; /* Tom marrom mais escuro */
 }
 
 .btn-contato a {
@@ -57,8 +60,8 @@ header i {
     width: 120px;
     height: 40px;
     border: 0;
-    background-color: #FFD700;
-    color: #3e1e02;
+    background-color: #CD8861; /* Tom bege queimado */
+    color: #261E1A; /* Marrom escuro */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -66,7 +69,7 @@ header i {
 .btn-contato button:hover {
     transform: scale(1.1); 
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    background-color: #FFC107; 
+    background-color: #AF5B2C; /* Laranja queimado */
 }
 
 .btn-contato button:active {
@@ -74,10 +77,10 @@ header i {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Banner 1 */
 .banner-1 {
-    background: linear-gradient(160deg, #f4c742, #f49756);
-    color: #3e1e02;
+    background: linear-gradient(160deg, #E5BF76, #FFF67F); /* Gradiente dourado para amarelo claro */
+    color: #261E1A; /* Marrom escuro */
     padding: 100px 0;
     text-align: center;
 }
@@ -85,26 +88,25 @@ header i {
 .banner-1 h1 {
     font-size: 4em;
     font-weight: bold;
-    color: #fff;
+    color: #261E1A;
 }
 
 .banner-1 h1 span {
-    color: #ffd966;
+    color: #AF5B2C; /* Laranja queimado */
 }
 
+/* Banner 2 */
 .banner-2 {
-    background-image: url('../Imagens/SolarBackground.png');
-    background-size: cover;
-    background-position: center;
+    background-color: #884121; /* Marrom escuro */
     padding: 50px 0;
-    color: #8d5524;
+    color: #FFF67F; /* Amarelo claro */
     text-align: center;
 }
 
 .search {
     display: flex;
     align-items: center;
-    border: 2px solid #d3a35f;
+    border: 2px solid #CD8861; /* Tom bege queimado */
     background-color: rgba(255, 250, 240, 0.9);
     width: 100%;
     max-width: 750px;
@@ -121,7 +123,7 @@ header i {
     width: 100%;
     outline: none;
     font-size: 18px;
-    color: #8d5524;
+    color: #261E1A; /* Marrom escuro */
 }
 
 #resultado {
@@ -142,6 +144,7 @@ header i {
     flex-direction: column; 
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .search {
         width: 90%;
@@ -151,5 +154,4 @@ header i {
         width: 90%;
     }
 }
-
 </style>
