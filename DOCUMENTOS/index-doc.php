@@ -13,6 +13,8 @@ include 'style-doc.php';
     <title>Solar Ancestral - Menu de Busca</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </head>
 
 <body>
@@ -41,11 +43,8 @@ include 'style-doc.php';
             </label>
             <input type="text" id="searchInput" placeholder="Pesquisar...">
         </div>
-        <div id="resultado"></div>
-        <div class="sun-symbol-container"></div>
-    </section>
-
-    <script type="text/javascript">
+        <div id="resultado">
+        <script type="text/javascript">
         $(document).ready(function(){
             $("#searchInput").keyup(function(){
                 var input = $(this).val().trim(); 
@@ -76,6 +75,11 @@ include 'style-doc.php';
             sessionStorage.setItem('historia', relacao);
         }
     </script>
+        </div>
+        <div class="sun-symbol-container"></div>
+        <div id="particles-js"></div>
+
+    </section>
 </body>
 </html>
 

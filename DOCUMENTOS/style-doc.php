@@ -1,5 +1,4 @@
 <style>
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +6,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body e Background */
 html, body {
     height: 100%;
-    background-color: #FFF67F; /* Tom amarelo claro */
+    background-color: #FFF8D6;
 }
 
 .container {
@@ -24,7 +22,6 @@ html, body {
     justify-content: space-between;
 }
 
-/* Cabeçalho */
 header {
     width: 100%;
     padding: 60px 4%;
@@ -33,21 +30,30 @@ header {
     left: 0;
     transition: .5s;
     z-index: 1000;
-    background: #E5BF76; /* Tom dourado claro */
+    background: #F0D8A8; 
 }
 
 header.rolagem {
-    background-color: #AF5B2C; /* Tom laranja queimado */
+    background-color: #D5A982; 
     padding: 20px 4%;
 }
 
 header.rolagem a, header.rolagem i {
-    color: #FFF67F; /* Amarelo claro */
+    color: #FFF8D6; 
 }
 
 header i {
     font-size: 30px;
-    color: #884121; /* Tom marrom mais escuro */
+    color: #B07E63; 
+}
+
+header.rolagem .btn-contato button {
+    background-color: #CD8861;
+    color: #FFF8D6; 
+}
+
+header.rolagem .btn-contato button:hover {
+    background-color: #AF5B2C;
 }
 
 .btn-contato a {
@@ -60,27 +66,26 @@ header i {
     width: 120px;
     height: 40px;
     border: 0;
-    background-color: #CD8861; /* Tom bege queimado */
-    color: #261E1A; /* Marrom escuro */
+    background-color: #D5A982; 
+    color: #4E3E30; 
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .btn-contato button:hover {
     transform: scale(1.1); 
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    background-color: #AF5B2C; /* Laranja queimado */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    background-color: #B07E63; 
 }
 
 .btn-contato button:active {
     transform: scale(1.05);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Banner 1 */
 .banner-1 {
-    background: linear-gradient(160deg, #E5BF76, #FFF67F); /* Gradiente dourado para amarelo claro */
-    color: #261E1A; /* Marrom escuro */
+    background: linear-gradient(160deg, #F0D8A8, #FFF8D6); 
+    color: #4E3E30; 
     padding: 100px 0;
     text-align: center;
 }
@@ -88,32 +93,35 @@ header i {
 .banner-1 h1 {
     font-size: 4em;
     font-weight: bold;
-    color: #261E1A;
+    color: #4E3E30;
 }
 
 .banner-1 h1 span {
-    color: #AF5B2C; /* Laranja queimado */
+    color: #BA783E;
 }
 
-/* Banner 2 */
 .banner-2 {
-    background-color: #884121; /* Marrom escuro */
+    background-color: #B07E63; 
     padding: 50px 0;
-    color: #FFF67F; /* Amarelo claro */
+    color: #FFF8D6; 
     text-align: center;
+}
+
+.banner-2 p h1 h2 h3 h4 h5{
+    color: #4E3E30;
 }
 
 .search {
     display: flex;
     align-items: center;
-    border: 2px solid #CD8861; /* Tom bege queimado */
-    background-color: rgba(255, 250, 240, 0.9);
+    border: 2px solid #D5A982; 
+    background-color: rgba(255, 248, 214, 0.9);
     width: 100%;
     max-width: 750px;
     border-radius: 20px;
     padding: 10px;
     margin: 20px auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #searchInput {
@@ -123,7 +131,7 @@ header i {
     width: 100%;
     outline: none;
     font-size: 18px;
-    color: #261E1A; /* Marrom escuro */
+    color: #4E3E30;
 }
 
 #resultado {
@@ -144,7 +152,6 @@ header i {
     flex-direction: column; 
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .search {
         width: 90%;
@@ -154,4 +161,5 @@ header i {
         width: 90%;
     }
 }
+
 </style>
