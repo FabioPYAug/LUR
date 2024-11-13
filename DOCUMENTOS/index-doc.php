@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'style-doc.php';
 ?>
 
@@ -10,6 +10,7 @@ include 'style-doc.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <title>Solar Ancestral - Menu de Busca</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -31,16 +32,17 @@ include 'style-doc.php';
     </header>
 
     <section class="banner banner-1">
-    <div class="sun-container">
-        <div class="sun"></div>
-    </div>
-    <div class="centered-text">
-        <h1>PESQUISA NA <span>ORIGEM SOLAR</span></h1>
-    </div>
-</section>
+        <div class="sun-container">
+            <div class="sun"></div>
+        </div>
+        <div class="centered-text">
+            <h1>PESQUISA NA <span>ORIGEM SOLAR</span></h1>
+        </div>
+    </section>
 
 
     <section class="banner banner-2">
+        <div id="words-container"></div>
         <div class="search">
             <label for="searchInput">
                 <span class="material-symbols-outlined"></span>
@@ -48,48 +50,79 @@ include 'style-doc.php';
             <input type="text" id="searchInput" placeholder="Pesquisar...">
         </div>
         <div id="resultado">
-        <script type="text/javascript">
-        $(document).ready(function(){
-            $("#searchInput").keyup(function(){
-                var input = $(this).val().trim(); 
-                if(input != ""){
-                    $.ajax({
-                        url: "functionDoc.php",
-                        method: "POST",
-                        data: {input: input},
-                        success: function(data) {
-                            if(data.trim() != "") {
-                                $("#resultado").html(data).css("display", "block"); 
-                            } else {
-                                $("#resultado").css("display", "none"); 
-                            }
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#searchInput").keyup(function() {
+                        var input = $(this).val().trim();
+                        if (input != "") {
+                            $.ajax({
+                                url: "functionDoc.php",
+                                method: "POST",
+                                data: {
+                                    input: input
+                                },
+                                success: function(data) {
+                                    if (data.trim() != "") {
+                                        $("#resultado").html(data).css("display", "block");
+                                    } else {
+                                        $("#resultado").css("display", "none");
+                                    }
+                                }
+                            });
+                        } else {
+                            $("#resultado").css("display", "none");
                         }
                     });
-                } else {
-                    $("#resultado").css("display", "none"); 
+                });
+
+                function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito) {
+                    let LocalImagem = `../Imagens/SolarPlaceholder.png`;
+
+                    sessionStorage.setItem('nome', nome);
+                    sessionStorage.setItem('tipo', tipo);
+                    sessionStorage.setItem('historia', relacao);
                 }
-            });
-        });
-
-        function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito){
-            let LocalImagem = `../Imagens/SolarPlaceholder.png`;
-
-            sessionStorage.setItem('nome', nome);
-            sessionStorage.setItem('tipo', tipo);
-            sessionStorage.setItem('historia', relacao);
-        }
-    </script>
+            </script>
         </div>
         <div class="sun-symbol-container"></div>
         <div id="particles-js"></div>
 
     </section>
 </body>
+
 </html>
 
 <script>
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", function() {
         let header = document.querySelector('#header')
         header.classList.toggle('rolagem', window.scrollY > 500)
     })
+
+    const words = ["Sol", "Lua", "Baúrda", "Zoystea", "Aystea", "Kruspoll", "Deuses", "Parasita", "Bobby", "Erin", "Flora", "PlinPlinPlon", "Luniére", "Pietro", "Nila", "Allyan", "Onho", "Ely", "Tina", "Snuggle"];
+    const container = document.getElementById("words-container");
+
+    function createWord() {
+        const word = document.createElement("div");
+        word.classList.add("word");
+        word.textContent = words[Math.floor(Math.random() * words.length)];
+
+        const xPos = Math.random() * 100;
+        const yPos = Math.random() * 100;
+        const rotation = (Math.random() * 360) + "deg";
+
+        const delay = Math.random() * 3;
+        const scale = (Math.random() * 0.5 + 0.5).toFixed(2);
+
+        word.style.left = `${xPos}vw`;
+        word.style.top = `${yPos}vh`;
+        word.style.transform = `rotate(${rotation}) scale(${scale})`; 
+        word.style.animationDelay = `${delay}s`;
+
+        container.appendChild(word);
+
+        setTimeout(() => {
+            word.remove();
+        }, 5000);
+    }
+    setInterval(createWord, 50);
 </script>

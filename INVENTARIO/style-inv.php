@@ -5,11 +5,14 @@
     width: 100%;
     top: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
+    z-index: 1000;
 }
 
 #header.rolagem {
     background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 4%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); 
 }
 
 #header .flex {
@@ -17,6 +20,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    transition: padding 0.3s;
+}
+
+header.rolagem .flex {
+    padding: 5px 20px; 
 }
 
 .btn-contato button {

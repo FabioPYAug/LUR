@@ -115,10 +115,13 @@ include 'style-inv.php';
 </html>
 <script>
     window.addEventListener("scroll", function() {
-        const header = document.querySelector('#header');
-        header.classList.toggle('rolagem', window.scrollY > 50);
-    });
-
+    const header = document.querySelector('#header');
+    if (window.scrollY > 500) {
+        header.classList.add('rolagem');
+    } else {
+        header.classList.remove('rolagem');
+    }
+});
 
     const particleContainer = document.createElement('div');
     particleContainer.classList.add('particle-container');
