@@ -14,7 +14,6 @@ include 'style-doc.php';
     <title>Solar Ancestral - Menu de Busca</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </head>
 
@@ -74,18 +73,9 @@ include 'style-doc.php';
                         }
                     });
                 });
-
-                function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito) {
-                    let LocalImagem = `../Imagens/SolarPlaceholder.png`;
-
-                    sessionStorage.setItem('nome', nome);
-                    sessionStorage.setItem('tipo', tipo);
-                    sessionStorage.setItem('historia', relacao);
-                }
             </script>
         </div>
         <div class="sun-symbol-container"></div>
-        <div id="particles-js"></div>
 
     </section>
 </body>
@@ -98,7 +88,7 @@ include 'style-doc.php';
         header.classList.toggle('rolagem', window.scrollY > 500)
     })
 
-    const words = ["Sol", "Lua", "Baúrda", "Zoystea", "Aystea", "Kruspoll", "Deuses", "Parasita", "Bobby", "Erin", "Flora", "PlinPlinPlon", "Luniére", "Pietro", "Nila", "Allyan", "Onho", "Ely", "Tina", "Snuggle"];
+    const words = ["Sol", "Lua", "Baúrda", "Zoystea", "Aystea", "Kruspoll", "Deuses", "Parasita", "Bobby", "Erin", "Flora", "PlinPlinPlon", "Luniére", "Pietro", "Nila", "Allyan", "Onho", "Ely", "Tina", "Snuggle", "Maria", "Shou", "Ashura", "Zerlar", "Jafar", "Astaroth", "Declínio", "Ciclo", "Carcaça", "Íris", "Filhos", "Sentidos", "Fadas", "Arquifada", "Fylakir", "Yiron", "Zenagan", "Canalsus", "Miguel", "TPM", "Daimonas", "PPParadise", "Choriséo", "Charisma", "Risorius", "Yaagcê", "Guildacê", "Angkor", "Drys", "Enegeia", "Litore", "Lying", "Lilith", "Gaya", "Yuki", "Agaro", "RIK", "Manu", "Keanu", "Fahlir", "Sanara", "Bernie", "Eldar", "Maldição", "Bênção", "Magia", "Alma", "Tempo", "Lunar", "Solar", "Homunculos", "Tieflings", "Humanos", "Elfos", "Haflings", "Gnomos", "Anões", "Guerrairos", "Arqueiros", "Clérigos", "Magos", "Bruxos", "Feiticeiros", "Necromantes", "Ladinos", "Crecente", "Nova", "Cheia", "Artifices", "Druídas", "Monges"];
 const container = document.getElementById("words-container");
 
 function createWord() {
@@ -122,7 +112,7 @@ function createWord() {
 
     setTimeout(() => {
         word.remove();
-    }, 5000);
+    }, 10000);
 }
-setInterval(createWord, 50);
+setInterval(createWord, 300);
 </script>

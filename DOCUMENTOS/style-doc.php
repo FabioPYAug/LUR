@@ -148,7 +148,7 @@ header .btn-contato button:hover {
 .word {
     font-family: 'MedievalSharp', cursive;
     position: absolute;
-    font-size: 1.85rem;
+    font-size: 5rem;
     color: #4E3E30;
     opacity: 0;
     animation: growFade 6s ease-in-out infinite;
@@ -157,21 +157,12 @@ header .btn-contato button:hover {
 
 @keyframes growFade {
     0% {
-        transform: scale(0.8);
-        opacity: 8;
+        transform: scale(0.5);
+        opacity: 0.65;
     }
     100% {
         transform: scale(1);
         opacity: 0;
     }
-}
-
-#particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
 }
 </style>
