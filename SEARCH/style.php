@@ -39,8 +39,8 @@
 .particle {
     position: absolute;
     bottom: 0;
-    width: 2px;
-    height: 15px;
+    width: 1px;
+    height: 12px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.4);
     animation: moveUp linear infinite;
@@ -173,7 +173,9 @@ header i {
 
 .banner h1 span {
     color: #bb86fc;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
+
 
 .search {
     display: flex;
@@ -199,12 +201,19 @@ header i {
 }
 
 #resultado {
-    max-width: 750px;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-color: #bb86fc rgba(72, 61, 139, 0.2);
+    scrollbar-width: thin;
 }
+#resultado::-webkit-scrollbar {
+    width: 8px;
+}
+#resultado::-webkit-scrollbar-thumb {
+    background-color: #bb86fc;
+    border-radius: 10px;
+}
+
 
 .banner {
     height: 100vh;
@@ -224,6 +233,11 @@ header i {
 
     #resultado {
         width: 90%;
+    }
+    .btn-contato button {
+        font-size: 16px;
+        width: 100px;
+        height: 35px;
     }
 }
 
