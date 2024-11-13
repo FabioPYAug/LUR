@@ -31,10 +31,14 @@ include 'style-doc.php';
     </header>
 
     <section class="banner banner-1">
-        <div class="centered-text">
-            <h1>PESQUISA NA <span>ORIGEM SOLAR</span></h1>
-        </div>
-    </section>
+    <div class="sun-container">
+        <div class="sun"></div>
+    </div>
+    <div class="centered-text">
+        <h1>PESQUISA NA <span>ORIGEM SOLAR</span></h1>
+    </div>
+</section>
+
 
     <section class="banner banner-2">
         <div class="search">
