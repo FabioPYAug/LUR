@@ -88,7 +88,13 @@ include 'style-doc.php';
         header.classList.toggle('rolagem', window.scrollY > 500)
     })
 
-    const words = ["Sol", "Lua", "Baúrda", "Zoystea", "Aystea", "Kruspoll", "Deuses", "Parasita", "Bobby", "Erin", "Flora", "PlinPlinPlon", "Luniére", "Pietro", "Nila", "Allyan", "Onho", "Ely", "Tina", "Snuggle", "Maria", "Shou", "Ashura", "Zerlar", "Jafar", "Astaroth", "Declínio", "Ciclo", "Carcaça", "Íris", "Filhos", "Sentidos", "Fadas", "Arquifada", "Fylakir", "Yiron", "Zenagan", "Canalsus", "Miguel", "TPM", "Daimonas", "PPParadise", "Choriséo", "Charisma", "Risorius", "Yaagcê", "Guildacê", "Angkor", "Drys", "Enegeia", "Litore", "Lying", "Lilith", "Gaya", "Yuki", "Agaro", "RIK", "Manu", "Keanu", "Fahlir", "Sanara", "Bernie", "Eldar", "Maldição", "Bênção", "Magia", "Alma", "Tempo", "Lunar", "Solar", "Homunculos", "Tieflings", "Humanos", "Elfos", "Haflings", "Gnomos", "Anões", "Guerrairos", "Arqueiros", "Clérigos", "Magos", "Bruxos", "Feiticeiros", "Necromantes", "Ladinos", "Crecente", "Nova", "Cheia", "Artifices", "Druídas", "Monges"];
+    const words = ["Sol", "Lua", "Baúrda", "Zoystea", "Aystea", "Kruspoll", "Deuses", "Parasita", "Bobby", "Erin", "Flora", "PlinPlinPlon", "Luniére", "Pietro",
+     "Nila", "Allyan", "Onho", "Ely", "Tina", "Snuggle", "Maria", "Shou", "Ashura", "Zerlar", "Jafar", "Astaroth", "Declínio", "Ciclo", "Carcaça", "Íris", "Filhos",
+      "Sentidos", "Fadas", "Arquifada", "Fylakir", "Yiron", "Zenagan", "Canalsus", "Miguel", "TPM", "Daimonas", "PPParadise", "Choriséo", "Charisma", "Risorius",
+       "Yaagcê", "Guildacê", "Angkor", "Drys", "Enegeia", "Litore", "Lying", "Lilith", "Gaya", "Yuki", "Agaro", "RIK", "Manu", "Keanu", "Fahlir", "Sanara", "Bernie",
+        "Eldar", "Maldição", "Bênção", "Magia", "Alma", "Tempo", "Lunar", "Solar", "Homunculos", "Tieflings", "Humanos", "Elfos", "Haflings", "Gnomos", "Anões",
+         "Guerrairos", "Arqueiros", "Clérigos", "Magos", "Bruxos", "Feiticeiros", "Necromantes", "Ladinos", "Crecente", "Nova", "Cheia", "Artifices", "Druídas",
+          "Monges", "Hanar", "Malatias", "Koga", "Aurora", "Jade", "Dragão", "Medusa", "Hidra", "Criatura", "Inteligência", "Thornn", "Charllote", "Parisa", "Stella"];
 const container = document.getElementById("words-container");
 
 function createWord() {
@@ -114,5 +120,5 @@ function createWord() {
         word.remove();
     }, 10000);
 }
-setInterval(createWord, 300);
+setInterval(createWord, 250);
 </script>

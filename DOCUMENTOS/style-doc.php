@@ -86,10 +86,14 @@ header .btn-contato button:hover {
 }
 
 .banner-2 {
-    background-color: #B07E63;
     padding: 50px 0;
     color: #FFF8D6;
     text-align: center;
+    background-color: #B07E63; 
+    background-image: url('../Imagens/Textura-Papel.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
 
 .search {
@@ -158,7 +162,7 @@ header .btn-contato button:hover {
 @keyframes growFade {
     0% {
         transform: scale(0.5);
-        opacity: 0.65;
+        opacity: 0.55;
     }
     100% {
         transform: scale(1);
