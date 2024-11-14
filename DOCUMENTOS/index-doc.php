@@ -93,7 +93,7 @@ include 'style-doc.php';
       "Sentidos", "Fadas", "Arquifada", "Fylakir", "Yiron", "Zenagan", "Canalsus", "Miguel", "TPM", "Daimonas", "PPParadise", "Choriséo", "Charisma", "Risorius",
        "Yaagcê", "Guildacê", "Angkor", "Drys", "Enegeia", "Litore", "Lying", "Lilith", "Gaya", "Yuki", "Agaro", "RIK", "Manu", "Keanu", "Fahlir", "Sanara", "Bernie",
         "Eldar", "Maldição", "Bênção", "Magia", "Alma", "Tempo", "Lunar", "Solar", "Homunculos", "Tieflings", "Humanos", "Elfos", "Haflings", "Gnomos", "Anões",
-         "Guerrairos", "Arqueiros", "Clérigos", "Magos", "Bruxos", "Feiticeiros", "Necromantes", "Ladinos", "Crecente", "Nova", "Cheia", "Artifices", "Druídas",
+         "Guerrairos", "Arqueiros", "Clérigos", "Magos", "Bruxos", "Feiticeiros", "Necromantes", "Ladinos", "Crescente", "Nova", "Cheia", "Artifices", "Druídas",
           "Monges", "Hanar", "Malatias", "Koga", "Aurora", "Jade", "Dragão", "Medusa", "Hidra", "Criatura", "Inteligência", "Thornn", "Charllote", "Parisa", "Stella"];
 const container = document.getElementById("words-container");
 
