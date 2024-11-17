@@ -11,7 +11,6 @@ include 'style-inv.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <title>Noite Escura - Menu de Busca</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -69,7 +68,7 @@ include 'style-inv.php';
                 });
 
                 function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito) {
-                    let LocalImagem = `../Imagens/PlaceHolder.png`;
+                    let LocalImagem = `../../Imagens/PlaceHolder.png`;
 
                     sessionStorage.setItem('nome', nome);
                     sessionStorage.setItem('tipo', tipo);
@@ -107,6 +106,7 @@ include 'style-inv.php';
                     }
 
                 }
+                
             </script>
         </div>
     </section>
