@@ -68,7 +68,7 @@ include 'style-inv.php';
                 });
 
                 function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito) {
-                    let LocalImagem = `../../Imagens/PlaceHolder.png`;
+                    let LocalImagem = `../../Imagens/ITENS NE/${nome}.png`;
 
                     sessionStorage.setItem('nome', nome);
                     sessionStorage.setItem('tipo', tipo);
@@ -87,7 +87,8 @@ include 'style-inv.php';
                     sessionStorage.setItem('LocalImagem', LocalImagem);
                     sessionStorage.setItem('acao', acao);
                     sessionStorage.setItem('efeito', efeito);
-                    console.log(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito)
+                    console.log(LocalImagem)
+
                     switch (tipo) {
                         case "Arma":
                             window.location.href = 'Valores/ArmaPadrão.html'
