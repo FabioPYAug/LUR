@@ -49,7 +49,7 @@ include 'style-inv.php';
                         var input = $(this).val().trim();
                         if (input != "") {
                             $.ajax({
-                                url: "function.php",
+                                url: "function-inv.php",
                                 method: "POST",
                                 data: {
                                     input: input
@@ -101,7 +101,7 @@ include 'style-inv.php';
                         case "Moeda":
                             window.location.href = 'Valores/MoedaPadrão.html'
                             break;
-                        case "Itens":
+                        case "Item":
                             window.location.href = 'Valores/ItensPadrão.html'
                             break;
                     }
