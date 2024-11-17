@@ -87,6 +87,7 @@ include 'style-inv.php';
                     sessionStorage.setItem('LocalImagem', LocalImagem);
                     sessionStorage.setItem('acao', acao);
                     sessionStorage.setItem('efeito', efeito);
+                    console.log(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito)
                     switch (tipo) {
                         case "Arma":
                             window.location.href = 'Valores/ArmaPadrão.html'
