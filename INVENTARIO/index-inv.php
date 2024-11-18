@@ -91,7 +91,17 @@ include 'style-inv.php';
 
                     switch (tipo) {
                         case "Arma":
-                            window.location.href = 'Valores/ArmaPadrão.html'
+                            if(entidade == "Sol"){
+                                window.location.href = 'Valores/ArmaSol.html'
+                            } 
+                            else if(entidade == "Lua"){
+                                window.location.href = 'Valores/ArmaLua.html'
+                            }
+                            else if(nome == "Parisa"){
+                                window.location.href = 'Valores/Parisa.html'
+                            }else{
+                                window.location.href = 'Valores/ArmaPadrão.html'
+                            }
                             break;
                         case "Material":
                             window.location.href = 'Valores/MaterialPadrão.html'
@@ -104,6 +114,9 @@ include 'style-inv.php';
                             break;
                         case "Item":
                             window.location.href = 'Valores/ItensPadrão.html'
+                            break;
+                        case "Armadura":
+                            window.location.href = 'Valores/ArmaduraPadrão.html'
                             break;
                     }
 
