@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Armadura de Couro - Noite Escura</title>
+    <title id="tituloPagina">-Noite Escura-</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@
     <!-- PARTE SUPERIOR -->
     <header>
         <div class="header-container">
-            <h1 class="site-title">Armadura de Couro</h1>
+            <h1 class="site-title" id="APnome"></h1>
             <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
                 stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../index-inv.php'">
                 <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
@@ -41,43 +41,39 @@
                         <!-- Textos -->
                         <div class="text-content">
                             <h3 id="capD">Descrição</h3>
-                            <p>
-                                A armadura de couro é uma escolha muito popular entre os aventureiros que buscam agilidade e defesa. Considerada o verdadeiro "meio a meio", essa armadura é útil em todas as situações.
-                                <br>A armadura de couro é confeccionada a partir de camadas de couro curtido em óleo quente e couro flexível. Essa combinação proporciona proteção eficaz contra cortes e impactos, sem sacrificar a agilidade do usuário.
-                                <br>Além de sua funcionalidade, a armadura de couro é a escolha preferida para aqueles que valorizam o estilo. Ela é a armadura mais facilmente modificável, permitindo combinações com uma vasta gama de peças de roupas. Isso a torna não apenas uma opção prática para a defesa, mas também uma escolha estética para aventureiros que desejam expressar sua individualidade em cada missão.
-                            </p>
+                            <p id="APdescricao"></p>
 
                             <h3 id="capH">História</h3>
-                            <p>
-                                Sua história é extremamente antiga e repleta de lendas. Acredita-se que a armadura de couro tenha sido criada por uma pequena <strong class="negrito">tribo de halflings</strong> que enfrentava diversas crises devido aos ataques de goblins. Esses invasores usavam lanças e adagas de pedra extremamente afiadas, forçando os halflings a desenvolverem uma proteção que fosse eficaz e ágil.
-                                <br>Com isso, os halflings decidiram se unir para encontrar uma maneira de combater essas ameaças. Eles optaram por acabar com o estoque de vacas próximas para criar uma enorme camisa de couro. Essa vestimenta foi dada ao halfling mais poderoso da tribo, que, como um verdadeiro herói, matou mais de 40 goblins em um único dia. Esse feito não apenas salvou a tribo, mas também consolidou a armadura de couro como um símbolo de bravura, resistência e flexibilidade.
-                            </p>
+                            <p id="APhistoria"></p>
 
                             <h3 id="capC">Categorias</h3>
-                            <p><strong class="negrito">Vestimenta</strong> : <strong class="negrito">Pessoal</strong></p>
+                            <div class="info-row">
+                                <p id="APtipo"><strong class="negrito"></strong></p>
+                                <p id="APalcanceTAB"><strong class="negrito"></strong></p>
+                            </div>
                         </div>
 
                         <!-- Imagem -->
                         <div class="image-content">
-                            <img src="../Imagens/PlaceHolder.png" class="Imagens" alt="Espada Curta"/>
+                            <img src="" id="imagePlaceholder" class="Imagens" alt="Imagem da Armadura"/>
                             
                             <!-- Tabela abaixo da imagem -->
                             <table class="info-table">
                                 <tr>
                                     <td class="title">Defesa</td>
-                                    <td class="value">+2 de CA</td>
+                                    <td class="value" id="APdefesa"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Penalidade de Armadura</td>
-                                    <td class="value">0</td>
+                                    <td class="value" id="APpenalidade"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Peso</td>
-                                    <td class="value">7kg</td>
+                                    <td class="value" id="APpeso"></td>
                                 </tr>
                                 <tr>
                                     <td class="title">Preço de Venda</td>
-                                    <td class="value">20 JONS<br>7 ZENS</td>
+                                    <td class="value" id="APvenda"></td>
                                 </tr>
                             </table>
                         </div>
@@ -86,6 +82,122 @@
             </div>
         </div>
     </main>
+
+    <!-- Script movido para o final do body -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nome = sessionStorage.getItem('nome');
+            const tipo = sessionStorage.getItem('tipo');
+            const alcance = sessionStorage.getItem('alcance');
+            const descricao = sessionStorage.getItem('descricao');
+            const historia = sessionStorage.getItem('historia');
+            const entidade = sessionStorage.getItem('entidade');
+            const teste = sessionStorage.getItem('teste');
+            const dano = sessionStorage.getItem('dano');
+            const critico = sessionStorage.getItem('critico');
+            const peso = sessionStorage.getItem('peso');
+            const tipoDano = sessionStorage.getItem('tipoDano');
+            const venda = sessionStorage.getItem('venda');
+            const defesa = sessionStorage.getItem('defesa');
+            const penalidade = sessionStorage.getItem('penalidade');
+            const LocalImagem = sessionStorage.getItem('LocalImagem');
+            const acao = sessionStorage.getItem('acao');
+            const efeito = sessionStorage.getItem('efeito');
+
+            const tituloPagina = document.getElementById('tituloPagina');
+            const imgElement = document.getElementById('imagePlaceholder');
+
+            if (acao) {
+                const elementoAcao = document.getElementById('APacao');
+                if (elementoAcao) elementoAcao.textContent = acao;
+            }
+
+            if (efeito) {
+                const elementoEfeito = document.getElementById('APefeito');
+                if (elementoEfeito) elementoEfeito.textContent = efeito;
+            }
+
+            if (imgElement && LocalImagem) {
+                imgElement.src = LocalImagem;
+            }
+            
+            if (tituloPagina && nome) {
+                tituloPagina.textContent = nome;
+            }
+
+            const elementoNome = document.getElementById('APnome');
+            if (elementoNome && nome) {
+                elementoNome.textContent = nome;
+            }
+
+            if (tipo) {
+                const elementoTipo = document.getElementById('APtipo');
+                if (elementoTipo) elementoTipo.textContent = tipo;
+            }
+
+            if (alcance) {
+                const elementoAlcance = document.getElementById('APalcance');
+                const elementoAlcanceTab = document.getElementById('APalcanceTAB');
+                if (elementoAlcance) elementoAlcance.textContent = alcance;
+                if (elementoAlcanceTab) elementoAlcanceTab.textContent = alcance;
+            }
+
+            if (descricao) {
+                const elementoDescricao = document.getElementById('APdescricao');
+                if (elementoDescricao) elementoDescricao.textContent = descricao;
+            }
+
+            if (historia) {
+                const elementoHistoria = document.getElementById('APhistoria');
+                if (elementoHistoria) elementoHistoria.textContent = historia;
+            }
+
+            if (entidade) {
+                const elementoEntidade = document.getElementById('APentidade');
+                if (elementoEntidade) elementoEntidade.textContent = entidade;
+            }
+
+            if (teste) {
+                const elementoTeste = document.getElementById('APteste');
+                if (elementoTeste) elementoTeste.textContent = teste;
+            }
+
+            if (dano) {
+                const elementoDano = document.getElementById('APdano');
+                if (elementoDano) elementoDano.textContent = dano;
+            }
+
+            if (critico) {
+                const elementoCritico = document.getElementById('APcritico');
+                if (elementoCritico) elementoCritico.textContent = critico;
+            }
+
+            if (peso) {
+                const elementoPeso = document.getElementById('APpeso');
+                if (elementoPeso) elementoPeso.textContent = peso;
+            }
+
+            if (tipoDano) {
+                const elementoTipoDano = document.getElementById('APtipoDano');
+                if (elementoTipoDano) elementoTipoDano.textContent = tipoDano;
+            }
+
+            if (venda) {
+                const elementoVenda = document.getElementById('APvenda');
+                if (elementoVenda) elementoVenda.innerHTML = venda;
+            }
+
+            if (defesa) {
+                const elementoDefesa = document.getElementById('APdefesa');
+                if (elementoDefesa) elementoDefesa.textContent = defesa;
+            }
+
+            if (penalidade) {
+                const elementoPenalidade = document.getElementById('APpenalidade');
+                if (elementoPenalidade) elementoPenalidade.textContent = penalidade;
+            }
+        });
+    </script>
 </body>
 
 </html>
@@ -93,6 +205,16 @@
 
 <style>
     @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+
+    .info-row {
+        display: flex;       
+        align-items: center;
+    }
+    .info-row p {
+        margin: 0 10px;  
+        color: rgb(206, 176, 9);   
+        font-weight: bold;
+    }
 
     *,
     *::before,
