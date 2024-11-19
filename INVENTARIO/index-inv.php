@@ -114,7 +114,12 @@ include 'style-inv.php';
                             window.location.href = 'Valores/MoedaPadrão.html'
                             break;
                         case "Item":
-                            window.location.href = 'Valores/ItensPadrão.html'
+                            if(entidade == "Lua"){
+                                window.location.href = 'Valores/ItensLua.html'
+                            }
+                            else{
+                                window.location.href = 'Valores/ItensPadrão.html'
+                            }
                             break;
                         case "Armadura":
                             window.location.href = 'Valores/ArmaduraPadrão.html'
