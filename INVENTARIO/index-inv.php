@@ -87,19 +87,20 @@ include 'style-inv.php';
                     sessionStorage.setItem('LocalImagem', LocalImagem);
                     sessionStorage.setItem('acao', acao);
                     sessionStorage.setItem('efeito', efeito);
-                    console.log(LocalImagem)
 
                     switch (tipo) {
                         case "Arma":
                             if(entidade == "Sol"){
-                                window.location.href = 'Valores/ArmaSol.html'
+                                if(nome == "Parisa"){
+                                    window.location.href = 'Valores/Parisa.html'
+                                }else{
+                                    window.location.href = 'Valores/ArmaSol.html'
+                                }
                             } 
                             else if(entidade == "Lua"){
                                 window.location.href = 'Valores/ArmaLua.html'
                             }
-                            else if(nome == "Parisa"){
-                                window.location.href = 'Valores/Parisa.html'
-                            }else{
+                            else{
                                 window.location.href = 'Valores/ArmaPadrão.html'
                             }
                             break;
