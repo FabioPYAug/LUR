@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <canvas id="nebulaCanvas"></canvas>
     <!-- PARTE SUPERIOR -->
     <header>
         <div class="header-container">
@@ -96,6 +97,7 @@
     </main>
 
     <!-- Script movido para o final do body -->
+    <script src="LuaScript.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const nome = sessionStorage.getItem('nome');
@@ -216,6 +218,15 @@
 
 
 <style>
+    canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
     @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
 
     .info-row {
@@ -224,7 +235,7 @@
     }
     .info-row p {
         margin: 0 10px;  
-        color: rgb(206, 176, 9);   
+        color: #a35ee0;
         font-weight: bold;
     }
 
@@ -239,14 +250,14 @@
     body {
         font-family: 'Jura', sans-serif;
         background-color: #000000;
-        color: #f0f0f0;
+        color: #e4d9fc;
         line-height: 1.6;
     }
 
     header {
         background-color: #111;
         padding: 15px 20px;
-        border-bottom: 2px solid #444;
+        border-bottom: 2px solid #553472;
     }
 
     .header-container {
@@ -256,20 +267,20 @@
     }
 
     .site-title {
-        color: #FFD700;
+        color: #9d4eff;
         font-size: 2rem;
     }
 
     .icon {
         width: 52px;
         height: 52px;
-        color: gold;
+        color: #9d4eff;
         cursor: pointer;
         transition: color 0.3s ease;
     }
 
     .icon:hover {
-        color: white;
+        color: #d6baff;
     }
 
     .content-wrapper {
@@ -280,10 +291,11 @@
     }
 
     .sidebar {
+        opacity: 0.90;
         width: 20%;
-        background-color: #282828;
+        background-color: #16121f;
         padding: 15px;
-        border-right: 2px solid #444;
+        border-right: 2px solid #693f8f;
         top: 20px;
         flex: 1 1 200px;
     }
@@ -291,6 +303,7 @@
     .sidebar h2 {
         font-size: 1.2rem;
         margin-bottom: 10px;
+        color: #d1b2ff;
     }
 
     .sidebar ul {
@@ -298,25 +311,26 @@
     }
 
     .sidebar a {
-        color: #FFD700;
+        color: #b084f5;
         text-decoration: none;
         display: block;
         padding: 5px 0;
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid #705093;
     }
 
     .sidebar a:hover {
-        background-color: #333;
+        background-color: #37254d;
     }
 
     .meio {
+        opacity: 0.90;
         text-align: left;
         width: 75%;
         padding: 20px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        background-color: #353535;
-        border-bottom: 1px solid #444;
-        border-right: 1px solid #444;
+        background-color: #231a36;
+        border-bottom: 1px solid #493261;
+        border-right: 1px solid #705093;
         flex: 3 1 600px;
     }
 
@@ -324,15 +338,15 @@
         font-size: 4rem;
         margin: 0;
         padding: 20px 0;
-        border-bottom: 7px solid #FFD700;
-        color: white;
+        border-bottom: 7px solid #9d4eff;
+        color: #ffffff;
     }
 
     h2,
     h3 {
         margin-bottom: 1rem;
         text-align: left;
-        color: white;
+        color: #d1b2ff;
         font-size: 28px;
     }
 
@@ -340,7 +354,7 @@
         margin-bottom: 1.5rem;
         max-width: 800px;
         text-align: justify;
-        color: white;
+        color: #e4d9fc;
         font-size: 18px;
         line-height: 1.4;
     }
@@ -349,42 +363,42 @@
         width: 100%;
         max-width: 600px;
         border-collapse: collapse;
-        color: white;
+        color: #e4d9fc;
         margin: 20px 0 0 0;
     }
 
     .info-table td {
         padding: 10px;
-        border: 2px solid #444;
+        border: 2px solid #705093;
     }
 
     .info-table .title {
         text-align: left;
         font-weight: bold;
-        color: gold;
+        color: #b084f5;
         font-size: 20px;
     }
 
     .info-table .value {
         text-align: right;
-        color: #f0f0f0;
+        color: #f0e4ff;
         font-size: 20px;
     }
 
     .info-table tr:nth-child(even) {
-        background-color: #333;
+        background-color: #2b2140;
     }
 
     .info-table tr:nth-child(odd) {
-        background-color: #282828;
+        background-color: #241a3b;
     }
 
     .negrito {
-        color: rgb(206, 176, 9);
+        color: #cf8bff;
     }
 
     .Imagens {
-        border: 7px solid #444;
+        border: 7px solid #705093;
         width: 100%;
         max-width: 300px;
         height: auto;
@@ -416,7 +430,7 @@
     .image-content img {
         width: 100%;
         height: auto;
-        border: 7px solid #444;
+        border: 7px solid #705093;
         transition: transform 0.3s ease;
     }
 
@@ -456,7 +470,7 @@
 
         .sidebar {
             border-right: none;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #705093;
             margin-bottom: 20px;
         }
 

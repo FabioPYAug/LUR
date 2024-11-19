@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <canvas id="nebulaCanvas"></canvas>
     <!-- PARTE SUPERIOR -->
     <header>
         <div class="header-container">
@@ -92,6 +93,7 @@
     </main>
 
     <!-- Script movido para o final do body -->
+    <script src="LuaScript.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const nome = sessionStorage.getItem('nome');
@@ -212,6 +214,15 @@
 
 
 <style>
+    canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
     @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
 
     .info-row {
@@ -276,6 +287,7 @@
     }
 
     .sidebar {
+        opacity: 0.90;
         width: 20%;
         background-color: #16121f;
         padding: 15px;
@@ -307,6 +319,7 @@
     }
 
     .meio {
+        opacity: 0.95;
         text-align: left;
         width: 75%;
         padding: 20px;
