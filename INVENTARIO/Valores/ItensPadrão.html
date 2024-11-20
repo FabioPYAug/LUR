@@ -31,7 +31,7 @@
                     <li><a href="#capD">Descrição</a></li>
                     <li><a href="#capH">História</a></li>
                     <li><a href="#capE">Efeitos</a></li>
-                    <li><a href="#capC">Categorias</a></li>     
+                    <li><a href="#capC">Categorias</a></li>
                 </ul>
             </aside>
 
@@ -59,8 +59,8 @@
 
                         <!-- Imagem -->
                         <div class="image-content">
-                            <img src="" id="imagePlaceholder" class="Imagens" alt="Imagem do Item"/>
-                            
+                            <img src="" id="imagePlaceholder" class="Imagens" alt="Imagem do Item" />
+
                             <!-- Tabela abaixo da imagem -->
                             <table class="info-table">
                                 <tr>
@@ -93,118 +93,140 @@
 
     <!-- Script movido para o final do body -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const nome = sessionStorage.getItem('nome');
-            const tipo = sessionStorage.getItem('tipo');
-            const alcance = sessionStorage.getItem('alcance');
-            const descricao = sessionStorage.getItem('descricao');
-            const historia = sessionStorage.getItem('historia');
-            const entidade = sessionStorage.getItem('entidade');
-            const teste = sessionStorage.getItem('teste');
-            const dano = sessionStorage.getItem('dano');
-            const critico = sessionStorage.getItem('critico');
-            const peso = sessionStorage.getItem('peso');
-            const tipoDano = sessionStorage.getItem('tipoDano');
-            const venda = sessionStorage.getItem('venda');
-            const defesa = sessionStorage.getItem('defesa');
-            const penalidade = sessionStorage.getItem('penalidade');
-            const LocalImagem = sessionStorage.getItem('LocalImagem');
-            const acao = sessionStorage.getItem('acao');
-            const efeito = sessionStorage.getItem('efeito');
+        document.addEventListener("DOMContentLoaded", () => {
+            const nome = sessionStorage.getItem("nome");
+            const tipo = sessionStorage.getItem("tipo");
+            const alcance = sessionStorage.getItem("alcance");
+            const descricao = sessionStorage.getItem("descricao");
+            const historia = sessionStorage.getItem("historia");
+            const entidade = sessionStorage.getItem("entidade");
+            const teste = sessionStorage.getItem("teste");
+            const dano = sessionStorage.getItem("dano");
+            const critico = sessionStorage.getItem("critico");
+            const peso = sessionStorage.getItem("peso");
+            const tipoDano = sessionStorage.getItem("tipoDano");
+            const venda = sessionStorage.getItem("venda");
+            const defesa = sessionStorage.getItem("defesa");
+            const penalidade = sessionStorage.getItem("penalidade");
+            const LocalImagem = sessionStorage.getItem("LocalImagem");
+            const acao = sessionStorage.getItem("acao");
+            const efeito = sessionStorage.getItem("efeito");
 
-            const tituloPagina = document.getElementById('tituloPagina');
-            const imgElement = document.getElementById('imagePlaceholder');
+            const tituloPagina = document.getElementById("tituloPagina");
+            const imgElement = document.getElementById("imagePlaceholder");
 
             if (acao) {
-                const elementoAcao = document.getElementById('APacao');
+                const elementoAcao = document.getElementById("APacao");
                 if (elementoAcao) elementoAcao.textContent = acao;
             }
 
             if (efeito) {
-                const elementoEfeito = document.getElementById('APefeito');
-                if (elementoEfeito) elementoEfeito.textContent = efeito;
+                const elementoEfeito = document.getElementById("APefeito");
+                if (elementoEfeito) {
+                    let FormatadoEfeito = efeito.replace(/\\n/g, '\n');
+                    FormatadoEfeito = FormatadoEfeito
+                        .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
+                        .replace(/\n/g, '<br>');       // Para quebras simples
+
+                    elementoEfeito.innerHTML = FormatadoEfeito;
+                }
             }
 
             if (imgElement && LocalImagem) {
                 imgElement.src = LocalImagem;
             }
-            
+
             if (tituloPagina && nome) {
                 tituloPagina.textContent = nome;
             }
 
-            const elementoNome = document.getElementById('APnome');
+            const elementoNome = document.getElementById("APnome");
             if (elementoNome && nome) {
                 elementoNome.textContent = nome;
             }
 
             if (tipo) {
-                const elementoTipo = document.getElementById('APtipo');
+                const elementoTipo = document.getElementById("APtipo");
                 if (elementoTipo) elementoTipo.textContent = tipo;
             }
 
             if (alcance) {
-                const elementoAlcance = document.getElementById('APalcance');
-                const elementoAlcanceTab = document.getElementById('APalcanceTAB');
+                const elementoAlcance = document.getElementById("APalcance");
+                const elementoAlcanceTab = document.getElementById("APalcanceTAB");
                 if (elementoAlcance) elementoAlcance.textContent = alcance;
                 if (elementoAlcanceTab) elementoAlcanceTab.textContent = alcance;
             }
 
             if (descricao) {
-                const elementoDescricao = document.getElementById('APdescricao');
-                if (elementoDescricao) elementoDescricao.textContent = descricao;
+                const elementoDescricao = document.getElementById("APdescricao");
+                if (elementoDescricao) {
+                    let FormatadoDescricao = descricao.replace(/\\n/g, '\n');
+                    FormatadoDescricao = FormatadoDescricao
+                        .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
+                        .replace(/\n/g, '<br>');       // Para quebras simples
+
+                    elementoDescricao.innerHTML = FormatadoDescricao;
+                }
             }
 
             if (historia) {
-                const elementoHistoria = document.getElementById('APhistoria');
-                if (elementoHistoria) elementoHistoria.textContent = historia;
+                const elementoHistoria = document.getElementById("APhistoria");
+                if (elementoHistoria) {
+                    let formattedHistoria = historia.replace(/\\n/g, '\n');
+                    formattedHistoria = formattedHistoria
+                        .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
+                        .replace(/\n/g, '<br>');       // Para quebras simples
+
+                    elementoHistoria.innerHTML = formattedHistoria;
+                }
             }
 
             if (entidade) {
-                const elementoEntidade = document.getElementById('APentidade');
+                const elementoEntidade = document.getElementById("APentidade");
                 if (elementoEntidade) elementoEntidade.textContent = entidade;
             }
 
             if (teste) {
-                const elementoTeste = document.getElementById('APteste');
+                const elementoTeste = document.getElementById("APteste");
                 if (elementoTeste) elementoTeste.textContent = teste;
             }
 
             if (dano) {
-                const elementoDano = document.getElementById('APdano');
+                const elementoDano = document.getElementById("APdano");
                 if (elementoDano) elementoDano.textContent = dano;
             }
 
             if (critico) {
-                const elementoCritico = document.getElementById('APcritico');
+                const elementoCritico = document.getElementById("APcritico");
                 if (elementoCritico) elementoCritico.textContent = critico;
             }
 
             if (peso) {
-                const elementoPeso = document.getElementById('APpeso');
+                const elementoPeso = document.getElementById("APpeso");
                 if (elementoPeso) elementoPeso.textContent = peso;
             }
 
             if (tipoDano) {
-                const elementoTipoDano = document.getElementById('APtipoDano');
+                const elementoTipoDano = document.getElementById("APtipoDano");
                 if (elementoTipoDano) elementoTipoDano.textContent = tipoDano;
             }
 
             if (venda) {
-                const elementoVenda = document.getElementById('APvenda');
+                const elementoVenda = document.getElementById("APvenda");
                 if (elementoVenda) elementoVenda.innerHTML = venda;
             }
 
             if (defesa) {
-                const elementoDefesa = document.getElementById('APdefesa');
+                const elementoDefesa = document.getElementById("APdefesa");
                 if (elementoDefesa) elementoDefesa.textContent = defesa;
             }
 
             if (penalidade) {
-                const elementoPenalidade = document.getElementById('APpenalidade');
+                const elementoPenalidade = document.getElementById("APpenalidade");
                 if (elementoPenalidade) elementoPenalidade.textContent = penalidade;
             }
         });
+
     </script>
 </body>
 
@@ -215,12 +237,13 @@
     @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
 
     .info-row {
-        display: flex;       
+        display: flex;
         align-items: center;
     }
+
     .info-row p {
-        margin: 0 10px;  
-        color: rgb(206, 176, 9);   
+        margin: 0 10px;
+        color: rgb(206, 176, 9);
         font-weight: bold;
     }
 
