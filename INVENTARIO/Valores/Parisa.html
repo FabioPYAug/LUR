@@ -1,473 +1,479 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="tituloPagina">-Noite Escura-</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  </head>
 
-  <body>
-    <div id="particles-js"></div>
-    <canvas id="canvas"></canvas>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="tituloPagina">-Noite Escura-</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
 
-    <!-- PARTE SUPERIOR -->
-    <header>
-      <div class="header-container">
-        <h1 class="site-title" id="APnome"></h1>
-        <svg
-          id="undo-icon"
-          viewBox="0 0 32 32"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="icon"
-          onclick="window.location.href='../index-inv.php'"
-        >
-          <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
-        </svg>
-      </div>
-    </header>
+<body>
+  <div id="particles-js"></div>
+  <canvas id="canvas"></canvas>
 
-    <!-- MEIO -->
-    <main>
-      <div class="content-wrapper">
-        <!-- Barra Lateral -->
-        <aside class="sidebar">
-          <h2>Tópicos</h2>
-          <ul>
-            <li><a href="#capD">Descrição</a></li>
-            <li><a href="#capH">História</a></li>
-            <li><a href="#capE">Efeitos</a></li>
-            <li><a href="#capC">Categorias</a></li>
-          </ul>
-        </aside>
+  <!-- PARTE SUPERIOR -->
+  <header>
+    <div class="header-container">
+      <h1 class="site-title" id="APnome"></h1>
+      <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../index-inv.php'">
+        <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
+      </svg>
+    </div>
+  </header>
 
-        <!-- Conteúdo Principal -->
-        <div class="meio">
-          <article>
-            <div class="article-content">
-              <!-- Textos -->
-              <div class="text-content">
-                <h3 id="capD">Descrição</h3>
-                <p id="APdescricao"></p>
+  <!-- MEIO -->
+  <main>
+    <div class="content-wrapper">
+      <!-- Barra Lateral -->
+      <aside class="sidebar">
+        <h2>Tópicos</h2>
+        <ul>
+          <li><a href="#capD">Descrição</a></li>
+          <li><a href="#capH">História</a></li>
+          <li><a href="#capE">Efeitos</a></li>
+          <li><a href="#capC">Categorias</a></li>
+        </ul>
+      </aside>
 
-                <h3 id="capH">História</h3>
-                <p id="APhistoria"></p>
+      <!-- Conteúdo Principal -->
+      <div class="meio">
+        <article>
+          <div class="article-content">
+            <!-- Textos -->
+            <div class="text-content">
+              <h3 id="capD">Descrição</h3>
+              <p id="APdescricao"></p>
 
-                <h3 id="capE">Efeitos</h3>
-                <p id="APefeito"></p>
+              <h3 id="capH">História</h3>
+              <p id="APhistoria"></p>
 
-                <h3 id="capC">Categorias</h3>
-                <div class="info-row">
-                  <p id="APtipo"><strong class="negrito"></strong></p>
-                  <p id="APalcanceTAB"><strong class="negrito"></strong></p>
-                  <p id="APentidade"><strong class="negrito"></strong></p>
-                </div>
-              </div>
+              <h3 id="capE">Efeitos</h3>
+              <p id="APefeito"></p>
 
-              <!-- Imagem -->
-              <div class="image-content">
-                <img
-                  src=""
-                  id="imagePlaceholder"
-                  class="Imagens"
-                  alt="Imagem do Item"
-                />
-
-                <!-- Tabela abaixo da imagem -->
-                <table class="info-table">
-                    <tr>
-                        <td class="title">Teste</td>
-                        <td class="value" id="APteste"></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Dano</td>
-                        <td class="value" id="APdano"></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Crítico</td>
-                        <td class="value" id="APcritico"></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Alcance</td>
-                        <td class="value" id="APalcance"></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Peso</td>
-                        <td class="value" id="APpeso"></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Tipo</td>
-                        <td class="value" id="APtipoDano"></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Preço de Venda</td>
-                        <td class="value" id="APvenda"></td>
-                    </tr>
-                </table>
+              <h3 id="capC">Categorias</h3>
+              <div class="info-row">
+                <p id="APtipo"><strong class="negrito"></strong></p>
+                <p id="APalcanceTAB"><strong class="negrito"></strong></p>
+                <p id="APentidade"><strong class="negrito"></strong></p>
               </div>
             </div>
-          </article>
-        </div>
-      </div>
-    </main>
 
-    <!-- Script movido para o final do body -->
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: {
-            value: 200,
-            density: {
-              enable: true,
-              value_area: 800,
-            },
+            <!-- Imagem -->
+            <div class="image-content">
+              <img src="" id="imagePlaceholder" class="Imagens" alt="Imagem do Item" />
+
+              <!-- Tabela abaixo da imagem -->
+              <table class="info-table">
+                <tr>
+                  <td class="title">Teste</td>
+                  <td class="value" id="APteste"></td>
+                </tr>
+                <tr>
+                  <td class="title">Dano</td>
+                  <td class="value" id="APdano"></td>
+                </tr>
+                <tr>
+                  <td class="title">Crítico</td>
+                  <td class="value" id="APcritico"></td>
+                </tr>
+                <tr>
+                  <td class="title">Alcance</td>
+                  <td class="value" id="APalcance"></td>
+                </tr>
+                <tr>
+                  <td class="title">Peso</td>
+                  <td class="value" id="APpeso"></td>
+                </tr>
+                <tr>
+                  <td class="title">Tipo</td>
+                  <td class="value" id="APtipoDano"></td>
+                </tr>
+                <tr>
+                  <td class="title">Preço de Venda</td>
+                  <td class="value" id="APvenda"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script movido para o final do body -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 200,
+          density: {
+            enable: true,
+            value_area: 800,
           },
-          color: {
-            value: "#5effb1",
+        },
+        color: {
+          value: "#5effb1",
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000",
           },
-          shape: {
-            type: "circle",
-            stroke: {
-              width: 0,
-              color: "#000000",
-            },
+        },
+        opacity: {
+          value: 0.5,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
           },
-          opacity: {
-            value: 0.5,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.1,
-            },
+        },
+        size: {
+          value: 2.5,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 0.1,
           },
-          size: {
-            value: 2.5,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 2,
-              size_min: 0.1,
-            },
-          },
-          line_linked: {
+        },
+        line_linked: {
+          enable: false,
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "random",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          attract: {
             enable: false,
           },
-          move: {
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
             enable: true,
-            speed: 3,
-            direction: "random",
-            random: true,
-            straight: false,
-            out_mode: "out",
-            attract: {
-              enable: false,
-            },
+            mode: "repulse",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
           },
         },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "repulse",
-            },
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-        },
-        retina_detect: true,
-      });
+      },
+      retina_detect: true,
+    });
 
-      var canvasLightning = function (c, cw, ch) {
-        this.init = function () {
-          this.loop();
-        };
-
-        var _this = this;
-        this.c = c;
-        this.ctx = c.getContext("2d");
-        this.cw = cw;
-        this.ch = ch;
-        this.mx = 0;
-        this.my = 0;
-
-        this.now = Date.now();
-        this.delta = 0;
-        this.then = this.now;
-
-        this.lightning = [];
-        this.lightTimeCurrent = 0;
-        this.lightTimeTotal = 50;
-
-        this.rand = function (rMi, rMa) {
-          return ~~(Math.random() * (rMa - rMi + 1) + rMi);
-        };
-
-        this.createL = function (x, y, canSpawn) {
-          this.lightning.push({
-            x: x,
-            y: y,
-            xRange: this.rand(5, 30),
-            yRange: this.rand(5, 25),
-            path: [
-              {
-                x: x,
-                y: y,
-              },
-            ],
-            pathLimit: this.rand(10, 35),
-            canSpawn: canSpawn,
-            hasFired: false,
-            grower: 0,
-            growerLimit: 5, //this.rand(5, 15)
-          });
-        };
-
-        this.updateL = function () {
-          var i = this.lightning.length;
-          while (i--) {
-            var light = this.lightning[i];
-
-            light.grower += this.delta;
-
-            if (light.grower >= light.growerLimit) {
-              light.grower = 0;
-              light.growerLimit *= 1.05;
-
-              light.path.push({
-                x:
-                  light.path[light.path.length - 1].x +
-                  (this.rand(0, light.xRange) - light.xRange / 2),
-                y:
-                  light.path[light.path.length - 1].y +
-                  this.rand(0, light.yRange),
-              });
-
-              if (light.path.length > light.pathLimit) {
-                this.lightning.splice(i, 1);
-              }
-              light.hasFired = true;
-            }
-          }
-        };
-
-        this.renderL = function () {
-          var i = this.lightning.length;
-          while (i--) {
-            var light = this.lightning[i];
-
-            this.ctx.strokeStyle =
-              "hsla(170, 100%, 76%, " + this.rand(10, 100) / 100 + ")";
-            this.ctx.lineWidth = 1;
-            if (this.rand(0, 30) == 0) {
-              this.ctx.lineWidth = 2;
-            }
-            if (this.rand(0, 60) == 0) {
-              this.ctx.lineWidth = 3;
-            }
-            if (this.rand(0, 90) == 0) {
-              this.ctx.lineWidth = 4;
-            }
-
-            this.ctx.beginPath();
-
-            var pathCount = light.path.length;
-            this.ctx.moveTo(light.x, light.y);
-            for (var pc = 0; pc < pathCount; pc++) {
-              this.ctx.lineTo(light.path[pc].x, light.path[pc].y);
-
-              if (light.canSpawn) {
-                if (this.rand(0, 100) == 0) {
-                  light.canSpawn = false;
-                  this.createL(light.path[pc].x, light.path[pc].y, false);
-                }
-              }
-            }
-
-            if (this.rand(0, 60) == 0) {
-              this.ctx.fillStyle =
-                "rgba(255, 255, 255, " + this.rand(1, 3) / 100 + ")";
-              this.ctx.fillRect(0, 0, this.cw, this.ch);
-            }
-
-            this.ctx.stroke();
-          }
-        };
-
-        this.lightningTimer = function () {
-          this.lightTimeCurrent += this.delta;
-          if (this.lightTimeCurrent >= this.lightTimeTotal) {
-            var newX = this.rand(100, cw - 100);
-            var newY = this.rand(0, ch / 2);
-            var createCount = this.rand(1, 3);
-            while (createCount--) {
-              this.createL(newX, newY, true);
-            }
-            this.lightTimeCurrent = 0;
-            this.lightTimeTotal = this.rand(200, 5500);
-          }
-        };
-
-        this.clearCanvas = function () {
-          this.ctx.globalCompositeOperation = "destination-out";
-          this.ctx.fillStyle = "rgba(0,0,0," + this.rand(1, 30) / 100 + ")";
-          this.ctx.fillRect(0, 0, this.cw, this.ch);
-          this.ctx.globalCompositeOperation = "source-over";
-        };
-
-        window.addEventListener("resize", () => {
-          this.cw = this.c.width = window.innerWidth;
-          this.ch = this.c.height = window.innerHeight;
-        });
-
-        this.loop = function () {
-          requestAnimationFrame(this.loop.bind(this));
-
-          this.now = Date.now();
-          this.delta = this.now - this.then;
-          this.then = this.now;
-
-          this.clearCanvas();
-          this.updateL();
-          this.lightningTimer();
-          this.renderL();
-        };
+    var canvasLightning = function (c, cw, ch) {
+      this.init = function () {
+        this.loop();
       };
 
-      var c = document.getElementById("canvas");
-      var cw = (c.width = window.innerWidth);
-      var ch = (c.height = window.innerHeight);
-      var cl = new canvasLightning(c, cw, ch);
+      var _this = this;
+      this.c = c;
+      this.ctx = c.getContext("2d");
+      this.cw = cw;
+      this.ch = ch;
+      this.mx = 0;
+      this.my = 0;
 
-      cl.init();
+      this.now = Date.now();
+      this.delta = 0;
+      this.then = this.now;
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const nome = sessionStorage.getItem("nome");
-        const tipo = sessionStorage.getItem("tipo");
-        const alcance = sessionStorage.getItem("alcance");
-        const descricao = sessionStorage.getItem("descricao");
-        const historia = sessionStorage.getItem("historia");
-        const entidade = sessionStorage.getItem("entidade");
-        const teste = sessionStorage.getItem("teste");
-        const dano = sessionStorage.getItem("dano");
-        const critico = sessionStorage.getItem("critico");
-        const peso = sessionStorage.getItem("peso");
-        const tipoDano = sessionStorage.getItem("tipoDano");
-        const venda = sessionStorage.getItem("venda");
-        const defesa = sessionStorage.getItem("defesa");
-        const penalidade = sessionStorage.getItem("penalidade");
-        const LocalImagem = sessionStorage.getItem("LocalImagem");
-        const acao = sessionStorage.getItem("acao");
-        const efeito = sessionStorage.getItem("efeito");
+      this.lightning = [];
+      this.lightTimeCurrent = 0;
+      this.lightTimeTotal = 50;
 
-        const tituloPagina = document.getElementById("tituloPagina");
-        const imgElement = document.getElementById("imagePlaceholder");
+      this.rand = function (rMi, rMa) {
+        return ~~(Math.random() * (rMa - rMi + 1) + rMi);
+      };
 
-        if (acao) {
-          const elementoAcao = document.getElementById("APacao");
-          if (elementoAcao) elementoAcao.textContent = acao;
+      this.createL = function (x, y, canSpawn) {
+        this.lightning.push({
+          x: x,
+          y: y,
+          xRange: this.rand(5, 30),
+          yRange: this.rand(5, 25),
+          path: [
+            {
+              x: x,
+              y: y,
+            },
+          ],
+          pathLimit: this.rand(10, 35),
+          canSpawn: canSpawn,
+          hasFired: false,
+          grower: 0,
+          growerLimit: 5, //this.rand(5, 15)
+        });
+      };
+
+      this.updateL = function () {
+        var i = this.lightning.length;
+        while (i--) {
+          var light = this.lightning[i];
+
+          light.grower += this.delta;
+
+          if (light.grower >= light.growerLimit) {
+            light.grower = 0;
+            light.growerLimit *= 1.05;
+
+            light.path.push({
+              x:
+                light.path[light.path.length - 1].x +
+                (this.rand(0, light.xRange) - light.xRange / 2),
+              y:
+                light.path[light.path.length - 1].y +
+                this.rand(0, light.yRange),
+            });
+
+            if (light.path.length > light.pathLimit) {
+              this.lightning.splice(i, 1);
+            }
+            light.hasFired = true;
+          }
         }
+      };
 
-        if (efeito) {
-          const elementoEfeito = document.getElementById("APefeito");
-          if (elementoEfeito) elementoEfeito.textContent = efeito;
-        }
+      this.renderL = function () {
+        var i = this.lightning.length;
+        while (i--) {
+          var light = this.lightning[i];
 
-        if (imgElement && LocalImagem) {
-          imgElement.src = LocalImagem;
-        }
+          this.ctx.strokeStyle =
+            "hsla(170, 100%, 76%, " + this.rand(10, 100) / 100 + ")";
+          this.ctx.lineWidth = 1;
+          if (this.rand(0, 30) == 0) {
+            this.ctx.lineWidth = 2;
+          }
+          if (this.rand(0, 60) == 0) {
+            this.ctx.lineWidth = 3;
+          }
+          if (this.rand(0, 90) == 0) {
+            this.ctx.lineWidth = 4;
+          }
 
-        if (tituloPagina && nome) {
-          tituloPagina.textContent = nome;
-        }
+          this.ctx.beginPath();
 
-        const elementoNome = document.getElementById("APnome");
-        if (elementoNome && nome) {
-          elementoNome.textContent = nome;
-        }
+          var pathCount = light.path.length;
+          this.ctx.moveTo(light.x, light.y);
+          for (var pc = 0; pc < pathCount; pc++) {
+            this.ctx.lineTo(light.path[pc].x, light.path[pc].y);
 
-        if (tipo) {
-          const elementoTipo = document.getElementById("APtipo");
-          if (elementoTipo) elementoTipo.textContent = tipo;
-        }
+            if (light.canSpawn) {
+              if (this.rand(0, 100) == 0) {
+                light.canSpawn = false;
+                this.createL(light.path[pc].x, light.path[pc].y, false);
+              }
+            }
+          }
 
-        if (alcance) {
-          const elementoAlcance = document.getElementById("APalcance");
-          const elementoAlcanceTab = document.getElementById("APalcanceTAB");
-          if (elementoAlcance) elementoAlcance.textContent = alcance;
-          if (elementoAlcanceTab) elementoAlcanceTab.textContent = alcance;
-        }
+          if (this.rand(0, 60) == 0) {
+            this.ctx.fillStyle =
+              "rgba(255, 255, 255, " + this.rand(1, 3) / 100 + ")";
+            this.ctx.fillRect(0, 0, this.cw, this.ch);
+          }
 
-        if (descricao) {
-          const elementoDescricao = document.getElementById("APdescricao");
-          if (elementoDescricao) elementoDescricao.textContent = descricao;
+          this.ctx.stroke();
         }
+      };
 
-        if (historia) {
-          const elementoHistoria = document.getElementById("APhistoria");
-          if (elementoHistoria) elementoHistoria.textContent = historia;
+      this.lightningTimer = function () {
+        this.lightTimeCurrent += this.delta;
+        if (this.lightTimeCurrent >= this.lightTimeTotal) {
+          var newX = this.rand(100, cw - 100);
+          var newY = this.rand(0, ch / 2);
+          var createCount = this.rand(1, 3);
+          while (createCount--) {
+            this.createL(newX, newY, true);
+          }
+          this.lightTimeCurrent = 0;
+          this.lightTimeTotal = this.rand(200, 5500);
         }
+      };
 
-        if (entidade) {
-          const elementoEntidade = document.getElementById("APentidade");
-          if (elementoEntidade) elementoEntidade.textContent = entidade;
-        }
+      this.clearCanvas = function () {
+        this.ctx.globalCompositeOperation = "destination-out";
+        this.ctx.fillStyle = "rgba(0,0,0," + this.rand(1, 30) / 100 + ")";
+        this.ctx.fillRect(0, 0, this.cw, this.ch);
+        this.ctx.globalCompositeOperation = "source-over";
+      };
 
-        if (teste) {
-          const elementoTeste = document.getElementById("APteste");
-          if (elementoTeste) elementoTeste.textContent = teste;
-        }
-
-        if (dano) {
-          const elementoDano = document.getElementById("APdano");
-          if (elementoDano) elementoDano.textContent = dano;
-        }
-
-        if (critico) {
-          const elementoCritico = document.getElementById("APcritico");
-          if (elementoCritico) elementoCritico.textContent = critico;
-        }
-
-        if (peso) {
-          const elementoPeso = document.getElementById("APpeso");
-          if (elementoPeso) elementoPeso.textContent = peso;
-        }
-
-        if (tipoDano) {
-          const elementoTipoDano = document.getElementById("APtipoDano");
-          if (elementoTipoDano) elementoTipoDano.textContent = tipoDano;
-        }
-
-        if (venda) {
-          const elementoVenda = document.getElementById("APvenda");
-          if (elementoVenda) elementoVenda.innerHTML = venda;
-        }
-
-        if (defesa) {
-          const elementoDefesa = document.getElementById("APdefesa");
-          if (elementoDefesa) elementoDefesa.textContent = defesa;
-        }
-
-        if (penalidade) {
-          const elementoPenalidade = document.getElementById("APpenalidade");
-          if (elementoPenalidade) elementoPenalidade.textContent = penalidade;
-        }
+      window.addEventListener("resize", () => {
+        this.cw = this.c.width = window.innerWidth;
+        this.ch = this.c.height = window.innerHeight;
       });
 
-    </script>
-  </body>
+      this.loop = function () {
+        requestAnimationFrame(this.loop.bind(this));
+
+        this.now = Date.now();
+        this.delta = this.now - this.then;
+        this.then = this.now;
+
+        this.clearCanvas();
+        this.updateL();
+        this.lightningTimer();
+        this.renderL();
+      };
+    };
+
+    var c = document.getElementById("canvas");
+    var cw = (c.width = window.innerWidth);
+    var ch = (c.height = window.innerHeight);
+    var cl = new canvasLightning(c, cw, ch);
+
+    cl.init();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const nome = sessionStorage.getItem("nome");
+      const tipo = sessionStorage.getItem("tipo");
+      const alcance = sessionStorage.getItem("alcance");
+      const descricao = sessionStorage.getItem("descricao");
+      const historia = sessionStorage.getItem("historia");
+      const entidade = sessionStorage.getItem("entidade");
+      const teste = sessionStorage.getItem("teste");
+      const dano = sessionStorage.getItem("dano");
+      const critico = sessionStorage.getItem("critico");
+      const peso = sessionStorage.getItem("peso");
+      const tipoDano = sessionStorage.getItem("tipoDano");
+      const venda = sessionStorage.getItem("venda");
+      const defesa = sessionStorage.getItem("defesa");
+      const penalidade = sessionStorage.getItem("penalidade");
+      const LocalImagem = sessionStorage.getItem("LocalImagem");
+      const acao = sessionStorage.getItem("acao");
+      const efeito = sessionStorage.getItem("efeito");
+
+      const tituloPagina = document.getElementById("tituloPagina");
+      const imgElement = document.getElementById("imagePlaceholder");
+
+      if (acao) {
+        const elementoAcao = document.getElementById("APacao");
+        if (elementoAcao) elementoAcao.textContent = acao;
+      }
+
+      if (efeito) {
+        const elementoEfeito = document.getElementById("APefeito");
+        if (elementoEfeito) {
+          let FormatadoEfeito = efeito.replace(/\\n/g, '\n');
+          FormatadoEfeito = FormatadoEfeito
+            .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
+            .replace(/\n/g, '<br>');       // Para quebras simples
+
+          elementoEfeito.innerHTML = FormatadoEfeito;
+        }
+      }
+
+      if (imgElement && LocalImagem) {
+        imgElement.src = LocalImagem;
+      }
+
+      if (tituloPagina && nome) {
+        tituloPagina.textContent = nome;
+      }
+
+      const elementoNome = document.getElementById("APnome");
+      if (elementoNome && nome) {
+        elementoNome.textContent = nome;
+      }
+
+      if (tipo) {
+        const elementoTipo = document.getElementById("APtipo");
+        if (elementoTipo) elementoTipo.textContent = tipo;
+      }
+
+      if (alcance) {
+        const elementoAlcance = document.getElementById("APalcance");
+        const elementoAlcanceTab = document.getElementById("APalcanceTAB");
+        if (elementoAlcance) elementoAlcance.textContent = alcance;
+        if (elementoAlcanceTab) elementoAlcanceTab.textContent = alcance;
+      }
+
+      if (descricao) {
+        const elementoDescricao = document.getElementById("APdescricao");
+        if (elementoDescricao) {
+          let FormatadoDescricao = descricao.replace(/\\n/g, '\n');
+          FormatadoDescricao = FormatadoDescricao
+            .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
+            .replace(/\n/g, '<br>');       // Para quebras simples
+
+          elementoDescricao.innerHTML = FormatadoDescricao;
+        }
+      }
+
+      if (historia) {
+        const elementoHistoria = document.getElementById("APhistoria");
+        if (elementoHistoria) {
+          let formattedHistoria = historia.replace(/\\n/g, '\n');
+          formattedHistoria = formattedHistoria
+            .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
+            .replace(/\n/g, '<br>');       // Para quebras simples
+
+          elementoHistoria.innerHTML = formattedHistoria;
+        }
+      }
+
+      if (entidade) {
+        const elementoEntidade = document.getElementById("APentidade");
+        if (elementoEntidade) elementoEntidade.textContent = entidade;
+      }
+
+      if (teste) {
+        const elementoTeste = document.getElementById("APteste");
+        if (elementoTeste) elementoTeste.textContent = teste;
+      }
+
+      if (dano) {
+        const elementoDano = document.getElementById("APdano");
+        if (elementoDano) elementoDano.textContent = dano;
+      }
+
+      if (critico) {
+        const elementoCritico = document.getElementById("APcritico");
+        if (elementoCritico) elementoCritico.textContent = critico;
+      }
+
+      if (peso) {
+        const elementoPeso = document.getElementById("APpeso");
+        if (elementoPeso) elementoPeso.textContent = peso;
+      }
+
+      if (tipoDano) {
+        const elementoTipoDano = document.getElementById("APtipoDano");
+        if (elementoTipoDano) elementoTipoDano.textContent = tipoDano;
+      }
+
+      if (venda) {
+        const elementoVenda = document.getElementById("APvenda");
+        if (elementoVenda) elementoVenda.innerHTML = venda;
+      }
+
+      if (defesa) {
+        const elementoDefesa = document.getElementById("APdefesa");
+        if (elementoDefesa) elementoDefesa.textContent = defesa;
+      }
+
+      if (penalidade) {
+        const elementoPenalidade = document.getElementById("APpenalidade");
+        if (elementoPenalidade) elementoPenalidade.textContent = penalidade;
+      }
+    });
+
+  </script>
+</body>
+
 </html>
 
 <style>
