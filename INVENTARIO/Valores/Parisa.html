@@ -203,8 +203,8 @@
         this.lightning.push({
           x: x,
           y: y,
-          xRange: this.rand(5, 30),
-          yRange: this.rand(5, 25),
+          xRange: this.rand(5, 35),
+          yRange: this.rand(5, 30),
           path: [
             {
               x: x,
@@ -215,7 +215,7 @@
           canSpawn: canSpawn,
           hasFired: false,
           grower: 0,
-          growerLimit: 5, //this.rand(5, 15)
+          growerLimit: 10, //this.rand(5, 15)
         });
       };
 
@@ -300,7 +300,7 @@
             this.createL(newX, newY, true);
           }
           this.lightTimeCurrent = 0;
-          this.lightTimeTotal = this.rand(200, 5500);
+          this.lightTimeTotal = this.rand(200, 5000);
         }
       };
 
