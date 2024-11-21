@@ -126,8 +126,9 @@
           cv: 150,
           vel: accl(rot(Math.PI / 1.223, möb(dbl(1 / 5, Math.PI / 2)))),
         });
-      $.strokeStyle = "hsla(0, 0%, 90%, 0.6)";
-      $.fillStyle = "hsla(0, 0%, 90%, 0.05)";
+      $.strokeStyle = "hsla(39, 100%, 50%, 0.6)";
+      $.fillStyle = "hsla(30, 100%, 70%, 0.6)" 
+
       $.fillRect(0, 0, c.width, c.height);
 
       function txt() {
@@ -205,7 +206,7 @@
         }
 
         function draw(t) {
-          var speedFactor = 0.25;
+          var speedFactor = 0.20;
 
           trail(1 - fade);
           $.save();
@@ -242,8 +243,9 @@
         function () {
           c.width = w = window.innerWidth / 1.1;
           c.height = h = window.innerHeight / 1.1;
-          $.strokeStyle = "hsla(0, 0%, 90%, 0.6)";
-          $.fillStyle = "hsla(0, 0%, 90%, 0.05)";
+          $.strokeStyle = "hsla(39, 100%, 50%, 0.6)";
+          $.fillStyle = "hsla(39, 100%, 50%, 0.05)";
+
         },
         false
       );
@@ -428,9 +430,9 @@
   }
 
   header {
-    background-color: #d4af37;
+    background-color: #d49d37;
     padding: 15px 20px;
-    border-bottom: 3px solid #c8a165;
+    border-bottom: 3px solid #fff59b;
     z-index: 1;
     position: relative;
   }
@@ -468,7 +470,7 @@
   }
 
   .sidebar {
-    opacity: 75%;
+    opacity: 85%;
     width: 20%;
     background-color: #fff5cc;
     padding: 15px;
@@ -501,7 +503,7 @@
 
   .meio {
     text-align: left;
-    opacity: 80%;
+    opacity: 90%;
     width: 75%;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
