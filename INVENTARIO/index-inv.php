@@ -108,7 +108,14 @@ include 'style-inv.php';
                             window.location.href = 'Valores/MaterialPadrão.html'
                             break;
                         case "Poção":
-                            window.location.href = 'Valores/PoçãoPadrão.html'
+                            if(entidade == "Sol"){
+                                window.location.href = 'Valores/PoçãoSol.html'
+                            } 
+                            else if(entidade == "Lua"){
+                                window.location.href = 'Valores/PoçãoLua.html'
+                            }else{
+                                window.location.href = 'Valores/PoçãoPadrão.html'
+                            }
                             break;
                         case "Moeda":
                             window.location.href = 'Valores/MoedaPadrão.html'
