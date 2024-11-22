@@ -123,8 +123,14 @@ include 'style-inv.php';
                         case "Item":
                             if(entidade == "Lua"){
                                 window.location.href = 'Valores/ItensLua.html'
-                            }
-                            else{
+                            } else if(entidade == "Sol"){
+                                if(nome == ""){
+                                    window.location.href = 'Valores/ItensBobby.html'
+                                }else{
+                                    window.location.href = 'Valores/ItensSol.html'
+                                }
+                                window.location.href = 'Valores/ItensLua.html'
+                            }else{
                                 window.location.href = 'Valores/ItensPadrão.html'
                             }
                             break;

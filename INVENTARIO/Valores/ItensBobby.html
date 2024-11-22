@@ -1,561 +1,687 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="tituloPagina">-Noite Escura-</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <button class="red-round-button">Não Aperte</button>
+
+    <canvas id="canvas"></canvas>
     <!-- PARTE SUPERIOR -->
-    <header>
-        <div class="header-container">
-            <h1 class="site-title" id="APnome"></h1>
-            <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../index-inv.php'">
-                <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
-            </svg>
-        </div>
+    <header class="rainbow-border">
+      <div class="header-container">
+        <h1 class="site-title rainbow-border" id="APnome"></h1>
+        <svg
+          id="undo-icon"
+          viewBox="0 0 32 32"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="icon"
+          onclick="window.location.href='../index-inv.php'"
+        >
+          <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
+        </svg>
+      </div>
     </header>
 
     <!-- MEIO -->
     <main>
-        <div class="content-wrapper">
-            <!-- Barra Lateral -->
-            <aside class="sidebar">
-                <h2>Tópicos</h2>
-                <ul>
-                    <li><a href="#capD">Descrição</a></li>
-                    <li><a href="#capH">História</a></li>
-                    <li><a href="#capE">Efeitos</a></li>
-                    <li><a href="#capC">Categorias</a></li>
-                </ul>
-            </aside>
+      <div class="content-wrapper">
+        <!-- Barra Lateral -->
+        <aside class="sidebar rainbow-border">
+          <h2 class="Titulos">Tópicos</h2>
+          <ul>
+            <li><a href="#capD" class="Titulos">Descrição</a></li>
+            <li><a href="#capH" class="Titulos">História</a></li>
+            <li><a href="#capE" class="Titulos">Efeitos</a></li>
+            <li><a href="#capC" class="Titulos">Categorias</a></li>
+          </ul>
+        </aside>
 
-            <!-- Conteúdo Principal -->
-            <div class="meio">
-                <article>
-                    <div class="article-content">
-                        <!-- Textos -->
-                        <div class="text-content">
-                            <h3 id="capD">Descrição</h3>
-                            <p id="APdescricao"></p>
+        <!-- Conteúdo Principal -->
+        <div class="meio rainbow-border">
+          <article>
+            <div class="article-content">
+              <!-- Textos -->
+              <div class="text-content">
+                <h3 id="capD" class="Titulos">Descrição</h3>
+                <p id="APdescricao"></p>
 
-                            <h3 id="capH">História</h3>
-                            <p id="APhistoria"></p>
+                <h3 id="capH" class="Titulos">História</h3>
+                <p id="APhistoria"></p>
 
-                            <h3 id="capE">Efeitos</h3>
-                            <p id="APefeito"></p>
+                <h3 id="capE" class="Titulos">Efeitos</h3>
+                <p id="APefeito"></p>
 
-                            <h3 id="capC">Categorias</h3>
-                            <div class="info-row">
-                                <p id="APtipo"><strong class="negrito"></strong></p>
-                                <p id="APalcanceTAB"><strong class="negrito"></strong></p>
-                            </div>
-                        </div>
+                <h3 id="capC" class="Titulos">Categorias</h3>
+                <div class="info-row">
+                  <p id="APtipo"><strong class="negrito"></strong></p>
+                  <p id="APalcanceTAB"><strong class="negrito"></strong></p>
+                </div>
+              </div>
 
-                        <!-- Imagem -->
-                        <div class="image-content">
-                            <img src="" id="imagePlaceholder" class="Imagens" alt="Imagem do Item" />
+              <!-- Imagem -->
+              <div class="image-content">
+                <img
+                  src="../../Imagens/PlaceHolder.png"
+                  id="imagePlaceholder"
+                  class="Imagens rainbow-border"
+                  alt="Imagem de Poção"
+                />
 
-                            <!-- Tabela abaixo da imagem -->
-                            <table class="info-table">
-                                <tr>
-                                    <td class="title">Teste</td>
-                                    <td class="value" id="APteste"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Dano</td>
-                                    <td class="value" id="APdano"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Alcance</td>
-                                    <td class="value" id="APalcance"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Peso</td>
-                                    <td class="value" id="APpeso"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title">Venda</td>
-                                    <td class="value" id="APvenda"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </article>
+                <!-- Tabela abaixo da imagem -->
+                <table class="info-table">
+                  <tr>
+                    <td class="title Titulos">Teste</td>
+                    <td class="value" id="APteste"></td>
+                  </tr>
+                  <tr>
+                    <td class="title Titulos">Dano</td>
+                    <td class="value" id="APdano"></td>
+                  </tr>
+                  <tr>
+                    <td class="title Titulos">Alcance</td>
+                    <td class="value" id="APalcance"></td>
+                  </tr>
+                  <tr>
+                    <td class="title Titulos">Peso</td>
+                    <td class="value" id="APpeso"></td>
+                  </tr>
+                  <tr>
+                    <td class="title Titulos">Venda</td>
+                    <td class="value" id="APvenda"></td>
+                  </tr>
+                </table>
+              </div>
             </div>
+          </article>
         </div>
+      </div>
     </main>
 
     <!-- Script movido para o final do body -->
+    <script src="BobbyScript.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const nome = sessionStorage.getItem("nome");
-            const tipo = sessionStorage.getItem("tipo");
-            const alcance = sessionStorage.getItem("alcance");
-            const descricao = sessionStorage.getItem("descricao");
-            const historia = sessionStorage.getItem("historia");
-            const entidade = sessionStorage.getItem("entidade");
-            const teste = sessionStorage.getItem("teste");
-            const dano = sessionStorage.getItem("dano");
-            const critico = sessionStorage.getItem("critico");
-            const peso = sessionStorage.getItem("peso");
-            const tipoDano = sessionStorage.getItem("tipoDano");
-            const venda = sessionStorage.getItem("venda");
-            const defesa = sessionStorage.getItem("defesa");
-            const penalidade = sessionStorage.getItem("penalidade");
-            const LocalImagem = sessionStorage.getItem("LocalImagem");
-            const acao = sessionStorage.getItem("acao");
-            const efeito = sessionStorage.getItem("efeito");
+      document.addEventListener("DOMContentLoaded", () => {
+        const nome = sessionStorage.getItem("nome");
+        const tipo = sessionStorage.getItem("tipo");
+        const alcance = sessionStorage.getItem("alcance");
+        const descricao = sessionStorage.getItem("descricao");
+        const historia = sessionStorage.getItem("historia");
+        const entidade = sessionStorage.getItem("entidade");
+        const teste = sessionStorage.getItem("teste");
+        const dano = sessionStorage.getItem("dano");
+        const critico = sessionStorage.getItem("critico");
+        const peso = sessionStorage.getItem("peso");
+        const tipoDano = sessionStorage.getItem("tipoDano");
+        const venda = sessionStorage.getItem("venda");
+        const defesa = sessionStorage.getItem("defesa");
+        const penalidade = sessionStorage.getItem("penalidade");
+        const LocalImagem = sessionStorage.getItem("LocalImagem");
+        const acao = sessionStorage.getItem("acao");
+        const efeito = sessionStorage.getItem("efeito");
 
-            const tituloPagina = document.getElementById("tituloPagina");
-            const imgElement = document.getElementById("imagePlaceholder");
+        const tituloPagina = document.getElementById("tituloPagina");
+        const imgElement = document.getElementById("imagePlaceholder");
 
-            if (acao) {
-                const elementoAcao = document.getElementById("APacao");
-                if (elementoAcao) elementoAcao.textContent = acao;
-            }
+        if (acao) {
+          const elementoAcao = document.getElementById("APacao");
+          if (elementoAcao) elementoAcao.textContent = acao;
+        }
 
-            if (efeito) {
-                const elementoEfeito = document.getElementById("APefeito");
-                if (elementoEfeito) {
-                    let FormatadoEfeito = efeito.replace(/\\n/g, '\n');
-                    FormatadoEfeito = FormatadoEfeito
-                        .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
-                        .replace(/\n/g, '<br>');       // Para quebras simples
+        if (efeito) {
+          const elementoEfeito = document.getElementById("APefeito");
+          if (elementoEfeito) {
+            let FormatadoEfeito = efeito.replace(/\\n/g, "\n");
+            FormatadoEfeito = FormatadoEfeito.replace(/\n\n/g, "<br><br>") // Para quebras duplas
+              .replace(/\n/g, "<br>"); // Para quebras simples
 
-                    elementoEfeito.innerHTML = FormatadoEfeito;
-                }
-            }
+            elementoEfeito.innerHTML = FormatadoEfeito;
+          }
+        }
 
-            if (imgElement && LocalImagem) {
-                imgElement.src = LocalImagem;
-            }
+        if (imgElement && LocalImagem) {
+          imgElement.src = LocalImagem;
+        }
 
-            if (tituloPagina && nome) {
-                tituloPagina.textContent = nome;
-            }
+        if (tituloPagina && nome) {
+          tituloPagina.textContent = nome;
+        }
 
-            const elementoNome = document.getElementById("APnome");
-            if (elementoNome && nome) {
-                elementoNome.textContent = nome;
-            }
+        const elementoNome = document.getElementById("APnome");
+        if (elementoNome && nome) {
+          elementoNome.textContent = nome;
+        }
 
-            if (tipo) {
-                const elementoTipo = document.getElementById("APtipo");
-                if (elementoTipo) elementoTipo.textContent = tipo;
-            }
+        if (tipo) {
+          const elementoTipo = document.getElementById("APtipo");
+          if (elementoTipo) elementoTipo.textContent = tipo;
+        }
 
-            if (alcance) {
-                const elementoAlcance = document.getElementById("APalcance");
-                const elementoAlcanceTab = document.getElementById("APalcanceTAB");
-                if (elementoAlcance) elementoAlcance.textContent = alcance;
-                if (elementoAlcanceTab) elementoAlcanceTab.textContent = alcance;
-            }
+        if (alcance) {
+          const elementoAlcance = document.getElementById("APalcance");
+          const elementoAlcanceTab = document.getElementById("APalcanceTAB");
+          if (elementoAlcance) elementoAlcance.textContent = alcance;
+          if (elementoAlcanceTab) elementoAlcanceTab.textContent = alcance;
+        }
 
-            if (descricao) {
-                const elementoDescricao = document.getElementById("APdescricao");
-                if (elementoDescricao) {
-                    let FormatadoDescricao = descricao.replace(/\\n/g, '\n');
-                    FormatadoDescricao = FormatadoDescricao
-                        .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
-                        .replace(/\n/g, '<br>');       // Para quebras simples
+        if (descricao) {
+          const elementoDescricao = document.getElementById("APdescricao");
+          if (elementoDescricao) {
+            let FormatadoDescricao = descricao.replace(/\\n/g, "\n");
+            FormatadoDescricao = FormatadoDescricao.replace(/\n\n/g, "<br><br>") // Para quebras duplas
+              .replace(/\n/g, "<br>"); // Para quebras simples
 
-                    elementoDescricao.innerHTML = FormatadoDescricao;
-                }
-            }
+            elementoDescricao.innerHTML = FormatadoDescricao;
+          }
+        }
 
-            if (historia) {
-                const elementoHistoria = document.getElementById("APhistoria");
-                if (elementoHistoria) {
-                    let formattedHistoria = historia.replace(/\\n/g, '\n');
-                    formattedHistoria = formattedHistoria
-                        .replace(/\n\n/g, '<br><br>')  // Para quebras duplas
-                        .replace(/\n/g, '<br>');       // Para quebras simples
+        if (historia) {
+          const elementoHistoria = document.getElementById("APhistoria");
+          if (elementoHistoria) {
+            let formattedHistoria = historia.replace(/\\n/g, "\n");
+            formattedHistoria = formattedHistoria
+              .replace(/\n\n/g, "<br><br>") // Para quebras duplas
+              .replace(/\n/g, "<br>"); // Para quebras simples
 
-                    elementoHistoria.innerHTML = formattedHistoria;
-                }
-            }
+            elementoHistoria.innerHTML = formattedHistoria;
+          }
+        }
 
-            if (entidade) {
-                const elementoEntidade = document.getElementById("APentidade");
-                if (elementoEntidade) elementoEntidade.textContent = entidade;
-            }
+        if (entidade) {
+          const elementoEntidade = document.getElementById("APentidade");
+          if (elementoEntidade) elementoEntidade.textContent = entidade;
+        }
 
-            if (teste) {
-                const elementoTeste = document.getElementById("APteste");
-                if (elementoTeste) elementoTeste.textContent = teste;
-            }
+        if (teste) {
+          const elementoTeste = document.getElementById("APteste");
+          if (elementoTeste) elementoTeste.textContent = teste;
+        }
 
-            if (dano) {
-                const elementoDano = document.getElementById("APdano");
-                if (elementoDano) elementoDano.textContent = dano;
-            }
+        if (dano) {
+          const elementoDano = document.getElementById("APdano");
+          if (elementoDano) elementoDano.textContent = dano;
+        }
 
-            if (critico) {
-                const elementoCritico = document.getElementById("APcritico");
-                if (elementoCritico) elementoCritico.textContent = critico;
-            }
+        if (critico) {
+          const elementoCritico = document.getElementById("APcritico");
+          if (elementoCritico) elementoCritico.textContent = critico;
+        }
 
-            if (peso) {
-                const elementoPeso = document.getElementById("APpeso");
-                if (elementoPeso) elementoPeso.textContent = peso;
-            }
+        if (peso) {
+          const elementoPeso = document.getElementById("APpeso");
+          if (elementoPeso) elementoPeso.textContent = peso;
+        }
 
-            if (tipoDano) {
-                const elementoTipoDano = document.getElementById("APtipoDano");
-                if (elementoTipoDano) elementoTipoDano.textContent = tipoDano;
-            }
+        if (tipoDano) {
+          const elementoTipoDano = document.getElementById("APtipoDano");
+          if (elementoTipoDano) elementoTipoDano.textContent = tipoDano;
+        }
 
-            if (venda) {
-                const elementoVenda = document.getElementById("APvenda");
-                if (elementoVenda) elementoVenda.innerHTML = venda;
-            }
+        if (venda) {
+          const elementoVenda = document.getElementById("APvenda");
+          if (elementoVenda) elementoVenda.innerHTML = venda;
+        }
 
-            if (defesa) {
-                const elementoDefesa = document.getElementById("APdefesa");
-                if (elementoDefesa) elementoDefesa.textContent = defesa;
-            }
+        if (defesa) {
+          const elementoDefesa = document.getElementById("APdefesa");
+          if (elementoDefesa) elementoDefesa.textContent = defesa;
+        }
 
-            if (penalidade) {
-                const elementoPenalidade = document.getElementById("APpenalidade");
-                if (elementoPenalidade) elementoPenalidade.textContent = penalidade;
-            }
-        });
-
+        if (penalidade) {
+          const elementoPenalidade = document.getElementById("APpenalidade");
+          if (elementoPenalidade) elementoPenalidade.textContent = penalidade;
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
 
-
 <style>
-    @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+  .red-round-button {
+    background-color: #ff0000;
+    color: #ffffff;
+    z-index: 5;
+    border: none; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.2s, box-shadow 0.2s; 
+    position: absolute; 
+  }
 
-    .info-row {
-        display: flex;
-        align-items: center;
+  .red-round-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5); 
+  }
+
+  .red-round-button:active {
+    transform: scale(0.9); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .Titulos {
+    font-family: arial;
+    animation: gradientColors 10s linear infinite;
+    background: linear-gradient(
+      90deg,
+      #ff7878,
+      #ffc272,
+      #ffff76,
+      #78ff78,
+      #7affff,
+      #7b7bff,
+      #ff7aff,
+      #ff7676
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @keyframes gradientColors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes rainbow-border {
+    0% {
+      border-color: red;
+    }
+    20% {
+      border-color: orange;
+    }
+    40% {
+      border-color: yellow;
+    }
+    60% {
+      border-color: green;
+    }
+    80% {
+      border-color: blue;
+    }
+    100% {
+      border-color: red;
+    }
+  }
+
+  .rainbow-border {
+    animation: rainbow-border 10s linear infinite;
+    border-width: 3px;
+  }
+
+  canvas {
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
     }
 
-    .info-row p {
-        margin: 0 10px;
-        color: rgb(206, 176, 9);
-        font-weight: bold;
+    50% {
+      background-position: 100% 50%;
     }
 
-    *,
-    *::before,
-    *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    100% {
+      background-position: 0% 50%;
     }
+  }
 
-    body {
-        font-family: 'Jura', sans-serif;
-        background-color: #000000;
-        color: #f0f0f0;
-        line-height: 1.6;
-    }
+  @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
 
-    header {
-        background-color: #111;
-        padding: 15px 20px;
-        border-bottom: 2px solid #444;
-    }
+  .info-row {
+    display: flex;
+    align-items: center;
+  }
 
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .info-row p {
+    margin: 0 10px;
+    color: rgb(206, 176, 9);
+    font-weight: bold;
+  }
 
-    .site-title {
-        color: #FFD700;
-        font-size: 2rem;
-    }
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    .icon {
-        width: 52px;
-        height: 52px;
-        color: gold;
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
+  body {
+    font-family: "Jura", sans-serif;
+    background-color: #000000;
+    color: #f0f0f0;
+    line-height: 1.6;
+  }
 
-    .icon:hover {
-        color: white;
-    }
+  header {
+    background-color: #111111;
+    padding: 15px 20px;
+    border-bottom: 2px solid #2f4f4f;
+  }
 
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-title {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+
+  .icon {
+    width: 52px;
+    height: 52px;
+    color: rgb(255, 187, 0);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .icon:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    width: 20%;
+    opacity: 90%;
+    background-color: #282828;
+    padding: 15px;
+    border-right: 4px solid #444;
+    border-bottom: 3px solid #444;
+    border-left: 3px solid #444;
+    border-top: 3px solid #444;
+    top: 20px;
+    flex: 1 1 200px;
+  }
+
+  .sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+  }
+
+  .sidebar a {
+    color: #ffd700;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    border-bottom: 1px solid #444;
+  }
+
+  .sidebar a:hover {
+    background-color: #333;
+  }
+
+  .meio {
+    text-align: left;
+    opacity: 95%;
+    width: 75%;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #353535;
+    border-bottom: 3px solid #444;
+    border-top: 3px solid #444;
+    border-right: 3px solid #444;
+    flex: 3 1 600px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 7px solid #ffd700;
+    color: white;
+  }
+
+  h2,
+  h3 {
+    margin-bottom: 1rem;
+    text-align: left;
+    color: white;
+    font-size: 28px;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    text-align: justify;
+    color: white;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .info-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    color: white;
+    margin: 20px 0 0 0;
+  }
+
+  .info-table td {
+    padding: 10px;
+    border: 2px solid #444;
+  }
+
+  .info-table .title {
+    text-align: left;
+    font-weight: bold;
+    color: gold;
+    font-size: 20px;
+  }
+
+  .info-table .value {
+    text-align: right;
+    color: #f0f0f0;
+    font-size: 20px;
+  }
+
+  .info-table tr:nth-child(even) {
+    background-color: #333;
+  }
+
+  .info-table tr:nth-child(odd) {
+    background-color: #282828;
+  }
+
+  .negrito {
+    color: rgb(206, 176, 9);
+  }
+
+  .Imagens {
+    border: 7px solid #444;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .Imagens:hover {
+    transform: scale(1.03);
+  }
+
+  .article-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .text-content {
+    flex: 1 1 60%;
+    min-width: 250px;
+  }
+
+  .image-content {
+    flex: 1 1 35%;
+    max-width: 300px;
+  }
+
+  .image-content img {
+    width: 100%;
+    height: auto;
+    border: 7px solid #444;
+    transition: transform 0.3s ease;
+  }
+
+  .image-content img:hover {
+    transform: scale(1.03);
+  }
+
+  .image-content .info-table {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 1200px) {
     .content-wrapper {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        flex-wrap: wrap;
+      padding: 15px;
     }
 
     .sidebar {
-        width: 20%;
-        background-color: #282828;
-        padding: 15px;
-        border-right: 2px solid #444;
-        top: 20px;
-        flex: 1 1 200px;
-    }
-
-    .sidebar h2 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-
-    .sidebar ul {
-        list-style: none;
-    }
-
-    .sidebar a {
-        color: #FFD700;
-        text-decoration: none;
-        display: block;
-        padding: 5px 0;
-        border-bottom: 1px solid #444;
-    }
-
-    .sidebar a:hover {
-        background-color: #333;
+      width: 25%;
     }
 
     .meio {
-        text-align: left;
-        width: 75%;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        background-color: #353535;
-        border-bottom: 1px solid #444;
-        border-right: 1px solid #444;
-        flex: 3 1 600px;
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+
+    .sidebar,
+    .meio {
+      width: 100%;
+    }
+
+    .sidebar {
+      border-right: none;
+      border-bottom: 2px solid #444;
+      margin-bottom: 20px;
+    }
+
+    .info-table {
+      width: 90%;
+    }
+
+    .article-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text-content,
+    .image-content {
+      flex: 1 1 100%;
+      max-width: none;
+    }
+
+    .info-table {
+      margin: 20px auto 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .site-title {
+      font-size: 1.5rem;
     }
 
     h1 {
-        font-size: 4rem;
-        margin: 0;
-        padding: 20px 0;
-        border-bottom: 7px solid #FFD700;
-        color: white;
+      font-size: 3rem;
     }
 
     h2,
     h3 {
-        margin-bottom: 1rem;
-        text-align: left;
-        color: white;
-        font-size: 28px;
+      font-size: 24px;
     }
 
     p {
-        margin-bottom: 1.5rem;
-        max-width: 800px;
-        text-align: justify;
-        color: white;
-        font-size: 18px;
-        line-height: 1.4;
+      font-size: 16px;
+    }
+
+    .info-table .title,
+    .info-table .value {
+      font-size: 16px;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      padding: 10px 15px;
+    }
+
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .icon {
+      margin-top: 10px;
+    }
+
+    .content-wrapper {
+      padding: 10px;
+    }
+
+    .meio {
+      padding: 15px;
     }
 
     .info-table {
-        width: 100%;
-        max-width: 600px;
-        border-collapse: collapse;
-        color: white;
-        margin: 20px 0 0 0;
-    }
-
-    .info-table td {
-        padding: 10px;
-        border: 2px solid #444;
-    }
-
-    .info-table .title {
-        text-align: left;
-        font-weight: bold;
-        color: gold;
-        font-size: 20px;
-    }
-
-    .info-table .value {
-        text-align: right;
-        color: #f0f0f0;
-        font-size: 20px;
-    }
-
-    .info-table tr:nth-child(even) {
-        background-color: #333;
-    }
-
-    .info-table tr:nth-child(odd) {
-        background-color: #282828;
-    }
-
-    .negrito {
-        color: rgb(206, 176, 9);
+      font-size: 14px;
     }
 
     .Imagens {
-        border: 7px solid #444;
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        transition: transform 0.3s ease;
+      max-width: 100%;
     }
-
-    .Imagens:hover {
-        transform: scale(1.03);
-    }
-
-    .article-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .text-content {
-        flex: 1 1 60%;
-        min-width: 250px;
-    }
-
-    .image-content {
-        flex: 1 1 35%;
-        max-width: 300px;
-    }
-
-    .image-content img {
-        width: 100%;
-        height: auto;
-        border: 7px solid #444;
-        transition: transform 0.3s ease;
-    }
-
-    .image-content img:hover {
-        transform: scale(1.03);
-    }
-
-    .image-content .info-table {
-        width: 100%;
-        max-width: 600px;
-        margin-top: 20px;
-    }
-
-    @media (max-width: 1200px) {
-        .content-wrapper {
-            padding: 15px;
-        }
-
-        .sidebar {
-            width: 25%;
-        }
-
-        .meio {
-            width: 70%;
-        }
-    }
-
-    @media (max-width: 992px) {
-        .content-wrapper {
-            flex-direction: column;
-        }
-
-        .sidebar,
-        .meio {
-            width: 100%;
-        }
-
-        .sidebar {
-            border-right: none;
-            border-bottom: 2px solid #444;
-            margin-bottom: 20px;
-        }
-
-        .info-table {
-            width: 90%;
-        }
-
-        .article-content {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .text-content,
-        .image-content {
-            flex: 1 1 100%;
-            max-width: none;
-        }
-
-        .info-table {
-            margin: 20px auto 0 auto;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .site-title {
-            font-size: 1.5rem;
-        }
-
-        h1 {
-            font-size: 3rem;
-        }
-
-        h2,
-        h3 {
-            font-size: 24px;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-        .info-table .title,
-        .info-table .value {
-            font-size: 16px;
-        }
-
-        .icon {
-            width: 40px;
-            height: 40px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        header {
-            padding: 10px 15px;
-        }
-
-        .header-container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .icon {
-            margin-top: 10px;
-        }
-
-        .content-wrapper {
-            padding: 10px;
-        }
-
-        .meio {
-            padding: 15px;
-        }
-
-        .info-table {
-            font-size: 14px;
-        }
-
-        .Imagens {
-            max-width: 100%;
-        }
-    }
+  }
 </style>
