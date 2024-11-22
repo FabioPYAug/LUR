@@ -176,7 +176,7 @@ $(document).ready(function() {
         $('body').append($slideshowContainer);
 
         // Lista das imagens para o slideshow
-        var images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; 
+        var images = ['https://images2.imgbox.com/27/db/6rorgqqs_o.png', 'https://images2.imgbox.com/f1/6a/kqq5bYVi_o.png', 'https://images2.imgbox.com/87/a7/dEWXx8Q0_o.png', 'https://images2.imgbox.com/0d/b3/RYi9CpUu_o.png', 'https://images2.imgbox.com/f4/bb/TCxOYfwb_o.png', 'https://images2.imgbox.com/f5/e7/fT4M5cRf_o.png', 'https://images2.imgbox.com/e5/db/5CbN6CDN_o.png', 'https://images2.imgbox.com/dc/a6/xshGA7H5_o.png', '']; 
         var currentImageIndex = 0;
 
         // Função para mudar a imagem do slideshow
@@ -218,7 +218,7 @@ $(document).ready(function() {
 
     $button.on('click', function() {
         // Cria o elemento de áudio
-        var audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'); 
+        var audio = new Audio('fennecxx, DJ ALEX - SPOOKY (Official Music)-[AudioTrimmer.com]'); 
         audio.loop = true;  
         audio.play(); 
 

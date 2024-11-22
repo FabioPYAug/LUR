@@ -108,12 +108,14 @@ include 'style-inv.php';
                             window.location.href = 'Valores/MaterialPadrão.html'
                             break;
                         case "Poção":
-                            if(entidade == "Sol"){
-                                window.location.href = 'Valores/PoçãoSol.html'
-                            } 
-                            else if(entidade == "Lua"){
+                            if(entidade == "Lua"){
                                 window.location.href = 'Valores/PoçãoLua.html'
-                            }else{
+                            } else if(entidade == "Sol"){
+                                if(nome == "Poção dos Sentidos Enfadonhos"){
+                                    window.location.href = 'Valores/PoçãoBobby.html'
+                                }else{
+                                    window.location.href = 'Valores/PoçãoSol.html'
+                            }}else{
                                 window.location.href = 'Valores/PoçãoPadrão.html'
                             }
                             break;
