@@ -7,9 +7,9 @@ let canvas = document.getElementById("canvas"),
     radius = 10;
 
 const Tau = Math.PI * 2,
-      ConnectionDist = 100,
-      Msqrt = Math.sqrt,
-      Mrandom = Math.random;
+    ConnectionDist = 100,
+    Msqrt = Math.sqrt,
+    Mrandom = Math.random;
 
 function handleResize() {
     w = ctx.canvas.width = window.innerWidth;
@@ -108,3 +108,107 @@ function animate() {
 
 createParticles();
 animate();
+
+
+$(document).ready(function() {
+    var $button = $('.red-round-button');
+    
+    function positionButtonRandomly() {
+        var screenWidth = $(window).width();
+        var screenHeight = $(window).height();
+        var randomX = Math.random() * (screenWidth - $button.outerWidth());
+        var randomY = Math.random() * (screenHeight - $button.outerHeight());
+        $button.css({ top: randomY, left: randomX });
+    }
+
+    positionButtonRandomly();
+    $(document).mousemove(function(event) {
+        var mouseX = event.pageX;
+        var mouseY = event.pageY;
+        var buttonX = $button.offset().left + $button.outerWidth() / 2;
+        var buttonY = $button.offset().top + $button.outerHeight() / 2;
+        var distanceX = mouseX - buttonX;
+        var distanceY = mouseY - buttonY;
+        var distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+
+        if (distance < 100) {
+            var moveX = (distanceX / distance) * 20; // Move 50px para longe
+            var moveY = (distanceY / distance) * 20; // Move 50px para longe
+            $button.css({
+                top: $button.offset().top - moveY,
+                left: $button.offset().left - moveX
+            });
+        }
+    });
+
+
+    function HAHAHAHA() {
+
+        var $slideshowContainer = $('<div id="slideshow-container"></div>').css({
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'black',
+            zIndex: 9999,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            overflow: 'hidden'
+        });
+        var $image = $('<img src="image1.jpg" class="slideshow-image" style="max-width: 100%; max-height: 100%; object-fit: contain;">');
+        $slideshowContainer.append($image);
+        $('body').append($slideshowContainer);
+
+        // Lista das imagens para o slideshow
+        var images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; 
+        var currentImageIndex = 0;
+
+        // Função para mudar a imagem do slideshow
+        function changeImage() {
+            currentImageIndex++;
+            if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+                $slideshowContainer.fadeOut(function() {
+                    $(this).remove();
+                    enablePageInteraction(); 
+                });
+            } else {
+                $image.fadeOut(500, function() {
+                    $image.attr('src', images[currentImageIndex]);
+                    $image.fadeIn(500);
+                });
+            }
+        }
+
+
+        var slideshowInterval = setInterval(changeImage, 3000);
+        disablePageInteraction();
+        function disablePageInteraction() {
+            $('body').css('overflow', 'hidden'); 
+            $(document).on('click', function(event) {
+                event.preventDefault(); 
+            });
+            $button.off('click'); 
+        }
+
+        function enablePageInteraction() {
+            $('body').css('overflow', 'auto'); 
+            $(document).off('click');
+            $button.on('click', function() {
+                HAHAHAHA();
+            });
+        }
+    }
+
+    $button.on('click', function() {
+        // Cria o elemento de áudio
+        var audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'); 
+        audio.loop = true;  
+        audio.play(); 
+
+        HAHAHAHA();
+    });
+});
+
