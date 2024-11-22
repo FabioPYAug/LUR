@@ -113,6 +113,20 @@ animate();
 $(document).ready(function() {
     var $button = $('.red-round-button');
     
+    function checkButtonPosition() {
+        var screenWidth = $(window).width();
+        var screenHeight = $(window).height();
+        var buttonOffset = $button.offset();
+        var buttonWidth = $button.outerWidth();
+        var buttonHeight = $button.outerHeight();
+
+        if (buttonOffset.left <= 0 || buttonOffset.left + buttonWidth >= screenWidth ||
+            buttonOffset.top <= 0 || buttonOffset.top + buttonHeight >= screenHeight) {
+            positionButtonRandomly();
+        }
+    }
+    setInterval(checkButtonPosition, 10);
+
     function positionButtonRandomly() {
         var screenWidth = $(window).width();
         var screenHeight = $(window).height();
@@ -132,8 +146,8 @@ $(document).ready(function() {
         var distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
         if (distance < 100) {
-            var moveX = (distanceX / distance) * 20; // Move 50px para longe
-            var moveY = (distanceY / distance) * 20; // Move 50px para longe
+            var moveX = (distanceX / distance) * 10; // Move 50px para longe
+            var moveY = (distanceY / distance) * 10; // Move 50px para longe
             $button.css({
                 top: $button.offset().top - moveY,
                 left: $button.offset().left - moveX
