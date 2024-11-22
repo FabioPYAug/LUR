@@ -14,7 +14,7 @@
     <!-- PARTE SUPERIOR -->
     <header>
         <div class="header-container">
-            <h1 class="site-title" id="APnome">Teste</h1>
+            <h1 class="site-title text" id="APnome">Teste</h1>
             <svg id="undo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round"
                 stroke-linejoin="round" stroke-width="2" class="icon" onclick="window.location.href='../index-inv.php'">
                 <path d="M12 22 L2 12 L12 3 M2 12 L16 12 C24 12 29 18 29 28" />
@@ -231,10 +231,26 @@
 
     </script>
 </body>
-
 </html>
 
 <style>
+    #APnome {
+        position: relative;
+        overflow: hidden;
+        filter: brightness(200%);
+    }
+
+    .text {
+        background-color: black;
+        color: white;
+        font-size: 180px;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        position: relative;
+        user-select: none;
+    }
+
     canvas {
         z-index: -2;
         top: 0;
@@ -335,20 +351,9 @@
         opacity: 90%;
         background-color: #282828;
         padding: 15px;
-        margin-right: 2px solid #f8f8f8;
+        border-right: 2px solid #444;
         top: 20px;
         flex: 1 1 200px;
-    }
-
-    aside.sidebar::after {
-        content: "";
-        background-color: white;
-        width: 2px;
-        height: 100%;
-        position: absolute;
-        top: 5.5%;
-        left: 100%;
-        z-index: -1;
     }
 
     .sidebar h2 {
