@@ -126,12 +126,11 @@ include 'style-inv.php';
                             if(entidade == "Lua"){
                                 window.location.href = 'Valores/ItensLua.html'
                             } else if(entidade == "Sol"){
-                                if(nome == ""){
+                                if(nome == "Tranca das Cartas"){
                                     window.location.href = 'Valores/ItensBobby.html'
                                 }else{
                                     window.location.href = 'Valores/ItensSol.html'
                                 }
-                                window.location.href = 'Valores/ItensLua.html'
                             }else{
                                 window.location.href = 'Valores/ItensPadrão.html'
                             }

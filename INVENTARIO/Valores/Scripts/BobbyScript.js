@@ -146,8 +146,8 @@ $(document).ready(function() {
         var distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
         if (distance < 100) {
-            var moveX = (distanceX / distance) * 10; // Move 50px para longe
-            var moveY = (distanceY / distance) * 10; // Move 50px para longe
+            var moveX = (distanceX / distance) * 15; // Move 50px para longe
+            var moveY = (distanceY / distance) * 15; // Move 50px para longe
             $button.css({
                 top: $button.offset().top - moveY,
                 left: $button.offset().left - moveX
@@ -218,7 +218,7 @@ $(document).ready(function() {
 
     $button.on('click', function() {
         // Cria o elemento de áudio
-        var audio = new Audio('fennecxx, DJ ALEX - SPOOKY (Official Music)-[AudioTrimmer.com]'); 
+        var audio = new Audio('Scripts/BOBBY.mp3'); 
         audio.loop = true;  
         audio.play(); 
 
