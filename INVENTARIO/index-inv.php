@@ -136,7 +136,11 @@ include 'style-inv.php';
                             }
                             break;
                         case "Armadura":
-                            window.location.href = 'Valores/ArmaduraPadrão.html'
+                            if(efeito != "-" || efeito != ""){
+                                window.location.href = 'Valores/ArmaduraPadrãoEfeitos.html'
+                            } else{
+                                window.location.href = 'Valores/ArmaduraPadrão.html'
+                            }
                             break;
                     }
 
