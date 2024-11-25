@@ -90,17 +90,15 @@ include 'style-inv.php';
 
                     switch (tipo) {
                         case "Arma":
-                            if(entidade == "Sol"){
-                                if(nome == "Parisa"){
+                            if (entidade == "Sol") {
+                                if (nome == "Parisa") {
                                     window.location.href = 'Valores/Parisa.html'
-                                }else{
+                                } else {
                                     window.location.href = 'Valores/ArmaSol.html'
                                 }
-                            } 
-                            else if(entidade == "Lua"){
+                            } else if (entidade == "Lua") {
                                 window.location.href = 'Valores/ArmaLua.html'
-                            }
-                            else{
+                            } else {
                                 window.location.href = 'Valores/ArmaPadrão.html'
                             }
                             break;
@@ -108,14 +106,15 @@ include 'style-inv.php';
                             window.location.href = 'Valores/MaterialPadrão.html'
                             break;
                         case "Poção":
-                            if(entidade == "Lua"){
+                            if (entidade == "Lua") {
                                 window.location.href = 'Valores/PoçãoLua.html'
-                            } else if(entidade == "Sol"){
-                                if(nome == "Poção dos Sentidos Enfadonhos"){
+                            } else if (entidade == "Sol") {
+                                if (nome == "Poção dos Sentidos Enfadonhos") {
                                     window.location.href = 'Valores/PoçãoBobby.html'
-                                }else{
+                                } else {
                                     window.location.href = 'Valores/PoçãoSol.html'
-                            }}else{
+                                }
+                            } else {
                                 window.location.href = 'Valores/PoçãoPadrão.html'
                             }
                             break;
@@ -123,29 +122,32 @@ include 'style-inv.php';
                             window.location.href = 'Valores/MoedaPadrão.html'
                             break;
                         case "Item":
-                            if(entidade == "Lua"){
-                                window.location.href = 'Valores/ItensLua.html'
-                            } else if(entidade == "Sol"){
-                                if(nome == "Tranca das Cartas"){
+                            if (entidade == "Lua") {
+                                if (nome == "Fragmento Sol e Lua") {
+                                    window.location.href = 'Valores/ItensColarSL.html'
+                                } else {
+                                    window.location.href = 'Valores/ItensLua.html'
+                                }
+                            } else if (entidade == "Sol") {
+                                if (nome == "Tranca das Cartas") {
                                     window.location.href = 'Valores/ItensBobby.html'
-                                }else{
+                                } else {
                                     window.location.href = 'Valores/ItensSol.html'
                                 }
-                            }else{
+                            } else {
                                 window.location.href = 'Valores/ItensPadrão.html'
                             }
                             break;
                         case "Armadura":
-                            if(efeito != "-" || efeito != ""){
+                            if (efeito != "-" || efeito != "") {
                                 window.location.href = 'Valores/ArmaduraPadrãoEfeitos.html'
-                            } else{
+                            } else {
                                 window.location.href = 'Valores/ArmaduraPadrão.html'
                             }
                             break;
                     }
 
                 }
-                
             </script>
         </div>
     </section>
@@ -154,13 +156,13 @@ include 'style-inv.php';
 </html>
 <script>
     window.addEventListener("scroll", function() {
-    const header = document.querySelector('#header');
-    if (window.scrollY > 500) {
-        header.classList.add('rolagem');
-    } else {
-        header.classList.remove('rolagem');
-    }
-});
+        const header = document.querySelector('#header');
+        if (window.scrollY > 500) {
+            header.classList.add('rolagem');
+        } else {
+            header.classList.remove('rolagem');
+        }
+    });
 
     const particleContainer = document.createElement('div');
     particleContainer.classList.add('particle-container');
