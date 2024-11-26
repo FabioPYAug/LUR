@@ -13,7 +13,7 @@
             <a href="#" onclick="window.location.href='DOCUMENTOS/index-doc.php'">Documentos</a>
             <a href="#" onclick="window.location.href='INVENTARIO/index-inv.php'">Inventário</a>
             <a href="#">Mapa</a>
-            <a href="#" onclick="window.location.href='GALERIA/galeria.html'">Galeria</a>
+            <a href="#" onclick="window.location.href='GALERIA/index-gal.php'">Galeria</a>
             <a href="#">Perfil</a>
         </nav>
     </header>
