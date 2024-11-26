@@ -12,10 +12,12 @@
   </head>
 
   <body>
+    <canvas id="gears" width="240" height="220"></canvas>
+
     <!-- PARTE SUPERIOR -->
     <header>
       <div class="header-container">
-        <h1 class="site-title" id="APnome"></h1>
+        <h1 class="site-title" id="APnome">Teste</h1>
         <svg
           id="undo-icon"
           viewBox="0 0 32 32"
@@ -52,10 +54,10 @@
               <!-- Textos -->
               <div class="text-content">
                 <h3 id="capD">Descrição</h3>
-                <p id="APdescricao"></p>
+                <p id="APdescricao">a</p>
 
                 <h3 id="capH">História</h3>
-                <p id="APhistoria"></p>
+                <p id="APhistoria">a</p>
 
                 <h3 id="capC">Categorias</h3>
                 <div class="info-row">
@@ -250,6 +252,11 @@
 </html>
 
 <style>
+    canvas#gears {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+    }
     
     @import url("https://fonts.googleapis.com/css?family=Special+Elite|Jura:400");
 
@@ -292,7 +299,7 @@
     }
 
     .site-title {
-        color: #f1c40f;
+        color: #e67e22;
         font-size: 2rem;
         text-shadow: 1px 1px 3px #000;
     }
@@ -325,6 +332,7 @@
         background: #1e1a17;
         padding: 15px;
         border-right: 3px solid #573a2f;
+        opacity: 85%;
     }
 
     .sidebar h2 {
@@ -357,14 +365,15 @@
         background: rgba(47, 32, 21, 0.95);
         border: 3px solid #573a2f;
         color: #f0f0f0;
+        opacity: 90%;
     }
 
     h1 {
         font-size: 3rem;
         margin: 0;
         padding: 20px 0;
-        border-bottom: 7px solid #f1c40f;
-        color: white;
+        border-bottom: 7px solid #e67e22;
+        color: #e67e22;
     }
 
     h2,
