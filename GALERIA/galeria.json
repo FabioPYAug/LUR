@@ -11,8 +11,8 @@
     {"url": "https://images2.imgbox.com/49/ba/To0pCVay_o.png", "categoria": "Conto NE"},
     {"url": "https://images2.imgbox.com/ba/5f/3RQGjfOO_o.png", "categoria": "Conto NE"},
     
-    {"url": "https://images2.imgbox.com/56/c8/MgUXroMO_o.gif", "categoria": "E-Players"},
-    {"url": "https://images2.imgbox.com/bd/53/JDWOlkWn_o.gif", "categoria": "E-NPCs"},
+    {"url": "https://images2.imgbox.com/56/c8/MgUXroMO_o.gif", "categoria": "Emotes"},
+    {"url": "https://images2.imgbox.com/bd/53/JDWOlkWn_o.gif", "categoria": "Emotes"},
     {"url": "https://images2.imgbox.com/0e/61/c2aNdFCR_o.png", "categoria": "Emotes"},
     {"url": "https://images2.imgbox.com/5a/dc/eGcAtijb_o.png", "categoria": "Emotes"},
     {"url": "https://images2.imgbox.com/da/e8/LgblndkQ_o.png", "categoria": "Emotes"},
@@ -136,8 +136,8 @@
     {"url": "https://images2.imgbox.com/41/16/Z0NKOIny_o.png", "categoria": "Tokens"},
     {"url": "https://images2.imgbox.com/46/5e/x1wTkG5G_o.png", "categoria": "Tokens"},
     {"url": "https://images2.imgbox.com/83/75/0INFetbJ_o.png", "categoria": "Tokens"},
-    {"url": "https://images2.imgbox.com/68/fc/n6jt0FEE_o.png", "categoria": "T-Inimigos"},
-    {"url": "https://images2.imgbox.com/97/26/wpVLejNe_o.png", "categoria": "T-NPCs"},
-    {"url": "https://images2.imgbox.com/3f/6b/6ULTtB2i_o.png", "categoria": "T-Players"},
-    {"url": "https://images2.imgbox.com/a5/01/wnsCuwrv_o.png", "categoria": "T-Todos"}
+    {"url": "https://images2.imgbox.com/68/fc/n6jt0FEE_o.png", "categoria": "Tokens"},
+    {"url": "https://images2.imgbox.com/97/26/wpVLejNe_o.png", "categoria": "Tokens"},
+    {"url": "https://images2.imgbox.com/3f/6b/6ULTtB2i_o.png", "categoria": "Tokens"},
+    {"url": "https://images2.imgbox.com/a5/01/wnsCuwrv_o.png", "categoria": "Tokens"}
 ]
