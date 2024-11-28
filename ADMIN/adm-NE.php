@@ -63,20 +63,70 @@
                     <h3 id="titulo-item">Cadastro</h3>
                 </div>
                 <div class="uk-modal-body">
-                    <label>Nome</label>
-                    <input type="text" class="uk-input">
-                    <label>Tipo</label>
-                    <input type="text" class="uk-input">
-                    <label>Descrição</label>
-                    <textarea class="uk-textarea"></textarea>
-                    <label>História</label>
-                    <textarea class="uk-textarea"></textarea>
+                    <div class="flex-container">
+                        <div style="flex: 1;">
+                            <label>Nome</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Tipo</label>
+                            <select id="cadTipo">
+                                <option value="Item">Item</option>
+                                <option value="Arma">Arma</option>
+                                <option value="Armadura">Armadura</option>
+                                <option value="Material">Material</option>
+                                <option value="Moeda">Moeda</option>
+                                <option value="Poção">Poção</option>
+                                <option value="Habilidade">Habilidade</option>
+                                <option value="Magia">Magia</option>
+                                <option value="Maldição">Maldição</option>
+                                <option value="Bênção">Bênção</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Entidade</label>
+                            <select id="cadEntidade">
+                                <option></option>
+                                <option value="Sol">Sol</option>
+                                <option value="Lua">Lua</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Alcance</label>
+                            <select id="cadAlcance">
+                                <option></option>
+                                <option value="Toque">Toque</option>
+                                <option value="Corpo a Corpo">Corpo a Corpo</option>
+                                <option value="Curto">Curto</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Longo">Longo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="flex-container">
+                        <div style="flex: 1;">
+                            <label>Descrição</label>
+                            <textarea class="uk-textarea" id="CadDescricao"></textarea>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>História</label>
+                            <textarea class="uk-textarea" id="CadHistoria"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="flex-container">
+                    </div>
                 </div>
                 <div class="uk-modal-footer">
                     <button class="uk-button uk-button-primary">Salvar</button>
                 </div>
             </div>
         </div>
+
+
     </div>
 </body>
 <script>
@@ -106,6 +156,27 @@
 </script>
 
 <style>
+    .flex-container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .flex-container>div {
+        flex: 1;
+    }
+
+    .uk-input,
+    select {
+        background: #e8eeef;
+        border: 1px solid #ccc;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        color: #384047;
+        box-sizing: border-box;
+    }
+
     textarea {
         background: #e8eeef;
         border: 1px solid #ccc;
@@ -256,7 +327,7 @@
         background: #fff;
         border-radius: 10px;
         width: 100%;
-        max-width: 500px;
+        max-width: 1250px;
         padding: 30px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
