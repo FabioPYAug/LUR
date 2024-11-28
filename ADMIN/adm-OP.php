@@ -15,10 +15,10 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li><a href="#">Lobby</a></li>
-                <li><a href="#">Noite Escura</a></li>
-                <li><a href="#">Ordem Paranormal</a></li>
-                <li><a href="#">Sussurros Históricos</a></li>
+            <li><a href="adm-lobby.php">Lobby</a></li>
+                <li><a href="adm-NE.php">Noite Escura</a></li>
+                <li><a href="adm-OP.php">Ordem Paranormal</a></li>
+                <li><a href="adm-SH.php">Sussurros Históricos</a></li>
             </ul>
         </div>
         <div id="page-content-wrapper">
