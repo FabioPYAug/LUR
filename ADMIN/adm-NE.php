@@ -302,11 +302,12 @@
         width: 100%;
         border: 1px solid #4bc970;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     button:hover {
         background-color: #3ac162;
+        transform: scale(1.02);
     }
 
     .modal-container {
@@ -349,6 +350,12 @@
 
         .cadastro-box {
             width: 90%;
+            max-width: 100%;
+        }
+
+        .uk-input,
+        select {
+            font-size: 14px;
         }
     }
 </style>
