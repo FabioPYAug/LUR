@@ -12,19 +12,20 @@
 
 <body>
     <div id="wrapper">
-        <!-- Sidebar -->
+        <!-- SIDEBAR -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-            <li><a href="adm-lobby.php">Lobby</a></li>
+                <li><a href="adm-lobby.php">Lobby</a></li>
                 <li><a href="adm-NE.php">Noite Escura</a></li>
                 <li><a href="adm-OP.php">Ordem Paranormal</a></li>
                 <li><a href="adm-SH.php">Sussurros Históricos</a></li>
             </ul>
         </div>
+        <!-- CONTEÚDO -->
         <div id="page-content-wrapper">
             <div class="col-md-12">
                 <form action="index.html" method="post">
-                    <h1>Novos Dados (CAMPANHAS)</h1>
+                    <h1>Novos Dados NE</h1>
                     <label for="job">Qual o Tipo de dados:</label>
                     <select id="job" name="user_job">
                         <optgroup label="Noite Escura">
@@ -53,6 +54,7 @@
         });
     </script>
 </body>
+
 </html>
 
 <style>
@@ -102,7 +104,6 @@
         margin-bottom: 10px;
     }
 
-    /* Estilos da Sidebar */
     #wrapper {
         display: flex;
         transition: all 0.5s ease;
@@ -113,6 +114,8 @@
         background: #000;
         color: #999;
         position: fixed;
+        top: 0;
+        left: 0;
         height: 100%;
         overflow-y: auto;
         transition: all 0.5s ease;
@@ -134,15 +137,20 @@
     }
 
     #sidebar-wrapper ul li a:hover {
-        color: #fff;
-        background: rgba(255, 255, 255, 0.2);
-        border-left: 3px solid red;
-    }
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-left: 2px solid red;
+    padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
     #page-content-wrapper {
         margin-left: 250px;
         padding: 20px;
-        width: 100%;
+        width: calc(100% - 250px);
+        transition: all 0.5s ease;
     }
 
     @media (max-width: 768px) {
