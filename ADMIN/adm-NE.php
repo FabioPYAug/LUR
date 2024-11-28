@@ -7,7 +7,6 @@
     <title>Sign Up Form</title>
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -21,11 +20,14 @@
                 <li><a href="adm-SH.php">Sussurros Históricos</a></li>
             </ul>
         </div>
+
         <!-- CONTEÚDO -->
         <div id="page-content-wrapper">
-            <div class="col-md-12">
+            <h1 class="TITULO">NOITE ESCURA</h1>
+            <div class="form-container">
+                <!-- Formulário 1 -->
                 <form action="index.html" method="post">
-                    <h1>Novos Dados NE</h1>
+                    <h1>Novos Dados</h1>
                     <label for="job">Qual o Tipo de dados:</label>
                     <select id="job" name="user_job">
                         <optgroup label="Noite Escura">
@@ -33,42 +35,55 @@
                             <option value="NEGal">Galeria</option>
                             <option value="NEDoc">Documento</option>
                         </optgroup>
+                    </select>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <!-- Formulário 2 -->
+                <form action="index.html" method="post">
+                    <h1>Modificar Dados</h1>
+                    <label for="op-job">Qual o Tipo de dados:</label>
+                    <select id="op-job" name="user_op_job">
                         <optgroup label="Ordem Paranormal">
                             <option value="OPInv">Inventário</option>
                             <option value="OPGal">Galeria</option>
                             <option value="OPDoc">Documento</option>
                         </optgroup>
                     </select>
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Abrir</button>
                 </form>
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const wrapper = document.getElementById("wrapper");
-            wrapper.addEventListener("click", () => {
-                wrapper.classList.toggle("toggled");
-            });
-        });
-    </script>
 </body>
 
 </html>
 
+
 <style>
+    @import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+
+    .TITULO {
+        font-family: 'Jura', sans-serif;
+        font-size: 2.9em;
+        text-align: center;
+        color: #384047;
+        margin-bottom: 20px;
+    }
+
     body {
         font-family: 'Nunito', sans-serif;
         color: #384047;
     }
 
     form {
-        max-width: 300px;
-        margin: 10px auto;
+        flex: 1;
+        max-width: 100%;
+        margin: 10px;
         padding: 10px 20px;
         background: #f4f7f8;
         border-radius: 8px;
+        box-sizing: border-box;
     }
 
     h1 {
@@ -102,6 +117,12 @@
         width: 100%;
         border: 1px solid #3ac162;
         margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #3ac162;
     }
 
     #wrapper {
@@ -137,14 +158,14 @@
     }
 
     #sidebar-wrapper ul li a:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    border-left: 2px solid red;
-    padding-left: 20px; 
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+        border-left: 2px solid red;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
     #page-content-wrapper {
         margin-left: 250px;
@@ -153,10 +174,16 @@
         transition: all 0.5s ease;
     }
 
+    .form-container {
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
     @media (max-width: 768px) {
         #sidebar-wrapper {
             width: 0;
-            transition: all 0.5s ease;
         }
 
         #wrapper.toggled #sidebar-wrapper {
@@ -165,10 +192,16 @@
 
         #page-content-wrapper {
             margin-left: 0;
+            padding: 10px;
         }
 
         #wrapper.toggled #page-content-wrapper {
             margin-left: 250px;
+        }
+
+        .form-container {
+            flex-direction: column;
+            align-items: stretch;
         }
     }
 </style>

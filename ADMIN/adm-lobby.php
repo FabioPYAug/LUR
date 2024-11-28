@@ -23,24 +23,8 @@
         </div>
         <!-- CONTEÚDO -->
         <div id="page-content-wrapper">
-            <div class="col-md-12">
-                <form action="index.html" method="post">
-                    <h1>Novos Dados NE</h1>
-                    <label for="job">Qual o Tipo de dados:</label>
-                    <select id="job" name="user_job">
-                        <optgroup label="Noite Escura">
-                            <option value="NEInv">Inventário</option>
-                            <option value="NEGal">Galeria</option>
-                            <option value="NEDoc">Documento</option>
-                        </optgroup>
-                        <optgroup label="Ordem Paranormal">
-                            <option value="OPInv">Inventário</option>
-                            <option value="OPGal">Galeria</option>
-                            <option value="OPDoc">Documento</option>
-                        </optgroup>
-                    </select>
-                    <button type="submit">Enviar</button>
-                </form>
+            <div class="centro">
+                <h1>:D</h1>
             </div>
         </div>
     </div>
