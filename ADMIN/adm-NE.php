@@ -118,6 +118,60 @@
                 </div>
                 <div class="uk-modal-body">
                     <div class="flex-container">
+                    <div style="flex: 1;">
+                            <label>Teste</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Dano</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Crítico</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Defesa</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Penalidade</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Tipo de Dano</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="flex-container">
+                    <div style="flex: 1;">
+                            <label>Peso</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Venda</label>
+                            <input type="text" class="uk-input">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Ação</label>
+                            <select id="cadAlcance">
+                                <option></option>
+                                <option value="Padrão">Padrão</option>
+                                <option value="Movimento">Movimento</option>
+                                <option value="Bônus">Bônus</option>
+                                <option value="Livre">Livre</option>
+                                <option value="Completa">Completa</option>
+                                <option value="Sustentada">Sustentada</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-footer">
+                    <div style="flex: 1;">
+                        <label>Efeito</label>
+                        <input type="text" class="uk-input">
                     </div>
                 </div>
                 <div class="uk-modal-footer">
@@ -175,6 +229,15 @@
         width: 100%;
         color: #384047;
         box-sizing: border-box;
+    }
+    select:focus {
+        border-color: #4bc970;
+        outline: none;
+    }
+
+    .uk-input:focus {
+        border-color: #4bc970;
+        outline: none;
     }
 
     textarea {
@@ -328,7 +391,7 @@
         background: #fff;
         border-radius: 10px;
         width: 100%;
-        max-width: 1250px;
+        max-width: 1000px;
         padding: 30px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
