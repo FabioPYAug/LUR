@@ -1,9 +1,9 @@
 <?php
 include("adm-style.php");
-// include("../NE/conexao.php");
+include("../NE/conexao.php");
 
-// $query = "SELECT * FROM ne_dados";
-// $result = mysqli_query($conexao, $query);
+$query = "SELECT * FROM ne_dados";
+$result = mysqli_query($conexao, $query);
 ?>
 
 <!DOCTYPE html>
@@ -55,9 +55,9 @@ include("adm-style.php");
                     <select id="op-NE" name="user_op_NE">
                         <option></option>
                         <?php
-                        //while ($row = mysqli_fetch_assoc($result)) {
-                        //    echo "<option value='{$row['ID']}'>{$row['ID']} - {$row['nome']} - {$row['tipo']}</option>";
-                        //}
+                        while ($row = mysqli_fetch_assoc($result)) {
+                           echo "<option value='{$row['ID']}'>{$row['ID']} - {$row['nome']} - {$row['tipo']}</option>";
+                        }
                         ?>
                     </select>
                     <button type="submit">Abrir</button>
