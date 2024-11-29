@@ -1,3 +1,10 @@
+<?php
+include("../NE/conexao.php");
+
+$query = "SELECT * FROM ne_dados";
+$result = mysqli_query($conexao, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,11 +52,12 @@
                     <h1>Modificar Dados</h1>
                     <label for="op-NE">Qual o Tipo de dados:</label>
                     <select id="op-NE" name="user_op_NE">
-                        <optgroup label="Ordem Paranormal">
-                            <option value="OPInv">Inventário</option>
-                            <option value="OPGal">Galeria</option>
-                            <option value="OPDoc">Documento</option>
-                        </optgroup>
+                        <option></option>
+                        <?php
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                        }
+                        ?>
                     </select>
                     <button type="submit">Abrir</button>
                 </form>
