@@ -1,8 +1,8 @@
 <?php
-include("../NE/conexao.php");
+// include("../NE/conexao.php");
 
-$query = "SELECT * FROM ne_dados";
-$result = mysqli_query($conexao, $query);
+// $query = "SELECT * FROM ne_dados";
+// $result = mysqli_query($conexao, $query);
 ?>
 
 <!DOCTYPE html>
@@ -54,9 +54,9 @@ $result = mysqli_query($conexao, $query);
                     <select id="op-NE" name="user_op_NE">
                         <option></option>
                         <?php
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value='{$row['ID']}'>{$row['ID']} - {$row['nome']} - {$row['tipo']}</option>";
-                        }
+                        //while ($row = mysqli_fetch_assoc($result)) {
+                        //    echo "<option value='{$row['ID']}'>{$row['ID']} - {$row['nome']} - {$row['tipo']}</option>";
+                        //}
                         ?>
                     </select>
                     <button type="submit">Abrir</button>
@@ -65,10 +65,10 @@ $result = mysqli_query($conexao, $query);
         </div>
 
         <!-- CADASTRO INVENTÁRIO -->
-        <div id="cadastro-container" class="modal-container" style="display: none;">
+        <div id="cadastro-container-inv" class="modal-container" style="display: none;">
             <div class="uk-modal-dialog cadastro-box">
                 <div class="uk-modal-header">
-                    <h3 id="titulo-item">Cadastro</h3>
+                    <h3 id="titulo-item">Cadastro Inventário</h3>
                 </div>
                 <div class="uk-modal-body">
                     <div class="flex-container">
@@ -188,10 +188,63 @@ $result = mysqli_query($conexao, $query);
             </div>
         </div>
 
+        <!-- CADASTRO GALERIA -->
+        <div id="cadastro-container-gal" class="modal-container" style="display: none;">
+            <div class="uk-modal-dialog cadastro-box">
+                <div class="uk-modal-header">
+                    <h3 id="titulo-item">Cadastro Galeria</h3>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="flex-container">
+                        <div style="flex: 1;">
+                            <label>Imagem</label>
+                            <input type="text" class="uk-input" id="cadNomeInv">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Categoria</label>
+                            <select id="cadTipo">
+                                <option value="Memes">Memes</option>
+                                <option value="Gerais">Gerais</option>
+                                <option value="Conto NE">Conto NE</option>
+                                <option value="Emotes">Emotes</option>
+                                <option value="Minis">Minis</option>
+                                <option value="Tokens">Tokens</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Entidade</label>
+                            <select id="cadEntidade">
+                                <option></option>
+                                <option value="Sol">Sol</option>
+                                <option value="Lua">Lua</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Alcance</label>
+                            <select id="cadAlcance">
+                                <option></option>
+                                <option value="Toque">Toque</option>
+                                <option value="Corpo a Corpo">Corpo a Corpo</option>
+                                <option value="Curto">Curto</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Longo">Longo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-footer">
+                    <button class="uk-button uk-button-primary" id="Salvar-Button">Salvar</button>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 </body>
 <script>
+    const NESelect = document.getElementById('NE');
+
+    //INVENTARIO CAD
     $("#Salvar-Button").click(function() {
         console.log("Botão clicado!");
         $.ajax({
@@ -231,8 +284,7 @@ $result = mysqli_query($conexao, $query);
 
 });
 
-    const NESelect = document.getElementById('NE');
-    const cadastroContainer = document.getElementById('cadastro-container');
+    const cadastroContainerinv = document.getElementById('cadastro-container-inv');
 
     NESelect.addEventListener('change', (e) => {
         const selectedValue = e.target.value;
@@ -244,18 +296,81 @@ $result = mysqli_query($conexao, $query);
     });
 
     function toggleCadastro(show) {
-        cadastroContainer.style.display = show ? 'flex' : 'none';
+        cadastroContainerinv.style.display = show ? 'flex' : 'none';
     }
 
     $(document).ready(function() {
-        $('#cadastro-container').click(function(event) {
-            if ($(event.target).is('#cadastro-container')) {
+        $('#cadastro-container-inv').click(function(event) {
+            if ($(event.target).is('#cadastro-container-inv')) {
+                toggleCadastro(false);
+            }
+        });
+    });
+
+
+    //GALERIA CAD
+    $("#Salvar-Button-gal").click(function() {
+        console.log("Botão clicado!");
+        $.ajax({
+            url: "../adm-functions.php",
+            type: "post",
+            async: true,
+            data: {
+                acao: "gravar-inv",
+                filtros: {
+                    nome: $("#cadNomeInv").val(),
+                    tipo: $("#cadNomeInv").val(),
+                    entidade: $("#cadNomeInv").val(),
+                    alcance: $("#cadNomeInv").val(),
+                    descricao: $("#cadNomeInv").val(),
+                    historia: $("#cadNomeInv").val(),
+                    teste: $("#cadNomeInv").val(),
+                    dano: $("#cadNomeInv").val(),
+                    critico: $("#cadNomeInv").val(),
+                    defesa: $("#cadNomeInv").val(),
+                    penalidade: $("#cadNomeInv").val(),
+                    tipoDano: $("#cadNomeInv").val(),
+                    peso: $("#cadNomeInv").val(),
+                    venda: $("#cadNomeInv").val(),
+                    acao: $("#cadNomeInv").val(),
+                    efeito: $("#cadNomeInv").val(),
+                }
+            },
+            dataType: "json",
+            success: function(result) {
+                
+            },
+            error: function(data) {
+                console.log(data);
+                alert('Ocorreu um Erro');
+            }
+        });
+
+});
+
+    const cadastroContainergal = document.getElementById('cadastro-container-inv');
+
+    NESelect.addEventListener('change', (e) => {
+        const selectedValue = e.target.value;
+        if (selectedValue === 'NEInv') {
+            toggleCadastro(true);
+        } else {
+            toggleCadastro(false);
+        }
+    });
+
+    function toggleCadastro(show) {
+        cadastroContainergal.style.display = show ? 'flex' : 'none';
+    }
+
+    $(document).ready(function() {
+        $('#cadastro-container-inv').click(function(event) {
+            if ($(event.target).is('#cadastro-container-inv')) {
                 toggleCadastro(false);
             }
         });
     });
 </script>
-
 <style>
     .flex-container {
         display: flex;
