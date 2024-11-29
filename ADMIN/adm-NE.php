@@ -160,6 +160,14 @@ include("adm-style.php");
                             <input type="text" class="uk-input" id="CadPesoInv">
                         </div>
                         <div style="flex: 1;">
+                            <label>Requesito</label>
+                            <input type="text" class="uk-input" id="CadRequesitoInv">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Custo</label>
+                            <input type="text" class="uk-input" id="CadCustoInv">
+                        </div>
+                        <div style="flex: 1;">
                             <label>Venda</label>
                             <input type="text" class="uk-input" id="CadVendaInv">
                         </div>
@@ -180,7 +188,7 @@ include("adm-style.php");
                 <div class="uk-modal-footer">
                     <div style="flex: 1;">
                         <label>Efeito</label>
-                        <input type="text" class="uk-input" id="CadEfeitoInv">
+                        <textarea class="uk-textarea" id="CadEfeitoInv"></textarea>
                     </div>
                 </div>
                 <div class="uk-modal-footer">
@@ -354,6 +362,8 @@ include("adm-style.php");
                     venda: $("#CadVendaInv").val(),
                     acao: $("#CadAcaoInv").val(),
                     efeito: $("#CadEfeitoInv").val(),
+                    custo: $("#CadCustoInv").val(),
+                    requesito: $("#CadRequesitoInv").val(),
                 }
             },
             success: function (result) {
