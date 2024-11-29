@@ -11,7 +11,7 @@ $result = mysqli_query($conexao, $query);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
+    <title>ADMIN NOITE ESCURA</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -55,7 +55,7 @@ $result = mysqli_query($conexao, $query);
                         <option></option>
                         <?php
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                            echo "<option value='{$row['ID']}'>{$row['ID']} - {$row['nome']} - {$row['tipo']}</option>";
                         }
                         ?>
                     </select>
@@ -74,7 +74,7 @@ $result = mysqli_query($conexao, $query);
                     <div class="flex-container">
                         <div style="flex: 1;">
                             <label>Nome</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="cadNomeInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Tipo</label>
@@ -183,7 +183,7 @@ $result = mysqli_query($conexao, $query);
                     </div>
                 </div>
                 <div class="uk-modal-footer">
-                    <button class="uk-button uk-button-primary">Salvar</button>
+                    <button class="uk-button uk-button-primary" id="Salvar-Button">Salvar</button>
                 </div>
             </div>
         </div>
@@ -192,6 +192,45 @@ $result = mysqli_query($conexao, $query);
     </div>
 </body>
 <script>
+    $("#Salvar-Button").click(function() {
+        console.log("Botão clicado!");
+        $.ajax({
+            url: "../adm-functions.php",
+            type: "post",
+            async: true,
+            data: {
+                acao: "gravar-inv",
+                filtros: {
+                    nome: $("#cadNomeInv").val(),
+                    tipo: $("#cadNomeInv").val(),
+                    entidade: $("#cadNomeInv").val(),
+                    alcance: $("#cadNomeInv").val(),
+                    descricao: $("#cadNomeInv").val(),
+                    historia: $("#cadNomeInv").val(),
+                    teste: $("#cadNomeInv").val(),
+                    dano: $("#cadNomeInv").val(),
+                    critico: $("#cadNomeInv").val(),
+                    defesa: $("#cadNomeInv").val(),
+                    penalidade: $("#cadNomeInv").val(),
+                    tipoDano: $("#cadNomeInv").val(),
+                    peso: $("#cadNomeInv").val(),
+                    venda: $("#cadNomeInv").val(),
+                    acao: $("#cadNomeInv").val(),
+                    efeito: $("#cadNomeInv").val(),
+                }
+            },
+            dataType: "json",
+            success: function(result) {
+                
+            },
+            error: function(data) {
+                console.log(data);
+                alert('Ocorreu um Erro');
+            }
+        });
+
+});
+
     const NESelect = document.getElementById('NE');
     const cadastroContainer = document.getElementById('cadastro-container');
 
