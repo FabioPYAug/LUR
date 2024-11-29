@@ -67,7 +67,7 @@ include 'style-inv.php';
                     });
                 });
 
-                function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito) {
+                function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito, custo, requesito) {
                     let LocalImagem = `../../Imagens/ITENS NE/${nome}.png`;
 
                     sessionStorage.setItem('nome', nome);
@@ -87,6 +87,8 @@ include 'style-inv.php';
                     sessionStorage.setItem('LocalImagem', LocalImagem);
                     sessionStorage.setItem('acao', acao);
                     sessionStorage.setItem('efeito', efeito);
+                    sessionStorage.setItem('custo', custo);
+                    sessionStorage.setItem('requesito', requesito);
 
                     switch (tipo) {
                         case "Arma":
@@ -154,6 +156,7 @@ include 'style-inv.php';
 </body>
 
 </html>
+
 <script>
     window.addEventListener("scroll", function() {
         const header = document.querySelector('#header');
