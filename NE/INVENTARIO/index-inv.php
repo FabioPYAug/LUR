@@ -147,6 +147,24 @@ include 'style-inv.php';
                                 window.location.href = 'Valores/ArmaduraPadrão.html'
                             }
                             break;
+                        case "Habilidade":
+                            if (entidade == "Sol") {
+                                window.location.href = 'Valores/HabilidadesSol.html'
+                            } else if (entidade == "Lua") {
+                                window.location.href = 'Valores/HabilidadesLua.html'
+                            } else {
+                                window.location.href = 'Valores/HabilidadesPadrão.html'
+                            }
+                            break;
+                        case "Magia":
+                            window.location.href = 'Valores/MagiasPadrão.html'
+                            break;
+                        case "Maldição":
+                            window.location.href = 'Valores/MaldiçãoPadrão.html'
+                            break;
+                        case "Bênção":
+                            window.location.href = 'Valores/BênçãoPadrão.html'
+                            break;
                     }
 
                 }
