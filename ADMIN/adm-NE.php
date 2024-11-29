@@ -1,4 +1,5 @@
 <?php
+include("adm-style.php");
 // include("../NE/conexao.php");
 
 // $query = "SELECT * FROM ne_dados";
@@ -78,7 +79,7 @@
                         </div>
                         <div style="flex: 1;">
                             <label>Tipo</label>
-                            <select id="cadTipo">
+                            <select id="cadTipoInv">
                                 <option value="Item">Item</option>
                                 <option value="Arma">Arma</option>
                                 <option value="Armadura">Armadura</option>
@@ -93,7 +94,7 @@
                         </div>
                         <div style="flex: 1;">
                             <label>Entidade</label>
-                            <select id="cadEntidade">
+                            <select id="cadEntidadeInv">
                                 <option></option>
                                 <option value="Sol">Sol</option>
                                 <option value="Lua">Lua</option>
@@ -101,7 +102,7 @@
                         </div>
                         <div style="flex: 1;">
                             <label>Alcance</label>
-                            <select id="cadAlcance">
+                            <select id="cadAlcanceInv">
                                 <option></option>
                                 <option value="Toque">Toque</option>
                                 <option value="Corpo a Corpo">Corpo a Corpo</option>
@@ -116,11 +117,11 @@
                     <div class="flex-container">
                         <div style="flex: 1;">
                             <label>Descrição</label>
-                            <textarea class="uk-textarea" id="CadDescricao"></textarea>
+                            <textarea class="uk-textarea" id="CadDescricaoInv"></textarea>
                         </div>
                         <div style="flex: 1;">
                             <label>História</label>
-                            <textarea class="uk-textarea" id="CadHistoria"></textarea>
+                            <textarea class="uk-textarea" id="CadHistoriaInv"></textarea>
                         </div>
                     </div>
                 </div>
@@ -128,27 +129,27 @@
                     <div class="flex-container">
                         <div style="flex: 1;">
                             <label>Teste</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadTesteInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Dano</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadDanoInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Crítico</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadCriticoInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Defesa</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadDefesaInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Penalidade</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadPenalidadeInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Tipo de Dano</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadTipodDanoInv">
                         </div>
                     </div>
                 </div>
@@ -156,15 +157,15 @@
                     <div class="flex-container">
                         <div style="flex: 1;">
                             <label>Peso</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadPesoInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Venda</label>
-                            <input type="text" class="uk-input">
+                            <input type="text" class="uk-input" id="CadVendaInv">
                         </div>
                         <div style="flex: 1;">
                             <label>Ação</label>
-                            <select id="cadAlcance">
+                            <select id="cadAlcance" id="CadAcaoInv">
                                 <option></option>
                                 <option value="Padrão">Padrão</option>
                                 <option value="Movimento">Movimento</option>
@@ -179,7 +180,7 @@
                 <div class="uk-modal-footer">
                     <div style="flex: 1;">
                         <label>Efeito</label>
-                        <input type="text" class="uk-input">
+                        <input type="text" class="uk-input" id="CadEfeitoInv">
                     </div>
                 </div>
                 <div class="uk-modal-footer">
@@ -198,11 +199,11 @@
                     <div class="flex-container">
                         <div style="flex: 1;">
                             <label>Imagem</label>
-                            <input type="text" class="uk-input" id="cadNomeInv">
+                            <input type="text" class="uk-input" id="cadImagemGal">
                         </div>
                         <div style="flex: 1;">
                             <label>Categoria</label>
-                            <select id="cadTipo">
+                            <select id="cadCategoriaGal">
                                 <option value="Memes">Memes</option>
                                 <option value="Gerais">Gerais</option>
                                 <option value="Conto NE">Conto NE</option>
@@ -230,17 +231,17 @@
                     <div class="flex-container">
                         <div style="flex: 1;">
                             <label>Nome</label>
-                            <input type="text" class="uk-input" id="cadNomeInv">
+                            <input type="text" class="uk-input" id="cadNomeDoc">
                         </div>
                         <div style="flex: 1;">
                             <label>Autor</label>
-                            <input type="text" class="uk-input" id="cadNomeInv">
+                            <input type="text" class="uk-input" id="cadAutorDoc">
                         </div>
                     </div>
                     <div class="flex-container">
                         <div style="flex: 1;">
                             <label>Tipo</label>
-                            <select id="cadTipo">
+                            <select id="cadTipoDoc">
                                 <option value="Mapa">Mapa</option>
                                 <option value="Anotação">Anotação</option>
                                 <option value="Fofoquei">Fofoquei</option>
@@ -259,7 +260,7 @@
                         </div>
                         <div style="flex: 1;">
                             <label>Arco</label>
-                            <select id="cadTipo">
+                            <select id="cadArcoDoc">
                                 <option value="Iniciação">Iniciação</option>
                                 <option value="Kruspoll">Kruspoll</option>
                                 <option value="Crânio Vazio">Crânio Vazio</option>
@@ -269,7 +270,7 @@
                         </div>
                         <div style="flex: 1;">
                             <label>Palavra Chave</label>
-                            <input type="text" class="uk-input" id="cadNomeInv">
+                            <input type="text" class="uk-input" id="cadPCDoc">
                         </div>
                     </div>
                 </div>
@@ -338,21 +339,21 @@
                 acao: "gravar-inv",
                 filtros: {
                     nome: $("#cadNomeInv").val(),
-                    tipo: $("#cadTipo").val(),
-                    entidade: $("#cadEntidade").val(),
-                    alcance: $("#cadAlcance").val(),
-                    descricao: $("#CadDescricao").val(),
-                    historia: $("#CadHistoria").val(),
-                    teste: $("#cadNomeInv").val(),
-                    dano: $("#cadNomeInv").val(),
-                    critico: $("#cadNomeInv").val(),
-                    defesa: $("#cadNomeInv").val(),
-                    penalidade: $("#cadNomeInv").val(),
-                    tipoDano: $("#cadNomeInv").val(),
-                    peso: $("#cadNomeInv").val(),
-                    venda: $("#cadNomeInv").val(),
-                    acao: $("#cadNomeInv").val(),
-                    efeito: $("#cadNomeInv").val(),
+                    tipo: $("#cadTipoInv").val(),
+                    entidade: $("#cadEntidadeInv").val(),
+                    alcance: $("#cadAlcanceInv").val(),
+                    descricao: $("#CadDescricaoInv").val(),
+                    historia: $("#CadHistoriaInv").val(),
+                    teste: $("#CadTesteInv").val(),
+                    dano: $("#CadDanoInv").val(),
+                    critico: $("#CadCriticoInv").val(),
+                    defesa: $("#CadDefesaInv").val(),
+                    penalidade: $("#CadPenalidadeInv").val(),
+                    tipoDano: $("#CadTipodDanoInv").val(),
+                    peso: $("#CadPesoInv").val(),
+                    venda: $("#CadVendaInv").val(),
+                    acao: $("#CadAcaoInv").val(),
+                    efeito: $("#CadEfeitoInv").val(),
                 }
             },
             success: function (result) {
@@ -375,8 +376,8 @@
             data: {
                 acao: "gravar-gal",
                 filtros: {
-                    imagem: $("#cadNomeInv").val(),
-                    categoria: $("#cadTipo").val(),
+                    imagem: $("#cadImagemGal").val(),
+                    categoria: $("#cadCategoriaGal").val(),
                 }
             },
             success: function (result) {
@@ -399,11 +400,11 @@
             data: {
                 acao: "gravar-doc",
                 filtros: {
-                    nome: $("#cadNomeInv").val(),
-                    autor: $("#cadNomeInv").val(),
-                    tipo: $("#cadTipo").val(),
-                    arco: $("#cadTipo").val(),
-                    palavraChave: $("#cadNomeInv").val(),
+                    nome: $("#cadNomeDoc").val(),
+                    autor: $("#cadAutorDoc").val(),
+                    tipo: $("#cadTipoDoc").val(),
+                    arco: $("#cadArcoDoc").val(),
+                    palavraChave: $("#cadPCDoc").val(),
                 }
             },
             success: function (result) {
@@ -417,220 +418,5 @@
         });
     });
 </script>
-
-<style>
-    .flex-container {
-        display: flex;
-        gap: 20px;
-    }
-
-    .flex-container>div {
-        flex: 1;
-    }
-
-    .uk-input,
-    select {
-        background: #e8eeef;
-        border: 1px solid #ccc;
-        padding: 12px;
-        font-size: 16px;
-        border-radius: 5px;
-        width: 100%;
-        color: #384047;
-        box-sizing: border-box;
-    }
-
-    select:focus {
-        border-color: #4bc970;
-        outline: none;
-    }
-
-    .uk-input:focus {
-        border-color: #4bc970;
-        outline: none;
-    }
-
-    textarea {
-        background: #e8eeef;
-        border: 1px solid #ccc;
-        padding: 12px;
-        font-size: 16px;
-        border-radius: 5px;
-        width: 100%;
-        margin-bottom: 20px;
-        color: #384047;
-        resize: vertical;
-        box-sizing: border-box;
-        transition: border-color 0.3s ease;
-    }
-
-    textarea:focus {
-        border-color: #4bc970;
-        outline: none;
-    }
-
-    .TITULO {
-        font-family: 'Jura', sans-serif;
-        font-size: 2.9em;
-        text-align: center;
-        color: #384047;
-        margin-bottom: 20px;
-    }
-
-    body {
-        font-family: 'Nunito', sans-serif;
-        background-color: #f4f7f8;
-        color: #384047;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    #wrapper {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        width: 100%;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-        background: #333;
-        color: #fff;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        overflow-y: auto;
-        transition: all 0.3s ease;
-        padding-top: 20px;
-    }
-
-    #sidebar-wrapper ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    #sidebar-wrapper ul li {
-        padding: 15px;
-    }
-
-    #sidebar-wrapper ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-    }
-
-    #sidebar-wrapper ul li a:hover {
-        color: #4bc970;
-        background: rgba(255, 255, 255, 0.2);
-        border-left: 3px solid #4bc970;
-    }
-
-    #page-content-wrapper {
-        margin-left: 250px;
-        width: 100%;
-        padding: 20px;
-        transition: margin-left 0.3s ease;
-    }
-
-    .form-container {
-        display: flex;
-        gap: 20px;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    form {
-        flex: 1;
-        max-width: 100%;
-        margin: 10px;
-        padding: 20px;
-        background: #fff;
-        border-radius: 8px;
-        box-sizing: border-box;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    input,
-    select {
-        background: #e8eeef;
-        border: 1px solid #ccc;
-        padding: 12px;
-        font-size: 16px;
-        border-radius: 5px;
-        width: 100%;
-        margin-bottom: 20px;
-        color: #384047;
-    }
-
-    button {
-        padding: 12px 20px;
-        color: #fff;
-        background-color: #4bc970;
-        font-size: 16px;
-        text-align: center;
-        border-radius: 5px;
-        width: 100%;
-        border: 1px solid #4bc970;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    button:hover {
-        background-color: #3ac162;
-        transform: scale(1.02);
-    }
-
-    .modal-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-        padding: 0 20px;
-    }
-
-    .cadastro-box {
-        background: #fff;
-        border-radius: 10px;
-        width: 100%;
-        max-width: 1000px;
-        padding: 30px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    }
-
-    @media (max-width: 768px) {
-        #sidebar-wrapper {
-            width: 0;
-        }
-
-        #page-content-wrapper {
-            margin-left: 0;
-            padding: 10px;
-        }
-
-        .form-container {
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .cadastro-box {
-            width: 90%;
-            max-width: 100%;
-        }
-
-        .uk-input,
-        select {
-            font-size: 14px;
-        }
-    }
-</style>
 
 </html>
