@@ -126,7 +126,7 @@
                 </div>
                 <div class="uk-modal-body">
                     <div class="flex-container">
-                    <div style="flex: 1;">
+                        <div style="flex: 1;">
                             <label>Teste</label>
                             <input type="text" class="uk-input">
                         </div>
@@ -154,7 +154,7 @@
                 </div>
                 <div class="uk-modal-body">
                     <div class="flex-container">
-                    <div style="flex: 1;">
+                        <div style="flex: 1;">
                             <label>Peso</label>
                             <input type="text" class="uk-input">
                         </div>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <div class="uk-modal-footer">
-                    <button class="uk-button uk-button-primary" id="Salvar-Button">Salvar</button>
+                    <button class="uk-button uk-button-primary" id="Salvar-Button-inv">Salvar</button>
                 </div>
             </div>
         </div>
@@ -211,29 +211,70 @@
                                 <option value="Tokens">Tokens</option>
                             </select>
                         </div>
+                    </div>
+                </div>
+                <div class="uk-modal-footer">
+                    <button class="uk-button uk-button-primary" id="Salvar-Button-gal">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CADASTRO DOCUMENTO -->
+        <div id="cadastro-container-doc" class="modal-container" style="display: none;">
+            <div class="uk-modal-dialog cadastro-box">
+                <div class="uk-modal-header">
+                    <h3 id="titulo-item">Cadastro Documento</h3>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="flex-container">
                         <div style="flex: 1;">
-                            <label>Entidade</label>
-                            <select id="cadEntidade">
-                                <option></option>
-                                <option value="Sol">Sol</option>
-                                <option value="Lua">Lua</option>
+                            <label>Nome</label>
+                            <input type="text" class="uk-input" id="cadNomeInv">
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Autor</label>
+                            <input type="text" class="uk-input" id="cadNomeInv">
+                        </div>
+                    </div>
+                    <div class="flex-container">
+                        <div style="flex: 1;">
+                            <label>Tipo</label>
+                            <select id="cadTipo">
+                                <option value="Mapa">Mapa</option>
+                                <option value="Anotação">Anotação</option>
+                                <option value="Fofoquei">Fofoquei</option>
+                                <option value="Pergaminho">Pergaminho</option>
+                                <option value="Carta">Carta</option>
+                                <option value="Livro">Livro</option>
+                                <option value="Grimório">Grimório</option>
+                                <option value="Diário">Diário</option>
+                                <option value="Catálogo">Catálogo</option>
+                                <option value="Recompensa">Recompensa</option>
+                                <option value="Missão">Missão</option>
+                                <option value="HQ">HQ</option>
+                                <option value="Documento">Documento</option>
+                                <option value="Outros">Outros</option>
                             </select>
                         </div>
                         <div style="flex: 1;">
-                            <label>Alcance</label>
-                            <select id="cadAlcance">
-                                <option></option>
-                                <option value="Toque">Toque</option>
-                                <option value="Corpo a Corpo">Corpo a Corpo</option>
-                                <option value="Curto">Curto</option>
-                                <option value="Médio">Médio</option>
-                                <option value="Longo">Longo</option>
+                            <label>Arco</label>
+                            <select id="cadTipo">
+                                <option value="Iniciação">Iniciação</option>
+                                <option value="Kruspoll">Kruspoll</option>
+                                <option value="Crânio Vazio">Crânio Vazio</option>
+                                <option value="Canalsus">Canalsus</option>
+                                <option value="Daimonas">Daimonas</option>
                             </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Palavra Chave</label>
+                            <input type="text" class="uk-input" id="cadNomeInv">
                         </div>
                     </div>
                 </div>
                 <div class="uk-modal-footer">
-                    <button class="uk-button uk-button-primary" id="Salvar-Button">Salvar</button>
+                    <button class="uk-button uk-button-primary" id="Salvar-Button-doc">Salvar</button>
                 </div>
             </div>
         </div>
@@ -243,23 +284,65 @@
 </body>
 <script>
     const NESelect = document.getElementById('NE');
+    const cadastroContainerInv = document.getElementById('cadastro-container-inv');
+    const cadastroContainerGal = document.getElementById('cadastro-container-gal');
+    const cadastroContainerDoc = document.getElementById('cadastro-container-doc');
 
-    //INVENTARIO CAD
-    $("#Salvar-Button").click(function() {
-        console.log("Botão clicado!");
+    // Gerenciar exibição dos modais
+    NESelect.addEventListener('change', (e) => {
+        const selectedValue = e.target.value;
+
+        // Ocultar todos os modais
+        cadastroContainerInv.style.display = 'none';
+        cadastroContainerGal.style.display = 'none';
+        cadastroContainerDoc.style.display = 'none';
+
+        // Exibir o modal correspondente
+        if (selectedValue === 'NEInv') {
+            cadastroContainerInv.style.display = 'flex';
+        } else if (selectedValue === 'NEGal') {
+            cadastroContainerGal.style.display = 'flex';
+        } else if (selectedValue === 'NEDoc') {
+            cadastroContainerDoc.style.display = 'flex';
+        }
+    });
+
+    // Fechar modais ao clicar fora deles
+    $(document).ready(function () {
+        $('#cadastro-container-inv').click(function (event) {
+            if ($(event.target).is('#cadastro-container-inv')) {
+                cadastroContainerInv.style.display = 'none';
+            }
+        });
+
+        $('#cadastro-container-gal').click(function (event) {
+            if ($(event.target).is('#cadastro-container-gal')) {
+                cadastroContainerGal.style.display = 'none';
+            }
+        });
+
+        $('#cadastro-container-doc').click(function (event) {
+            if ($(event.target).is('#cadastro-container-doc')) {
+                cadastroContainerDoc.style.display = 'none';
+            }
+        });
+    });
+
+    // Salvar Inventário
+    $("#Salvar-Button-inv").click(function () {
+        console.log("Salvar Inventário!");
         $.ajax({
             url: "../adm-functions.php",
             type: "post",
-            async: true,
             data: {
                 acao: "gravar-inv",
                 filtros: {
                     nome: $("#cadNomeInv").val(),
-                    tipo: $("#cadNomeInv").val(),
-                    entidade: $("#cadNomeInv").val(),
-                    alcance: $("#cadNomeInv").val(),
-                    descricao: $("#cadNomeInv").val(),
-                    historia: $("#cadNomeInv").val(),
+                    tipo: $("#cadTipo").val(),
+                    entidade: $("#cadEntidade").val(),
+                    alcance: $("#cadAlcance").val(),
+                    descricao: $("#CadDescricao").val(),
+                    historia: $("#CadHistoria").val(),
                     teste: $("#cadNomeInv").val(),
                     dano: $("#cadNomeInv").val(),
                     critico: $("#cadNomeInv").val(),
@@ -272,105 +355,69 @@
                     efeito: $("#cadNomeInv").val(),
                 }
             },
-            dataType: "json",
-            success: function(result) {
-                
+            success: function (result) {
+                console.log("Inventário salvo com sucesso!");
+                alert('Inventário salvo com sucesso!');
             },
-            error: function(data) {
+            error: function (data) {
                 console.log(data);
-                alert('Ocorreu um Erro');
-            }
-        });
-
-});
-
-    const cadastroContainerinv = document.getElementById('cadastro-container-inv');
-
-    NESelect.addEventListener('change', (e) => {
-        const selectedValue = e.target.value;
-        if (selectedValue === 'NEInv') {
-            toggleCadastro(true);
-        } else {
-            toggleCadastro(false);
-        }
-    });
-
-    function toggleCadastro(show) {
-        cadastroContainerinv.style.display = show ? 'flex' : 'none';
-    }
-
-    $(document).ready(function() {
-        $('#cadastro-container-inv').click(function(event) {
-            if ($(event.target).is('#cadastro-container-inv')) {
-                toggleCadastro(false);
+                alert('Ocorreu um erro ao salvar o inventário');
             }
         });
     });
 
-
-    //GALERIA CAD
-    $("#Salvar-Button-gal").click(function() {
-        console.log("Botão clicado!");
+    // Salvar Galeria
+    $("#Salvar-Button-gal").click(function () {
+        console.log("Salvar Galeria!");
         $.ajax({
             url: "../adm-functions.php",
             type: "post",
-            async: true,
             data: {
-                acao: "gravar-inv",
+                acao: "gravar-gal",
                 filtros: {
-                    nome: $("#cadNomeInv").val(),
-                    tipo: $("#cadNomeInv").val(),
-                    entidade: $("#cadNomeInv").val(),
-                    alcance: $("#cadNomeInv").val(),
-                    descricao: $("#cadNomeInv").val(),
-                    historia: $("#cadNomeInv").val(),
-                    teste: $("#cadNomeInv").val(),
-                    dano: $("#cadNomeInv").val(),
-                    critico: $("#cadNomeInv").val(),
-                    defesa: $("#cadNomeInv").val(),
-                    penalidade: $("#cadNomeInv").val(),
-                    tipoDano: $("#cadNomeInv").val(),
-                    peso: $("#cadNomeInv").val(),
-                    venda: $("#cadNomeInv").val(),
-                    acao: $("#cadNomeInv").val(),
-                    efeito: $("#cadNomeInv").val(),
+                    imagem: $("#cadNomeInv").val(),
+                    categoria: $("#cadTipo").val(),
                 }
             },
-            dataType: "json",
-            success: function(result) {
-                
+            success: function (result) {
+                console.log("Galeria salva com sucesso!");
+                alert('Galeria salva com sucesso!');
             },
-            error: function(data) {
+            error: function (data) {
                 console.log(data);
-                alert('Ocorreu um Erro');
+                alert('Ocorreu um erro ao salvar a galeria');
             }
         });
-
-});
-
-    const cadastroContainergal = document.getElementById('cadastro-container-inv');
-
-    NESelect.addEventListener('change', (e) => {
-        const selectedValue = e.target.value;
-        if (selectedValue === 'NEInv') {
-            toggleCadastro(true);
-        } else {
-            toggleCadastro(false);
-        }
     });
 
-    function toggleCadastro(show) {
-        cadastroContainergal.style.display = show ? 'flex' : 'none';
-    }
-
-    $(document).ready(function() {
-        $('#cadastro-container-inv').click(function(event) {
-            if ($(event.target).is('#cadastro-container-inv')) {
-                toggleCadastro(false);
+    // Salvar Documento
+    $("#Salvar-Button-doc").click(function () {
+        console.log("Salvar Documento!");
+        $.ajax({
+            url: "../adm-functions.php",
+            type: "post",
+            data: {
+                acao: "gravar-doc",
+                filtros: {
+                    nome: $("#cadNomeInv").val(),
+                    autor: $("#cadNomeInv").val(),
+                    tipo: $("#cadTipo").val(),
+                    arco: $("#cadTipo").val(),
+                    palavraChave: $("#cadNomeInv").val(),
+                }
+            },
+            success: function (result) {
+                console.log("Documento salvo com sucesso!");
+                alert('Documento salvo com sucesso!');
+            },
+            error: function (data) {
+                console.log(data);
+                alert('Ocorreu um erro ao salvar o documento');
             }
         });
     });
 </script>
+
 <style>
     .flex-container {
         display: flex;
@@ -392,6 +439,7 @@
         color: #384047;
         box-sizing: border-box;
     }
+
     select:focus {
         border-color: #4bc970;
         outline: none;
