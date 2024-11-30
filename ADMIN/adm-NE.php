@@ -341,7 +341,7 @@ $result = mysqli_query($conexao, $query);
     $("#Salvar-Button-inv").click(function () {
         console.log("Salvar Inventário!");
         $.ajax({
-            url: "../adm-functions.php",
+            url: "./adm-functions.php",
             type: "post",
             data: {
                 acao: "gravar-inv",
