@@ -104,6 +104,7 @@ $result = mysqli_query($conexao, $query);
                             <label>Alcance</label>
                             <select id="cadAlcanceInv">
                                 <option></option>
+                                <option value="Pessoal">Pessoal</option>
                                 <option value="Toque">Toque</option>
                                 <option value="Corpo a Corpo">Corpo a Corpo</option>
                                 <option value="Curto">Curto</option>
@@ -173,8 +174,8 @@ $result = mysqli_query($conexao, $query);
                         </div>
                         <div style="flex: 1;">
                             <label>Ação</label>
-                            <select id="cadAlcance" id="CadAcaoInv">
-                                <option></option>
+                            <select id="CadAcaoInv">
+                                <option value=""></option>
                                 <option value="Padrão">Padrão</option>
                                 <option value="Movimento">Movimento</option>
                                 <option value="Bônus">Bônus</option>
@@ -340,6 +341,7 @@ $result = mysqli_query($conexao, $query);
     // Salvar Inventário
     $("#Salvar-Button-inv").click(function () {
         console.log("Salvar Inventário!");
+        console.log($("#CadAcaoInv").val());
         $.ajax({
             url: "./adm-functions.php",
             type: "post",
@@ -368,6 +370,7 @@ $result = mysqli_query($conexao, $query);
             },
             success: function (result) {
                 console.log("Inventário salvo com sucesso!");
+                Limpar();
                 alert('Inventário salvo com sucesso!');
             },
             error: function (data) {
@@ -391,6 +394,7 @@ $result = mysqli_query($conexao, $query);
                 }
             },
             success: function (result) {
+                Limpar();
                 console.log("Galeria salva com sucesso!");
                 alert('Galeria salva com sucesso!');
             },
@@ -419,6 +423,7 @@ $result = mysqli_query($conexao, $query);
             },
             success: function (result) {
                 console.log("Documento salvo com sucesso!");
+                Limpar();
                 alert('Documento salvo com sucesso!');
             },
             error: function (data) {
@@ -427,6 +432,39 @@ $result = mysqli_query($conexao, $query);
             }
         });
     });
+
+    function Limpar(){
+        document.getElementById("cadNomeInv").value = "";
+        document.getElementById("CadTesteInv").value = "";
+        document.getElementById("CadDanoInv").value = "";
+        document.getElementById("CadCriticoInv").value = "";
+        document.getElementById("CadDefesaInv").value = "";
+        document.getElementById("CadPenalidadeInv").value = "";
+        document.getElementById("CadTipodDanoInv").value = "";
+        document.getElementById("CadPesoInv").value = "";
+        document.getElementById("CadRequesitoInv").value = "";
+        document.getElementById("CadCustoInv").value = "";
+        document.getElementById("CadVendaInv").value = "";
+        document.getElementById("CadDescricaoInv").value = "";
+        document.getElementById("CadHistoriaInv").value = "";
+        document.getElementById("CadEfeitoInv").value = "";
+        document.getElementById("cadImagemGal").value = "";
+        document.getElementById("cadNomeDoc").value = "";
+        document.getElementById("cadAutorDoc").value = "";
+        document.getElementById("cadPCDoc").value = "";
+
+        document.getElementById("cadTipoInv").selectedIndex = 0;
+        document.getElementById("cadEntidadeInv").selectedIndex = 0;
+        document.getElementById("cadAlcanceInv").selectedIndex = 0;
+        //document.getElementById("CadAcaoInv").selectedIndex = 0;
+        document.getElementById("cadCategoriaGal").selectedIndex = 0;
+        document.getElementById("cadTipoDoc").selectedIndex = 0;
+        document.getElementById("cadArcoDoc").selectedIndex = 0;
+
+        cadastroContainerDoc.style.display = 'none';
+        cadastroContainerGal.style.display = 'none';
+        cadastroContainerInv.style.display = 'none';
+}
 </script>
 
 </html>
