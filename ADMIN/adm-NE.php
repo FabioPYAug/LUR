@@ -460,6 +460,7 @@ $result = mysqli_query($conexao, $query);
         document.getElementById("cadCategoriaGal").selectedIndex = 0;
         document.getElementById("cadTipoDoc").selectedIndex = 0;
         document.getElementById("cadArcoDoc").selectedIndex = 0;
+        document.getElementById("NE").selectedIndex = 0;
 
         cadastroContainerDoc.style.display = 'none';
         cadastroContainerGal.style.display = 'none';
