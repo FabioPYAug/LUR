@@ -15,26 +15,10 @@ include 'style-inv.php';
 </head>
 
 <body>
-    <header id="header">
-        <div class="container">
-            <div class="flex">
-                <a><i class="bi bi-moon"></i></a>
-                <div class="btn-contato">
-                    <a onclick="window.location.href='../lobby.php'"><button>Retornar</button></a>
-                    <a><button>Filtro</button></a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="banner banner-1">
-        <div class="centered-text">
-            <h1>PESQUISA EM <span>NOITE ESCURA</span></h1>
-        </div>
-    </section>
+    <?php include '../sidebar.php'; ?>
 
     <section class="banner banner-2">
-
+    
         <div class="search">
             <label for="searchInput">
                 <span class="material-symbols-outlined"></span>

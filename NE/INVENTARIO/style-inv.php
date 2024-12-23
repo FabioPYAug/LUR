@@ -1,32 +1,5 @@
 <style>
 
-#header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
-    z-index: 1000;
-}
-
-#header.rolagem {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 10px 4%;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); 
-}
-
-#header .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    transition: padding 0.3s;
-}
-
-header.rolagem .flex {
-    padding: 5px 20px; 
-}
-
 .btn-contato button {
     padding: 8px 16px;
     font-size: 16px;
@@ -107,31 +80,6 @@ html {
     justify-content: space-between;
 }
 
-header {
-    width: 100%;
-    padding: 60px 4%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: .5s;
-    z-index: 1000;
-    background-color: #1a1a1a;
-}
-
-header.rolagem {
-    background-color: #2e2e3a;
-    padding: 20px 4%;
-}
-
-header.rolagem a, header.rolagem i {
-    color: #bb86fc;
-}
-
-header i {
-    font-size: 30px;
-    color: #bb86fc;
-}
-
 .btn-contato a {
     margin-right: 30px; 
 }
@@ -159,12 +107,6 @@ header i {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); 
 }
 
-
-.banner-1 {
-    background-color: #2e2e3a;
-    color: #fff;
-}
-
 .banner-2 {
     background-size: cover;
     background-position: center;
@@ -173,17 +115,6 @@ header i {
 
     text-align: center;
 }
-
-.banner h1 {
-    font-size: 4em;
-    color: #fff;
-}
-
-.banner h1 span {
-    color: #bb86fc;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-}
-
 
 .search {
     display: flex;
@@ -288,5 +219,6 @@ h6 {
 .item-left, .item-center, .item-right {
     background: transparent;
 }
+
 
 </style>
