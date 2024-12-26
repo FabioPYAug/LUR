@@ -70,7 +70,6 @@
         font-size: 20px;
     }
 
-    /* Sidebar */
     .main-menu {
         background: #212121;
         position: fixed;
@@ -103,7 +102,7 @@
     }
 
     .main-menu a:hover {
-        background-color: #333;
+        background-color:rgb(149, 123, 184);
         color: #fff;
     }
 
