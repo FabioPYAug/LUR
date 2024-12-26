@@ -18,27 +18,7 @@ include 'style-doc.php';
 </head>
 
 <body>
-    <header id="header">
-        <div class="container">
-            <div class="flex">
-                <a><i class="bi bi-sun"></i></a>
-                <div class="btn-contato">
-                    <a onclick="window.location.href='../lobby.php'"><button>Retornar</button></a>
-                    <a><button>Filtro</button></a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="banner banner-1">
-        <div class="sun-container">
-            <div class="sun"></div>
-        </div>
-        <div class="centered-text">
-            <h1>PESQUISA NA <span>ORIGEM SOLAR</span></h1>
-        </div>
-    </section>
-
+    <?php include '../sidebar.php'; ?>
 
     <section class="banner banner-2">
         <div id="words-container"></div>

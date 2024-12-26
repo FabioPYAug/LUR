@@ -8,41 +8,40 @@
 <body>
     <div class="area"></div>
     <nav class="main-menu">
-        <ul>
             <li>
-                <a href="https://jbfarrow.com">
+                <a href="../lobby.php">
                     <i class="fa fa-home fa-2x"></i>
                     <span class="nav-text">Home</span>
                 </a>
             </li>
             <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-globe fa-2x"></i>
+                <a href="../DOCUMENTOS/index-doc.php">
+                    <i class="fa fa-book fa-2x"></i>
                     <span class="nav-text">Documentos</span>
                 </a>
             </li>
             <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-comments fa-2x"></i>
+                <a href="../INVENTARIO/index-inv.php">
+                <i class="fa fa-shield fa-2x"></i>
                     <span class="nav-text">Inventário</span>
                 </a>
             </li>
             <li class="has-subnav">
-                <a href="#">
+                <a href="../GALERIA/index-gal.php">
                     <i class="fa fa-camera-retro fa-2x"></i>
                     <span class="nav-text">Galeria</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-film fa-2x"></i>
+                    <i class="fa fa-map fa-2x"></i>
                     <span class="nav-text">Mapa</span>
                 </a>
             </li>
             <ul class="logout">
                 <li>
                     <a href="#">
-                        <i class="fa fa-power-off fa-2x"></i>
+                        <i class="fa fa-user fa-2x"></i>
                         <span class="nav-text">Perfil</span>
                     </a>
                 </li>
