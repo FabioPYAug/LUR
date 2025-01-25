@@ -78,76 +78,76 @@ include 'style-inv.php';
                         case "Arma":
                             if (entidade == "Sol") {
                                 if (nome == "Parisa") {
-                                    window.open('Valores/Parisa.html', '_blank')
+                                    window.open('Valores/Parisa.html')
                                 } else {
-                                    window.open('Valores/ArmaSol.html', '_blank')
+                                    window.open('Valores/ArmaSol.html')
                                 }
                             } else if (entidade == "Lua") {
-                                window.open('Valores/ArmaLua.html', '_blank')
+                                window.open('Valores/ArmaLua.html')
                             } else {
-                                 window.open('Valores/ArmaPadrão.html', '_blank')
+                                 window.open('Valores/ArmaPadrão.html')
                             }
                             break;
                         case "Material":
-                            window.open('Valores/MaterialPadrão.html', '_blank')
+                            window.open('Valores/MaterialPadrão.html')
                             break;
                         case "Poção":
                             if (entidade == "Lua") {
-                                window.open('Valores/PoçãoLua.html', '_blank')
+                                window.open('Valores/PoçãoLua.html')
                             } else if (entidade == "Sol") {
                                 if (nome == "Poção dos Sentidos Enfadonhos") {
-                                    window.open('Valores/PoçãoBobby.html', '_blank')
+                                    window.open('Valores/PoçãoBobby.html')
                                 } else {
-                                    window.open('Valores/PoçãoSol.html', '_blank')
+                                    window.open('Valores/PoçãoSol.html')
                                 }
                             } else {
-                                window.open('Valores/PoçãoPadrão.html', '_blank')
+                                window.open('Valores/PoçãoPadrão.html')
                             }
                             break;
                         case "Moeda":
-                            window.open('Valores/MoedaPadrão.html', '_blank')
+                            window.open('Valores/MoedaPadrão.html')
                             break;
                         case "Item":
                             if (entidade == "Lua") {
                                 if (nome == "Fragmento Sol e Lua") {
-                                    window.open('Valores/ItensColarSL.html', '_blank')
+                                    window.open('Valores/ItensColarSL.html')
                                 } else {
-                                    window.open('Valores/ItensLua.html', '_blank')
+                                    window.open('Valores/ItensLua.html')
                                 }
                             } else if (entidade == "Sol") {
                                 if (nome == "Tranca das Cartas") {
-                                    window.open('Valores/ItensBobby.html', '_blank')
+                                    window.open('Valores/ItensBobby.html')
                                 } else {
-                                    window.open('Valores/ItensSol.html', '_blank')
+                                    window.open('Valores/ItensSol.html')
                                 }
                             } else {
-                                window.open('Valores/ItensPadrão.html', '_blank')
+                                window.open('Valores/ItensPadrão.html')
                             }
                             break;
                         case "Armadura":
                             if (efeito != "-" || efeito != "") {
-                                window.open('Valores/ArmaduraPadrãoEfeitos.html', '_blank')
+                                window.open('Valores/ArmaduraPadrãoEfeitos.html')
                             } else {
-                                window.open('Valores/ArmaduraPadrão.html', '_blank')
+                                window.open('Valores/ArmaduraPadrão.html')
                             }
                             break;
                         case "Habilidade":
                             if (entidade == "Sol") {
-                                window.open('Valores/HabilidadesSol.html', '_blank')
+                                window.open('Valores/HabilidadesSol.html')
                             } else if (entidade == "Lua") {
-                                window.open('Valores/HabilidadesLua.html', '_blank')
+                                window.open('Valores/HabilidadesLua.html')
                             } else {
-                                window.open('Valores/HabilidadesPadrão.html', '_blank')
+                                window.open('Valores/HabilidadesPadrão.html')
                             }
                             break;
                         case "Magia":
-                            window.open('Valores/MagiasPadrão.html', '_blank')
+                            window.open('Valores/MagiasPadrão.html')
                             break;
                         case "Maldição":
-                            window.open('Valores/MaldiçãoPadrão.html', '_blank')
+                            window.open('Valores/MaldiçãoPadrão.html')
                             break;
                         case "Bênção":
-                            window.open('Valores/BênçãoPadrão.html', '_blank')
+                            window.open('Valores/BênçãoPadrão.html')
                             break;
                     }
 
