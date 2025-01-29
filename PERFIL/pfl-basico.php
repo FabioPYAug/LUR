@@ -98,7 +98,8 @@
         }
 
         .header .details #skin {
-            margin-left: auto; /* Isso garante que "skin" fique à direita */
+            margin-left: auto;
+            /* Isso garante que "skin" fique à direita */
         }
 
         /* Seções do Perfil */
@@ -284,74 +285,105 @@
             }
         }
 
-        .carrossel-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            margin-top: 20px;
-        }
+        /* Estilo do Select */
+.styled-select {
+    background-color: #2e3338;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    appearance: none;
+    transition: all 0.3s ease;
+}
 
-        .carrossel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+.styled-select:hover {
+    background-color: #353c45;
+}   
 
-        .token {
-            min-width: 300px;
-            margin-right: 20px;
-            border-radius: 15px;
-            background-color: #2e3338;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-            color: #fff;
-            text-align: center;
-            flex-shrink: 0;
-        }
+.styled-select:focus {
+    background-color: #444d57;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+}
 
-        .token:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
-        }
+.label {
+    font-size: 1.1rem;
+    color:#e0e0e0;
+    margin-bottom: 10px;
+    display: inline-block;
+}
 
-        .token img {
-            width: 100%;
-            border-radius: 10px;
-            max-height: 200px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
 
-        .token p {
-            margin: 5px 0;
-        }
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
-        /* Botões de Navegação */
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #ffcc00;
-            font-size: 2rem;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            z-index: 10;
-        }
+.token {
+    min-width: 300px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background-color: #2e3338;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    color: #fff;
+    text-align: center;
+    flex-shrink: 0;
+}
 
-        .carousel-btn.left {
-            left: 10px;
-        }
+.token:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
 
-        .carousel-btn.right {
-            right: 10px;
-        }
+.token img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
 
-        .carousel-btn:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
+.token p {
+    margin: 5px 0;
+}
+
+/* Botões de Navegação do Carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffcc00;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
     </style>
 </head>
 
@@ -386,8 +418,8 @@
             <!-- Personagens -->
             <div class="section personagens">
                 <h2>Personagens</h2>
-                <label for="personagem-select">Selecione um Personagem:</label>
-                <select id="personagem-select">
+                <label for="personagem-select" class="label">Selecione um Personagem:</label>
+                <select id="personagem-select" class="styled-select">
                     <option value="personagem1">Personagem 1</option>
                     <option value="personagem2">Personagem 2</option>
                 </select>
