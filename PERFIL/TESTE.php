@@ -54,7 +54,6 @@
             background-color: #353c45;
         }
 
-        /* Header (Banner e Avatar) */
         .header {
             background-color: #1b1e22;
             padding: 20px;
@@ -99,10 +98,8 @@
 
         .header .details #skin {
             margin-left: auto;
-            /* Isso garante que "skin" fique à direita */
         }
 
-        /* Seções do Perfil */
         .profile-sections {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -111,7 +108,6 @@
             width: 100%;
         }
 
-        /* Estilo das seções */
         .section {
             background-color: #2e3338;
             border-radius: 8px;
@@ -146,7 +142,6 @@
             color: #ccc;
         }
 
-        /* Inventário */
         .inventory ul {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -172,7 +167,6 @@
             margin-bottom: 5px;
         }
 
-        /* Lista de Amigos */
         .friends,
         .suggested-friends {
             background-color: #2e3338;
@@ -226,7 +220,6 @@
             color: #d1d1d1;
         }
 
-        /* Estilo da Barra de Rolagem */
         ::-webkit-scrollbar {
             width: 10px;
             background-color: #2e2f36;
@@ -244,8 +237,6 @@
         ::-webkit-scrollbar-track {
             background-color: #2e2f36;
         }
-
-        /* Rodapé */
         .footer {
             background-color: #1b1e22;
             text-align: center;
@@ -254,7 +245,6 @@
             color: #aaa;
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .profile-sections {
                 grid-template-columns: 1fr;
@@ -285,7 +275,6 @@
             }
         }
 
-        /* Estilo do Select */
 .styled-select {
     background-color: #2e3338;
     color: #e0e0e0;
@@ -348,7 +337,7 @@
 .token img {
     width: 100%;
     border-radius: 10px;
-    max-height: 200px;
+    max-height: 400px;
     object-fit: cover;
     margin-bottom: 10px;
 }
@@ -356,8 +345,6 @@
 .token p {
     margin: 5px 0;
 }
-
-/* Botões de Navegação do Carrossel */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -383,6 +370,12 @@
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+.token img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
 
     </style>
 </head>
@@ -393,8 +386,8 @@
         <div class="header">
             <div class="avatar"></div>
             <div class="details">
-                <h1 id="nome">João RPG</h1>
-                <p class="Detalhes" id="detalhes">descrição</p>
+                <h1 id="nome">bright</h1>
+                <p class="Detalhes" id="detalhes">Olá! Sou a Sune Miku</p>
             </div>
         </div>
 
@@ -402,17 +395,17 @@
         <div class="profile-sections">
             <!-- Dados do Jogador -->
             <div class="section">
-                <h2>Dados</h2>
+                <h2>Estatísticas</h2>
                 <p><strong>Sessões Jogadas:</strong></p>
-                <p id="valorsessão">0</p>
+                <p id="valorsessão">8</p>
                 <p><strong>Críticos:</strong></p>
-                <p id="valorcritico">0</p>
+                <p id="valorcritico">7</p>
                 <p><strong>Falhas:</strong></p>
                 <p id="valorfalhas">0</p>
                 <p><strong>Oneshots:</strong></p>
                 <p id="valoroneshot">0</p>
                 <p><strong>Campanhas:</strong></p>
-                <p id="valorcampanha">0</p>
+                <p id="valorcampanha">1</p>
             </div>
 
             <!-- Personagens -->
@@ -420,21 +413,20 @@
                 <h2>Personagens</h2>
                 <label for="personagem-select" class="label">Selecione um Personagem:</label>
                 <select id="personagem-select" class="styled-select">
-                    <option value="personagem1">Personagem 1</option>
-                    <option value="personagem2">Personagem 2</option>
+                    <option value="personagem1">Hatsune Miku</option>
                 </select>
 
                 <div class="carrossel-container">
                     <div class="carrossel" id="carrossel">
                         <div class="token">
-                            <img src="https://via.placeholder.com/300" alt="Token 1">
-                            <p>Período: 2025</p>
-                            <p>Apelido: O Valente</p>
+                            <img src="https://images2.imgbox.com/e1/25/8GgJjO6k_o.png" alt="Token 1">
+                            <p>Sessão 1 - Sessão 4</p>
+                            <p>Sune</p>
                         </div>
                         <div class="token">
-                            <img src="https://via.placeholder.com/300" alt="Token 2">
-                            <p>Período: 2024</p>
-                            <p>Apelido: O Mágico</p>
+                            <img src="https://images2.imgbox.com/5c/96/0iJbVrcR_o.png" alt="Token 2">
+                            <p>Sessão 5 - Sessão 7</p>
+                            <p>Sune Dopamina</p>
                         </div>
                     </div>
                     <button class="carousel-btn left" onclick="moveCarousel(-1)">&#8249;</button>
@@ -446,16 +438,7 @@
                 <h2>Histórias Jogadas</h2>
                 <ul>
                     <li><img src="https://via.placeholder.com/50">
-                        <p>Noite Escura</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Empíreo</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Thanatos</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Solarens</p>
+                        <p>Tropical</p>
                     </li>
                 </ul>
             </div>
@@ -468,8 +451,12 @@
             <h2>Amigos</h2>
             <ul>
                 <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo 1">
-                    <span>Amigo 1</span>
+                    <img src="https://images2.imgbox.com/e2/3a/CjmhguA1_o.jpg" alt="Amigo 1">
+                    <span>TainhaCrespulet</span>
+                </li>
+                <li>
+                    <img src="https://images2.imgbox.com/7b/42/fXQ0Ls26_o.jpg" alt="Amigo 1">
+                    <span>SonicObeso</span>
                 </li>
             </ul>
         </div>
@@ -477,8 +464,12 @@
             <h2>Talvez Conheça</h2>
             <ul>
                 <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
-                    <span>Amigo Sugerido 1</span>
+                    <img src="https://images2.imgbox.com/6a/cc/uJDM6fqo_o.jpg" alt="Amigo Sugerido 1">
+                    <span>Twenty</span>
+                </li>
+                <li>
+                    <img src="https://images2.imgbox.com/23/15/W772z7WW_o.png" alt="Amigo Sugerido 1">
+                    <span>babio</span>
                 </li>
             </ul>
         </div>
