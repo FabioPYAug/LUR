@@ -337,7 +337,7 @@
 .token img {
     width: 100%;
     border-radius: 10px;
-    max-height: 200px;
+    max-height: 400px;
     object-fit: cover;
     margin-bottom: 10px;
 }
@@ -370,6 +370,12 @@
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+.token img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
 
     </style>
 </head>
@@ -380,8 +386,8 @@
         <div class="header">
             <div class="avatar"></div>
             <div class="details">
-                <h1 id="nome">Tombstone</h1>
-                <p class="Detalhes" id="detalhes">Olá! Sou um sapo cego :P</p>
+                <h1 id="nome">bright</h1>
+                <p class="Detalhes" id="detalhes">Olá! Sou a Sune Miku</p>
             </div>
         </div>
 
@@ -391,15 +397,15 @@
             <div class="section">
                 <h2>Estatísticas</h2>
                 <p><strong>Sessões Jogadas:</strong></p>
-                <p id="valorsessão">0</p>
+                <p id="valorsessão">8</p>
                 <p><strong>Críticos:</strong></p>
-                <p id="valorcritico">0</p>
+                <p id="valorcritico">7</p>
                 <p><strong>Falhas:</strong></p>
                 <p id="valorfalhas">0</p>
                 <p><strong>Oneshots:</strong></p>
-                <p id="valoroneshot">2</p>
+                <p id="valoroneshot">0</p>
                 <p><strong>Campanhas:</strong></p>
-                <p id="valorcampanha">2</p>
+                <p id="valorcampanha">1</p>
             </div>
 
             <!-- Personagens -->
@@ -407,21 +413,20 @@
                 <h2>Personagens</h2>
                 <label for="personagem-select" class="label">Selecione um Personagem:</label>
                 <select id="personagem-select" class="styled-select">
-                    <option value="personagem1">Pietro</option>
-                    <option value="personagem2">Mikail Pietrovsky</option>
+                    <option value="personagem1">Hatsune Miku</option>
                 </select>
 
                 <div class="carrossel-container">
                     <div class="carrossel" id="carrossel">
                         <div class="token">
-                            <img src="https://via.placeholder.com/300" alt="Token 1">
-                            <p>Sessão 3 - Sessão 16</p>
-                            <p>Pietro Foragido</p>
+                            <img src="https://images2.imgbox.com/e1/25/8GgJjO6k_o.png" alt="Token 1">
+                            <p>Sessão 1 - Sessão 4</p>
+                            <p>Sune</p>
                         </div>
                         <div class="token">
-                            <img src="https://via.placeholder.com/300" alt="Token 2">
-                            <p>Sessão 17 - Sessão 26</p>
-                            <p>Pietro Era de Ouro</p>
+                            <img src="https://images2.imgbox.com/5c/96/0iJbVrcR_o.png" alt="Token 2">
+                            <p>Sessão 5 - Sessão 7</p>
+                            <p>Sune Dopamina</p>
                         </div>
                     </div>
                     <button class="carousel-btn left" onclick="moveCarousel(-1)">&#8249;</button>
@@ -433,16 +438,7 @@
                 <h2>Histórias Jogadas</h2>
                 <ul>
                     <li><img src="https://via.placeholder.com/50">
-                        <p>Noite Escura</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Afano</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Thanatos</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Solarens</p>
+                        <p>Tropical</p>
                     </li>
                 </ul>
             </div>
@@ -455,16 +451,12 @@
             <h2>Amigos</h2>
             <ul>
                 <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo 1">
+                    <img src="https://images2.imgbox.com/e2/3a/CjmhguA1_o.jpg" alt="Amigo 1">
                     <span>TainhaCrespulet</span>
                 </li>
                 <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo 1">
+                    <img src="https://images2.imgbox.com/7b/42/fXQ0Ls26_o.jpg" alt="Amigo 1">
                     <span>SonicObeso</span>
-                </li>
-                <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo 1">
-                    <span>Twenty</span>
                 </li>
             </ul>
         </div>
@@ -472,15 +464,11 @@
             <h2>Talvez Conheça</h2>
             <ul>
                 <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
-                    <span>Diotasheck</span>
+                    <img src="https://images2.imgbox.com/6a/cc/uJDM6fqo_o.jpg" alt="Amigo Sugerido 1">
+                    <span>Twenty</span>
                 </li>
                 <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
-                    <span>Megami</span>
-                </li>
-                <li>
-                    <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
+                    <img src="https://images2.imgbox.com/23/15/W772z7WW_o.png" alt="Amigo Sugerido 1">
                     <span>babio</span>
                 </li>
             </ul>
