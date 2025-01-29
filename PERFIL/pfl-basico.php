@@ -54,7 +54,6 @@
             background-color: #353c45;
         }
 
-        /* Header (Banner e Avatar) */
         .header {
             background-color: #1b1e22;
             padding: 20px;
@@ -99,10 +98,8 @@
 
         .header .details #skin {
             margin-left: auto;
-            /* Isso garante que "skin" fique à direita */
         }
 
-        /* Seções do Perfil */
         .profile-sections {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -111,7 +108,6 @@
             width: 100%;
         }
 
-        /* Estilo das seções */
         .section {
             background-color: #2e3338;
             border-radius: 8px;
@@ -146,7 +142,6 @@
             color: #ccc;
         }
 
-        /* Inventário */
         .inventory ul {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -172,7 +167,6 @@
             margin-bottom: 5px;
         }
 
-        /* Lista de Amigos */
         .friends,
         .suggested-friends {
             background-color: #2e3338;
@@ -226,7 +220,6 @@
             color: #d1d1d1;
         }
 
-        /* Estilo da Barra de Rolagem */
         ::-webkit-scrollbar {
             width: 10px;
             background-color: #2e2f36;
@@ -244,8 +237,6 @@
         ::-webkit-scrollbar-track {
             background-color: #2e2f36;
         }
-
-        /* Rodapé */
         .footer {
             background-color: #1b1e22;
             text-align: center;
@@ -254,7 +245,6 @@
             color: #aaa;
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .profile-sections {
                 grid-template-columns: 1fr;
@@ -285,7 +275,6 @@
             }
         }
 
-        /* Estilo do Select */
 .styled-select {
     background-color: #2e3338;
     color: #e0e0e0;
@@ -356,8 +345,6 @@
 .token p {
     margin: 5px 0;
 }
-
-/* Botões de Navegação do Carrossel */
 .carousel-btn {
     position: absolute;
     top: 50%;
