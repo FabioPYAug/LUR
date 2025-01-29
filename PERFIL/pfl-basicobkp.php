@@ -393,8 +393,8 @@
         <div class="header">
             <div class="avatar"></div>
             <div class="details">
-                <h1 id="nome">Tombstone</h1>
-                <p class="Detalhes" id="detalhes">Olá! Sou um sapo cego :P</p>
+                <h1 id="nome">João RPG</h1>
+                <p class="Detalhes" id="detalhes">descrição</p>
             </div>
         </div>
 
@@ -402,7 +402,7 @@
         <div class="profile-sections">
             <!-- Dados do Jogador -->
             <div class="section">
-                <h2>Estatísticas</h2>
+                <h2>Dados</h2>
                 <p><strong>Sessões Jogadas:</strong></p>
                 <p id="valorsessão">0</p>
                 <p><strong>Críticos:</strong></p>
