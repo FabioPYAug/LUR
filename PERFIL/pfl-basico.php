@@ -24,14 +24,28 @@
         }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 70%;
+            max-width: 1300px;
             margin-top: 30px;
             background-color: #2e2f36;
             border-radius: 12px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-container {
+            width: 30%;
+            background-color: #2e2f36;
+            border-radius: 12px;
+            margin-left: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* Header (Banner e Avatar) */
@@ -61,6 +75,7 @@
         .header .details h1 {
             font-size: 2rem;
             margin-bottom: 5px;
+            color: #fff;
         }
 
         .header .details .Detalhes {
@@ -71,11 +86,13 @@
         /* Seções do Perfil */
         .profile-sections {
             display: grid;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 2fr;
             gap: 20px;
             padding: 20px;
+            width: 100%;
         }
 
+        /* Estilo das seções */
         .section {
             background-color: #3b3f47;
             border-radius: 8px;
@@ -86,6 +103,7 @@
         .section h2 {
             font-size: 1.6rem;
             margin-bottom: 10px;
+            color: #fff;
         }
 
         .section p {
@@ -122,6 +140,67 @@
             margin-bottom: 5px;
         }
 
+        /* Lista de Amigos */
+        .friends, .suggested-friends {
+            background-color: #3b3f47;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .friends h2, .suggested-friends h2 {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .friends ul, .suggested-friends ul {
+            list-style: none;
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .friends li, .suggested-friends li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+
+        .friends li img, .suggested-friends li img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .friends li span, .suggested-friends li span {
+            font-size: 1.1rem;
+            color: #d1d1d1;
+        }
+
+        /* Estilo da Barra de Rolagem */
+        ::-webkit-scrollbar {
+            width: 12px;
+            background-color: #2e2f36;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #777;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #2e2f36;
+        }
+
+        /* Rodapé */
         .footer {
             background-color: #1b1e22;
             text-align: center;
@@ -148,6 +227,16 @@
             .header .details h1 {
                 font-size: 1.6rem;
             }
+
+            .side-container {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .friends ul, .suggested-friends ul {
+                max-height: 150px;
+            }
         }
     </style>
 </head>
@@ -157,8 +246,8 @@
         <div class="header">
             <div class="avatar"></div>
             <div class="details">
-                <h1 id="nome">Nome</h1>
-                <p class="Detalhes" id="detalhes">Detalhes</p>
+                <h1 id="nome">João RPG</h1>
+                <p class="Detalhes" id="detalhes">Mago - Nível 10</p>
             </div>
         </div>
 
@@ -183,21 +272,50 @@
                     <li><strong>Inteligência:</strong> 18</li>
                     <li><strong>Carisma:</strong> 14</li>
                 </ul>
-                
+            </div>
+
+            <!-- Inventário do Jogador -->
+            <div class="section inventory">
+                <h2>Histórias Jogadas</h2>
+                <ul>
+                    <li><img src="https://via.placeholder.com/50"><p>Noite Escura</p></li>
+                    <li><img src="https://via.placeholder.com/50"><p>Empíreo</p></li>
+                    <li><img src="https://via.placeholder.com/50"><p>Thanatos</p></li>
+                    <li><img src="https://via.placeholder.com/50"><p>Solarens</p></li>
+                    <li><img src="https://via.placeholder.com/50"><p>Noite Escura</p></li>
+                    <li><img src="https://via.placeholder.com/50"><p>Empíreo</p></li>
+                    <li><img src="https://via.placeholder.com/50"><p>Thanatos</p></li>
+                    <li><img src="https://via.placeholder.com/50"><p>Solarens</p></li>
+                </ul>
             </div>
         </div>
+    </div>
 
-        <!-- Inventário do Jogador -->
-        <div class="section inventory">
-            <h2>Inventário</h2>
+    <!-- Lateral com lista de amigos e sugestões -->
+    <div class="side-container">
+        <!-- Amigos -->
+        <div class="friends">
+            <h2>Amigos</h2>
             <ul>
-                <li><img src="https://via.placeholder.com/50" alt="Poção de Cura"><p>Poção de Cura</p></li>
-                <li><img src="https://via.placeholder.com/50" alt="Espada Mágica"><p>Espada Mágica</p></li>
-                <li><img src="https://via.placeholder.com/50" alt="Armadura de Aço"><p>Armadura de Aço</p></li>
-                <li><img src="https://via.placeholder.com/50" alt="Escudo de Mithril"><p>Escudo de Mithril</p></li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Amigo 1">
+                    <span>Amigo 1</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Amigos que Talvez Conheça -->
+        <div class="suggested-friends">
+            <h2>Talvez Conheça</h2>
+            <ul>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
+                    <span>Amigo Sugerido 1</span>
+                </li>
             </ul>
         </div>
     </div>
+
 
 </body>
 </html>
