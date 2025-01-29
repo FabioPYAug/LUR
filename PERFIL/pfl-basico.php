@@ -410,9 +410,9 @@
                 <p><strong>Falhas:</strong></p>
                 <p id="valorfalhas">0</p>
                 <p><strong>Oneshots:</strong></p>
-                <p id="valoroneshot">0</p>
+                <p id="valoroneshot">2</p>
                 <p><strong>Campanhas:</strong></p>
-                <p id="valorcampanha">0</p>
+                <p id="valorcampanha">2</p>
             </div>
 
             <!-- Personagens -->
@@ -420,21 +420,21 @@
                 <h2>Personagens</h2>
                 <label for="personagem-select" class="label">Selecione um Personagem:</label>
                 <select id="personagem-select" class="styled-select">
-                    <option value="personagem1">Personagem 1</option>
-                    <option value="personagem2">Personagem 2</option>
+                    <option value="personagem1">Pietro</option>
+                    <option value="personagem2">Mikail Pietrovsky</option>
                 </select>
 
                 <div class="carrossel-container">
                     <div class="carrossel" id="carrossel">
                         <div class="token">
                             <img src="https://via.placeholder.com/300" alt="Token 1">
-                            <p>Período: 2025</p>
-                            <p>Apelido: O Valente</p>
+                            <p>Sessão 3 - Sessão 16</p>
+                            <p>Pietro Foragido</p>
                         </div>
                         <div class="token">
                             <img src="https://via.placeholder.com/300" alt="Token 2">
-                            <p>Período: 2024</p>
-                            <p>Apelido: O Mágico</p>
+                            <p>Sessão 17 - Sessão 26</p>
+                            <p>Pietro Era de Ouro</p>
                         </div>
                     </div>
                     <button class="carousel-btn left" onclick="moveCarousel(-1)">&#8249;</button>
@@ -449,7 +449,7 @@
                         <p>Noite Escura</p>
                     </li>
                     <li><img src="https://via.placeholder.com/50">
-                        <p>Empíreo</p>
+                        <p>Afano</p>
                     </li>
                     <li><img src="https://via.placeholder.com/50">
                         <p>Thanatos</p>
@@ -469,7 +469,15 @@
             <ul>
                 <li>
                     <img src="https://via.placeholder.com/40" alt="Amigo 1">
-                    <span>Amigo 1</span>
+                    <span>TainhaCrespulet</span>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Amigo 1">
+                    <span>SonicObeso</span>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Amigo 1">
+                    <span>Twenty</span>
                 </li>
             </ul>
         </div>
@@ -478,7 +486,15 @@
             <ul>
                 <li>
                     <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
-                    <span>Amigo Sugerido 1</span>
+                    <span>Diotasheck</span>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
+                    <span>Megami</span>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Amigo Sugerido 1">
+                    <span>babio</span>
                 </li>
             </ul>
         </div>
