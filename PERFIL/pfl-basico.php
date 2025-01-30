@@ -31,17 +31,14 @@ include 'pfl-basico-stl.php';
                 <h2>Dados</h2>
                 <p><strong>Sessões Jogadas:</strong></p>
                 <p id="valorsessão">0</p>
+                <p><strong>Críticos:</strong></p>
+                <p id="valorcritico">0</p>
+                <p><strong>Falhas:</strong></p>
+                <p id="valorfalhas">0</p>
                 <p><strong>Oneshots:</strong></p>
                 <p id="valoroneshot">0</p>
                 <p><strong>Campanhas:</strong></p>
                 <p id="valorcampanha">0</p>
-                <div class="bar-container">
-                    <div class="bar" id="progress-bar"></div>
-                    <div class="labels">
-                        <span id="criticos-label">Críticos: 0</span>
-                        <span id="falhas-label">Falhas: 0</span>
-                    </div>
-                </div>
             </div>
 
             <!-- Personagens -->

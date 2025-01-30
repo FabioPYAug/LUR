@@ -372,42 +372,4 @@
         object-fit: contain;
         margin-bottom: 10px;
     }
-
-    .bar-container {
-        width: 80%;
-        max-width: 600px;
-        position: relative;
-    }
-
-    .bar {
-        display: flex;
-        height: 30px;
-        width: 100%;
-        border: 2px solid #333;
-        border-radius: 5px;
-        overflow: hidden;
-    }
-
-    .criticos {
-        background-color: #007bff;
-        text-align: left;
-        color: white;
-        line-height: 30px;
-        padding-left: 5px;
-        font-weight: bold;
-    }
-
-    .falhas {
-        background-color: #ff5733;
-        text-align: right;
-        color: white;
-        line-height: 30px;
-        padding-right: 5px;
-    }
-
-    .labels {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-    }
 </style>
