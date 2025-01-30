@@ -46,21 +46,15 @@ include 'pfl-basico-stl.php';
                 <h2>Personagens</h2>
                 <label for="personagem-select" class="label">Selecione um Personagem:</label>
                 <select id="personagem-select" class="styled-select">
-                    <option value="personagem1">Personagem 1</option>
-                    <option value="personagem2">Personagem 2</option>
+                    <option value="">Personagem 1</option>
                 </select>
 
                 <div class="carrossel-container">
                     <div class="carrossel" id="carrossel">
                         <div class="token">
                             <img src="https://via.placeholder.com/300" alt="Token 1">
-                            <p>Período: 2025</p>
-                            <p>Apelido: O Valente</p>
-                        </div>
-                        <div class="token">
-                            <img src="" alt="Token 2">
-                            <p>Período: 2024</p>
-                            <p>Apelido: O Mágico</p>
+                            <p id="periodo">Período</p>
+                            <p id="nomeskin">Nome</p>
                         </div>
                     </div>
                     <button class="carousel-btn left" onclick="moveCarousel(-1)">&#8249;</button>
