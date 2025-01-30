@@ -29,16 +29,15 @@ include 'pfl-basico-stl.php';
             <!-- Dados do Jogador -->
             <div class="section">
                 <h2>Dados</h2>
-                <p><strong>Sessões Jogadas:</strong></p>
-                <p id="valorsessão">0</p>
-                <p><strong>Críticos:</strong></p>
-                <p id="valorcritico">0</p>
-                <p><strong>Falhas:</strong></p>
-                <p id="valorfalhas">0</p>
-                <p><strong>Oneshots:</strong></p>
-                <p id="valoroneshot">0</p>
-                <p><strong>Campanhas:</strong></p>
-                <p id="valorcampanha">0</p>
+                <p><strong>Sessões Jogadas:</strong> <span id="valorsessao">0</span></p>
+                <p><strong>Críticos:</strong> <span id="valorcritico">1000</span></p>
+                <p><strong>Falhas:</strong> <span id="valorfalhas">254</span></p>
+                <div class="bar-container">
+                    <div class="crit-fail-bar">
+                        <div id="critBar" class="crit-bar">10</div>
+                        <div id="failBar" class="fail-bar">1</div>
+                    </div>
+                </div>
             </div>
 
             <!-- Personagens -->
@@ -56,6 +55,11 @@ include 'pfl-basico-stl.php';
                             <img src="https://via.placeholder.com/300" alt="Token 1">
                             <p>Período: 2025</p>
                             <p>Apelido: O Valente</p>
+                        </div>
+                        <div class="token">
+                            <img src="https://via.placeholder.com/300" alt="Token 2">
+                            <p>Período: 2024</p>
+                            <p>Apelido: O Mágico</p>
                         </div>
                         <div class="token">
                             <img src="https://via.placeholder.com/300" alt="Token 2">

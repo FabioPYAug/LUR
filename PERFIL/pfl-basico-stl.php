@@ -107,6 +107,7 @@
         padding: 25px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease-in-out;
+        max-width: 900px;
     }
 
     .section:hover {
@@ -314,7 +315,7 @@
         min-width: 300px;
         margin-right: 20px;
         border-radius: 15px;
-        background-color: #2e3338;
+        background-color: #444d57;
         padding: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease-in-out;
@@ -371,5 +372,39 @@
         border-radius: 10px;
         object-fit: contain;
         margin-bottom: 10px;
+    }
+
+    .crit-fail-bar {
+        display: flex;
+        width: 100%;
+        height: 30px;
+        background-color: #444;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 20px 0;
+    }
+
+    .crit-bar {
+        background-color: blue;
+        height: 100%;
+        text-align: left;
+        line-height: 30px;
+        color: white;
+        padding-left: 10px;
+    }
+
+    .fail-bar {
+        background-color: orange;
+        height: 100%;
+        text-align: right;
+        line-height: 30px;
+        color: white;
+        padding-right: 10px;
+    }
+
+    .bar-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 </style>
