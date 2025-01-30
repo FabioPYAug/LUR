@@ -327,6 +327,7 @@
     .token:hover {
         transform: scale(1.05);
         box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+        background-color: #5a646c;
     }
 
     .token img {

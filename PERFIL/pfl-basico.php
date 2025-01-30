@@ -58,7 +58,7 @@ include 'pfl-basico-stl.php';
                             <p>Apelido: O Valente</p>
                         </div>
                         <div class="token">
-                            <img src="https://via.placeholder.com/300" alt="Token 2">
+                            <img src="" alt="Token 2">
                             <p>Período: 2024</p>
                             <p>Apelido: O Mágico</p>
                         </div>
