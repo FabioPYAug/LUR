@@ -31,6 +31,7 @@
     }
 
     .side-container {
+        margin-top: 30px;
         width: 28%;
         background-color: #2a2f38;
         border-radius: 12px;
@@ -138,8 +139,9 @@
 
     .inventory ul {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
         gap: 15px;
+        list-style-type: none;
     }
 
     .inventory li {
@@ -148,6 +150,7 @@
         border-radius: 10px;
         text-align: center;
         transition: all 0.3s ease-in-out;
+        list-style-type: none;
     }
 
     .inventory li:hover {
@@ -155,9 +158,13 @@
         transform: translateY(-5px);
     }
 
+    .inventory p {
+        font-size: 20px;
+    }
+
     .inventory img {
-        width: 60px;
-        height: 60px;
+        width: 128px;
+        height: 128px;
         margin-bottom: 5px;
     }
 

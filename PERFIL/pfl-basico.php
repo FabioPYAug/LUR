@@ -74,15 +74,6 @@ include 'pfl-basico-stl.php';
                     <li><img src="https://via.placeholder.com/50">
                         <p>Noite Escura</p>
                     </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Empíreo</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Thanatos</p>
-                    </li>
-                    <li><img src="https://via.placeholder.com/50">
-                        <p>Solarens</p>
-                    </li>
                 </ul>
             </div>
         </div>
