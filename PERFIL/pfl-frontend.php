@@ -1,5 +1,5 @@
 <?php
-include 'pfl-basico-stl.php';
+include 'Skins/pfl-basico.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ include 'pfl-basico-stl.php';
 
 <body>
     <?php
-    include 'pfl-basico-js.php';
+    include 'pfl-script.php';
     ?>
     <div class="container">
         <div class="header">

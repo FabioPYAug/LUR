@@ -46,7 +46,7 @@
             labels: ['Críticos', 'Falhas'],
             datasets: [{
                 label: 'Estatísticas de RPG',
-                data: [70, 30],
+                data: [50, 50],
                 backgroundColor: ['#36a2eb', '#ff7f0e'],
                 borderColor: ['#fff', '#fff'],
                 borderWidth: 1

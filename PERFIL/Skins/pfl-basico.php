@@ -125,6 +125,7 @@
     .section p {
         margin-bottom: 10px;
         color: #b2b2b2;
+        font-size: 1.1rem;
     }
 
     .stats ul {
