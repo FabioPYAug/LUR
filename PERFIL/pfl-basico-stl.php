@@ -381,4 +381,14 @@
         object-fit: contain;
         margin-bottom: 10px;
     }
+
+    .pie-chart-container {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    
 </style>

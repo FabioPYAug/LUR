@@ -27,40 +27,66 @@ include 'pfl-basico-stl.php';
         <!-- Seções do Perfil -->
         <div class="profile-sections">
             <!-- Dados do Jogador -->
+            <!-- Seção Dados -->
             <div class="section">
                 <h2>Dados</h2>
                 <p><strong>Sessões Jogadas:</strong></p>
                 <p id="valorsessão">0</p>
-                <p><strong>Críticos:</strong></p>
-                <p id="valorcritico">0</p>
-                <p><strong>Falhas:</strong></p>
-                <p id="valorfalhas">0</p>
                 <p><strong>Oneshots:</strong></p>
                 <p id="valoroneshot">0</p>
                 <p><strong>Campanhas:</strong></p>
                 <p id="valorcampanha">0</p>
+
+                <!-- Gráfico de Pizza -->
+                <h3>Estatísticas de RPG</h3>
+                <div class="pie-chart-container">
+                    <canvas id="pizza-chart"></canvas>
+                </div>
             </div>
+
 
             <!-- Personagens -->
             <div class="section personagens">
                 <h2>Personagens</h2>
                 <label for="personagem-select" class="label">Selecione um Personagem:</label>
                 <select id="personagem-select" class="styled-select">
-                    <option value="">Personagem 1</option>
+                    <option value="1">Personagem 1</option>
+                    <option value="2">Personagem 2</option>
                 </select>
-
                 <div class="carrossel-container">
                     <div class="carrossel" id="carrossel">
-                        <div class="token">
+                        <div class="token" data-personagem="1">
                             <img src="https://via.placeholder.com/300" alt="Token 1">
-                            <p id="periodo">Período</p>
-                            <p id="nomeskin">Nome</p>
+                            <p class="periodo">Período</p>
+                            <p class="nomeskin">Carlos</p>
+                        </div>
+                        <div class="token" data-personagem="2">
+                            <img src="https://via.placeholder.com/300" alt="Token 2">
+                            <p class="periodo">Período</p>
+                            <p class="nomeskin">Jorge</p>
+                        </div>
+                        <div class="token" data-personagem="1">
+                            <img src="https://via.placeholder.com/300" alt="Token 3">
+                            <p class="periodo">Período</p>
+                            <p class="nomeskin">Carlos</p>
+                        </div>
+                        <div class="token" data-personagem="2">
+                            <img src="https://via.placeholder.com/300" alt="Token 4">
+                            <p class="periodo">Período</p>
+                            <p class="nomeskin">Jorge</p>
+                        </div>
+                        <div class="token" data-personagem="1">
+                            <img src="https://via.placeholder.com/300" alt="Token 5">
+                            <p class="periodo">Período</p>
+                            <p class="nomeskin">Carlos</p>
                         </div>
                     </div>
                     <button class="carousel-btn left" onclick="moveCarousel(-1)">&#8249;</button>
                     <button class="carousel-btn right" onclick="moveCarousel(1)">&#8250;</button>
                 </div>
             </div>
+
+
 
             <div class="section inventory">
                 <h2>Histórias Jogadas</h2>
