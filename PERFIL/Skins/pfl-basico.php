@@ -1,3 +1,58 @@
+<script>
+    //CRITICOS E FALHAS
+    document.addEventListener("DOMContentLoaded", function() {
+    console.log('Página carregada e o gráfico será gerado');
+    
+    const ctx = document.getElementById('pizza-chart').getContext('2d');
+    const pizzaChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Críticos', 'Falhas'],
+            datasets: [{
+                label: 'Estatísticas de RPG',
+                data: [50, 50],
+                backgroundColor: ['#4e73df', '#ff7f0e'], 
+                borderColor: ['#D8D8D8', '#D8D8D8'], 
+                borderWidth: 2, 
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: {
+                            family: "'Cinzel', sans-serif", 
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        color: '#D8D8D8'
+                    }
+                },  
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': ' + tooltipItem.raw + '%'; 
+                        }
+                    },
+                    backgroundColor: '#2c3e50', 
+                    titleFont: {
+                        family: "'Cinzel', sans-serif",
+                        weight: 'bold',
+                        size: 14
+                    },
+                    bodyFont: {
+                        family: "'Cinzel', sans-serif",
+                        size: 12
+                    },
+                    bodyColor: '#D8D8D8', 
+                }
+            }
+        }
+    });
+});
+</script>
 <style>
     * {
         margin: 0;
@@ -124,7 +179,7 @@
 
     .section p {
         margin-bottom: 10px;
-        color: #b2b2b2;
+        color:rgb(216, 216, 216);
         font-size: 1.1rem;
     }
 
