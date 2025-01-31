@@ -26,8 +26,8 @@ include 'pfl-basico-stl.php';
 
         <!-- Seções do Perfil -->
         <div class="profile-sections">
+
             <!-- Dados do Jogador -->
-            <!-- Seção Dados -->
             <div class="section">
                 <h2>Dados</h2>
                 <p><strong>Sessões Jogadas:</strong></p>
@@ -36,9 +36,7 @@ include 'pfl-basico-stl.php';
                 <p id="valoroneshot">0</p>
                 <p><strong>Campanhas:</strong></p>
                 <p id="valorcampanha">0</p>
-
                 <!-- Gráfico de Pizza -->
-                <h3>Estatísticas de RPG</h3>
                 <div class="pie-chart-container">
                     <canvas id="pizza-chart"></canvas>
                 </div>
