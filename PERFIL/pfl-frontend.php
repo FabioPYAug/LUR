@@ -1,6 +1,5 @@
 <?php
 include('verificaLogin.php');
-session_start();
 
 if (!isset($_SESSION['us_ID'])) {
     header("Location: login.php"); 
@@ -129,5 +128,22 @@ include 'Skins/pfl-basico.php';
 </body>
 
 <script>
+    function carregarDadosUsuario() {
+    $.ajax({
+        url: 'dadosuser.php',
+        type: 'GET',
+        dataType: 'json', 
+        success: function(response) {
+            $('#nome').text(response.nome);
+            $('#detalhes').text(response.detalhes);
+            $('#valorsessão').text(response.sessoes);
+            $('#valoroneshot').text(response.oneshots);
+            $('#valorcampanha').text(response.campanhas);
+        },
+        error: function(xhr, status, error) {
+            console.error('Erro na requisição AJAX: ', status, error);
+        }
+    });
+}
 </script>  
 </html>
