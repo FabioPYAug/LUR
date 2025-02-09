@@ -15,6 +15,7 @@ include 'Skins/pfl-basico.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Perfil do Jogador - RPG</title>
 </head>
 
@@ -56,32 +57,11 @@ include 'Skins/pfl-basico.php';
                 <label for="personagem-select" class="label">Selecione um Personagem:</label>
                 <select id="personagem-select" class="styled-select">
                     <option value="1">Personagem 1</option>
-                    <option value="2">Personagem 2</option>
                 </select>
                 <div class="carrossel-container">
                     <div class="carrossel" id="carrossel">
                         <div class="token" data-personagem="1">
                             <img src="https://via.placeholder.com/300" alt="Token 1">
-                            <p class="periodo">Período</p>
-                            <p class="nomeskin">Carlos</p>
-                        </div>
-                        <div class="token" data-personagem="2">
-                            <img src="https://via.placeholder.com/300" alt="Token 2">
-                            <p class="periodo">Período</p>
-                            <p class="nomeskin">Jorge</p>
-                        </div>
-                        <div class="token" data-personagem="1">
-                            <img src="https://via.placeholder.com/300" alt="Token 3">
-                            <p class="periodo">Período</p>
-                            <p class="nomeskin">Carlos</p>
-                        </div>
-                        <div class="token" data-personagem="2">
-                            <img src="https://via.placeholder.com/300" alt="Token 4">
-                            <p class="periodo">Período</p>
-                            <p class="nomeskin">Jorge</p>
-                        </div>
-                        <div class="token" data-personagem="1">
-                            <img src="https://via.placeholder.com/300" alt="Token 5">
                             <p class="periodo">Período</p>
                             <p class="nomeskin">Carlos</p>
                         </div>
@@ -128,22 +108,35 @@ include 'Skins/pfl-basico.php';
 </body>
 
 <script>
+    var criticos;
+    var falhas;
+    carregarDadosUsuario()
     function carregarDadosUsuario() {
     $.ajax({
         url: 'dadosuser.php',
         type: 'GET',
         dataType: 'json', 
         success: function(response) {
-            $('#nome').text(response.nome);
-            $('#detalhes').text(response.detalhes);
-            $('#valorsessão').text(response.sessoes);
-            $('#valoroneshot').text(response.oneshots);
-            $('#valorcampanha').text(response.campanhas);
+            console.log(response); 
+            if (response.error) {
+                console.error('Erro: ' + response.error);
+            } else {
+                $('#nome').text(response.us_login); 
+                $('#detalhes').text('Descrição: ' + response.us_criticos); 
+                $('#valorsessão').text(response.us_sessoes);
+                $('#valoroneshot').text(response.us_oneshots);
+                $('#valorcampanha').text(response.us_campanhas);
+                criticos = response.us_criticos;
+                falhas = response.us_falhas
+
+                criarGraficoPizza(criticos, falhas);
+            }
         },
         error: function(xhr, status, error) {
             console.error('Erro na requisição AJAX: ', status, error);
         }
     });
 }
+
 </script>  
 </html>

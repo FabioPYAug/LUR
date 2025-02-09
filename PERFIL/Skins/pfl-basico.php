@@ -1,58 +1,62 @@
 <script>
-    //CRITICOS E FALHAS
-    document.addEventListener("DOMContentLoaded", function() {
-    console.log('Página carregada e o gráfico será gerado');
-    
+document.addEventListener("DOMContentLoaded", function() {
     const ctx = document.getElementById('pizza-chart').getContext('2d');
-    const pizzaChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Críticos', 'Falhas'],
-            datasets: [{
-                label: 'Estatísticas de RPG',
-                data: [50, 50],
-                backgroundColor: ['#4e73df', '#ff7f0e'], 
-                borderColor: ['#D8D8D8', '#D8D8D8'], 
-                borderWidth: 2, 
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                    labels: {
-                        font: {
-                            family: "'Cinzel', sans-serif", 
-                            size: 16,
-                            weight: 'bold'
-                        },
-                        color: '#D8D8D8'
-                    }
-                },  
-                tooltip: {
-                    callbacks: {
-                        label: function(tooltipItem) {
-                            return tooltipItem.label + ': ' + tooltipItem.raw + '%'; 
+    function criarGraficoPizza(criticos, falhas) {
+        const ctx = document.getElementById('pizza-chart').getContext('2d');
+        const pizzaChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Críticos', 'Falhas'],
+                datasets: [{
+                    label: 'Estatísticas de RPG',
+                    data: [criticos, falhas],
+                    backgroundColor: ['#4e73df', '#ff7f0e'], 
+                    borderColor: ['#D8D8D8', '#D8D8D8'], 
+                    borderWidth: 2, 
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: {
+                                family: "'Cinzel', sans-serif", 
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            color: '#D8D8D8'
                         }
-                    },
-                    backgroundColor: '#2c3e50', 
-                    titleFont: {
-                        family: "'Cinzel', sans-serif",
-                        weight: 'bold',
-                        size: 14
-                    },
-                    bodyFont: {
-                        family: "'Cinzel', sans-serif",
-                        size: 12
-                    },
-                    bodyColor: '#D8D8D8', 
+                    },  
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + '%'; 
+                            }
+                        },
+                        backgroundColor: '#2c3e50', 
+                        titleFont: {
+                            family: "'Cinzel', sans-serif",
+                            weight: 'bold',
+                            size: 14
+                        },
+                        bodyFont: {
+                            family: "'Cinzel', sans-serif",
+                            size: 12
+                        },
+                        bodyColor: '#D8D8D8', 
+                    }
                 }
             }
-        }
-    });
+        });
+    }
+
+    // Chame a função para criar o gráfico
+    criarGraficoPizza();
 });
 </script>
+
 <style>
     * {
         margin: 0;
