@@ -29,6 +29,7 @@ include 'Skins/pfl-basico.php';
             <div class="details">
                 <h1 id="nome">João RPG</h1>
                 <p class="Detalhes" id="detalhes">descrição</p>
+                <button id="logoutBtn">Logout</button>
             </div>
         </div>
 
@@ -108,6 +109,20 @@ include 'Skins/pfl-basico.php';
 </body>
 
 <script>
+    $('#logoutBtn').on('click', function() {
+    $.ajax({
+        url: 'logout.php',
+        type: 'GET',
+        success: function() {
+            window.location.href = 'login.php';
+        },
+        error: function(xhr, status, error) {
+            console.error('Erro ao tentar deslogar: ', error);
+        }
+    });
+});
+
+
     var criticos;
     var falhas;
     carregarDadosUsuario()
@@ -116,6 +131,7 @@ include 'Skins/pfl-basico.php';
         url: 'dadosuser.php',
         type: 'GET',
         dataType: 'json', 
+        cache: false,
         success: function(response) {
             console.log(response); 
             if (response.error) {

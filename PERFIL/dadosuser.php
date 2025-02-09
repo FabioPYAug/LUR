@@ -12,8 +12,9 @@ $query = "SELECT u.us_ID, u.us_login, u.us_senha,
        ud.us_criticos, ud.us_falhas, ud.us_sessoes, 
        ud.us_oneshots, ud.us_campanhas
 FROM users u
-INNER JOIN users_dados ud ON u.us_ID = '$us_ID'";
-
+INNER JOIN users_dados ud 
+    ON u.us_ID = ud.us_ID
+WHERE u.us_ID = '$us_ID'";
 $result = mysqli_query($conexao, $query);
 
 if (mysqli_num_rows($result) > 0) {

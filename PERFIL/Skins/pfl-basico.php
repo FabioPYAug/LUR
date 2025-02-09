@@ -1,5 +1,4 @@
 <script>
-document.addEventListener("DOMContentLoaded", function() {
     const ctx = document.getElementById('pizza-chart').getContext('2d');
     function criarGraficoPizza(criticos, falhas) {
         const ctx = document.getElementById('pizza-chart').getContext('2d');
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     tooltip: {
                         callbacks: {
                             label: function(tooltipItem) {
-                                return tooltipItem.label + ': ' + tooltipItem.raw + '%'; 
+                                return tooltipItem.label + ': ' + tooltipItem.raw; 
                             }
                         },
                         backgroundColor: '#2c3e50', 
@@ -54,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Chame a função para criar o gráfico
     criarGraficoPizza();
-});
 </script>
 
 <style>
