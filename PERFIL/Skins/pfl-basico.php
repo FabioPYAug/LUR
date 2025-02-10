@@ -196,35 +196,48 @@
     }
 
     .inventory ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
-        gap: 15px;
-        list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 12px; 
+    list-style-type: none;
+    justify-items: center; 
     }
 
     .inventory li {
-        background-color: #444d57;
-        padding: 12px;
+        background-color: #2e3338; 
+        padding: 8px; 
         border-radius: 10px;
         text-align: center;
-        transition: all 0.3s ease-in-out;
-        list-style-type: none;
+        transition: transform 0.3s ease-in-out;
+        width: 90px; 
+        height: 130px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
     }
 
     .inventory li:hover {
-        background-color: #5a646c;
-        transform: translateY(-5px);
+        transform: scale(1.05); 
+        background-color: #444d57;
     }
 
-    .inventory p {
-        font-size: 20px;
+    .inventory li img {
+        width: 80px; 
+        height: 80px; 
+        object-fit: cover; 
+        border-radius: 8px; 
+        margin-bottom: 8px; 
     }
 
-    .inventory img {
-        width: 128px;
-        height: 128px;
-        margin-bottom: 5px;
+    .inventory li p {
+        font-size: 12px; 
+        color: #e0e0e0;
+        text-align: center;
     }
+
+
 
     .friends,
     .suggested-friends {
