@@ -82,12 +82,12 @@ include 'Skins/pfl-basico.php';
                         <p>Noite Escura</p>
                     </li>
                     <li>
-                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
-                        <p>Noite Escura</p>
+                        <img src="Icons/Thanatos.png" alt="Noite Escura">
+                        <p>Thanatos</p>
                     </li>
                     <li>
-                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
-                        <p>Noite Escura</p>
+                        <img src="Icons/Afano.png" alt="Noite Escura">
+                        <p>Afano</p>
                     </li>
                     <li>
                         <img src="Icons/Noite Escura.png" alt="Noite Escura">
