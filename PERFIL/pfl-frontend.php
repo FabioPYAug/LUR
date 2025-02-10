@@ -77,22 +77,6 @@ include 'Skins/pfl-basico.php';
             <div class="section inventory">
                 <h2>Histórias Jogadas</h2>
                 <ul>
-                    <li>
-                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
-                        <p>Noite Escura</p>
-                    </li>
-                    <li>
-                        <img src="Icons/Thanatos.png" alt="Noite Escura">
-                        <p>Thanatos</p>
-                    </li>
-                    <li>
-                        <img src="Icons/Afano.png" alt="Noite Escura">
-                        <p>Afano</p>
-                    </li>
-                    <li>
-                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
-                        <p>Noite Escura</p>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -140,31 +124,49 @@ include 'Skins/pfl-basico.php';
     var falhas;
     carregarDadosUsuario()
     function carregarDadosUsuario() {
-    $.ajax({
-        url: 'dadosuser.php',
-        type: 'GET',
-        dataType: 'json', 
-        cache: false,
-        success: function(response) {
-            console.log(response); 
-            if (response.error) {
-                console.error('Erro: ' + response.error);
-            } else {
-                $('#nome').text(response.us_login); 
-                $('#detalhes').text('Descrição: ' + response.us_criticos); 
-                $('#valorsessão').text(response.us_sessoes);
-                $('#valoroneshot').text(response.us_oneshots);
-                $('#valorcampanha').text(response.us_campanhas);
-                criticos = response.us_criticos;
-                falhas = response.us_falhas
+        $.ajax({
+    url: 'dadosuser.php',
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(response) {
+        console.log(response);
 
-                criarGraficoPizza(criticos, falhas);
+        if (response.error) {
+            console.error('Erro: ' + response.error);
+        } else {
+            $('#nome').text(response.user.us_login);
+            $('#detalhes').text('Descrição: ' + response.user.us_criticos);
+            $('#valorsessao').text(response.user.us_sessoes);
+            $('#valoroneshot').text(response.user.us_oneshots);
+            $('#valorcampanha').text(response.user.us_campanhas);
+
+            let criticos = response.user.us_criticos;
+            let falhas = response.user.us_falhas;
+            criarGraficoPizza(criticos, falhas);
+            $('.inventory ul').empty();
+            var valor = 0
+
+            if (response.campanhas.length > 0) {
+                response.campanhas.forEach(function(campanha) {
+                    $('.inventory ul').append(`
+                        <li>
+                            <img src="${response.campanhas[valor].us_campanha}" alt="${response.campanhas[valor].us_nome}">
+                            <p>${response.campanhas[valor].us_nome}</p>
+                        </li>
+                    `);
+                valor++
+                });
+            } else {
+                $('#campanhas').append('<p>Nenhuma campanha encontrada.</p>');
             }
-        },
-        error: function(xhr, status, error) {
-            console.error('Erro na requisição AJAX: ', status, error);
         }
-    });
+    },
+    error: function(xhr, status, error) {
+        console.error('Erro na requisição AJAX: ', status, error);
+    }
+});
+
 }
 
 </script>  
