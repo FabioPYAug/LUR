@@ -75,7 +75,7 @@ include 'Skins/pfl-basico.php';
 
 
             <div class="section inventory">
-                <h2>Histórias Jogadas</h2>
+                <h2>Participações</h2>
                 <ul>
                 </ul>
             </div>
