@@ -77,7 +77,20 @@ include 'Skins/pfl-basico.php';
             <div class="section inventory">
                 <h2>Histórias Jogadas</h2>
                 <ul>
-                    <li><img src="https://via.placeholder.com/50">
+                    <li>
+                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
+                        <p>Noite Escura</p>
+                    </li>
+                    <li>
+                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
+                        <p>Noite Escura</p>
+                    </li>
+                    <li>
+                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
+                        <p>Noite Escura</p>
+                    </li>
+                    <li>
+                        <img src="Icons/Noite Escura.png" alt="Noite Escura">
                         <p>Noite Escura</p>
                     </li>
                 </ul>

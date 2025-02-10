@@ -17,6 +17,12 @@ INNER JOIN users_dados ud
 WHERE u.us_ID = '$us_ID'";
 $result = mysqli_query($conexao, $query);
 
+$us_ID = $_SESSION['us_ID'];
+$query = "SELECT *
+FROM users_campanhas
+WHERE u.us_ID = '$us_ID'";
+$result = mysqli_query($conexao, $query);
+
 if (mysqli_num_rows($result) > 0) {
     $user_data = mysqli_fetch_assoc($result);
     echo json_encode($user_data); 
