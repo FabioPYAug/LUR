@@ -40,10 +40,25 @@ if ($result_campanhas && mysqli_num_rows($result_campanhas) > 0) {
     }
 }
 
-// Combinar os dados do usuário e das campanhas
+$query_tokens = "
+    SELECT * 
+    FROM user_tokens 
+    WHERE us_ID = '$us_ID'
+";
+$result_tokens = mysqli_query($conexao, $query_tokens);
+
+$tokens_data = [];
+if ($result_tokens && mysqli_num_rows($result_tokens) > 0) {
+    while ($row = mysqli_fetch_assoc($result_tokens)) {
+        $tokens_data[] = $row;
+    }
+}
+
+// Combinar os dados do usuário e campanhas e tokens
 $response = [
     "user" => $user_data,
-    "campanhas" => $campanhas_data
+    "campanhas" => $campanhas_data,
+    "tokens" => $tokens_data
 ];
 
 // Retornar a resposta como JSON

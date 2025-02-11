@@ -57,14 +57,10 @@ include 'Skins/pfl-basico.php';
                 <h2>Personagens</h2>
                 <label for="personagem-select" class="label">Selecione um Personagem:</label>
                 <select id="personagem-select" class="styled-select">
-                    <option value="1">Personagem 1</option>
                 </select>
                 <div class="carrossel-container">
                     <div class="carrossel" id="carrossel">
                         <div class="token" data-personagem="1">
-                            <img src="https://via.placeholder.com/300" alt="Token 1">
-                            <p class="periodo">Período</p>
-                            <p class="nomeskin">Carlos</p>
                         </div>
                     </div>
                     <button class="carousel-btn left" onclick="moveCarousel(-1)">&#8249;</button>
@@ -159,6 +155,32 @@ include 'Skins/pfl-basico.php';
                 });
             } else {
                 $('#campanhas').append('<p>Nenhuma campanha encontrada.</p>');
+            }
+
+            if (response.tokens.length > 0) {
+                $('#personagem-select').empty(); 
+                $('#carrossel').empty();
+                var teste = ""
+                response.tokens.forEach(function(token) {
+                    if(teste == token.ID_token){
+                        console.log("passei aq")
+                    }else{
+                        $('#personagem-select').append(`
+                            <option value="${token.ID_token}">${token.us_personagem}</option>
+                        `);
+                    }
+                    teste = token.ID_token
+                    $('#carrossel').append(`
+                        <div class="token" data-personagem="${token.ID_token}">
+                            <img src="${token.us_imagem}" alt="Token ${token.ID_token}">
+                            <p class="periodo">${token.us_periodo}</p>
+                            <p class="nomeskin">${token.us_nome}</p>
+                        </div>
+                    `);
+                    
+                });
+            } else {
+                $('#personagem-select').append('<option value="">Nenhum personagem encontrado</option>');
             }
         }
     },

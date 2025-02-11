@@ -14,25 +14,25 @@
     }
 
     //MODIFICAÇÃO DO SELECT E PERSONAGENS
-    document.addEventListener("DOMContentLoaded", function() {
-        const selectElement = document.getElementById('personagem-select');
+    document.addEventListener("DOMContentLoaded", function () {
+    const selectElement = document.getElementById('personagem-select');
+
+    function filterTokens() {
+        const selectedPersonagem = selectElement.value;
         const tokens = document.querySelectorAll('.carrossel .token');
 
-        function filterTokens() {
-            const selectedPersonagem = selectElement.value;
+        tokens.forEach(function (token) {
+            const personagem = token.getAttribute('data-personagem');
 
-            tokens.forEach(function(token) {
-                const personagem = token.getAttribute('data-personagem');
-                if (personagem === selectedPersonagem) {
-                    token.style.display = 'block';
-                } else {
-                    token.style.display = 'none';
-                }
-            });
-        }
+            if (personagem === selectedPersonagem.toString()) {
+                token.style.display = 'block';
+            } else {
+                token.style.display = 'none';
+            }
+        });
+    }
+    selectElement.addEventListener('change', filterTokens);
+    setTimeout(filterTokens, 500); 
+});
 
-        selectElement.addEventListener('change', filterTokens);
-
-        filterTokens();
-    });
 </script>
