@@ -168,15 +168,6 @@
         max-width: 560px;
     }
 
-    .personagens{
-        background-color: #2e3338;
-        border-radius: 8px;
-        padding: 25px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease-in-out;
-        max-width: 82%;
-    }
-
     .section:hover {
         background-color: #3a4348;
     }

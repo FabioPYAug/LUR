@@ -40,11 +40,11 @@ include 'Skins/pfl-basico.php';
             <div class="section">
                 <h2>Dados</h2>
                 <p><strong>Sessões Jogadas:</strong></p>
-                <p id="valorsessão">0</p>
+                <p id="valorsessão"></p>
                 <p><strong>Oneshots:</strong></p>
-                <p id="valoroneshot">0</p>
+                <p id="valoroneshot"></p>
                 <p><strong>Campanhas:</strong></p>
-                <p id="valorcampanha">0</p>
+                <p id="valorcampanha"></p>
                 <!-- Gráfico de Pizza -->
                 <div class="pie-chart-container">
                     <canvas id="pizza-chart"></canvas>
@@ -131,9 +131,10 @@ include 'Skins/pfl-basico.php';
         if (response.error) {
             console.error('Erro: ' + response.error);
         } else {
+            console.log(response.user)
             $('#nome').text(response.user.us_login);
             $('#detalhes').text('Descrição: ' + response.user.us_criticos);
-            $('#valorsessao').text(response.user.us_sessoes);
+            $('#valorsessão').text(response.user.us_sessoes);
             $('#valoroneshot').text(response.user.us_oneshots);
             $('#valorcampanha').text(response.user.us_campanhas);
 
