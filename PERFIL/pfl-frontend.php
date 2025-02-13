@@ -45,6 +45,10 @@ include 'Skins/pfl-basico.php';
                 <p id="valoroneshot"></p>
                 <p><strong>Campanhas:</strong></p>
                 <p id="valorcampanha"></p>
+                <p><strong>Acertos Críticos:</strong></p>
+                <p id="valorcritico"></p>
+                <p><strong>Falhas Críticas:</strong></p>
+                <p id="valorfalha"></p>
                 <!-- Gráfico de Pizza -->
                 <div class="pie-chart-container">
                     <canvas id="pizza-chart"></canvas>
@@ -137,9 +141,10 @@ include 'Skins/pfl-basico.php';
             $('#valorsessão').text(response.user.us_sessoes);
             $('#valoroneshot').text(response.user.us_oneshots);
             $('#valorcampanha').text(response.user.us_campanhas);
-
             let criticos = response.user.us_criticos;
             let falhas = response.user.us_falhas;
+            $('#valorfalha').text(falhas);
+            $('#valorcritico').text(criticos);
             criarGraficoPizza(criticos, falhas);
             $('.inventory ul').empty();
             var valor = 0
