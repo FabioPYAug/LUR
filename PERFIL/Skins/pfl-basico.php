@@ -165,7 +165,7 @@
         padding: 25px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease-in-out;
-        max-width: 560px;
+        max-width: 660px;
     }
 
     .section:hover {
