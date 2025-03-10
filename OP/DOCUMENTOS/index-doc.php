@@ -21,7 +21,15 @@ include 'style-doc.php';
 
     <section class="banner banner-1"></section>
 
-    <section class="banner banner-2"></section>
+    <section class="banner banner-2">
+    <div class="container">
+            <h1>Ficha de Investigação</h1>
+            <div class="section">
+                <h2>Caso</h2>
+                <p><strong>Local:</strong> Kartas-che, Cidade Espiral</p>
+                <p><strong>Resumo:</strong> Uma cidade isolada com dezenas de policiais mortos. Os cidadãos temem sair às ruas, e o governo oculta informações.</p>
+            </div>
+            </section>
 
 </body>
 
