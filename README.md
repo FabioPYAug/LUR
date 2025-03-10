@@ -30,6 +30,7 @@ Todo o conteúdo e dados do site estão integrados diretamente a um banco de dad
 
 * 0.1
     * Criação da aba de Noite Escura
+    * * Criação da aba de Ordem Paranormal
 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/FabioPYAug/Luna-RPG?style=for-the-badge)
