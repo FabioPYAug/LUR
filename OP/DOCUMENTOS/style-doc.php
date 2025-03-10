@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-    height: 200%; /* Aumenta a altura para permitir rolagem */
+    height: 200%; 
     position: relative;
 }
 
@@ -27,7 +27,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     transition: opacity 1s ease-in-out;
-    will-change: transform; /* Informar ao navegador que a transformação será feita */
+    will-change: transform; 
 }
 
 .banner-1 {
