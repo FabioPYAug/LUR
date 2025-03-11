@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tituloPagina">Mistérios e Rituais</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="site-title" id="ritualNome">[Nome do Ritual]</h1>
+            <button class="back-button" onclick="window.location.href='../index.html'">&larr; Voltar</button>
+        </div>
+    </header>
+
+    <!-- Subheader para o Menu de Seções -->
+    <div class="subheader">
+        <nav>
+            <ul>
+                <li><a href="#descricao">Descrição</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#detalhes">Detalhes</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <aside class="sidebar">
+            <!-- O Menu foi movido para o subheader, então não há mais aqui. -->
+        </aside>
+
+        <section class="content">
+            <article>
+                <div class="details-image">
+                    <img id="ritualImagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3r_sM7QQ45aSu9y8Bug6rJtMB--YWkyAiA&s" alt="Imagem do Ritual">
+                </div>
+                <section id="descricao">
+                    <h2>Descrição</h2>
+                    <p id="ritualDescricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </section>
+
+                <section id="historia">
+                    <h2>História</h2>
+                    <p id="ritualHistoria">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </section>
+
+                <section id="detalhes">
+                    <h2>Detalhes</h2>
+                    <div class="details-container">
+                        <div class="details-text">
+                            <p><strong>Tipo:</strong> <span id="ritualTipo">[Tipo]</span></p>
+                            <p><strong>Alcance:</strong> <span id="ritualAlcance">[Alcance]</span></p>
+                            <p><strong>Efeito:</strong> <span id="ritualEfeito">[Efeito]</span></p>
+                        </div>
+                    </div>
+
+                    <table class="details-table">
+                        <tr>
+                            <th>Custo</th>
+                            <td id="ritualCusto">[Custo]</td>
+                        </tr>
+                        <tr>
+                            <th>Duração</th>
+                            <td id="ritualDuracao">[Duração]</td>
+                        </tr>
+                        <tr>
+                            <th>Condição</th>
+                            <td id="ritualCondicao">[Condição]</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .header {
+        background-color: #111;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .header-small {
+        padding: 10px;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .site-title {
+        font-family: 'Cinzel', serif;
+        color: #fff;
+        font-size: 1.8rem;
+    }
+
+    .back-button {
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+        background-color: #d1faff;
+        color: #000;
+        transform: scale(1.1);
+    }
+
+    .subheader {
+        background-color: #222;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .subheader nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .subheader nav ul li {
+        margin: 0 15px;
+    }
+
+    .subheader nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .subheader nav ul li a:hover {
+        color: #d1faff;
+    }
+
+    .main-content {
+        display: flex;
+        flex: 1;
+        max-width: 1600px;
+        margin: 20px auto;
+        gap: 20px;
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        flex: 1;
+        background-color: #111;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-family: 'Cinzel', serif;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .details-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .details-text {
+        flex: 1;
+    }
+
+    .details-image {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .details-image img {
+        max-width: 80%;  
+        border-radius: 8px;
+        border: 2px solid #444;
+    }
+
+    .details-table {
+        width: 70%;  
+        margin-top: 20px;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .details-table th, .details-table td {
+        border: 1px solid #444;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .details-table th {
+        background-color: #ffffff;
+        color: #000;
+    }
+</style>
