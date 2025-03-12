@@ -21,11 +21,32 @@
 </html>
 <script>
     const imageUrls = [
-        'https://via.placeholder.com/150',
-        'https://via.placeholder.com/150/0000FF',
-        'https://via.placeholder.com/150/FF0000',
-        'https://via.placeholder.com/150/00FF00',
-        'https://via.placeholder.com/150/FFFF00'
+        'SIGILOS/A.png',
+        'SIGILOS/B.png',
+        'SIGILOS/C.png',
+        'SIGILOS/D.png',
+        'SIGILOS/E.png',
+        'SIGILOS/F.png',
+        'SIGILOS/G.png',
+        'SIGILOS/H.png',
+        'SIGILOS/I.png',
+        'SIGILOS/J.png',
+        'SIGILOS/K.png',
+        'SIGILOS/L.png',
+        'SIGILOS/M.png',
+        'SIGILOS/N.png',
+        'SIGILOS/O.png',
+        'SIGILOS/P.png',
+        'SIGILOS/Q.png',
+        'SIGILOS/R.png',
+        'SIGILOS/S.png',
+        'SIGILOS/T.png',
+        'SIGILOS/U.png',
+        'SIGILOS/V.png',
+        'SIGILOS/W.png',
+        'SIGILOS/X.png',
+        'SIGILOS/Y.png',
+        'SIGILOS/Z.png'
     ];
 
     function createRandomImage() {
@@ -42,8 +63,8 @@
         document.body.appendChild(img);
 
         setTimeout(() => {
-            img.style.width = '200px';
-            img.style.height = '200px';
+            img.style.width = '100px';
+            img.style.height = '100px';
             img.style.opacity = '0';
         }, 100);
 
