@@ -128,11 +128,11 @@
             </a>
         </li>
         <li>
-    <a href="../INVENTARIO/index-inv.php">
-        <i class="fa fa-inbox fa-2x"></i>
-        <span class="nav-text">Arsenal</span>
-    </a>
-</li>
+            <a href="../INVENTARIO/index-inv.php">
+                <i class="fa fa-inbox fa-2x"></i>
+                <span class="nav-text">Arsenal</span>
+            </a>
+        </li>
         <li>
             <a href="javascript:void(0)" onclick="toggleSubmenu(this)">
                 <i class="fa fa-camera-retro fa-2x"></i>
