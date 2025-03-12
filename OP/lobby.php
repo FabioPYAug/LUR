@@ -52,7 +52,7 @@
         }, 2000);
     }
 
-    setInterval(createRandomImage, 150);
+    setInterval(createRandomImage, 250);
 </script>
 <style>
     body {
@@ -67,6 +67,7 @@
     h1 {
         font-size: 4em;
         margin-top: 50px;
+        z-index: 50;
     }
 
     .random-image {
@@ -74,8 +75,9 @@
         width: 50px;
         height: 50px;
         transition: width 5s, height 5s, opacity 5s;
-        opacity: 1;
+        opacity: 0.85;
         animation: shake2 0.5s ease-in-out infinite;
+        z-index: -50;
     }
 
     @keyframes shake {
@@ -146,9 +148,11 @@
         transition: width 5s, height 5s, opacity 5s;
         opacity: 1;
         animation: shake 0.5s ease-in-out infinite, float 3s ease-in-out infinite;
+        z-index: 50;
     }
 
     .titulo {
         animation: shake 0.5s ease-in-out infinite;
+        z-index: 50;
     }
 </style>
