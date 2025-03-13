@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <canvas id="c"></canvas>
     <header class="header">
       <div class="header-container">
         <h1 class="site-title" id="ritualNome">[Nome do Ritual]</h1>
@@ -108,10 +109,121 @@
         </article>
       </section>
     </main>
+
+    <script>
+      window.onload = function (argument) {
+        var canvas = document.getElementById("c");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        if (canvas.getContext) {
+          var c = canvas.getContext("2d"),
+            w = canvas.width,
+            h = canvas.height;
+
+          c.strokeStyle = "red";
+          c.fillStyle = "#7a0a11";
+          c.lineWidth = 0.1;
+          var points = {
+            number: 333,
+            connect_distance: 50,
+            mouse_distance: 100,
+            array: [],
+          };
+
+          Point = function () {
+            this.x = Math.random() * w;
+            this.y = Math.random() * h;
+            this.vector_x = Math.random() - 0.5;
+            this.vector_y = Math.random() - 0.5;
+            this.speed_x = Math.random() * 20;
+            this.speed_y = Math.random() * 20;
+            this.radius = Math.random() * 5;
+          };
+
+          Point.prototype = {
+            draw_point: function () {
+              c.beginPath();
+              c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+              c.fill();
+            },
+
+            next_position: function () {
+              var temp_p = this;
+
+              if (temp_p.x < 0 || temp_p.x > w) {
+                temp_p.vector_x = -temp_p.vector_x;
+              } else if (temp_p.y < 0 || temp_p.y > h) {
+                temp_p.vector_y = -temp_p.vector_y;
+              }
+
+              temp_p.x += temp_p.vector_x * temp_p.speed_x;
+              temp_p.y += temp_p.vector_y * temp_p.speed_y;
+            },
+          };
+
+          init();
+
+          connect_each = function () {
+            var temp_array = points.array;
+            var temp_queue = arguments[0];
+
+            for (var i = 0; i < points.number; i++) {
+              for (var j = 0; j < points.number; j++) {
+                pre_p = points.array[i];
+                next_p = temp_array[j];
+
+                if (
+                  pre_p.x - next_p.x < points.connect_distance &&
+                  pre_p.y - next_p.y < points.connect_distance &&
+                  pre_p.x - next_p.x > -points.connect_distance &&
+                  pre_p.y - next_p.y > -points.connect_distance
+                ) {
+                  c.beginPath();
+                  c.moveTo(pre_p.x, pre_p.y);
+                  c.lineTo(next_p.x, next_p.y);
+                  c.stroke();
+                  c.closePath();
+                }
+              }
+            }
+          };
+          function init() {
+            for (var i = 0; i < points.number; i++) {
+              points.array.push(new Point());
+              points.array[i].draw_point();
+            }
+          }
+          function animated_part() {
+            var temp_array = points.array;
+            for (var i = 0; i < points.number; i++) {
+              temp_array[i].next_position();
+              temp_array[i].draw_point();
+            }
+            connect_each();
+          }
+          setInterval(function () {
+            animated_part();
+          }, 33);
+        }
+      };
+    </script>
   </body>
 </html>
 
 <style>
+  @import "compass/reset";
+  @import "compass/css3";
+  canvas {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: black; 
+    z-index: -1; 
+  }
+
   @media (max-width: 768px) {
     .header-container {
       flex-direction: column;
@@ -140,7 +252,7 @@
 
   body {
     font-family: "Roboto", sans-serif;
-    background-color: #000;
+    background-color: #330000;
     color: #fff;
     margin: 0;
     display: flex;
@@ -149,10 +261,11 @@
   }
 
   .header {
-    background-color: #111;
+    background-color: #550000;
     padding: 20px;
     text-align: center;
     transition: all 0.3s ease;
+    opacity: 0.95;
   }
 
   .header-small {
@@ -170,13 +283,14 @@
   .site-title {
     font-family: "Cinzel", serif;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    text-shadow: 0 0 5px #ff0000;
   }
 
   .back-button {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;
+    border: 2px solid #ff0000;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -184,13 +298,13 @@
   }
 
   .back-button:hover {
-    background-color: #d1faff;
-    color: #000;
+    background-color: #ff0000;
+    color: #fff;
     transform: scale(1.1);
   }
 
   .subheader {
-    background-color: #222;
+    background-color: #440000;
     padding: 10px;
     text-align: center;
   }
@@ -214,7 +328,7 @@
   }
 
   .subheader nav ul li a:hover {
-    color: #d1faff;
+    color: #ff0000;
   }
 
   .main-content {
@@ -225,6 +339,7 @@
     gap: 20px;
     padding: 0 10px;
     flex-wrap: wrap;
+    opacity: 0.95;
   }
 
   .sidebar {
@@ -233,16 +348,19 @@
 
   .content {
     flex: 1;
-    background-color: #111;
+    background-color: #550000;
     padding: 20px;
     border-radius: 8px;
+    font-size: 1.2rem;
   }
 
   h2 {
     font-family: "Cinzel", serif;
-    color: #ffffff;
+    color: #ffe2e2;
     margin-bottom: 10px;
     font-weight: bold;
+    text-shadow: 0 0 5px #ff0000;
+    font-size: 1.8rem;
   }
 
   .details-container {
@@ -280,13 +398,13 @@
 
   .details-table th,
   .details-table td {
-    border: 1px solid #444;
+    border: 1px solid #ff5555;
     padding: 10px;
     text-align: left;
   }
 
   .details-table th {
-    background-color: #ffffff;
-    color: #000;
+    background-color: #ff0000;
+    color: #fff;
   }
 </style>
