@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Adobe+Hebrew:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lobby.css">
     <title>Ordem Paranormal</title>
 </head>
@@ -12,7 +13,7 @@
 
 <body>
     <div class="container">
-        <h1 class="titulo">Ordem Paranormal</h1>
+        <h1 class="titulo">ORDEM PARANORMAL</h1>
         <img id="miedo" src="INVENTARIO/VALORES/imgs/Medo.webp" alt="Medo">
     </div>
     <?php include 'sidebar.php'; ?>
@@ -73,11 +74,18 @@
         }, 2000);
     }
 
-    setInterval(createRandomImage, 230);
+    setInterval(createRandomImage, 200);
 </script>
 <style>
+    @font-face {
+        font-family: 'Adobe Hebrew';
+        src: url('../FONTES/OP.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     body {
-        font-family: 'Cinzel', sans-serif;
+        font-family: 'Adobe Hebrew', sans-serif;
         background-color: black;
         color: white;
         text-align: center;
@@ -107,15 +115,15 @@
         }
 
         25% {
-            transform: translateX(-0.25px);
+            transform: translateX(-0.30px);
         }
 
         50% {
-            transform: translateX(0.25px);
+            transform: translateX(0.30px);
         }
 
         75% {
-            transform: translateX(-0.25px);
+            transform: translateX(-0.30px);
         }
 
         100% {

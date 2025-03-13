@@ -4,65 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu com Submenu</title>
+    <title>Menu com Submenu e Imagens Aleatórias</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
-        @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-        @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-
-        .fa-2x {
-            font-size: 2em;
+        @font-face {
+            font-family: 'Lara';
+            src: url('../FONTES/NE.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
         }
 
-        .fa {
-            position: relative;
-            display: table-cell;
-            width: 60px;
-            height: 36px;
-            text-align: center;
-            vertical-align: middle;
-            font-size: 20px;
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
 
         .main-menu {
-            background: #212121;
+            margin-bottom: 15px;
+            background: #000;
+            color: #fff;
             position: fixed;
             top: 0;
             left: 0;
             height: 100%;
-            width: 60px;
+            width: 80px;
             overflow: hidden;
-            transition: width 0.3s ease;
+            transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease;
             z-index: 1000;
             padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .main-menu:hover {
             width: 250px;
+            background: #fff;
+            color: #000;
         }
 
         .main-menu li {
             display: block;
             width: 100%;
+            margin-bottom: 20px;
         }
 
         .main-menu a {
-            color: #999;
-            font-family: Arial, sans-serif;
+            color: inherit;
+            font-family: Lara, sans-serif;
+            font-size: 20px;
             text-decoration: none;
-            padding: 10px;
-            display: block;
-            transition: background-color 0.3s;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .main-menu a:hover {
-            background-color: rgb(149, 123, 184);
-            color: #fff;
+            background-color: #d3d3d3;
+            color: inherit;
         }
 
         .main-menu .nav-text {
             opacity: 0;
+            margin-left: 10px;
             transition: opacity 0.3s ease;
         }
 
@@ -71,7 +80,7 @@
         }
 
         .sub-menu {
-            font-family: Arial, sans-serif;
+            font-family: Lara, sans-serif;
             list-style: none;
             padding-left: 20px;
             margin: 0;
@@ -85,21 +94,34 @@
         }
 
         .sub-menu a {
-            color: #ccc;
+            color: inherit;
             font-size: 0.9em;
-            font-family: Arial, sans-serif;
+            font-family: Lara, sans-serif;
             padding: 8px 10px;
             display: block;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .sub-menu a:hover {
-            background-color: #575757;
-            color: #fff;
+            background-color: inherit;
+            color: inherit;
         }
 
         .sub-menu.open {
             max-height: 200px;
+        }
+
+        .logout a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .logout a:hover {
+            background-color: inherit;
+            color: inherit;
         }
     </style>
 </head>
@@ -108,14 +130,14 @@
     <div class="area"></div>
     <nav class="main-menu" onmouseleave="closeAllSubmenus()">
         <li class="has-subnav">
-            <a href="../DOCUMENTOS/index-doc.php">
+            <a href="DOCUMENTOS/index-doc.php">
                 <i class="fa fa-book fa-2x"></i>
                 <span class="nav-text">Documentos</span>
             </a>
         </li>
         <li>
-            <a href="../INVENTARIO/index-inv.php">
-                <i class="fa fa-shield fa-2x"></i>
+            <a href="INVENTARIO/index-inv.php">
+                <i class="fa fa-inbox fa-2x"></i>
                 <span class="nav-text">Inventário</span>
             </a>
         </li>
@@ -124,14 +146,6 @@
                 <i class="fa fa-camera-retro fa-2x"></i>
                 <span class="nav-text">Galeria</span>
             </a>
-            <ul class="sub-menu">
-                <li><a href="../DOCUMENTOS/relatorios.php">Gerais</a></li>
-                <li><a href="../DOCUMENTOS/guias.php">Conto</a></li>
-                <li><a href="../DOCUMENTOS/contratos.php">Emotes</a></li>
-                <li><a href="../DOCUMENTOS/relatorios.php">Minis</a></li>
-                <li><a href="../DOCUMENTOS/guias.php">Tokens</a></li>
-                <li><a href="../DOCUMENTOS/contratos.php">Memes</a></li>
-            </ul>
         </li>
         <li>
             <a href="#">
@@ -139,14 +153,12 @@
                 <span class="nav-text">Mapa</span>
             </a>
         </li>
-        <ul class="logout">
-            <li>
-                <a href="#">
-                    <i class="fa fa-user fa-2x"></i>
-                    <span class="nav-text">Perfil</span>
-                </a>
-            </li>
-        </ul>
+        <li>
+            <a href="#">
+                <i class="fa fa-user fa-2x"></i>
+                <span class="nav-text">Perfil</span>
+            </a>
+        </li>
     </nav>
 
     <script>
