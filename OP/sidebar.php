@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
+        .lua-item {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -121,6 +127,12 @@
 <body>
     <div class="area"></div>
     <nav class="main-menu" onmouseleave="closeAllSubmenus()">
+        <li>
+            <a href="#">
+                <i class="fa fa-user fa-2x"></i>
+                <span class="nav-text">Perfil</span>
+            </a>
+        </li>
         <li class="has-subnav">
             <a href="DOCUMENTOS/index-doc.php">
                 <i class="fa fa-book fa-2x"></i>
@@ -145,12 +157,13 @@
                 <span class="nav-text">Mapa</span>
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-user fa-2x"></i>
-                <span class="nav-text">Perfil</span>
+        <li class="lua-item">
+            <a href="/Lun-RPG/NE/lobby.php">
+                <i class="fa fa-moon fa-2x"></i>
+                <span class="nav-text">Noite Escura</span>
             </a>
         </li>
+
     </nav>
 
     <script>

@@ -10,7 +10,7 @@ include 'style-inv.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <title>Noite Escura - Menu de Busca</title>
+    <title>Ordem Paranormal - Arsenal</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -18,7 +18,7 @@ include 'style-inv.php';
     <?php include '../sidebar.php'; ?>
 
     <section class="banner banner-2">
-    
+
         <div class="search">
             <label for="searchInput">
                 <span class="material-symbols-outlined"></span>
@@ -26,9 +26,10 @@ include 'style-inv.php';
             <input type="text" id="searchInput" placeholder="Pesquisar">
         </div>
         <div id="resultado">
-            <script type="text/javascript">
-                $(document).ready(function() {
-                    $("#searchInput").keyup(function() {
+
+        <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#searchInput").keyup(function () {
                         var input = $(this).val().trim();
                         if (input != "") {
                             $.ajax({
@@ -37,7 +38,7 @@ include 'style-inv.php';
                                 data: {
                                     input: input
                                 },
-                                success: function(data) {
+                                success: function (data) {
                                     if (data.trim() != "") {
                                         $("#resultado").html(data).css("display", "block");
                                     } else {
@@ -85,7 +86,7 @@ include 'style-inv.php';
                             } else if (entidade == "Lua") {
                                 window.open('Valores/ArmaLua.html')
                             } else {
-                                 window.open('Valores/ArmaPadrão.html')
+                                window.open('Valores/ArmaPadrão.html')
                             }
                             break;
                         case "Equipamento":
