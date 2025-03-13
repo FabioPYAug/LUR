@@ -9,13 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Lara';
-            src: url('../FONTES/NE.otf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
+        .lua-item {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
-
 
         body {
             margin: 0;
@@ -25,7 +23,7 @@
 
         .main-menu {
             margin-bottom: 15px;
-            background: #000;
+            background: #5b4790;
             color: #fff;
             position: fixed;
             top: 0;
@@ -44,7 +42,7 @@
         .main-menu:hover {
             width: 250px;
             background: #fff;
-            color: #000;
+            color: #5b4790;
         }
 
         .main-menu li {
@@ -55,7 +53,7 @@
 
         .main-menu a {
             color: inherit;
-            font-family: Lara, sans-serif;
+            font-family: Arial, sans-serif;
             font-size: 20px;
             text-decoration: none;
             padding: 10px 20px;
@@ -80,7 +78,7 @@
         }
 
         .sub-menu {
-            font-family: Lara, sans-serif;
+            font-family: Arial, sans-serif;
             list-style: none;
             padding-left: 20px;
             margin: 0;
@@ -96,7 +94,7 @@
         .sub-menu a {
             color: inherit;
             font-size: 0.9em;
-            font-family: Lara, sans-serif;
+            font-family: Arial, sans-serif;
             padding: 8px 10px;
             display: block;
             transition: background-color 0.3s, color 0.3s;
@@ -124,11 +122,18 @@
             color: inherit;
         }
     </style>
+
 </head>
 
 <body>
     <div class="area"></div>
     <nav class="main-menu" onmouseleave="closeAllSubmenus()">
+        <li>
+            <a href="#">
+                <i class="fa fa-user fa-2x"></i>
+                <span class="nav-text">Perfil</span>
+            </a>
+        </li>
         <li class="has-subnav">
             <a href="DOCUMENTOS/index-doc.php">
                 <i class="fa fa-book fa-2x"></i>
@@ -153,12 +158,13 @@
                 <span class="nav-text">Mapa</span>
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-user fa-2x"></i>
-                <span class="nav-text">Perfil</span>
+        <li class="lua-item">
+            <a href="/Lun-RPG/OP/lobby.php">
+                <i class="fa fa-eye fa-2x"></i>
+                <span class="nav-text">Ordem Paranormal</span>
             </a>
         </li>
+
     </nav>
 
     <script>
