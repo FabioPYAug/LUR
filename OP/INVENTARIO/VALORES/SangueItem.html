@@ -110,6 +110,8 @@
       </section>
     </main>
 
+    <div class="blood-effect"></div>
+
     <script>
       window.onload = function (argument) {
         var canvas = document.getElementById("c");
@@ -212,199 +214,236 @@
 </html>
 
 <style>
-  @import "compass/reset";
-  @import "compass/css3";
-  canvas {
-    position: fixed; 
-    top: 0;
+    @import "compass/reset";
+    @import "compass/css3";
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: -1;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .back-button {
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .main-content {
+        flex-direction: column;
+        padding: 0 10px;
+      }
+
+      .details-table {
+        width: 100%;
+      }
+
+      .details-image img {
+        max-width: 100%;
+      }
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: #6d0000;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      position: relative;
+      background-color: #550000;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      opacity: 0.95;
+    }
+
+    .blood-effect {
+    position: fixed;
+    bottom: 0;
     left: 0;
-    width: 100vw; 
-    height: 100vh; 
-    background-color: black; 
-    z-index: -1; 
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #8b0000, transparent);
+    animation: blood-flow 5s infinite, pulse-effect 1.8s infinite ease-in-out;
+    z-index: 1;
   }
 
-  @media (max-width: 768px) {
+  @keyframes blood-flow {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  @keyframes pulse-effect {
+    0% {
+      height: 95px;
+    }
+    50% {
+      height: 150px; /
+    }
+    100% {
+      height: 95px;
+    }
+  }
+
+    .header-small {
+      padding: 10px;
+    }
+
     .header-container {
-      flex-direction: column;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .site-title {
+      font-family: "Cinzel", serif;
+      color: #fff;
+      font-size: 2.2rem;
+      text-shadow: 0 0 5px #ff0000;
     }
 
     .back-button {
-      margin-top: 10px;
-      width: 100%;
-      box-sizing: border-box;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #ff0000;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ff0000;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .subheader {
+      background-color: #440000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .subheader nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .subheader nav ul li {
+      margin: 0 15px;
+    }
+
+    .subheader nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .subheader nav ul li a:hover {
+      color: #ff0000;
     }
 
     .main-content {
-      flex-direction: column;
+      display: flex;
+      flex: 1;
+      max-width: 1600px;
+      margin: 20px auto;
+      gap: 20px;
       padding: 0 10px;
+      flex-wrap: wrap;
+      opacity: 0.95;
     }
 
-    .details-table {
-      width: 100%;
+    .sidebar {
+      display: none;
+    }
+
+    .content {
+      flex: 1;
+      background-color: #550000;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+    }
+
+    h2 {
+      font-family: "Cinzel", serif;
+      color: #ffe2e2;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-shadow: 0 0 5px #ff0000;
+      font-size: 1.8rem;
+    }
+
+    .details-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .details-text {
+      flex: 1;
+    }
+
+    .details-image {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .details-image img {
-      max-width: 100%;
+      max-width: 80%;
+      border-radius: 8px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
-  }
 
-  body {
-    font-family: "Roboto", sans-serif;
-    background-color: #330000;
-    color: #fff;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+    .details-image img:hover {
+      transform: scale(1.1);
+    }
 
-  .header {
-    background-color: #550000;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    opacity: 0.95;
-  }
+    .details-table {
+      width: 70%;
+      margin-top: 20px;
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  .header-small {
-    padding: 10px;
-  }
+    .details-table th,
+    .details-table td {
+      border: 1px solid #ff5555;
+      padding: 10px;
+      text-align: left;
+    }
 
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .site-title {
-    font-family: "Cinzel", serif;
-    color: #fff;
-    font-size: 2.2rem;
-    text-shadow: 0 0 5px #ff0000;
-  }
-
-  .back-button {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #ff0000;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .back-button:hover {
-    background-color: #ff0000;
-    color: #fff;
-    transform: scale(1.1);
-  }
-
-  .subheader {
-    background-color: #440000;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .subheader nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  .subheader nav ul li {
-    margin: 0 15px;
-  }
-
-  .subheader nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-
-  .subheader nav ul li a:hover {
-    color: #ff0000;
-  }
-
-  .main-content {
-    display: flex;
-    flex: 1;
-    max-width: 1600px;
-    margin: 20px auto;
-    gap: 20px;
-    padding: 0 10px;
-    flex-wrap: wrap;
-    opacity: 0.95;
-  }
-
-  .sidebar {
-    display: none;
-  }
-
-  .content {
-    flex: 1;
-    background-color: #550000;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-family: "Cinzel", serif;
-    color: #ffe2e2;
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-shadow: 0 0 5px #ff0000;
-    font-size: 1.8rem;
-  }
-
-  .details-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .details-text {
-    flex: 1;
-  }
-
-  .details-image {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .details-image img {
-    max-width: 80%;
-    border-radius: 8px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-
-  .details-image img:hover {
-    transform: scale(1.1);
-  }
-
-  .details-table {
-    width: 70%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .details-table th,
-  .details-table td {
-    border: 1px solid #ff5555;
-    padding: 10px;
-    text-align: left;
-  }
-
-  .details-table th {
-    background-color: #ff0000;
-    color: #fff;
-  }
+    .details-table th {
+      background-color: #ff0000;
+      color: #fff;
+    }
 </style>
