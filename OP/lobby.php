@@ -73,7 +73,7 @@
         }, 2000);
     }
 
-    setInterval(createRandomImage, 250);
+    setInterval(createRandomImage, 230);
 </script>
 <style>
     body {

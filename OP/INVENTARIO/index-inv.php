@@ -88,24 +88,8 @@ include 'style-inv.php';
                                  window.open('Valores/ArmaPadrão.html')
                             }
                             break;
-                        case "Material":
+                        case "Equipamento":
                             window.open('Valores/MaterialPadrão.html')
-                            break;
-                        case "Poção":
-                            if (entidade == "Lua") {
-                                window.open('Valores/PoçãoLua.html')
-                            } else if (entidade == "Sol") {
-                                if (nome == "Poção dos Sentidos Enfadonhos") {
-                                    window.open('Valores/PoçãoBobby.html')
-                                } else {
-                                    window.open('Valores/PoçãoSol.html')
-                                }
-                            } else {
-                                window.open('Valores/PoçãoPadrão.html')
-                            }
-                            break;
-                        case "Moeda":
-                            window.open('Valores/MoedaPadrão.html')
                             break;
                         case "Item":
                             if (entidade == "Lua") {
@@ -124,13 +108,6 @@ include 'style-inv.php';
                                 window.open('Valores/ItensPadrão.html')
                             }
                             break;
-                        case "Armadura":
-                            if (efeito != "-" || efeito != "") {
-                                window.open('Valores/ArmaduraPadrãoEfeitos.html')
-                            } else {
-                                window.open('Valores/ArmaduraPadrão.html')
-                            }
-                            break;
                         case "Habilidade":
                             if (entidade == "Sol") {
                                 window.open('Valores/HabilidadesSol.html')
@@ -140,14 +117,8 @@ include 'style-inv.php';
                                 window.open('Valores/HabilidadesPadrão.html')
                             }
                             break;
-                        case "Magia":
+                        case "Ritual":
                             window.open('Valores/MagiasPadrão.html')
-                            break;
-                        case "Maldição":
-                            window.open('Valores/MaldiçãoPadrão.html')
-                            break;
-                        case "Bênção":
-                            window.open('Valores/BênçãoPadrão.html')
                             break;
                     }
 
@@ -159,40 +130,3 @@ include 'style-inv.php';
 </body>
 
 </html>
-
-<script>
-    window.addEventListener("scroll", function() {
-        const header = document.querySelector('#header');
-        if (window.scrollY > 500) {
-            header.classList.add('rolagem');
-        } else {
-            header.classList.remove('rolagem');
-        }
-    });
-
-    const particleContainer = document.createElement('div');
-    particleContainer.classList.add('particle-container');
-    document.body.appendChild(particleContainer);
-
-    const particleCount = 42;
-
-    function createParticle() {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.animationDuration = `${1 + Math.random() * 2}s`;
-        particle.style.animationDelay = `${Math.random() * 5}s`;
-
-        particleContainer.appendChild(particle);
-
-        particle.addEventListener('animationend', () => {
-            particle.remove();
-            createParticle();
-        });
-    }
-
-    for (let i = 0; i < particleCount; i++) {
-        createParticle();
-    }
-</script>

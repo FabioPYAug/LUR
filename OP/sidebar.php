@@ -122,13 +122,13 @@
     <div class="area"></div>
     <nav class="main-menu" onmouseleave="closeAllSubmenus()">
         <li class="has-subnav">
-            <a href="../DOCUMENTOS/index-doc.php">
+            <a href="DOCUMENTOS/index-doc.php">
                 <i class="fa fa-book fa-2x"></i>
                 <span class="nav-text">Documentos</span>
             </a>
         </li>
         <li>
-            <a href="../INVENTARIO/index-inv.php">
+            <a href="INVENTARIO/index-inv.php">
                 <i class="fa fa-inbox fa-2x"></i>
                 <span class="nav-text">Arsenal</span>
             </a>
