@@ -128,6 +128,134 @@ include 'style-inv.php';
             </script>
         </div>
     </section>
+    <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#searchInput").keyup(function() {
+                        var input = $(this).val().trim();
+                        if (input != "") {
+                            $.ajax({
+                                url: "function-inv.php",
+                                method: "POST",
+                                data: {
+                                    input: input
+                                },
+                                success: function(data) {
+                                    if (data.trim() != "") {
+                                        $("#resultado").html(data).css("display", "block");
+                                    } else {
+                                        $("#resultado").css("display", "none");
+                                    }
+                                }
+                            });
+                        } else {
+                            $("#resultado").css("display", "none");
+                        }
+                    });
+                });
+
+                function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito, custo, requesito) {
+                    let LocalImagem = `../../Imagens/ITENS NE/${nome}.png`;
+
+                    sessionStorage.setItem('nome', nome);
+                    sessionStorage.setItem('tipo', tipo);
+                    sessionStorage.setItem('alcance', alcance);
+                    sessionStorage.setItem('descricao', descricao);
+                    sessionStorage.setItem('historia', historia);
+                    sessionStorage.setItem('entidade', entidade);
+                    sessionStorage.setItem('teste', teste);
+                    sessionStorage.setItem('dano', dano);
+                    sessionStorage.setItem('critico', critico);
+                    sessionStorage.setItem('peso', peso);
+                    sessionStorage.setItem('tipoDano', tipoDano);
+                    sessionStorage.setItem('venda', venda);
+                    sessionStorage.setItem('defesa', defesa);
+                    sessionStorage.setItem('penalidade', penalidade);
+                    sessionStorage.setItem('LocalImagem', LocalImagem);
+                    sessionStorage.setItem('acao', acao);
+                    sessionStorage.setItem('efeito', efeito);
+                    sessionStorage.setItem('custo', custo);
+                    sessionStorage.setItem('requesito', requesito);
+
+                    switch (tipo) {
+                        case "Arma":
+                            if (entidade == "Sol") {
+                                if (nome == "Parisa") {
+                                    window.open('Valores/Parisa.html')
+                                } else {
+                                    window.open('Valores/ArmaSol.html')
+                                }
+                            } else if (entidade == "Lua") {
+                                window.open('Valores/ArmaLua.html')
+                            } else {
+                                 window.open('Valores/ArmaPadrão.html')
+                            }
+                            break;
+                        case "Material":
+                            window.open('Valores/MaterialPadrão.html')
+                            break;
+                        case "Poção":
+                            if (entidade == "Lua") {
+                                window.open('Valores/PoçãoLua.html')
+                            } else if (entidade == "Sol") {
+                                if (nome == "Poção dos Sentidos Enfadonhos") {
+                                    window.open('Valores/PoçãoBobby.html')
+                                } else {
+                                    window.open('Valores/PoçãoSol.html')
+                                }
+                            } else {
+                                window.open('Valores/PoçãoPadrão.html')
+                            }
+                            break;
+                        case "Moeda":
+                            window.open('Valores/MoedaPadrão.html')
+                            break;
+                        case "Item":
+                            if (entidade == "Lua") {
+                                if (nome == "Fragmento Sol e Lua") {
+                                    window.open('Valores/ItensColarSL.html')
+                                } else {
+                                    window.open('Valores/ItensLua.html')
+                                }
+                            } else if (entidade == "Sol") {
+                                if (nome == "Tranca das Cartas") {
+                                    window.open('Valores/ItensBobby.html')
+                                } else {
+                                    window.open('Valores/ItensSol.html')
+                                }
+                            } else {
+                                window.open('Valores/ItensPadrão.html')
+                            }
+                            break;
+                        case "Armadura":
+                            if (efeito != "-" || efeito != "") {
+                                window.open('Valores/ArmaduraPadrãoEfeitos.html')
+                            } else {
+                                window.open('Valores/ArmaduraPadrão.html')
+                            }
+                            break;
+                        case "Habilidade":
+                            if (entidade == "Sol") {
+                                window.open('Valores/HabilidadesSol.html')
+                            } else if (entidade == "Lua") {
+                                window.open('Valores/HabilidadesLua.html')
+                            } else {
+                                window.open('Valores/HabilidadesPadrão.html')
+                            }
+                            break;
+                        case "Magia":
+                            window.open('Valores/MagiasPadrão.html')
+                            break;
+                        case "Maldição":
+                            window.open('Valores/MaldiçãoPadrão.html')
+                            break;
+                        case "Bênção":
+                            window.open('Valores/BênçãoPadrão.html')
+                            break;
+                    }
+
+
+                }
+            </script>
 </body>
 
 </html>
