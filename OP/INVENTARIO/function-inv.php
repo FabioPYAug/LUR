@@ -39,59 +39,66 @@ INNER JOIN op_rituais r ON t.op_ID = r.op_ID
 WHERE d.op_tipo LIKE '{$input}%' 
    OR d.op_elemento LIKE '{$input}%' 
    OR d.op_categoria LIKE '{$input}%'";
-    $result = mysqli_query($conexao, $query);
-    if(mysqli_num_rows($result) > 0){
-        while($row = mysqli_fetch_assoc($result)){
-            
-            $op_ID = $row['op_ID'];
-            $nome = $row['nome'];
-            $tipo = $row['tipo'];
-            $alcance = $row['alcance'];
-            $descricao = $row['descricao'];
-            $historia = $row['historia'];
-            $entidade = $row['entidade'];
-            $teste = $row['teste'];
-            $dano = $row['dano'];
-            $critico = $row['critico'];
-            $peso = $row['peso'];
-            $tipo_dano = $row['tipo_dano'];
-            $venda = $row['venda'];
-            $defesa = $row['defesa'];
-            $penalidade = $row['penalidade'];
-            $acao = $row['acao'];
-            $efeito = $row['efeito'];
-            $custo = $row['custo'];
-            $requesito = $row['requesito'];
 
-            ?>
-            <button class="custom-btn btn-1" onclick="valores(
-            '<?php echo addslashes($nome); ?>',
-            '<?php echo addslashes($tipo); ?>',
-            '<?php echo addslashes($alcance); ?>',
-            '<?php echo addslashes($descricao); ?>',
-            '<?php echo addslashes($historia); ?>',
-            '<?php echo addslashes($entidade); ?>',
-            '<?php echo addslashes($teste); ?>',
-            '<?php echo addslashes($dano); ?>',
-            '<?php echo addslashes($critico); ?>',
-            '<?php echo addslashes($peso); ?>',
-            '<?php echo addslashes($tipo_dano); ?>',
-            '<?php echo addslashes($venda); ?>',
-            '<?php echo addslashes($defesa); ?>',
-            '<?php echo addslashes($penalidade); ?>',
-            '<?php echo addslashes($acao); ?>',
-            '<?php echo addslashes($efeito); ?>',
-            '<?php echo addslashes($custo); ?>',
-            '<?php echo addslashes($requesito); ?>'
-            )">
-                <span class="item-left"><?php echo $id; ?></span>
-                <span class="item-center"><?php echo $nome; ?></span>
-                <span class="item-right"><?php echo $tipo; ?></span>
-            </button><br>
-            <?php
-        }
-    } else {
-        echo "<h6 class='text-danger text-center'>Zero Dados Encontrados</h6>";
+$result = mysqli_query($conexao, $query);
+
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        
+        $op_ID = $row['op_ID'];
+        $op_nome = $row['op_nome'];
+        $op_tipo = $row['op_tipo'];
+        $op_alcance = $row['op_alcance'];
+        $op_descricao = $row['op_descricao'];
+        $op_historia = $row['op_historia'];
+        $op_efeito = $row['op_efeito'];
+        $op_token = $row['op_token'];
+        $op_elemento = $row['op_elemento'];
+        $op_categoria_detalhes = $row['categoria_detalhes'];
+        $op_custo = $row['op_custo'];
+        $op_duracao = $row['op_duracao'];
+        $op_condicao = $row['op_condicao'];
+        $op_resistencia = $row['op_resistencia'];
+        $op_alvo = $row['op_alvo'];
+        $op_dano = $row['op_dano'];
+        $op_peso = $row['op_peso'];
+        $op_categoria_status = $row['categoria_status'];
+        $op_padrao = $row['op_padrao'];
+        $op_discente = $row['op_discente'];
+        $op_verdadeiro = $row['op_verdadeiro'];
+        $op_circulo = $row['op_circulo'];
+
+        ?>
+        <button class="custom-btn btn-1" onclick="valores(
+        '<?php echo addslashes($op_nome); ?>',
+        '<?php echo addslashes($op_tipo); ?>',
+        '<?php echo addslashes($op_alcance); ?>',
+        '<?php echo addslashes($op_descricao); ?>',
+        '<?php echo addslashes($op_historia); ?>',
+        '<?php echo addslashes($op_efeito); ?>',
+        '<?php echo addslashes($op_token); ?>',
+        '<?php echo addslashes($op_elemento); ?>',
+        '<?php echo addslashes($op_categoria_detalhes); ?>',
+        '<?php echo addslashes($op_custo); ?>',
+        '<?php echo addslashes($op_duracao); ?>',
+        '<?php echo addslashes($op_condicao); ?>',
+        '<?php echo addslashes($op_resistencia); ?>',
+        '<?php echo addslashes($op_alvo); ?>',
+        '<?php echo addslashes($op_dano); ?>',
+        '<?php echo addslashes($op_peso); ?>',
+        '<?php echo addslashes($op_categoria_status); ?>',
+        '<?php echo addslashes($op_padrao); ?>',
+        '<?php echo addslashes($op_discente); ?>',
+        '<?php echo addslashes($op_verdadeiro); ?>',
+        '<?php echo addslashes($op_circulo); ?>'
+        )">
+            <span class="item-left"><?php echo $op_ID; ?></span>
+            <span class="item-center"><?php echo $op_nome; ?></span>
+            <span class="item-right"><?php echo $op_tipo; ?></span>
+        </button><br>
+        <?php
     }
-}
+} else {
+    echo "<h6 class='text-danger text-center'>Zero Dados Encontrados</h6>";
+}}
 ?>

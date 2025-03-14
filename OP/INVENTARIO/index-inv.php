@@ -153,41 +153,53 @@ include 'style-inv.php';
                     });
                 });
 
-                function valores(nome, tipo, alcance, descricao, historia, entidade, teste, dano, critico, peso, tipoDano, venda, defesa, penalidade, acao, efeito, custo, requesito) {
-                    let LocalImagem = `../../Imagens/ITENS NE/${nome}.png`;
+                function valores(
+                    op_nome, op_tipo, op_alcance, op_descricao, op_historia, op_efeito, op_token, 
+                    op_elemento, op_categoria_detalhes, op_custo, op_duracao, op_condicao, 
+                    op_resistencia, op_alvo, op_dano, op_peso, op_categoria_status, 
+                    op_padrao, op_discente, op_verdadeiro, op_circulo
+                ) {
+                    let LocalImagem = `../../Imagens/ITENS NE/${op_nome}.png`;
 
-                    sessionStorage.setItem('nome', nome);
-                    sessionStorage.setItem('tipo', tipo);
-                    sessionStorage.setItem('alcance', alcance);
-                    sessionStorage.setItem('descricao', descricao);
-                    sessionStorage.setItem('historia', historia);
-                    sessionStorage.setItem('entidade', entidade);
-                    sessionStorage.setItem('teste', teste);
-                    sessionStorage.setItem('dano', dano);
-                    sessionStorage.setItem('critico', critico);
-                    sessionStorage.setItem('peso', peso);
-                    sessionStorage.setItem('tipoDano', tipoDano);
-                    sessionStorage.setItem('venda', venda);
-                    sessionStorage.setItem('defesa', defesa);
-                    sessionStorage.setItem('penalidade', penalidade);
+                    sessionStorage.setItem('op_nome', op_nome);
+                    sessionStorage.setItem('op_tipo', op_tipo);
+                    sessionStorage.setItem('op_alcance', op_alcance);
+                    sessionStorage.setItem('op_descricao', op_descricao);
+                    sessionStorage.setItem('op_historia', op_historia);
+                    sessionStorage.setItem('op_efeito', op_efeito);
+                    sessionStorage.setItem('op_token', op_token);
+                    sessionStorage.setItem('op_elemento', op_elemento);
+                    sessionStorage.setItem('op_categoria_detalhes', op_categoria_detalhes);
+                    sessionStorage.setItem('op_custo', op_custo);
+                    sessionStorage.setItem('op_duracao', op_duracao);
+                    sessionStorage.setItem('op_condicao', op_condicao);
+                    sessionStorage.setItem('op_resistencia', op_resistencia);
+                    sessionStorage.setItem('op_alvo', op_alvo);
+                    sessionStorage.setItem('op_dano', op_dano);
+                    sessionStorage.setItem('op_peso', op_peso);
+                    sessionStorage.setItem('op_categoria_status', op_categoria_status);
+                    sessionStorage.setItem('op_padrao', op_padrao);
+                    sessionStorage.setItem('op_discente', op_discente);
+                    sessionStorage.setItem('op_verdadeiro', op_verdadeiro);
+                    sessionStorage.setItem('op_circulo', op_circulo);
                     sessionStorage.setItem('LocalImagem', LocalImagem);
-                    sessionStorage.setItem('acao', acao);
-                    sessionStorage.setItem('efeito', efeito);
-                    sessionStorage.setItem('custo', custo);
-                    sessionStorage.setItem('requesito', requesito);
 
-                    switch (tipo) {
-                        case "Arma":
-                            if (entidade == "Sol") {
-                                if (nome == "Parisa") {
-                                    window.open('Valores/Parisa.html')
-                                } else {
-                                    window.open('Valores/ArmaSol.html')
-                                }
-                            } else if (entidade == "Lua") {
-                                window.open('Valores/ArmaLua.html')
+                    console.log(op_tipo)
+
+                    switch (op_tipo) {
+                        case "Item":
+                            if (op_elemento == "Sangue") {
+                                window.open('VALORES/SangueItem.html')
+                            } else if (op_elemento == "Conhecimento") {
+                                window.open('VALORES/ArmaLua.html')
+                            } else if (op_elemento == "Morte") {
+                                window.open('VALORES/ArmaLua.html')
+                            } else if (op_elemento == "Energia") {
+                                window.open('VALORES/ArmaLua.html')
+                            } else if (op_elemento == "Medo") {
+                                window.open('VALORES/ArmaLua.html')
                             } else {
-                                 window.open('Valores/ArmaPadrão.html')
+                                window.open('VALORES/PadraoItem.html')
                             }
                             break;
                         case "Material":
