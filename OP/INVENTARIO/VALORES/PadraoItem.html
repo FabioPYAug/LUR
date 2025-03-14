@@ -29,7 +29,7 @@
         <ul>
           <li><a href="#descricao">Descrição</a></li>
           <li><a href="#historia">História</a></li>
-          <li><a href="#detalhes">Detalhes</a></li>
+          <li><a href="#efeito">Efeito</a></li>
         </ul>
       </nav>
     </div>
@@ -71,25 +71,26 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </section>
+          <br>
+
+          <section id="efeito">
+            <h2 data-text="Efeito">Efeito</h2>
+            <p
+              id="ritualEfeito"
+              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </section>
+          <br>
 
           <section id="detalhes">
-            <h2>Detalhes</h2>
-            <div class="details-container">
-              <div class="details-text">
-                <p>
-                  <strong>Tipo:</strong> <span id="ritualTipo">[Tipo]</span>
-                </p>
-                <p>
-                  <strong>Alcance:</strong>
-                  <span id="ritualAlcance">[Alcance]</span>
-                </p>
-                <p>
-                  <strong>Efeito:</strong>
-                  <span id="ritualEfeito">[Efeito]</span>
-                </p>
-              </div>
-            </div>
-
             <table class="details-table">
               <tr>
                 <th>Custo</th>
@@ -100,10 +101,40 @@
                 <td id="ritualDuracao">[Duração]</td>
               </tr>
               <tr>
-                <th>Condição</th>
-                <td id="ritualCondicao">[Condição]</td>
+                <th>Alcance</th>
+                <td id="ritualCondicao">[Alcance]</td>
+              </tr>
+              <tr>
+                <th>Teste</th>
+                <td id="ritualCondicao">[Teste]</td>
+              </tr>
+              <tr>
+                <th>Dano</th>
+                <td id="ritualCondicao">[Dano]</td>
+              </tr>
+              <tr>
+                <th>Categoria</th>
+                <td id="ritualCondicao">[Categoria]</td>
+              </tr>
+              <tr>
+                <th>Peso</th>
+                <td id="ritualCondicao">[Peso]</td>
               </tr>
             </table>
+            <br>
+            <div class="details-container">
+              <div class="details-text">
+                <p>
+                  <strong>Tipo</strong>
+                </p>
+                <p>
+                  <strong>Alcance</strong>
+                </p>
+                <p>
+                  <strong>Efeito</strong>
+                </p>
+              </div>
+            </div>
           </section>
         </article>
       </section>
@@ -252,7 +283,8 @@
   }
 
   .details-text {
-    flex: 1;
+    display: flex;
+    gap: 20px;
   }
 
   .details-image {
