@@ -9,13 +9,41 @@ if(isset($_POST["input"])){
         exit;
     }
 
-    $query = "SELECT * FROM ne_dados WHERE nome LIKE '{$input}%' OR id LIKE '{$input}%' OR tipo LIKE '{$input}%' OR alcance LIKE '{$input}%' OR entidade LIKE '{$input}%' OR tipo_dano LIKE '{$input}%'";
+    $query = "SELECT 
+    t.op_ID,
+    t.op_descricao,
+    t.op_historia,
+    t.op_nome,
+    t.op_efeito,
+    t.op_token,
+    d.op_tipo,
+    d.op_elemento,
+    d.op_categoria AS categoria_detalhes,
+    s.op_custo,
+    s.op_duracao,
+    s.op_condicao,
+    s.op_resistencia,
+    s.op_alvo,
+    s.op_dano,
+    s.op_alcance,
+    s.op_peso,
+    s.op_categoria AS categoria_status,
+    r.op_padrao,
+    r.op_discente,
+    r.op_verdadeiro,
+    r.op_circulo
+FROM op_textos t
+INNER JOIN op_detalhes d ON t.op_ID = d.op_ID
+INNER JOIN op_status s ON t.op_ID = s.op_ID
+INNER JOIN op_rituais r ON t.op_ID = r.op_ID
+WHERE d.op_tipo LIKE '{$input}%' 
+   OR d.op_elemento LIKE '{$input}%' 
+   OR d.op_categoria LIKE '{$input}%'";
     $result = mysqli_query($conexao, $query);
-
     if(mysqli_num_rows($result) > 0){
         while($row = mysqli_fetch_assoc($result)){
             
-            $id = $row['ID'];
+            $op_ID = $row['op_ID'];
             $nome = $row['nome'];
             $tipo = $row['tipo'];
             $alcance = $row['alcance'];
