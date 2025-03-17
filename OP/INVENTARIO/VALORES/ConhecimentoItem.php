@@ -1,397 +1,250 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="tituloPagina">Mistérios e Rituais</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Cinzel:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div class="glitch-overlay" id="glitch"></div>
-    <canvas id="c"></canvas>
-    <header class="header">
-      <div class="header-container">
-        <h1
-          class="site-title glitch"
-          id="ritualNome"
-          data-text="[Nome do Ritual]"
-        >
-          [Nome do Ritual]
-        </h1>
-        <button
-          class="back-button"
-          onclick="window.location.href='../index-inv.php'"
-        >
-          &larr; Voltar
-        </button>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="tituloPagina">Mistérios e Rituais</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <div class="subheader">
-      <nav>
-        <ul>
-          <li>
-            <a href="#descricao" class="glitch" data-text="Descrição">Descrição</a>
-          </li>
-          <li>
-            <a href="#historia" class="glitch" data-text="História">História</a>
-          </li>
-          <li>
-            <a href="#efeito" class="glitch" data-text="Efeitos">Efeito</a>
-          </li>
-        </ul>
-      </nav>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Cinzel:wght@400;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <canvas id="space"></canvas>
+  <header class="header">
+    <div class="header-container">
+      <h1 class="site-title" id="ritualNome">[Nome do Ritual]</h1>
+      <button class="back-button" onclick="window.location.href='../index-inv.php'">
+        &larr; Voltar
+      </button>
     </div>
+  </header>
 
-    <main class="main-content">
-      <aside class="sidebar"></aside>
+  <div class="subheader">
+    <nav>
+      <ul>
+        <li><a href="#descricao">Descrição</a></li>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#efeito">Efeito</a></li>
+      </ul>
+    </nav>
+  </div>
 
-      <section class="content">
-        <article>
-          <div class="details-image">
-            <img
-              id="ritualImagem"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3r_sM7QQ45aSu9y8Bug6rJtMB--YWkyAiA&s"
-              alt="Imagem do Ritual"
-            />
-          </div>
-          <section id="descricao">
-            <h2 class="glitch" data-text="Descrição">Descrição</h2>
-            <p
-              id="ritualDescricao"
-              class="glitch"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
+  <main class="main-content">
+    <aside class="sidebar"></aside>
 
-          <section id="historia">
-            <h2 class="glitch" data-text="História">História</h2>
-            <p
-              id="ritualHistoria"
-              class="glitch"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
+    <section class="content">
+      <article>
+        <div class="details-image">
+          <img id="ritualImagem"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3r_sM7QQ45aSu9y8Bug6rJtMB--YWkyAiA&s"
+            alt="Imagem do Ritual" />
+        </div>
+        <section id="descricao">
+          <h2>Descrição</h2>
+          <p id="ritualDescricao">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
 
-          <section id="efeito">
-            <h2 class="glitch" data-text="Efeito">Efeito</h2>
-            <p
-              id="ritualEfeito"
-              class="glitch"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
+        <section id="historia">
+          <h2>História</h2>
+          <p id="ritualHistoria">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+        <br>
 
-          <section id="detalhes">
-            <table class="details-table">
-              <tr>
-                <th>Custo</th>
-                <td id="ritualCusto">[Custo]</td>
-              </tr>
-              <tr>
-                <th>Duração</th>
-                <td id="ritualDuracao">[Duração]</td>
-              </tr>
-              <tr>
-                <th>Alcance</th>
-                <td id="ritualCondicao">[Alcance]</td>
-              </tr>
-              <tr>
-                <th>Teste</th>
-                <td id="ritualCondicao">[Teste]</td>
-              </tr>
-              <tr>
-                <th>Dano</th>
-                <td id="ritualCondicao">[Dano]</td>
-              </tr>
-              <tr>
-                <th>Categoria</th>
-                <td id="ritualCondicao">[Categoria]</td>
-              </tr>
-              <tr>
-                <th>Peso</th>
-                <td id="ritualCondicao">[Peso]</td>
-              </tr>
-            </table>
-            <br />
-            <div class="details-container">
-              <div class="details-text">
-                <p>
-                  <strong class="glitch" data-text="Tipo:">Tipo</strong>
-                </p>
-                <p>
-                  <strong class="glitch" data-text="Alcance:">Alcance</strong>
-                </p>
-                <p>
-                  <strong class="glitch" data-text="Efeito:">Efeito</strong>
-                </p>
-              </div>
+        <section id="efeito">
+          <h2 data-text="Efeito">Efeito</h2>
+          <p id="ritualEfeito"
+            data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+        <br>
+
+        <section id="detalhes">
+          <table class="details-table">
+            <tr>
+              <th>Custo</th>
+              <td id="ritualCusto">[Custo]</td>
+            </tr>
+            <tr>
+              <th>Duração</th>
+              <td id="ritualDuracao">[Duração]</td>
+            </tr>
+            <tr>
+              <th>Alcance</th>
+              <td id="ritualCondicao">[Alcance]</td>
+            </tr>
+            <tr>
+              <th>Teste</th>
+              <td id="ritualCondicao">[Teste]</td>
+            </tr>
+            <tr>
+              <th>Dano</th>
+              <td id="ritualCondicao">[Dano]</td>
+            </tr>
+            <tr>
+              <th>Categoria</th>
+              <td id="ritualCondicao">[Categoria]</td>
+            </tr>
+            <tr>
+              <th>Peso</th>
+              <td id="ritualCondicao">[Peso]</td>
+            </tr>
+          </table>
+          <br>
+          <div class="details-container">
+            <div class="details-text">
+              <p>
+                <strong>Tipo</strong>
+              </p>
+              <p>
+                <strong>Alcance</strong>
+              </p>
+              <p>
+                <strong>Efeito</strong>
+              </p>
             </div>
-          </section>
-        </article>
-      </section>
-    </main>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+  <script>
+    var canvas;
+    var context;
+    var screenH;
+    var screenW;
+    var stars = [];
+    var fps = 50;
+    var numStars = 100;
 
-    <script>
-      window.requestAnimFrame =
-        window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function (callback) {
-          window.setTimeout(callback, 1000 / 60);
-        };
+    $('document').ready(function () {
 
-      var canvas = document.getElementById("c");
-      var ctx = canvas.getContext("2d");
+      screenH = $(window).height();
+      screenW = $(window).width();
 
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas = $('#space');
 
-      var particles = [];
+      canvas.attr('height', screenH);
+      canvas.attr('width', screenW);
+      context = canvas[0].getContext('2d');
 
-      /* settings */
+      for (var i = 0; i < numStars; i++) {
+        var x = Math.round(Math.random() * screenW);
+        var y = Math.round(Math.random() * screenH);
+        var length = 1 + Math.random() * 5;
+        var opacity = Math.random();
 
-      var bounce = 0.9;
-      var proximity = -100;
-      var speed_limit = 25000;
-      var particle_count = 1000;
-      var min_hue = 1000;
-      var hue_step = ((360 - min_hue) / particle_count) * 3;
-      var predefined_colors = [
-        "#ff00cc",
-        "#00eeff",
-        "#7b00ff",
-        "#7b00ff",
-        "#96fac1",
-        "#e04870",
-        "#c21be3",
-        "#a6ff00",
-      ];
+        var star = new Star(x, y, length, opacity);
 
-      /* --------------------- */
 
-      var Vector = function (x, y) {
-        this.x = x || 0;
-        this.y = y || 0;
-      };
-
-      Vector.prototype.add = function (x, y) {
-        if (x instanceof Vector) {
-          this.x += x.x;
-          this.y += x.y;
-        } else if (x != null && y != null) {
-          this.x += x;
-          this.y += y;
-        } else if (x != null) {
-          this.x += x;
-          this.y += x;
-        }
-      };
-
-      Vector.prototype.sub = function (x, y) {
-        if (x instanceof Vector) {
-          this.x -= x.x;
-          this.y -= x.y;
-        } else if (x != null && y != null) {
-          this.x -= x;
-          this.y -= y;
-        } else if (x != null) {
-          this.x -= x;
-          this.y -= x;
-        }
-      };
-
-      Vector.prototype.zero = function () {
-        this.x = 0;
-        this.y = 0;
-      };
-
-      /* --------------------- */
-
-      var Particle = function () {
-        // Escolher uma cor aleatória do array de cores predefinidas
-        this.color =
-          predefined_colors[
-            Math.floor(Math.random() * predefined_colors.length)
-          ];
-
-        this.acc = new Vector();
-
-        this.vel = new Vector(-1 + Math.random() * 2, -1 + Math.random() * 2);
-
-        this.pos = new Vector(
-          canvas.width * Math.random(),
-          canvas.height * Math.random()
-        );
-      };
-
-      Particle.prototype.update = function () {
-        this.vel.add(this.acc);
-
-        if (this.vel.x > speed_limit || this.vel.y > speed_limit) {
-          this.vel.x = Math.min(this.vel.x, speed_limit);
-          this.vel.y = Math.min(this.vel.y, speed_limit);
-        }
-
-        this.pos.add(this.vel);
-
-        this.acc.zero();
-
-        if (this.pos.x < 0) {
-          this.pos.x = 0;
-
-          this.vel.x *= -bounce;
-        } else if (this.pos.x > canvas.width) {
-          this.pos.x = canvas.width;
-
-          this.vel.x *= -bounce;
-        }
-
-        if (this.pos.y < 0) {
-          this.pos.y = 0;
-
-          this.vel.y *= -bounce;
-        } else if (this.pos.y > canvas.height) {
-          this.pos.y = canvas.height;
-
-          this.vel.y *= -bounce;
-        }
-      };
-
-      Particle.prototype.draw = function (ctx) {
-        ctx.fillStyle = this.color;
-
-        ctx.fillRect(this.pos.x - 1, this.pos.y - 1, 2, 2);
-
-        this.hue = min_hue;
-      };
-
-      /* --------------------- */
-
-      function loop() {
-        ctx.globalCompositeOperation = "destination-in";
-
-        ctx.fillStyle = "rgba(0,0,0,0.9)";
-
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.globalCompositeOperation = "source-over";
-
-        var i, l;
-
-        i = l = particles.length;
-
-        while (i--) {
-          var particle = particles[i];
-
-          if (i > 0) {
-            var j = i - 1;
-
-            while (j--) {
-              var other = particles[j];
-
-              var diff_x = particle.pos.x - other.pos.x;
-              var diff_y = particle.pos.y - other.pos.y;
-
-              var dist = Math.sqrt(diff_x * diff_x + diff_y * diff_y);
-
-              if (dist > proximity) {
-                if (dist < 100) {
-                  particle.hue += hue_step;
-                  other.hue += hue_step;
-                }
-
-                var force = Math.pow(dist, 3) / 8;
-
-                var x = diff_x / force;
-                var y = diff_y / force;
-
-                particle.acc.sub(x, y);
-
-                other.acc.add(x, y);
-              }
-            }
-          }
-
-          particle.update();
-
-          particle.draw(ctx);
-        }
-
-        requestAnimFrame(loop);
+        stars.push(star);
       }
 
-      var i = particle_count;
+      setInterval(animate, 1000 / fps);
+    });
 
-      while (i--) {
-        particles.push(new Particle());
+    /**
+     * Animate the canvas
+     */
+    function animate() {
+      context.clearRect(0, 0, screenW, screenH);
+      $.each(stars, function () {
+        this.draw(context);
+      })
+    }
+
+    /**
+     * Star
+     * 
+     * @param int x
+     * @param int y
+     * @param int length
+     * @param opacity
+     */
+    function Star(x, y, length, opacity) {
+      this.x = parseInt(x);
+      this.y = parseInt(y);
+      this.length = parseInt(length);
+      this.opacity = opacity;
+      this.factor = 1;
+      this.increment = Math.random() * .03;
+    }
+
+    /**
+     * Draw a star
+     * 
+     * This function draws a start.
+     * You need to give the contaxt as a parameter 
+     * 
+     * @param context
+     */
+    Star.prototype.draw = function () {
+      context.rotate((Math.PI * 1 / 10));
+      context.save();
+      context.translate(this.x, this.y);
+
+      if (this.opacity > 1) {
+        this.factor = -1;
+      }
+      else if (this.opacity <= 0) {
+        this.factor = 1;
+
+        this.x = Math.round(Math.random() * screenW);
+        this.y = Math.round(Math.random() * screenH);
       }
 
-      loop();
+      this.opacity += this.increment * this.factor;
 
-      const glitchOverlay = document.getElementById("glitch");
-
-      function triggerGlitch() {
-        glitchOverlay.classList.add("active");
-
-        setTimeout(() => {
-          glitchOverlay.classList.remove("active");
-        }, 750);
+      context.beginPath()
+      for (var i = 5; i--;) {
+        context.lineTo(0, this.length);
+        context.translate(0, this.length);
+        context.rotate((Math.PI * 2 / 10));
+        context.lineTo(0, - this.length);
+        context.translate(0, - this.length);
+        context.rotate(-(Math.PI * 6 / 10));
       }
+      context.lineTo(0, this.length);
+      context.closePath();
+      context.fillStyle = "rgba(255, 255, 200, " + this.opacity + ")";
+      context.shadowBlur = 5;
+      context.shadowColor = '#ffff33';
+      context.fill();
 
-      setInterval(triggerGlitch, valor());
+      context.restore();
+    }
+  </script>
+</body>
 
-      function valor(){
-        var tempo = Math.floor(Math.random() * (10000 - 100 + 1)) + 100;
-        return(tempo)
-      }
-    </script>
-  </body>
 </html>
-<style>
-  @import "compass/reset";
-  @import "compass/css3";
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(30, 0, 60);
-    z-index: -1;
-  }
 
+<style>
   @media (max-width: 768px) {
     .header-container {
       flex-direction: column;
@@ -420,8 +273,8 @@
 
   body {
     font-family: "Roboto", sans-serif;
-    background-color: #300060;
-    color: #e0ffff;
+    background-color: #fff;
+    color: #d4af37;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -429,47 +282,10 @@
   }
 
   .header {
-    position: relative;
-    background-color: #500080;
+    background-color: #d4af37;
     padding: 20px;
     text-align: center;
     transition: all 0.3s ease;
-    opacity: 0.9;
-  }
-
-  .blood-effect {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #7e009f, transparent);
-    animation: blood-flow 5s infinite, pulse-effect 1.8s infinite ease-in-out;
-    z-index: 1;
-  }
-
-  @keyframes blood-flow {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-
-  @keyframes pulse-effect {
-    0% {
-      height: 95px;
-    }
-    50% {
-      height: 150px;
-    }
-    100% {
-      height: 95px;
-    }
   }
 
   .header-small {
@@ -482,20 +298,18 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
   }
 
   .site-title {
     font-family: "Cinzel", serif;
-    color: #e0ffff;
-    font-size: 2.2rem;
-    text-shadow: 0 0 5px #00d4ff;
+    color: #fff;
+    font-size: 1.8rem;
   }
 
   .back-button {
     background-color: transparent;
-    color: #e0ffff;
-    border: 2px solid #00d4ff;
+    color: #fff;
+    border: 2px solid #fff;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -503,13 +317,13 @@
   }
 
   .back-button:hover {
-    background-color: #00d4ff;
-    color: #300060;
+    background-color: #fff;
+    color: #d4af37;
     transform: scale(1.1);
   }
 
   .subheader {
-    background-color: #400070;
+    background-color: #f9f6f0;
     padding: 10px;
     text-align: center;
   }
@@ -527,13 +341,13 @@
 
   .subheader nav ul li a {
     text-decoration: none;
-    color: #e0ffff;
+    color: #d4af37;
     font-weight: 500;
     transition: color 0.3s ease;
   }
 
   .subheader nav ul li a:hover {
-    color: #00d4ff;
+    color: #b8860b;
   }
 
   .main-content {
@@ -544,7 +358,6 @@
     gap: 20px;
     padding: 0 10px;
     flex-wrap: wrap;
-    opacity: 0.95;
   }
 
   .sidebar {
@@ -553,20 +366,16 @@
 
   .content {
     flex: 1;
-    background-color: #500080;
+    background-color: #f9f6f0;
     padding: 20px;
     border-radius: 8px;
-    font-size: 1.2rem;
-    opacity: 0.9;
   }
 
   h2 {
     font-family: "Cinzel", serif;
-    color: #e0ffff;
+    color: rgb(214, 165, 4);
     margin-bottom: 10px;
     font-weight: bold;
-    text-shadow: 0 0 5px #00d4ff;
-    font-size: 1.8rem;
   }
 
   .details-container {
@@ -586,14 +395,15 @@
   }
 
   .details-image img {
-    width: 450px; 
-    height: 450px; 
+    width: 450px;
+    height: 450px;
     border-radius: 8px;
     transition: transform 0.3s ease, border-color 0.3s ease;
   }
 
   .details-image img:hover {
     transform: scale(1.1);
+    border-color: #b8860b;
   }
 
   .details-table {
@@ -606,193 +416,24 @@
 
   .details-table th,
   .details-table td {
-    border: 1px solid #6b00b8;
+    border: 1px solid #d4af37;
     padding: 10px;
     text-align: left;
   }
 
   .details-table th {
-    background-color: #00d4ff;
-    color: #300060;
+    background-color: #d4af37;
+    color: #fff;
   }
 
-  .glitch-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: rgba(255, 255, 255, 0.05);
-    z-index: 100;
-    display: none;
+  .details-table td {
+    background-color: #fff;
+    color: #d4af37;
   }
 
-  @keyframes glitch {
-    0% {
-      clip-path: inset(10% 0 85% 0);
-      transform: translate(-10px, -10px);
-      background: rgba(255, 0, 0, 0.3);
-    }
-    20% {
-      clip-path: inset(20% 0 70% 0);
-      transform: translate(10px, -5px);
-      background: rgba(0, 255, 0, 0.3);
-    }
-    40% {
-      clip-path: inset(30% 0 60% 0);
-      transform: translate(-10px, 5px);
-      background: rgba(0, 0, 255, 0.3);
-    }
-    60% {
-      clip-path: inset(50% 0 40% 0);
-      transform: translate(0, 10px);
-      background: rgba(255, 255, 0, 0.3);
-    }
-    80% {
-      clip-path: inset(10% 0 80% 0);
-      transform: translate(10px, -10px);
-      background: rgba(255, 0, 255, 0.3);
-    }
-    100% {
-      clip-path: inset(0% 0 100% 0);
-      transform: translate(0, 0);
-      background: rgba(0, 255, 255, 0.3);
-    }
-  }
-
-  .glitch-overlay.active {
-    display: block;
-    animation: glitch 0.5s steps(5, end) infinite;
-  }
-
-  /* Efeito de Glitch */
-  /* Efeito de Glitch */
-  .glitch {
-    position: relative;
-    display: inline-block;
-    color: white;
-  }
-
-  .glitch:before,
-  .glitch:after {
-    content: attr(data-text);
+  #space {
     position: absolute;
     top: 0;
     left: 0;
-    color: rgba(255, 255, 255, 0.5);
-    clip: rect(0, 0, 0, 0);
-    background: black;
-    animation: glitch-animation 0.5s infinite linear alternate-reverse;
-  }
-
-  .glitch:before {
-    left: -2px;
-    text-shadow: 2px 0 rgba(255, 0, 0, 0.7);
-  }
-
-  .glitch:after {
-    left: 2px;
-    text-shadow: -2px 0 rgba(0, 0, 255, 0.7);
-  }
-
-  .glitch:hover:before {
-    animation: glitch-hover-1 0.8s infinite ease-in-out alternate-reverse;
-    text-shadow: 3px 0 rgba(255, 0, 0, 0.7);
-  }
-
-  .glitch:hover:after {
-    animation: glitch-hover-2 0.8s infinite ease-in-out alternate-reverse;
-    text-shadow: -3px 0 rgba(0, 0, 255, 0.7);
-  }
-
-  /* Animações de glitch */
-  @keyframes glitch-animation {
-    0% {
-      clip: rect(10% 0 90% 0);
-      transform: translate(-2px, -2px);
-      background: rgba(255, 0, 0, 0.3);
-    }
-    20% {
-      clip: rect(20% 0 80% 0);
-      transform: translate(2px, 3px);
-      background: rgba(0, 255, 0, 0.3);
-    }
-    40% {
-      clip: rect(30% 0 70% 0);
-      transform: translate(-3px, 5px);
-      background: rgba(0, 0, 255, 0.3);
-    }
-    60% {
-      clip: rect(50% 0 50% 0);
-      transform: translate(0, 7px);
-      background: rgba(255, 255, 0, 0.3);
-    }
-    80% {
-      clip: rect(60% 0 40% 0);
-      transform: translate(-4px, -2px);
-      background: rgba(255, 0, 255, 0.3);
-    }
-    100% {
-      clip: rect(70% 0 30% 0);
-      transform: translate(2px, 0);
-      background: rgba(0, 255, 255, 0.3);
-    }
-  }
-
-  @keyframes glitch-hover-1 {
-    0% {
-      clip: rect(25px, 9999px, 70px, 0);
-      transform: translate(10px, 10px);
-    }
-    25% {
-      clip: rect(45px, 9999px, 90px, 0);
-      transform: translate(-5px, -10px);
-    }
-    50% {
-      clip: rect(60px, 9999px, 120px, 0);
-      transform: translate(5px, 5px);
-    }
-    75% {
-      clip: rect(30px, 9999px, 80px, 0);
-      transform: translate(-10px, 0);
-    }
-    100% {
-      clip: rect(55px, 9999px, 110px, 0);
-      transform: translate(0, 0);
-    }
-  }
-
-  @keyframes glitch-hover-2 {
-    0% {
-      top: -1px;
-      left: 1px;
-      clip: rect(50px, 9999px, 90px, 0);
-      transform: translate(-5px, -5px);
-    }
-    25% {
-      top: -5px;
-      left: 5px;
-      clip: rect(70px, 9999px, 120px, 0);
-      transform: translate(10px, 10px);
-    }
-    50% {
-      top: -3px;
-      left: -3px;
-      clip: rect(80px, 9999px, 100px, 0);
-      transform: translate(-10px, -10px);
-    }
-    75% {
-      top: 0px;
-      left: -5px;
-      clip: rect(95px, 9999px, 130px, 0);
-      transform: translate(5px, 0);
-    }
-    100% {
-      top: -1px;
-      left: 1px;
-      clip: rect(110px, 9999px, 140px, 0);
-      transform: translate(0, 0);
-    }
   }
 </style>
