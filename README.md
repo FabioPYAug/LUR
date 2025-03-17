@@ -1,4 +1,4 @@
-# Lun - Sistema de Gerenciamento de Campanhas de RPG v0.1
+# LUR - Log dos Universos de RPG v0.1
 
 ## Descrição
 Lun é um site desenvolvido para facilitar e organizar sessões de RPG, proporcionando uma experiência aprimorada com acesso rápido a recursos essenciais e estatísticas dos jogadores. :D
