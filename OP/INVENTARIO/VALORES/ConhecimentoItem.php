@@ -293,7 +293,7 @@
       }, 2000);
     }
 
-    setInterval(createRandomImage, 500);
+    setInterval(createRandomImage, 10);
   </script>
 </body>
 
@@ -301,16 +301,16 @@
 
 <style>
   .random-image {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  transition: width 5s, height 5s, opacity 5s;
-  opacity: 0.85;
-  animation: shake2 0.5s ease-in-out infinite;
-  z-index: -50;
-  filter: sepia(1) saturate(5) brightness(1.5);
-}
-
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    transition: width 5s, height 5s, opacity 5s;
+    opacity: 0.85;
+    animation: shake2 0.5s ease-in-out infinite;
+    z-index: -10;
+    filter: brightness(0.4) saturate(10%) hue-rotate(50deg);
+    overflow: hidden;
+  }
 
 
   @keyframes shake {
