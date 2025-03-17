@@ -141,7 +141,7 @@
     var screenW;
     var stars = [];
     var fps = 50;
-    var numStars = 100;
+    var numStars = 200;
 
     $('document').ready(function () {
 
@@ -157,7 +157,7 @@
       for (var i = 0; i < numStars; i++) {
         var x = Math.round(Math.random() * screenW);
         var y = Math.round(Math.random() * screenH);
-        var length = 1 + Math.random() * 5;
+        var length = 1 + Math.random() * 3;
         var opacity = Math.random();
 
         var star = new Star(x, y, length, opacity);
@@ -166,7 +166,7 @@
         stars.push(star);
       }
 
-      setInterval(animate, 1000 / fps);
+      setInterval(animate, 750 / fps);
     });
 
     /**
@@ -239,12 +239,139 @@
 
       context.restore();
     }
+
+    const imageUrls = [
+      '/Lun-RPG/OP/SIGILOS/A.png',
+      '/Lun-RPG/OP/SIGILOS/B.png',
+      '/Lun-RPG/OP/SIGILOS/C.png',
+      '/Lun-RPG/OP/SIGILOS/D.png',
+      '/Lun-RPG/OP/SIGILOS/E.png',
+      '/Lun-RPG/OP/SIGILOS/F.png',
+      '/Lun-RPG/OP/SIGILOS/G.png',
+      '/Lun-RPG/OP/SIGILOS/H.png',
+      '/Lun-RPG/OP/SIGILOS/I.png',
+      '/Lun-RPG/OP/SIGILOS/J.png',
+      '/Lun-RPG/OP/SIGILOS/K.png',
+      '/Lun-RPG/OP/SIGILOS/L.png',
+      '/Lun-RPG/OP/SIGILOS/M.png',
+      '/Lun-RPG/OP/SIGILOS/N.png',
+      '/Lun-RPG/OP/SIGILOS/O.png',
+      '/Lun-RPG/OP/SIGILOS/P.png',
+      '/Lun-RPG/OP/SIGILOS/Q.png',
+      '/Lun-RPG/OP/SIGILOS/R.png',
+      '/Lun-RPG/OP/SIGILOS/S.png',
+      '/Lun-RPG/OP/SIGILOS/T.png',
+      '/Lun-RPG/OP/SIGILOS/U.png',
+      '/Lun-RPG/OP/SIGILOS/V.png',
+      '/Lun-RPG/OP/SIGILOS/W.png',
+      '/Lun-RPG/OP/SIGILOS/X.png',
+      '/Lun-RPG/OP/SIGILOS/Y.png',
+      '/Lun-RPG/OP/SIGILOS/Z.png'
+    ];
+
+    function createRandomImage() {
+      const randomIndex = Math.floor(Math.random() * imageUrls.length);
+      const img = document.createElement('img');
+      img.src = imageUrls[randomIndex];
+      img.classList.add('random-image');
+
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      img.style.left = `${x}px`;
+      img.style.top = `${y}px`;
+
+      document.body.appendChild(img);
+
+      setTimeout(() => {
+        img.style.width = '100px';
+        img.style.height = '100px';
+        img.style.opacity = '0';
+      }, 100);
+
+      setTimeout(() => {
+        img.remove();
+      }, 2000);
+    }
+
+    setInterval(createRandomImage, 500);
   </script>
 </body>
 
 </html>
 
 <style>
+  .random-image {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transition: width 5s, height 5s, opacity 5s;
+  opacity: 0.85;
+  animation: shake2 0.5s ease-in-out infinite;
+  z-index: -50;
+  filter: sepia(1) saturate(5) brightness(1.5);
+}
+
+
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-0.30px);
+    }
+
+    50% {
+      transform: translateX(0.30px);
+    }
+
+    75% {
+      transform: translateX(-0.30px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shake2 {
+    0% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-1px);
+    }
+
+    50% {
+      transform: translateX(1px);
+    }
+
+    75% {
+      transform: translateX(-1px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
   @media (max-width: 768px) {
     .header-container {
       flex-direction: column;
