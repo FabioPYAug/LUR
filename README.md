@@ -1,7 +1,7 @@
 # LUR - Log dos Universos de RPG v0.1
 
 ## Descrição
-Lun é um site desenvolvido para facilitar e organizar sessões de RPG, proporcionando uma experiência aprimorada com acesso rápido a recursos essenciais e estatísticas dos jogadores. :D
+LURPG ou apenas Lur é um site desenvolvido para facilitar e organizar sessões de RPG, proporcionando uma experiência aprimorada com acesso rápido a recursos essenciais e estatísticas dos jogadores. :D
 
 ## Funcionalidades
 
@@ -33,6 +33,6 @@ Todo o conteúdo e dados do site estão integrados diretamente a um banco de dad
     * * Criação da aba de Ordem Paranormal
 
 
-![GitHub repo size](https://img.shields.io/github/repo-size/FabioPYAug/Luna-RPG?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/FabioPYAug/Luna-RPG?style=for-the-badge)
-![GitHub open pull requests](https://img.shields.io/github/issues-pr/FabioPYAug/Luna-RPG?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/FabioPYAug/LUR-RPG?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/FabioPYAug/LUR-RPG?style=for-the-badge)
+![GitHub open pull requests](https://img.shields.io/github/issues-pr/FabioPYAug/LUR-RPG?style=for-the-badge)
