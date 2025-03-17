@@ -5,11 +5,14 @@ LURPG ou apenas Lur é um site desenvolvido para facilitar e organizar sessões 
 
 ## Funcionalidades
 
-### Seleção de Campanha
-O menu inicial permite que os usuários escolham entre dois universos de RPG distintos, cada um com dados e funcionalidades próprias:
+### Seleção de Universo
+Existem duas vertentes em LUR, sendo elas:
 
 - **Noite Escura**  
-  Inclui uma pesquisa avançada para documentos, itens e magias, além do acesso a um mapa interativo e uma galeria de tokens e artes utilizadas ao longo da campanha.
+  Inclui uma pesquisa avançada para documentos, itens e magias, além do acesso a um mapa interativo e uma galeria de tokens e artes utilizadas ao longo das campanhas.
+
+- **Ordem Paranormal**  
+  Inclui uma pesquisa avançada para documentos, itens e rituais, além do acesso a um mapa interativo e uma galeria de tokens e artes utilizadas ao longo das campanhas.
 
 ### Menu do Usuário
 Os jogadores podem acessar o menu de perfil para:
