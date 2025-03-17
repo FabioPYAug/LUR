@@ -189,79 +189,78 @@ include 'style-inv.php';
                     switch (op_tipo) {
                         case "Item":
                             if (op_elemento == "Sangue") {
-                                window.open('VALORES/SangueItem.html')
+                                window.open('VALORES/SangueItem.php')
                             } else if (op_elemento == "Conhecimento") {
-                                window.open('VALORES/ArmaLua.html')
+                                window.open('VALORES/ConhecimentoItem.php')
                             } else if (op_elemento == "Morte") {
-                                window.open('VALORES/ArmaLua.html')
+                                window.open('VALORES/MorteItem.php')
                             } else if (op_elemento == "Energia") {
-                                window.open('VALORES/ArmaLua.html')
+                                window.open('VALORES/3n3rg14Item.php')
                             } else if (op_elemento == "Medo") {
-                                window.open('VALORES/ArmaLua.html')
+                                window.open('VALORES/MedoItem.php')
                             } else {
-                                window.open('VALORES/PadraoItem.html')
+                                window.open('VALORES/PadraoItem.php')
                             }
                             break;
-                        case "Material":
-                            window.open('Valores/MaterialPadrão.html')
-                            break;
-                        case "Poção":
-                            if (entidade == "Lua") {
-                                window.open('Valores/PoçãoLua.html')
-                            } else if (entidade == "Sol") {
-                                if (nome == "Poção dos Sentidos Enfadonhos") {
-                                    window.open('Valores/PoçãoBobby.html')
-                                } else {
-                                    window.open('Valores/PoçãoSol.html')
-                                }
+                        case "Equipamento":
+                            if (op_elemento == "Sangue") {
+                                window.open('VALORES/SangueEquipamento.php')
+                            } else if (op_elemento == "Conhecimento") {
+                                window.open('VALORES/ConhecimentoEquipamento.php')
+                            } else if (op_elemento == "Morte") {
+                                window.open('VALORES/MorteEquipamento.php')
+                            } else if (op_elemento == "Energia") {
+                                window.open('VALORES/3n3rg14Equipamento.php')
+                            } else if (op_elemento == "Medo") {
+                                window.open('VALORES/MedoEquipamento.php')
                             } else {
-                                window.open('Valores/PoçãoPadrão.html')
+                                window.open('VALORES/PadraoEquipamento.php')
                             }
                             break;
-                        case "Moeda":
-                            window.open('Valores/MoedaPadrão.html')
-                            break;
-                        case "Item":
-                            if (entidade == "Lua") {
-                                if (nome == "Fragmento Sol e Lua") {
-                                    window.open('Valores/ItensColarSL.html')
-                                } else {
-                                    window.open('Valores/ItensLua.html')
-                                }
-                            } else if (entidade == "Sol") {
-                                if (nome == "Tranca das Cartas") {
-                                    window.open('Valores/ItensBobby.html')
-                                } else {
-                                    window.open('Valores/ItensSol.html')
-                                }
+                        case "Arma":
+                            if (op_elemento == "Sangue") {
+                                window.open('VALORES/SangueArma.php')
+                            } else if (op_elemento == "Conhecimento") {
+                                window.open('VALORES/ConhecimentoArma.php')
+                            } else if (op_elemento == "Morte") {
+                                window.open('VALORES/MorteArma.php')
+                            } else if (op_elemento == "Energia") {
+                                window.open('VALORES/3n3rg14Arma.php')
+                            } else if (op_elemento == "Medo") {
+                                window.open('VALORES/MedoArma.php')
                             } else {
-                                window.open('Valores/ItensPadrão.html')
+                                window.open('VALORES/PadraoArma.php')
                             }
                             break;
-                        case "Armadura":
-                            if (efeito != "-" || efeito != "") {
-                                window.open('Valores/ArmaduraPadrãoEfeitos.html')
+                        case "Ritual":
+                            if (op_elemento == "Sangue") {
+                                window.open('VALORES/SangueRitual.php')
+                            } else if (op_elemento == "Conhecimento") {
+                                window.open('VALORES/ConhecimentoRitual.php')
+                            } else if (op_elemento == "Morte") {
+                                window.open('VALORES/MorteRitual.php')
+                            } else if (op_elemento == "Energia") {
+                                window.open('VALORES/3n3rg14Ritual.php')
+                            } else if (op_elemento == "Medo") {
+                                window.open('VALORES/MedoRitual.php')
                             } else {
-                                window.open('Valores/ArmaduraPadrão.html')
+                                window.open('VALORES/PadraoRitual.php')
                             }
                             break;
                         case "Habilidade":
-                            if (entidade == "Sol") {
-                                window.open('Valores/HabilidadesSol.html')
-                            } else if (entidade == "Lua") {
-                                window.open('Valores/HabilidadesLua.html')
+                            if (op_elemento == "Sangue") {
+                                window.open('VALORES/SangueHabilidade.php')
+                            } else if (op_elemento == "Conhecimento") {
+                                window.open('VALORES/ConhecimentoHabilidade.php')
+                            } else if (op_elemento == "Morte") {
+                                window.open('VALORES/MorteHabilidade.php')
+                            } else if (op_elemento == "Energia") {
+                                window.open('VALORES/3n3rg14Habilidade.php')
+                            } else if (op_elemento == "Medo") {
+                                window.open('VALORES/MedoHabilidade.php')
                             } else {
-                                window.open('Valores/HabilidadesPadrão.html')
+                                window.open('VALORES/PadraoHabilidade.php')
                             }
-                            break;
-                        case "Magia":
-                            window.open('Valores/MagiasPadrão.html')
-                            break;
-                        case "Maldição":
-                            window.open('Valores/MaldiçãoPadrão.html')
-                            break;
-                        case "Bênção":
-                            window.open('Valores/BênçãoPadrão.html')
                             break;
                     }
 
