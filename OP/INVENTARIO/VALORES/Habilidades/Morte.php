@@ -14,131 +14,90 @@
   <body>
     <canvas id="canv"></canvas>
     <header class="header">
-      <div class="header-container">
-        <h1 class="site-title" id="ritualNome">[Nome do Ritual]</h1>
-        <button
-          class="back-button"
-          onclick="window.location.href='../index-inv.php'"
-        >
-          &larr; Voltar
-        </button>
-      </div>
-    </header>
-
-    <div class="subheader">
-      <nav>
-        <ul>
-          <li><a href="#descricao">Descrição</a></li>
-          <li><a href="#historia">História</a></li>
-          <li><a href="#efeito">Efeito</a></li>
-        </ul>
-      </nav>
+    <div class="header-container">
+      <h1 class="site-title" id="habilidadeNome">[Nome da Habilidade]</h1>
+      <button class="back-button" onclick="window.location.href='../index-inv.php'">
+        &larr; Voltar
+      </button>
     </div>
+  </header>
 
-    <main class="main-content">
-      <aside class="sidebar"></aside>
+  <div class="subheader">
+    <nav>
+      <ul>
+        <li><a href="#efeito">Efeito</a></li>
+      </ul>
+    </nav>
+  </div>
 
-      <section class="content">
-        <article>
-          <div class="details-image">
-            <img
-              id="ritualImagem"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3r_sM7QQ45aSu9y8Bug6rJtMB--YWkyAiA&s"
-              alt="Imagem do Ritual"
-            />
-          </div>
-          <section id="descricao">
-            <h2>Descrição</h2>
-            <p id="ritualDescricao">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
+  <main class="main-content">
+    <aside class="sidebar"></aside>
 
-          <section id="historia">
-            <h2>História</h2>
-            <p id="ritualHistoria">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
+    <section class="content">
+      <article>
+        <section id="efeito">
+          <h2 data-text="Efeito">Efeito</h2>
+          <p id="habilidadeEfeito" data-text="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+        <br>
 
-          <section id="efeito">
-            <h2 data-text="Efeito">Efeito</h2>
-            <p
-              id="ritualEfeito"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
-          <br>
-
-          <section id="detalhes">
-            <table class="details-table">
-              <tr>
-                <th>Custo</th>
-                <td id="ritualCusto">[Custo]</td>
-              </tr>
-              <tr>
-                <th>Duração</th>
-                <td id="ritualDuracao">[Duração]</td>
-              </tr>
-              <tr>
-                <th>Alcance</th>
-                <td id="ritualCondicao">[Alcance]</td>
-              </tr>
-              <tr>
-                <th>Teste</th>
-                <td id="ritualCondicao">[Teste]</td>
-              </tr>
-              <tr>
-                <th>Dano</th>
-                <td id="ritualCondicao">[Dano]</td>
-              </tr>
-              <tr>
-                <th>Categoria</th>
-                <td id="ritualCondicao">[Categoria]</td>
-              </tr>
-              <tr>
-                <th>Peso</th>
-                <td id="ritualCondicao">[Peso]</td>
-              </tr>
-            </table>
-            <br>
-            <div class="details-container">
-              <div class="details-text">
-                <p>
-                  <strong>Tipo</strong>
-                </p>
-                <p>
-                  <strong>Alcance</strong>
-                </p>
-                <p>
-                  <strong>Efeito</strong>
-                </p>
-              </div>
+        <section id="detalhes">
+          <table class="details-table">
+            <tr>
+              <th>Custo</th>
+              <td id="HabilidadeCusto">[Custo]</td>
+            </tr>
+            <tr>
+              <th>Duração</th>
+              <td id="HabilidadeDuracao">[Duração]</td>
+            </tr>
+            <tr>
+              <th>Alcance</th>
+              <td id="HabilidadeCondicao">[Alcance]</td>
+            </tr>
+            <tr>
+              <th>Teste</th>
+              <td id="HabilidadeCondicao">[Teste]</td>
+            </tr>
+            <tr>
+              <th>Dano</th>
+              <td id="HabilidadeCondicao">[Dano]</td>
+            </tr>
+            <tr>
+              <th>Resistência</th>
+              <td id="HabilidadeResistência">[Resistência]</td>
+            </tr>
+            <tr>
+              <th>Alvo</th>
+              <td id="HabilidadeAlvo">[Alvo]</td>
+            </tr>
+          </table>
+          <br />
+          <div class="details-container">
+            <div class="details-text">
+              <p>
+                <strong>Tipo</strong>
+              </p>
+              <p>
+                <strong>Alcance</strong>
+              </p>
+              <p>
+                <strong>Efeito</strong>
+              </p>
             </div>
-          </section>
-        </article>
-      </section>
-    </main>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
     <script>
       var c = document.getElementById("canv"),
         $ = c.getContext("2d"),
@@ -464,11 +423,15 @@
   }
 
   .details-table {
-    width: 70%;
+    width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
+  }
+
+  .details-table th {
+    width: 40%
   }
 
   .details-table th,

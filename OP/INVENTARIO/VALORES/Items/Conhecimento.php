@@ -534,11 +534,15 @@
   }
 
   .details-table {
-    width: 70%;
+    width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
+  }
+
+  .details-table th {
+    width: 40%
   }
 
   .details-table th,

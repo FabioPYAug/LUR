@@ -16,7 +16,7 @@
   <canvas id="space"></canvas>
   <header class="header">
     <div class="header-container">
-      <h1 class="site-title" id="ritualNome">[Nome do Ritual]</h1>
+      <h1 class="site-title" id="habilidadeNome">[Nome da Habilidade]</h1>
       <button class="back-button" onclick="window.location.href='../index-inv.php'">
         &larr; Voltar
       </button>
@@ -26,8 +26,6 @@
   <div class="subheader">
     <nav>
       <ul>
-        <li><a href="#descricao">Descrição</a></li>
-        <li><a href="#historia">História</a></li>
         <li><a href="#efeito">Efeito</a></li>
       </ul>
     </nav>
@@ -38,42 +36,9 @@
 
     <section class="content">
       <article>
-        <div class="details-image">
-          <img id="ritualImagem"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3r_sM7QQ45aSu9y8Bug6rJtMB--YWkyAiA&s"
-            alt="Imagem do Ritual" />
-        </div>
-        <section id="descricao">
-          <h2>Descrição</h2>
-          <p id="ritualDescricao">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
-
-        <section id="historia">
-          <h2>História</h2>
-          <p id="ritualHistoria">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
-        <br>
-
         <section id="efeito">
           <h2 data-text="Efeito">Efeito</h2>
-          <p id="ritualEfeito"
-            data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+          <p id="habilidadeEfeito" data-text="">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
             enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -89,34 +54,34 @@
           <table class="details-table">
             <tr>
               <th>Custo</th>
-              <td id="ritualCusto">[Custo]</td>
+              <td id="HabilidadeCusto">[Custo]</td>
             </tr>
             <tr>
               <th>Duração</th>
-              <td id="ritualDuracao">[Duração]</td>
+              <td id="HabilidadeDuracao">[Duração]</td>
             </tr>
             <tr>
               <th>Alcance</th>
-              <td id="ritualCondicao">[Alcance]</td>
+              <td id="HabilidadeCondicao">[Alcance]</td>
             </tr>
             <tr>
               <th>Teste</th>
-              <td id="ritualCondicao">[Teste]</td>
+              <td id="HabilidadeCondicao">[Teste]</td>
             </tr>
             <tr>
               <th>Dano</th>
-              <td id="ritualCondicao">[Dano]</td>
+              <td id="HabilidadeCondicao">[Dano]</td>
             </tr>
             <tr>
-              <th>Categoria</th>
-              <td id="ritualCondicao">[Categoria]</td>
+              <th>Resistência</th>
+              <td id="HabilidadeResistência">[Resistência]</td>
             </tr>
             <tr>
-              <th>Peso</th>
-              <td id="ritualCondicao">[Peso]</td>
+              <th>Alvo</th>
+              <td id="HabilidadeAlvo">[Alvo]</td>
             </tr>
           </table>
-          <br>
+          <br />
           <div class="details-container">
             <div class="details-text">
               <p>
@@ -241,32 +206,32 @@
     }
 
     const imageUrls = [
-      '/Lun-RPG/OP/SIGILOS/A.png',
-      '/Lun-RPG/OP/SIGILOS/B.png',
-      '/Lun-RPG/OP/SIGILOS/C.png',
-      '/Lun-RPG/OP/SIGILOS/D.png',
-      '/Lun-RPG/OP/SIGILOS/E.png',
-      '/Lun-RPG/OP/SIGILOS/F.png',
-      '/Lun-RPG/OP/SIGILOS/G.png',
-      '/Lun-RPG/OP/SIGILOS/H.png',
-      '/Lun-RPG/OP/SIGILOS/I.png',
-      '/Lun-RPG/OP/SIGILOS/J.png',
-      '/Lun-RPG/OP/SIGILOS/K.png',
-      '/Lun-RPG/OP/SIGILOS/L.png',
-      '/Lun-RPG/OP/SIGILOS/M.png',
-      '/Lun-RPG/OP/SIGILOS/N.png',
-      '/Lun-RPG/OP/SIGILOS/O.png',
-      '/Lun-RPG/OP/SIGILOS/P.png',
-      '/Lun-RPG/OP/SIGILOS/Q.png',
-      '/Lun-RPG/OP/SIGILOS/R.png',
-      '/Lun-RPG/OP/SIGILOS/S.png',
-      '/Lun-RPG/OP/SIGILOS/T.png',
-      '/Lun-RPG/OP/SIGILOS/U.png',
-      '/Lun-RPG/OP/SIGILOS/V.png',
-      '/Lun-RPG/OP/SIGILOS/W.png',
-      '/Lun-RPG/OP/SIGILOS/X.png',
-      '/Lun-RPG/OP/SIGILOS/Y.png',
-      '/Lun-RPG/OP/SIGILOS/Z.png'
+      '/LUR/OP/SIGILOS/A.png',
+      '/LUR/OP/SIGILOS/B.png',
+      '/LUR/OP/SIGILOS/C.png',
+      '/LUR/OP/SIGILOS/D.png',
+      '/LUR/OP/SIGILOS/E.png',
+      '/LUR/OP/SIGILOS/F.png',
+      '/LUR/OP/SIGILOS/G.png',
+      '/LUR/OP/SIGILOS/H.png',
+      '/LUR/OP/SIGILOS/I.png',
+      '/LUR/OP/SIGILOS/J.png',
+      '/LUR/OP/SIGILOS/K.png',
+      '/LUR/OP/SIGILOS/L.png',
+      '/LUR/OP/SIGILOS/M.png',
+      '/LUR/OP/SIGILOS/N.png',
+      '/LUR/OP/SIGILOS/O.png',
+      '/LUR/OP/SIGILOS/P.png',
+      '/LUR/OP/SIGILOS/Q.png',
+      '/LUR/OP/SIGILOS/R.png',
+      '/LUR/OP/SIGILOS/S.png',
+      '/LUR/OP/SIGILOS/T.png',
+      '/LUR/OP/SIGILOS/U.png',
+      '/LUR/OP/SIGILOS/V.png',
+      '/LUR/OP/SIGILOS/W.png',
+      '/LUR/OP/SIGILOS/X.png',
+      '/LUR/OP/SIGILOS/Y.png',
+      '/LUR/OP/SIGILOS/Z.png'
     ];
 
     function createRandomImage() {
@@ -401,7 +366,7 @@
   body {
     font-family: "Roboto", sans-serif;
     background-color: #fff;
-    color: #d4af37;
+    color:rgb(155, 123, 20);
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -430,7 +395,7 @@
   .site-title {
     font-family: "Cinzel", serif;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .back-button {
@@ -496,6 +461,7 @@
     background-color: #f9f6f0;
     padding: 20px;
     border-radius: 8px;
+    font-size: 1.2rem;
   }
 
   h2 {
@@ -503,6 +469,7 @@
     color: rgb(214, 165, 4);
     margin-bottom: 10px;
     font-weight: bold;
+    font-size: 1.8rem;
   }
 
   .details-container {
@@ -530,15 +497,18 @@
 
   .details-image img:hover {
     transform: scale(1.1);
-    border-color: #b8860b;
   }
 
   .details-table {
-    width: 70%;
+    width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
+  }
+
+  .details-table th {
+    width: 40%
   }
 
   .details-table th,
