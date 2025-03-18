@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="tituloPagina">Mistérios e Rituais</title>
+    <title id="tituloPagina">Mistérios</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Cinzel:wght@400;600&display=swap"
@@ -14,22 +14,11 @@
   <body>
     <canvas id="c"></canvas>
     <header class="header">
-      <div class="header-container">
-        <h1 class="site-title" id="ritualNome">[Nome do Ritual]</h1>
-        <button
-          class="back-button"
-          onclick="window.location.href='../index-inv.php'"
-        >
-          &larr; Voltar
-        </button>
-      </div>
     </header>
 
     <div class="subheader">
       <nav>
         <ul>
-          <li><a href="#descricao">Descrição</a></li>
-          <li><a href="#historia">História</a></li>
           <li><a href="#efeito">Efeito</a></li>
         </ul>
       </nav>
@@ -42,42 +31,16 @@
         <article>
           <div class="details-image">
             <img
-              id="ritualImagem"
+              id="HabilidadeImagem"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH3r_sM7QQ45aSu9y8Bug6rJtMB--YWkyAiA&s"
-              alt="Imagem do Ritual"
+              alt="Imagem do Habilidade"
             />
           </div>
-          <section id="descricao">
-            <h2>Descrição</h2>
-            <p id="ritualDescricao">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
-
-          <section id="historia">
-            <h2>História</h2>
-            <p id="ritualHistoria">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
-
           <section id="efeito">
             <h2 data-text="Efeito">Efeito</h2>
             <p
-              id="ritualEfeito"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              id="habilidadeEfeito"
+              data-text=""
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -94,31 +57,31 @@
             <table class="details-table">
               <tr>
                 <th>Custo</th>
-                <td id="ritualCusto">[Custo]</td>
+                <td id="HabilidadeCusto">[Custo]</td>
               </tr>
               <tr>
                 <th>Duração</th>
-                <td id="ritualDuracao">[Duração]</td>
+                <td id="HabilidadeDuracao">[Duração]</td>
               </tr>
               <tr>
                 <th>Alcance</th>
-                <td id="ritualCondicao">[Alcance]</td>
+                <td id="HabilidadeCondicao">[Alcance]</td>
               </tr>
               <tr>
                 <th>Teste</th>
-                <td id="ritualCondicao">[Teste]</td>
+                <td id="HabilidadeCondicao">[Teste]</td>
               </tr>
               <tr>
                 <th>Dano</th>
-                <td id="ritualCondicao">[Dano]</td>
+                <td id="HabilidadeCondicao">[Dano]</td>
               </tr>
               <tr>
-                <th>Categoria</th>
-                <td id="ritualCondicao">[Categoria]</td>
+                <th>Resistência</th>
+                <td id="HabilidadeResistência">[Resistência]</td>
               </tr>
               <tr>
-                <th>Peso</th>
-                <td id="ritualCondicao">[Peso]</td>
+                <th>Alvo</th>
+                <td id="HabilidadeAlvo">[Alvo]</td>
               </tr>
             </table>
             <br />
