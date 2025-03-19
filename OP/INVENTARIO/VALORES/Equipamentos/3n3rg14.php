@@ -16,13 +16,7 @@
     <canvas id="c"></canvas>
     <header class="header">
       <div class="header-container">
-        <h1
-          class="site-title glitch"
-          id="ritualNome"
-          data-text="[Nome do Ritual]"
-        >
-          [Nome do Ritual]
-        </h1>
+        <h1 class="site-title" id="ritualNome">[Nome do Ritual]</h1>
         <button
           class="back-button"
           onclick="window.location.href='../index-inv.php'"
@@ -35,15 +29,8 @@
     <div class="subheader">
       <nav>
         <ul>
-          <li>
-            <a href="#descricao" class="glitch" data-text="Descrição">Descrição</a>
-          </li>
-          <li>
-            <a href="#historia" class="glitch" data-text="História">História</a>
-          </li>
-          <li>
-            <a href="#efeito" class="glitch" data-text="Efeitos">Efeito</a>
-          </li>
+          <li><a href="#descricao">Descrição</a></li>
+          <li><a href="#historia">História</a></li>
         </ul>
       </nav>
     </div>
@@ -61,12 +48,8 @@
             />
           </div>
           <section id="descricao">
-            <h2 class="glitch" data-text="Descrição">Descrição</h2>
-            <p
-              id="ritualDescricao"
-              class="glitch"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            >
+            <h2>Descrição</h2>
+            <p id="ritualDescricao">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -78,12 +61,8 @@
           </section>
 
           <section id="historia">
-            <h2 class="glitch" data-text="História">História</h2>
-            <p
-              id="ritualHistoria"
-              class="glitch"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            >
+            <h2>História</h2>
+            <p id="ritualHistoria">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -93,66 +72,46 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </section>
-
-          <section id="efeito">
-            <h2 class="glitch" data-text="Efeito">Efeito</h2>
-            <p
-              id="ritualEfeito"
-              class="glitch"
-              data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </section>
+          <br>
 
           <section id="detalhes">
             <table class="details-table">
               <tr>
-                <th>Custo</th>
-                <td id="ritualCusto">[Custo]</td>
-              </tr>
-              <tr>
-                <th>Duração</th>
-                <td id="ritualDuracao">[Duração]</td>
-              </tr>
-              <tr>
-                <th>Alcance</th>
-                <td id="ritualCondicao">[Alcance]</td>
-              </tr>
-              <tr>
-                <th>Teste</th>
-                <td id="ritualCondicao">[Teste]</td>
+                <th>Categoria</th>
+                <td id="ritualCategoria">[Categoria]</td>
               </tr>
               <tr>
                 <th>Dano</th>
-                <td id="ritualCondicao">[Dano]</td>
+                <td id="ritualDano">[Dano]</td>
               </tr>
               <tr>
-                <th>Categoria</th>
-                <td id="ritualCondicao">[Categoria]</td>
+                <th>Crítico</th>
+                <td id="ritualCritico">[Crítico]</td>
+              </tr>
+              <tr>
+                <th>Alcance</th>
+                <td id="ritualAlcance">[Alcance]</td>
+              </tr>
+              <tr>
+                <th>Tipo</th>
+                <td id="ritualTipo">[Tipo]</td>
               </tr>
               <tr>
                 <th>Peso</th>
-                <td id="ritualCondicao">[Peso]</td>
+                <td id="ritualPeso">[Peso]</td>
               </tr>
             </table>
-            <br />
+            <br>
             <div class="details-container">
               <div class="details-text">
                 <p>
-                  <strong class="glitch" data-text="Tipo:">Tipo</strong>
+                  <strong>Tipo</strong>
                 </p>
                 <p>
-                  <strong class="glitch" data-text="Alcance:">Alcance</strong>
+                  <strong>Alcance</strong>
                 </p>
                 <p>
-                  <strong class="glitch" data-text="Efeito:">Efeito</strong>
+                  <strong>Efeito</strong>
                 </p>
               </div>
             </div>
@@ -597,11 +556,15 @@
   }
 
   .details-table {
-    width: 70%;
+    width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
+  }
+
+  .details-table th {
+    width: 40%
   }
 
   .details-table th,
