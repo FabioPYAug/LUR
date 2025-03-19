@@ -128,19 +128,19 @@
     <div class="area"></div>
     <nav class="main-menu" onmouseleave="closeAllSubmenus()">
         <li>
-            <a href="/Lun-RPG/PERFIL/pfl-frontend.php">
+            <a href="/LUR/PERFIL/pfl-frontend.php">
                 <i class="fa fa-user fa-2x"></i>
                 <span class="nav-text">Perfil</span>
             </a>
         </li>
         <li class="has-subnav">
-            <a href="/Lun-RPG/OP/DOCUMENTOS/index-doc.php">
+            <a href="/LUR/OP/DOCUMENTOS/index-doc.php">
                 <i class="fa fa-book fa-2x"></i>
                 <span class="nav-text">Documentos</span>
             </a>
         </li>
         <li>
-            <a href="/Lun-RPG/OP/INVENTARIO/index-inv.php">
+            <a href="/LUR/OP/INVENTARIO/index-inv.php">
                 <i class="fa fa-inbox fa-2x"></i>
                 <span class="nav-text">Arsenal</span>
             </a>
@@ -158,7 +158,7 @@
             </a>
         </li>
         <li class="lua-item">
-            <a href="/Lun-RPG/NE/lobby.php">
+            <a href="/LUR/NE/lobby.php">
                 <i class="fa fa-moon fa-2x"></i>
                 <span class="nav-text">Noite Escura</span>
             </a>
