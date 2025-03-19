@@ -119,6 +119,8 @@
         </section>
       </article>
     </section>
+    
+
   </main>
   <script>
     var canvas;
@@ -281,11 +283,59 @@
 
     setInterval(createRandomImage, 10);
   </script>
+  <section class="dark-section">
+  
+  <div class="dark-content">
+    <h2>Bem-vindo à Escuridão</h2>
+    <p>Você chegou ao fim da página, onde os segredos estão escondidos.</p>
+  </div>
+</section>
 </body>
 
 </html>
 
 <style>
+  .dark-section {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.dark-section h2,
+.dark-section p {
+  margin: 10px 0;
+  font-family: "Cinzel", serif;
+}
+
+.dark-content {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fog-move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+/* Transição suave para a névoa */
+.dark-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  z-index: 1;
+}
+
   .random-image {
     position: fixed;
     width: 20px;
