@@ -281,11 +281,55 @@
 
     setInterval(createRandomImage, 10);
   </script>
+  <section class="dark-section">
+    <div class="dark-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+    </div>
+  </section>
 </body>
 
 </html>
 
 <style>
+  .dark-section {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    overflow: hidden;
+  }
+
+  .dark-section h2,
+  .dark-section p {
+    margin: 10px auto;
+    max-width: 1000px;
+    font-family: "Cinzel", serif;
+    text-align: center;
+  }
+
+
+  .dark-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .dark-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    z-index: 1;
+  }
+
   .random-image {
     position: fixed;
     width: 20px;
