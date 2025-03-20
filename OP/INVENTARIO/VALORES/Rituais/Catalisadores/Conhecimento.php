@@ -281,6 +281,7 @@
 
     setInterval(createRandomImage, 10);
   </script>
+  <canvas id="canvasc"></canvas>
   <section class="dark-section">
     <div class="dark-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
@@ -291,11 +292,74 @@
       </p>
     </div>
   </section>
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById("canvasc");
+      var ctx = canvas.getContext("2d");
+      var W = window.innerWidth;
+      var H = window.innerHeight;
+      canvas.width = W;
+      canvas.height = H;
+
+      var layers = [];
+      layers.push({ size: 3, speed: 1, count: 50, particules: [] });
+      layers.push({ size: 2, speed: 0.5, count: 50, particules: [] });
+      layers.push({ size: 1, speed: 0.25, count: 50, particules: [] });
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = "rgb(228, 255, 255)";
+        ctx.beginPath();
+
+        for (var l of layers) {
+          for (var p of l.particules) {
+            var hs = l.size / 2;
+            ctx.fillRect(p.x - hs, p.y - hs, hs * 2, hs * 2);
+          }
+        }
+        ctx.fill();
+        update();
+      }
+
+      function update() {
+        for (var l of layers) {
+          for (var p of l.particules) {
+            p.y -= l.speed;
+
+            // Se a partícula sair da tela, ela reaparece no topo em um local aleatório
+            if (p.y < 0) {
+              p.y = H;
+              p.x = Math.random() * W;
+            }
+          }
+
+          if (l.particules.length < l.count) {
+            for (var i = 0; i < l.count - l.particules.length; i++) {
+              var particule = { x: Math.random() * W, y: Math.random() * H };
+              l.particules.push(particule);
+            }
+          }
+        }
+      }
+
+      setInterval(draw, 25);
+    };
+  </script>
 </body>
 
 </html>
 
 <style>
+  #canvasc {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+  }
+
   .dark-section {
     position: relative;
     background-color: #000;
@@ -412,6 +476,7 @@
       margin-top: 10px;
       width: 100%;
       box-sizing: border-box;
+      z-index: 1000;
     }
 
     .main-content {
@@ -471,6 +536,7 @@
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 10000;
   }
 
   .back-button:hover {
@@ -494,6 +560,7 @@
 
   .subheader nav ul li {
     margin: 0 15px;
+    z-index: 110000;
   }
 
   .subheader nav ul li a {
@@ -501,10 +568,12 @@
     color: #d4af37;
     font-weight: 500;
     transition: color 0.3s ease;
+    z-index: 110000;
   }
 
   .subheader nav ul li a:hover {
     color: #b8860b;
+    z-index: 110000;
   }
 
   .main-content {
